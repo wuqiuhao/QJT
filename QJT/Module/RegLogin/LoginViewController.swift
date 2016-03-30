@@ -12,7 +12,7 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetWorkManager.httpRequest(Methods.login_studentLogin, params: ["userName":"2012812044","passWord":"2012812044"], completed: { (responseData) in
+        NetWorkManager.httpRequest(Methods.login_studentLogin, params: ["userName":"2012812044","passWord":"2012812044"], modelType: Student.self,completed: { (responseData) in
                 print(responseData)
             }) { (errorMsg) in
                 debugPrint(errorMsg!)

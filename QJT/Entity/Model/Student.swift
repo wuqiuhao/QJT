@@ -31,13 +31,13 @@ class Student: Mappable {
     
     // Mappable
     func mapping(map: Map) {
-        studentID   <- map["studentID"]
-        password    <- map["password"]
-        name        <- map["name"]
-        phoneNum    <- map["phoneNum"]
-        specialtyID <- map["specialtyID"]
-        schoolYear  <- map["schoolYear"]
-        protraitID  <- map["protraitID"]
-        className   <- (map["className"])
+        studentID       <- map["studentID"]
+        password        <- map["password"]
+        name            <- map["name"]
+        phoneNum        <- map["phoneNum"]
+        specialtyID     <- map["specialtyID"]
+        schoolYear      <- map["schoolYear"]
+        protraitID      <- map["protraitID"]
+        className       <- map["className"]
     }
 }

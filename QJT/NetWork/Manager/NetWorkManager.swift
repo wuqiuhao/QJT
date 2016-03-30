@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import ObjectMapper
+import AlamofireObjectMapper
 
 typealias SuccessedClosure = ([String:AnyObject?])-> Void
 typealias FiledClosure = (String?)-> Void
@@ -28,10 +29,27 @@ class NetWorkManager {
         }
         let serviceURL = "\(SysConfig.getServerURL())\(serviceName!)/\(method)"
         
-        
+//        Alamofire.request(Method.POST, serviceURL, parameters: params, encoding: ParameterEncoding.URL).responseObject { (response: Response<Student, NSError>) in
+//            if let failableUser = response.result.value {
+//                if let user = failableUser.object {
+//                    // handle User object
+//                }
+//                else if let apiError = failableUser.apiError {
+//                    // handle API error
+//                }
+//                else {
+//                    // ...
+//                }
+//            }
+//            else {
+//                // ...
+//            }
+//        }
         Alamofire.request(Method.POST, serviceURL, parameters: params, encoding: ParameterEncoding.URL, headers: nil).responseJSON { (responseData) in
             let response = responseData.response
-            
+            if response == nil {
+                debugPrint("请求失败")
+            }
             switch response!.statusCode {
             case 200:
                 // http请求成功

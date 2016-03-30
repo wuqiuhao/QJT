@@ -58,6 +58,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		68FA520D1CAC18CA003DF699 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EFA869221CAA70AB00CC1B71 /* LoginViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		8414EAD03B5901A2C1BF70CA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,7 +219,7 @@
 		EFA869201CAA703800CC1B71 /* RegLogin */ = {
 			isa = PBXGroup;
 			children = (
-				EFA869221CAA70AB00CC1B71 /* LoginViewController.swift */,
+				68FA520D1CAC18CA003DF699 /* ViewController */,
 			);
 			name = RegLogin;
 			sourceTree = "<group>";

@@ -6,5 +6,6 @@ use_frameworks!
 
 pod 'Alamofire'
 pod 'MJRefresh'
-pod 'Argo'
+pod 'ObjectMapper', '~> 1.2'
 pod 'Kingfisher', '~> 2.2'
+pod 'AlamofireObjectMapper', '~> 2.1'

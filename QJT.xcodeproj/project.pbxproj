@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1A0F54FFF44B77ECE6EF942A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451ED4D82C76F378DBB33D09 /* Pods.framework */; };
+		EF45F52F1CABF1800052AA1F /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45F52E1CABF1800052AA1F /* Student.swift */; };
+		EF45F5341CABF2600052AA1F /* Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45F5331CABF2600052AA1F /* Mappable.swift */; };
 		EF9A30D01CA90FD400D5EFA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF9A30CE1CA90FD400D5EFA6 /* Main.storyboard */; };
 		EF9A30D21CA90FD400D5EFA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF9A30D11CA90FD400D5EFA6 /* Assets.xcassets */; };
 		EF9A30E81CA9133C00D5EFA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9A30E71CA9133C00D5EFA6 /* AppDelegate.swift */; };
@@ -21,6 +23,8 @@
 		421540CB059379FB231DBF0D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		451ED4D82C76F378DBB33D09 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE37ED3E40352A6C9D2E6664 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		EF45F52E1CABF1800052AA1F /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Student.swift; path = Entity/Model/Student.swift; sourceTree = "<group>"; };
+		EF45F5331CABF2600052AA1F /* Mappable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mappable.swift; path = General/Protocols/Mappable.swift; sourceTree = "<group>"; };
 		EF9A30C71CA90FD400D5EFA6 /* QJT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QJT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF9A30CF1CA90FD400D5EFA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF9A30D11CA90FD400D5EFA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,6 +67,28 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EF45F52B1CABF14B0052AA1F /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
+		EF45F5311CABF1E60052AA1F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		EF45F5321CABF1F10052AA1F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EF45F5331CABF2600052AA1F /* Mappable.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		EF9A30BE1CA90FD400D5EFA6 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +112,7 @@
 			children = (
 				EF9A30E21CA911F900D5EFA6 /* General */,
 				EF9A30DC1CA9119B00D5EFA6 /* NetWork */,
+				EF45F52B1CABF14B0052AA1F /* Lib */,
 				EF9A30DE1CA911AD00D5EFA6 /* Entity */,
 				EF9A30DD1CA911A400D5EFA6 /* Util */,
 				EF9A30E11CA911CB00D5EFA6 /* Module */,
@@ -132,6 +159,7 @@
 		EF9A30E01CA911BD00D5EFA6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EF45F52E1CABF1800052AA1F /* Student.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -148,6 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				EF9A30E71CA9133C00D5EFA6 /* AppDelegate.swift */,
+				EF45F5321CABF1F10052AA1F /* Protocols */,
+				EF45F5311CABF1E60052AA1F /* Extensions */,
 			);
 			name = General;
 			sourceTree = "<group>";
@@ -309,6 +339,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFA869191CAA651900CC1B71 /* NetWorkManager.swift in Sources */,
+				EF45F5341CABF2600052AA1F /* Mappable.swift in Sources */,
+				EF45F52F1CABF1800052AA1F /* Student.swift in Sources */,
 				EF9A30E81CA9133C00D5EFA6 /* AppDelegate.swift in Sources */,
 				EFA8691D1CAA655C00CC1B71 /* Methods.swift in Sources */,
 				EFA869231CAA70AB00CC1B71 /* LoginViewController.swift in Sources */,
@@ -379,7 +411,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "898e6608-7d6c-4417-9ce8-7fd13a5dd1db";
+				PROVISIONING_PROFILE = "526aef8d-dd46-4abf-bec1-12247782ea89";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -420,7 +452,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "898e6608-7d6c-4417-9ce8-7fd13a5dd1db";
+				PROVISIONING_PROFILE = "526aef8d-dd46-4abf-bec1-12247782ea89";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -437,9 +469,9 @@
 				INFOPLIST_FILE = "$(SRCROOT)/QJT/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.design.qjt;
+				PRODUCT_BUNDLE_IDENTIFIER = com.design.qianjiangtong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "898e6608-7d6c-4417-9ce8-7fd13a5dd1db";
+				PROVISIONING_PROFILE = "526aef8d-dd46-4abf-bec1-12247782ea89";
 				SWIFT_OBJC_BRIDGING_HEADER = "QJT/Supporting Files/QJT-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -456,9 +488,9 @@
 				INFOPLIST_FILE = "$(SRCROOT)/QJT/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.design.qjt;
+				PRODUCT_BUNDLE_IDENTIFIER = com.design.qianjiangtong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "898e6608-7d6c-4417-9ce8-7fd13a5dd1db";
+				PROVISIONING_PROFILE = "526aef8d-dd46-4abf-bec1-12247782ea89";
 				SWIFT_OBJC_BRIDGING_HEADER = "QJT/Supporting Files/QJT-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

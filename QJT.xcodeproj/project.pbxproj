@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1A0F54FFF44B77ECE6EF942A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451ED4D82C76F378DBB33D09 /* Pods.framework */; };
 		EF45F52F1CABF1800052AA1F /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45F52E1CABF1800052AA1F /* Student.swift */; };
-		EF45F5341CABF2600052AA1F /* Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45F5331CABF2600052AA1F /* Mappable.swift */; };
 		EF9A30D01CA90FD400D5EFA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF9A30CE1CA90FD400D5EFA6 /* Main.storyboard */; };
 		EF9A30D21CA90FD400D5EFA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF9A30D11CA90FD400D5EFA6 /* Assets.xcassets */; };
 		EF9A30E81CA9133C00D5EFA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9A30E71CA9133C00D5EFA6 /* AppDelegate.swift */; };
@@ -17,6 +16,7 @@
 		EFA8691D1CAA655C00CC1B71 /* Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8691C1CAA655C00CC1B71 /* Methods.swift */; };
 		EFA8691F1CAA659200CC1B71 /* SysConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8691E1CAA659200CC1B71 /* SysConfig.swift */; };
 		EFA869231CAA70AB00CC1B71 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA869221CAA70AB00CC1B71 /* LoginViewController.swift */; };
+		EFF324FA1CB025B800603394 /* ReturnResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF324F91CB025B800603394 /* ReturnResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +24,6 @@
 		451ED4D82C76F378DBB33D09 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE37ED3E40352A6C9D2E6664 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EF45F52E1CABF1800052AA1F /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Student.swift; path = Entity/Model/Student.swift; sourceTree = "<group>"; };
-		EF45F5331CABF2600052AA1F /* Mappable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mappable.swift; path = General/Protocols/Mappable.swift; sourceTree = "<group>"; };
 		EF9A30C71CA90FD400D5EFA6 /* QJT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QJT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF9A30CF1CA90FD400D5EFA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF9A30D11CA90FD400D5EFA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,6 +35,7 @@
 		EFA8691C1CAA655C00CC1B71 /* Methods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Methods.swift; path = NetWork/Config/Methods.swift; sourceTree = "<group>"; };
 		EFA8691E1CAA659200CC1B71 /* SysConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SysConfig.swift; path = NetWork/Config/SysConfig.swift; sourceTree = "<group>"; };
 		EFA869221CAA70AB00CC1B71 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Module/RegLogin/LoginViewController.swift; sourceTree = "<group>"; };
+		EFF324F91CB025B800603394 /* ReturnResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReturnResult.swift; path = Entity/Model/ResultModel/ReturnResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +92,6 @@
 		EF45F5321CABF1F10052AA1F /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				EF45F5331CABF2600052AA1F /* Mappable.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -167,6 +166,7 @@
 		EF9A30E01CA911BD00D5EFA6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EFB35AF61CAD62DC0002259A /* ResultModel */,
 				EF45F52E1CABF1800052AA1F /* Student.swift */,
 			);
 			name = Model;
@@ -222,6 +222,14 @@
 				68FA520D1CAC18CA003DF699 /* ViewController */,
 			);
 			name = RegLogin;
+			sourceTree = "<group>";
+		};
+		EFB35AF61CAD62DC0002259A /* ResultModel */ = {
+			isa = PBXGroup;
+			children = (
+				EFF324F91CB025B800603394 /* ReturnResult.swift */,
+			);
+			name = ResultModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,11 +355,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFA869191CAA651900CC1B71 /* NetWorkManager.swift in Sources */,
-				EF45F5341CABF2600052AA1F /* Mappable.swift in Sources */,
 				EF45F52F1CABF1800052AA1F /* Student.swift in Sources */,
 				EF9A30E81CA9133C00D5EFA6 /* AppDelegate.swift in Sources */,
 				EFA8691D1CAA655C00CC1B71 /* Methods.swift in Sources */,
 				EFA869231CAA70AB00CC1B71 /* LoginViewController.swift in Sources */,
+				EFF324FA1CB025B800603394 /* ReturnResult.swift in Sources */,
 				EFA8691F1CAA659200CC1B71 /* SysConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

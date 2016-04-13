@@ -55,6 +55,9 @@
 		687E38341CBE4008009EDE17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687E38331CBE4008009EDE17 /* Main.storyboard */; };
 		68B7B5251CBE8EC60046FC7F /* LeaveMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7B5241CBE8EC60046FC7F /* LeaveMainViewController.swift */; };
 		68B7B5271CBE8ED50046FC7F /* Leave.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B7B5261CBE8ED50046FC7F /* Leave.storyboard */; };
+		68B7B5291CBE90220046FC7F /* LeaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7B5281CBE90220046FC7F /* LeaveView.swift */; };
+		68B7B52B1CBE903B0046FC7F /* Attendance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7B52A1CBE903B0046FC7F /* Attendance.swift */; };
+		68B7B52D1CBE90580046FC7F /* AttendanceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7B52C1CBE90580046FC7F /* AttendanceMainViewController.swift */; };
 		68B98EEF1CBE4942009D64D1 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B98EEE1CBE4942009D64D1 /* MainTabBarController.swift */; };
 		68B98EF41CBE49A9009D64D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B98EF21CBE49A9009D64D1 /* LaunchScreen.storyboard */; };
 		68B98EF71CBE4A00009D64D1 /* QJT.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 68B98EF61CBE4A00009D64D1 /* QJT.entitlements */; };
@@ -119,6 +122,9 @@
 		687E38331CBE4008009EDE17 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		68B7B5241CBE8EC60046FC7F /* LeaveMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveMainViewController.swift; sourceTree = "<group>"; };
 		68B7B5261CBE8ED50046FC7F /* Leave.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Leave.storyboard; sourceTree = "<group>"; };
+		68B7B5281CBE90220046FC7F /* LeaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveView.swift; sourceTree = "<group>"; };
+		68B7B52A1CBE903B0046FC7F /* Attendance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attendance.swift; sourceTree = "<group>"; };
+		68B7B52C1CBE90580046FC7F /* AttendanceMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendanceMainViewController.swift; sourceTree = "<group>"; };
 		68B98EEE1CBE4942009D64D1 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		68B98EF21CBE49A9009D64D1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "Supporting Files/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		68B98EF61CBE4A00009D64D1 /* QJT.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = QJT.entitlements; sourceTree = "<group>"; };
@@ -257,6 +263,7 @@
 		68B98EEB1CBE4934009D64D1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				68B7B52A1CBE903B0046FC7F /* Attendance.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -264,6 +271,7 @@
 		68B98EEC1CBE4934009D64D1 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				68B7B52C1CBE90580046FC7F /* AttendanceMainViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -279,6 +287,7 @@
 		68B98EF01CBE4968009D64D1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				68B7B5281CBE90220046FC7F /* LeaveView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -619,6 +628,7 @@
 				68186C111CB3525D005AF62D /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
 				EF45F52F1CABF1800052AA1F /* Student.swift in Sources */,
 				68186C061CB3525D005AF62D /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
+				68B7B5291CBE90220046FC7F /* LeaveView.swift in Sources */,
 				68186C191CB3525D005AF62D /* NVActivityIndicatorView.swift in Sources */,
 				68186C031CB3525D005AF62D /* NVActivityIndicatorAnimationBallRotate.swift in Sources */,
 				68186C0A1CB3525D005AF62D /* NVActivityIndicatorAnimationBallZigZag.swift in Sources */,
@@ -638,6 +648,7 @@
 				68186C141CB3525D005AF62D /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
 				68186C0D1CB3525D005AF62D /* NVActivityIndicatorAnimationCubeTransition.swift in Sources */,
 				68186C0C1CB3525D005AF62D /* NVActivityIndicatorAnimationBlank.swift in Sources */,
+				68B7B52D1CBE90580046FC7F /* AttendanceMainViewController.swift in Sources */,
 				68186C021CB3525D005AF62D /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */,
 				EFA8691D1CAA655C00CC1B71 /* Methods.swift in Sources */,
 				68186C091CB3525D005AF62D /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
@@ -657,6 +668,7 @@
 				68323F641CBCE14A00B7DEBE /* KeychainItemWrapper.m in Sources */,
 				68186C0F1CB3525D005AF62D /* NVActivityIndicatorAnimationLineScaleParty.swift in Sources */,
 				68186BF91CB3525D005AF62D /* AnimationRefresh.swift in Sources */,
+				68B7B52B1CBE903B0046FC7F /* Attendance.swift in Sources */,
 				68186C151CB3525D005AF62D /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

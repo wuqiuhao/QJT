@@ -49,11 +49,13 @@
 		68186C361CB3554F005AF62D /* LoginShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68186C301CB3554F005AF62D /* LoginShowViewController.swift */; };
 		68186C371CB3554F005AF62D /* LoginStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68186C311CB3554F005AF62D /* LoginStepViewController.swift */; };
 		68186C381CB3554F005AF62D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68186C321CB3554F005AF62D /* LoginViewController.swift */; };
-		68186C5E1CB37555005AF62D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68186C5D1CB37555005AF62D /* LaunchScreen.storyboard */; };
 		682297C31CB13C50008CD1D4 /* RegLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 682297C21CB13C50008CD1D4 /* RegLogin.storyboard */; };
 		68323F641CBCE14A00B7DEBE /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 68323F631CBCE14A00B7DEBE /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		68323F661CBCE1DF00B7DEBE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68323F651CBCE1DF00B7DEBE /* Security.framework */; };
 		687E38341CBE4008009EDE17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687E38331CBE4008009EDE17 /* Main.storyboard */; };
+		68B98EEF1CBE4942009D64D1 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B98EEE1CBE4942009D64D1 /* MainTabBarController.swift */; };
+		68B98EF41CBE49A9009D64D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B98EF21CBE49A9009D64D1 /* LaunchScreen.storyboard */; };
+		68B98EF71CBE4A00009D64D1 /* QJT.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 68B98EF61CBE4A00009D64D1 /* QJT.entitlements */; };
 		EF45F52F1CABF1800052AA1F /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45F52E1CABF1800052AA1F /* Student.swift */; };
 		EF9A30D21CA90FD400D5EFA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF9A30D11CA90FD400D5EFA6 /* Assets.xcassets */; };
 		EF9A30E81CA9133C00D5EFA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9A30E71CA9133C00D5EFA6 /* AppDelegate.swift */; };
@@ -108,13 +110,14 @@
 		68186C301CB3554F005AF62D /* LoginShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginShowViewController.swift; path = Module/RegLogin/ViewController/LoginShowViewController.swift; sourceTree = "<group>"; };
 		68186C311CB3554F005AF62D /* LoginStepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginStepViewController.swift; path = Module/RegLogin/ViewController/LoginStepViewController.swift; sourceTree = "<group>"; };
 		68186C321CB3554F005AF62D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Module/RegLogin/ViewController/LoginViewController.swift; sourceTree = "<group>"; };
-		68186C5D1CB37555005AF62D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = QJT/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		682297C21CB13C50008CD1D4 /* RegLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RegLogin.storyboard; path = Module/RegLogin/RegLogin.storyboard; sourceTree = "<group>"; };
-		68323F601CBCE0A800B7DEBE /* QJT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = QJT.entitlements; sourceTree = "<group>"; };
 		68323F621CBCE14A00B7DEBE /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
 		68323F631CBCE14A00B7DEBE /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
 		68323F651CBCE1DF00B7DEBE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		687E38331CBE4008009EDE17 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		68B98EEE1CBE4942009D64D1 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		68B98EF21CBE49A9009D64D1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "Supporting Files/LaunchScreen.storyboard"; sourceTree = "<group>"; };
+		68B98EF61CBE4A00009D64D1 /* QJT.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = QJT.entitlements; sourceTree = "<group>"; };
 		AE37ED3E40352A6C9D2E6664 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EF45F52E1CABF1800052AA1F /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Student.swift; path = Entity/Model/Student.swift; sourceTree = "<group>"; };
 		EF9A30C71CA90FD400D5EFA6 /* QJT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QJT.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,10 +222,67 @@
 		687E38321CBE3FE3009EDE17 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				68B98EED1CBE4942009D64D1 /* ViewController */,
 				687E38331CBE4008009EDE17 /* Main.storyboard */,
 			);
 			name = Main;
 			path = Module/Main;
+			sourceTree = "<group>";
+		};
+		68B98EE91CBE4843009D64D1 /* Leave */ = {
+			isa = PBXGroup;
+			children = (
+				68B98EF01CBE4968009D64D1 /* View */,
+				68B98EF11CBE4968009D64D1 /* ViewController */,
+			);
+			name = Leave;
+			path = Module/Leave;
+			sourceTree = "<group>";
+		};
+		68B98EEA1CBE48CA009D64D1 /* Attendance */ = {
+			isa = PBXGroup;
+			children = (
+				68B98EEB1CBE4934009D64D1 /* View */,
+				68B98EEC1CBE4934009D64D1 /* ViewController */,
+			);
+			name = Attendance;
+			path = Module/Attendance;
+			sourceTree = "<group>";
+		};
+		68B98EEB1CBE4934009D64D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68B98EEC1CBE4934009D64D1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		68B98EED1CBE4942009D64D1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68B98EEE1CBE4942009D64D1 /* MainTabBarController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		68B98EF01CBE4968009D64D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68B98EF11CBE4968009D64D1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		68FA520D1CAC18CA003DF699 /* ViewController */ = {
@@ -274,7 +334,6 @@
 			isa = PBXGroup;
 			children = (
 				EF9A30C91CA90FD400D5EFA6 /* QJT */,
-				68186C5D1CB37555005AF62D /* LaunchScreen.storyboard */,
 				EF9A30D11CA90FD400D5EFA6 /* Assets.xcassets */,
 				EF9A30C81CA90FD400D5EFA6 /* Products */,
 				8414EAD03B5901A2C1BF70CA /* Pods */,
@@ -293,7 +352,7 @@
 		EF9A30C91CA90FD400D5EFA6 /* QJT */ = {
 			isa = PBXGroup;
 			children = (
-				68323F601CBCE0A800B7DEBE /* QJT.entitlements */,
+				68B98EF61CBE4A00009D64D1 /* QJT.entitlements */,
 				EF9A30E21CA911F900D5EFA6 /* General */,
 				EF9A30DC1CA9119B00D5EFA6 /* NetWork */,
 				EF45F52B1CABF14B0052AA1F /* Lib */,
@@ -353,6 +412,8 @@
 			children = (
 				687E38321CBE3FE3009EDE17 /* Main */,
 				EFA869201CAA703800CC1B71 /* RegLogin */,
+				68B98EE91CBE4843009D64D1 /* Leave */,
+				68B98EEA1CBE48CA009D64D1 /* Attendance */,
 			);
 			name = Module;
 			sourceTree = "<group>";
@@ -370,6 +431,7 @@
 		EF9A30E31CA912EB00D5EFA6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				68B98EF21CBE49A9009D64D1 /* LaunchScreen.storyboard */,
 				68186BD21CB35178005AF62D /* QJT-Bridging-Header.h */,
 				EF9A30E41CA9130A00D5EFA6 /* Info.plist */,
 			);
@@ -476,8 +538,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68B98EF71CBE4A00009D64D1 /* QJT.entitlements in Resources */,
 				682297C31CB13C50008CD1D4 /* RegLogin.storyboard in Resources */,
-				68186C5E1CB37555005AF62D /* LaunchScreen.storyboard in Resources */,
+				68B98EF41CBE49A9009D64D1 /* LaunchScreen.storyboard in Resources */,
 				EF9A30D21CA90FD400D5EFA6 /* Assets.xcassets in Resources */,
 				687E38341CBE4008009EDE17 /* Main.storyboard in Resources */,
 			);
@@ -540,6 +603,7 @@
 			files = (
 				68186C121CB3525D005AF62D /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
 				68186BFF1CB3525D005AF62D /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */,
+				68B98EEF1CBE4942009D64D1 /* MainTabBarController.swift in Sources */,
 				68186C081CB3525D005AF62D /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				68186C331CB3554F005AF62D /* LoginGeniusViewController.swift in Sources */,
 				68186C0B1CB3525D005AF62D /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,

@@ -58,7 +58,8 @@
 		68B7B5291CBE90220046FC7F /* LeaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7B5281CBE90220046FC7F /* LeaveView.swift */; };
 		68B7B52B1CBE903B0046FC7F /* Attendance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7B52A1CBE903B0046FC7F /* Attendance.swift */; };
 		68B7B52D1CBE90580046FC7F /* AttendanceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7B52C1CBE90580046FC7F /* AttendanceMainViewController.swift */; };
-		68B98EEF1CBE4942009D64D1 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B98EEE1CBE4942009D64D1 /* MainTabBarController.swift */; };
+		68B7B52F1CBE91C80046FC7F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7B52E1CBE91C80046FC7F /* MainTabBarController.swift */; };
+		68B7B5311CBE91F40046FC7F /* Attendance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B7B5301CBE91F40046FC7F /* Attendance.storyboard */; };
 		68B98EF41CBE49A9009D64D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B98EF21CBE49A9009D64D1 /* LaunchScreen.storyboard */; };
 		68B98EF71CBE4A00009D64D1 /* QJT.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 68B98EF61CBE4A00009D64D1 /* QJT.entitlements */; };
 		EF45F52F1CABF1800052AA1F /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45F52E1CABF1800052AA1F /* Student.swift */; };
@@ -125,7 +126,8 @@
 		68B7B5281CBE90220046FC7F /* LeaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveView.swift; sourceTree = "<group>"; };
 		68B7B52A1CBE903B0046FC7F /* Attendance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attendance.swift; sourceTree = "<group>"; };
 		68B7B52C1CBE90580046FC7F /* AttendanceMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendanceMainViewController.swift; sourceTree = "<group>"; };
-		68B98EEE1CBE4942009D64D1 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		68B7B52E1CBE91C80046FC7F /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		68B7B5301CBE91F40046FC7F /* Attendance.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Attendance.storyboard; sourceTree = "<group>"; };
 		68B98EF21CBE49A9009D64D1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "Supporting Files/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		68B98EF61CBE4A00009D64D1 /* QJT.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = QJT.entitlements; sourceTree = "<group>"; };
 		AE37ED3E40352A6C9D2E6664 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 			children = (
 				68B98EEB1CBE4934009D64D1 /* View */,
 				68B98EEC1CBE4934009D64D1 /* ViewController */,
+				68B7B5301CBE91F40046FC7F /* Attendance.storyboard */,
 			);
 			name = Attendance;
 			path = Module/Attendance;
@@ -279,7 +282,7 @@
 		68B98EED1CBE4942009D64D1 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				68B98EEE1CBE4942009D64D1 /* MainTabBarController.swift */,
+				68B7B52E1CBE91C80046FC7F /* MainTabBarController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -558,6 +561,7 @@
 				68B7B5271CBE8ED50046FC7F /* Leave.storyboard in Resources */,
 				68B98EF41CBE49A9009D64D1 /* LaunchScreen.storyboard in Resources */,
 				EF9A30D21CA90FD400D5EFA6 /* Assets.xcassets in Resources */,
+				68B7B5311CBE91F40046FC7F /* Attendance.storyboard in Resources */,
 				687E38341CBE4008009EDE17 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -619,7 +623,6 @@
 			files = (
 				68186C121CB3525D005AF62D /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
 				68186BFF1CB3525D005AF62D /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */,
-				68B98EEF1CBE4942009D64D1 /* MainTabBarController.swift in Sources */,
 				68186C081CB3525D005AF62D /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				68186C331CB3554F005AF62D /* LoginGeniusViewController.swift in Sources */,
 				68186C0B1CB3525D005AF62D /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,
@@ -670,6 +673,7 @@
 				68186BF91CB3525D005AF62D /* AnimationRefresh.swift in Sources */,
 				68B7B52B1CBE903B0046FC7F /* Attendance.swift in Sources */,
 				68186C151CB3525D005AF62D /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */,
+				68B7B52F1CBE91C80046FC7F /* MainTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

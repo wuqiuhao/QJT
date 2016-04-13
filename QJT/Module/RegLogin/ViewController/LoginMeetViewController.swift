@@ -1,24 +1,33 @@
 //
-//  LoginViewController.swift
+//  LoginMeetViewController.swift
 //  QJT
 //
-//  Created by wuqiuhao on 16/3/29.
+//  Created by LZQ on 16/3/31.
 //  Copyright © 2016年 Hale. All rights reserved.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginMeetViewController: LoginStepViewController {
 
+    @IBOutlet private weak var yellowTriangle: UIImageView!
+    @IBOutlet private weak var greenTriangle: UIImageView!
+    @IBOutlet private weak var purpleTriangle: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetWorkManager.httpRequest(Methods.login_studentLogin, params: ["userName":"2012812044","passWord":"2012812044"], modelType: Student.self,completed: { (responseData) in
-                print(responseData)
-            }) { (errorMsg) in
-                debugPrint(errorMsg!)
-        }
+
+        // Do any additional setup after loading the view.
     }
 
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        animate(yellowTriangle, offset: 3, duration: 3)
+        animate(greenTriangle, offset: 7, duration: 2)
+        animate(purpleTriangle, offset: 5, duration: 2)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

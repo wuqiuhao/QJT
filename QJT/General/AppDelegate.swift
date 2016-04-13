@@ -12,10 +12,22 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let appKey = "8d0ad725b58842d39a90aa77"
+    let channel = "App Store"
+    let isProduction = false
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if (UIDevice.currentDevice().systemVersion as NSString).floatValue >= 8 {
+            JPUSHService.registerForRemoteNotificationTypes(UIUserNotificationType.Badge.rawValue|UIUserNotificationType.Sound.rawValue|UIUserNotificationType.Alert.rawValue, categories: nil)
+        }else {
+            JPUSHService.registerForRemoteNotificationTypes(UIRemoteNotificationType.Badge.rawValue|UIRemoteNotificationType.Sound.rawValue|UIRemoteNotificationType.Alert.rawValue, categories: nil)
+        }
+        
+        
+        JPUSHService.setupWithOption(launchOptions, appKey: appKey, channel: channel, apsForProduction: isProduction)
+        
         return true
     }
 
@@ -43,6 +55,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        
+        JPUSHService.registerDeviceToken(deviceToken)
+    }
+    
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+        
+        print("did Fail To Register For Remote Notifications With Error:\(error)")
+    }
+    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+        
+        JPUSHService.handleRemoteNotification(userInfo)
+    }
 
 }
 

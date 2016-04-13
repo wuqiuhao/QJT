@@ -53,6 +53,8 @@
 		68323F641CBCE14A00B7DEBE /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 68323F631CBCE14A00B7DEBE /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		68323F661CBCE1DF00B7DEBE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68323F651CBCE1DF00B7DEBE /* Security.framework */; };
 		687E38341CBE4008009EDE17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687E38331CBE4008009EDE17 /* Main.storyboard */; };
+		68B7B5251CBE8EC60046FC7F /* LeaveMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7B5241CBE8EC60046FC7F /* LeaveMainViewController.swift */; };
+		68B7B5271CBE8ED50046FC7F /* Leave.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B7B5261CBE8ED50046FC7F /* Leave.storyboard */; };
 		68B98EEF1CBE4942009D64D1 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B98EEE1CBE4942009D64D1 /* MainTabBarController.swift */; };
 		68B98EF41CBE49A9009D64D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B98EF21CBE49A9009D64D1 /* LaunchScreen.storyboard */; };
 		68B98EF71CBE4A00009D64D1 /* QJT.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 68B98EF61CBE4A00009D64D1 /* QJT.entitlements */; };
@@ -115,6 +117,8 @@
 		68323F631CBCE14A00B7DEBE /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
 		68323F651CBCE1DF00B7DEBE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		687E38331CBE4008009EDE17 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		68B7B5241CBE8EC60046FC7F /* LeaveMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveMainViewController.swift; sourceTree = "<group>"; };
+		68B7B5261CBE8ED50046FC7F /* Leave.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Leave.storyboard; sourceTree = "<group>"; };
 		68B98EEE1CBE4942009D64D1 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		68B98EF21CBE49A9009D64D1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "Supporting Files/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		68B98EF61CBE4A00009D64D1 /* QJT.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = QJT.entitlements; sourceTree = "<group>"; };
@@ -234,6 +238,7 @@
 			children = (
 				68B98EF01CBE4968009D64D1 /* View */,
 				68B98EF11CBE4968009D64D1 /* ViewController */,
+				68B7B5261CBE8ED50046FC7F /* Leave.storyboard */,
 			);
 			name = Leave;
 			path = Module/Leave;
@@ -281,6 +286,7 @@
 		68B98EF11CBE4968009D64D1 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				68B7B5241CBE8EC60046FC7F /* LeaveMainViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -540,6 +546,7 @@
 			files = (
 				68B98EF71CBE4A00009D64D1 /* QJT.entitlements in Resources */,
 				682297C31CB13C50008CD1D4 /* RegLogin.storyboard in Resources */,
+				68B7B5271CBE8ED50046FC7F /* Leave.storyboard in Resources */,
 				68B98EF41CBE49A9009D64D1 /* LaunchScreen.storyboard in Resources */,
 				EF9A30D21CA90FD400D5EFA6 /* Assets.xcassets in Resources */,
 				687E38341CBE4008009EDE17 /* Main.storyboard in Resources */,
@@ -640,6 +647,7 @@
 				68186C041CB3525D005AF62D /* NVActivityIndicatorAnimationBallScale.swift in Sources */,
 				68186C161CB3525D005AF62D /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */,
 				68186BFD1CB3525D005AF62D /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
+				68B7B5251CBE8EC60046FC7F /* LeaveMainViewController.swift in Sources */,
 				68186C181CB3525D005AF62D /* NVActivityIndicatorShape.swift in Sources */,
 				68186C071CB3525D005AF62D /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
 				68186C381CB3554F005AF62D /* LoginViewController.swift in Sources */,

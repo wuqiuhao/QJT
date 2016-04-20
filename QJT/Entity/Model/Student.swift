@@ -46,7 +46,9 @@ class Student: Mappable {
         specialtyID = 0
         schoolYear = 0
         protraitID = 0
-        className = ""}
+        className = ""
+    }
+    
     
     // Mappable
     func mapping(map: Map) {

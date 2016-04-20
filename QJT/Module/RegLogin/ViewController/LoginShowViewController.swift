@@ -12,7 +12,6 @@ class LoginShowViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageCtrl: UIPageControl!
-    @IBOutlet weak var registerBtn: UIButton!
     @IBOutlet weak var loginBtn: UIButton!
 
     private var isFirstAppear = true
@@ -27,7 +26,6 @@ class LoginShowViewController: UIViewController {
         if isFirstAppear {
             scrollView.alpha = 0
             pageCtrl.alpha = 0
-            registerBtn.alpha = 0
             loginBtn.alpha = 0
         }
     }
@@ -39,7 +37,6 @@ class LoginShowViewController: UIViewController {
             UIView.animateWithDuration(1, delay: 0.5, options: .CurveEaseInOut, animations: { [weak self] in
                 self?.scrollView.alpha = 1
                 self?.pageCtrl.alpha = 1
-                self?.registerBtn.alpha = 1
                 self?.loginBtn.alpha = 1
                 }, completion: { _ in })
         }
@@ -71,13 +68,9 @@ extension LoginShowViewController {
         pageCtrl.pageIndicatorTintColor = UIColor.qjtBorderColor()
         pageCtrl.currentPageIndicatorTintColor = UIColor.qjtTintColor()
         
-        registerBtn.setTitle("重置", forState: .Normal)
         loginBtn.setTitle("登陆", forState: .Normal)
-        
-        registerBtn.backgroundColor = UIColor.qjtTintColor()
         loginBtn.setTitleColor(UIColor.qjtInputTextColor(), forState: .Normal)
         
-        registerBtn.addTarget(self, action: #selector(LoginShowViewController.registerBtnClicked), forControlEvents: UIControlEvents.TouchUpInside)
         loginBtn.addTarget(self, action: #selector(LoginShowViewController.loginBtnClicked), forControlEvents: UIControlEvents.TouchUpInside)
         
         loginBtn.layer.borderColor = UIColor.qjtCellSeparatorColor().CGColor

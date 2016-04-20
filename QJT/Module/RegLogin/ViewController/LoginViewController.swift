@@ -27,6 +27,8 @@ class LoginViewController: UIViewController {
         super.viewWillAppear(true)
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
+    
+    
         
 }
 

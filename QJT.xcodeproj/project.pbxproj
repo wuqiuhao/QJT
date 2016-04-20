@@ -8,6 +8,54 @@
 
 /* Begin PBXBuildFile section */
 		1A0F54FFF44B77ECE6EF942A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451ED4D82C76F378DBB33D09 /* Pods.framework */; };
+		68035A001CC756BA002F7C60 /* Attendance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680359EC1CC756BA002F7C60 /* Attendance.storyboard */; };
+		68035A011CC756BA002F7C60 /* Attendance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359EE1CC756BA002F7C60 /* Attendance.swift */; };
+		68035A021CC756BA002F7C60 /* AttendanceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359F01CC756BA002F7C60 /* AttendanceMainViewController.swift */; };
+		68035A031CC756BA002F7C60 /* Leave.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680359F21CC756BA002F7C60 /* Leave.storyboard */; };
+		68035A041CC756BA002F7C60 /* LeaveCourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359F41CC756BA002F7C60 /* LeaveCourseCell.swift */; };
+		68035A051CC756BA002F7C60 /* LeaveCourseCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359F51CC756BA002F7C60 /* LeaveCourseCollectionCell.swift */; };
+		68035A061CC756BA002F7C60 /* LeaveNextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359F61CC756BA002F7C60 /* LeaveNextCell.swift */; };
+		68035A071CC756BA002F7C60 /* LeaveTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359F71CC756BA002F7C60 /* LeaveTimeCell.swift */; };
+		68035A081CC756BA002F7C60 /* LeaveMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359F91CC756BA002F7C60 /* LeaveMainViewController.swift */; };
+		68035A091CC756BA002F7C60 /* Personal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680359FB1CC756BA002F7C60 /* Personal.storyboard */; };
+		68035A0A1CC756BA002F7C60 /* PersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359FD1CC756BA002F7C60 /* PersonalView.swift */; };
+		68035A0B1CC756BA002F7C60 /* PersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359FF1CC756BA002F7C60 /* PersonalMainViewController.swift */; };
+		68035A491CC75757002F7C60 /* qqqView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A481CC75757002F7C60 /* qqqView.swift */; };
+		68035A4B1CC757B3002F7C60 /* CTAttendanceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A4A1CC757B3002F7C60 /* CTAttendanceMainViewController.swift */; };
+		68035A4D1CC757D9002F7C60 /* CTLeaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A4C1CC757D9002F7C60 /* CTLeaveView.swift */; };
+		68035A4F1CC757E8002F7C60 /* CTLeaveMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A4E1CC757E8002F7C60 /* CTLeaveMainViewController.swift */; };
+		68035A511CC75803002F7C60 /* CTPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A501CC75803002F7C60 /* CTPersonalView.swift */; };
+		68035A531CC7581A002F7C60 /* CTPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A521CC7581A002F7C60 /* CTPersonalMainViewController.swift */; };
+		68035A551CC75B21002F7C60 /* TAttendanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A541CC75B21002F7C60 /* TAttendanceView.swift */; };
+		68035A571CC75B2F002F7C60 /* TAttendanceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A561CC75B2F002F7C60 /* TAttendanceMainViewController.swift */; };
+		68035A591CC75B4A002F7C60 /* TLeaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A581CC75B4A002F7C60 /* TLeaveView.swift */; };
+		68035A5B1CC75B5D002F7C60 /* TLeaveViewMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A5A1CC75B5D002F7C60 /* TLeaveViewMainController.swift */; };
+		68035A5D1CC75B78002F7C60 /* TPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A5C1CC75B78002F7C60 /* TPersonalView.swift */; };
+		68035A5F1CC75B8A002F7C60 /* TPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A5E1CC75B8A002F7C60 /* TPersonalMainViewController.swift */; };
+		68035A611CC75BAF002F7C60 /* CAttendanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A601CC75BAF002F7C60 /* CAttendanceView.swift */; };
+		68035A631CC75BB8002F7C60 /* CAttendanceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A621CC75BB8002F7C60 /* CAttendanceMainViewController.swift */; };
+		68035A651CC75BCF002F7C60 /* CLeaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A641CC75BCF002F7C60 /* CLeaveView.swift */; };
+		68035A671CC75BEE002F7C60 /* CLeaveMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A661CC75BEE002F7C60 /* CLeaveMainViewController.swift */; };
+		68035A691CC75C90002F7C60 /* CPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A681CC75C90002F7C60 /* CPersonalView.swift */; };
+		68035A6B1CC75CA4002F7C60 /* CPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A6A1CC75CA4002F7C60 /* CPersonalMainViewController.swift */; };
+		68035A6D1CC75F1B002F7C60 /* BAttendanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A6C1CC75F1B002F7C60 /* BAttendanceView.swift */; };
+		68035A6F1CC75F56002F7C60 /* BAttendanceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A6E1CC75F56002F7C60 /* BAttendanceMainViewController.swift */; };
+		68035A711CC75F73002F7C60 /* BLeaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A701CC75F73002F7C60 /* BLeaveView.swift */; };
+		68035A731CC75F8F002F7C60 /* BLeaveMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A721CC75F8F002F7C60 /* BLeaveMainViewController.swift */; };
+		68035A751CC75FAA002F7C60 /* BPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A741CC75FAA002F7C60 /* BPersonalView.swift */; };
+		68035A771CC75FB7002F7C60 /* BPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A761CC75FB7002F7C60 /* BPersonalMainViewController.swift */; };
+		68035A791CC75FE8002F7C60 /* LAttendanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A781CC75FE8002F7C60 /* LAttendanceView.swift */; };
+		68035A7B1CC75FF9002F7C60 /* LAttendanceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A7A1CC75FF9002F7C60 /* LAttendanceMainViewController.swift */; };
+		68035A7D1CC7600F002F7C60 /* LLeaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A7C1CC7600F002F7C60 /* LLeaveView.swift */; };
+		68035A7F1CC7601A002F7C60 /* LLeaveMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A7E1CC7601A002F7C60 /* LLeaveMainViewController.swift */; };
+		68035A811CC7602D002F7C60 /* LPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A801CC7602D002F7C60 /* LPersonalView.swift */; };
+		68035A831CC761AE002F7C60 /* LPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A821CC761AE002F7C60 /* LPersonalMainViewController.swift */; };
+		68035A851CC761CB002F7C60 /* SWAttendanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A841CC761CB002F7C60 /* SWAttendanceView.swift */; };
+		68035A871CC761E3002F7C60 /* SWAttendanceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A861CC761E3002F7C60 /* SWAttendanceMainViewController.swift */; };
+		68035A891CC761FA002F7C60 /* SWLeaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A881CC761FA002F7C60 /* SWLeaveView.swift */; };
+		68035A8B1CC7620A002F7C60 /* SWLeaveMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A8A1CC7620A002F7C60 /* SWLeaveMainViewController.swift */; };
+		68035A8D1CC76220002F7C60 /* SWPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A8C1CC76220002F7C60 /* SWPersonalView.swift */; };
+		68035A8F1CC7622D002F7C60 /* SWPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A8E1CC7622D002F7C60 /* SWPersonalMainViewController.swift */; };
 		68186BF91CB3525D005AF62D /* AnimationRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68186BD61CB3525D005AF62D /* AnimationRefresh.swift */; };
 		68186BFA1CB3525D005AF62D /* NVActivityIndicatorAnimationBallBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68186BD91CB3525D005AF62D /* NVActivityIndicatorAnimationBallBeat.swift */; };
 		68186BFB1CB3525D005AF62D /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68186BDA1CB3525D005AF62D /* NVActivityIndicatorAnimationBallClipRotate.swift */; };
@@ -52,14 +100,13 @@
 		682297C31CB13C50008CD1D4 /* RegLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 682297C21CB13C50008CD1D4 /* RegLogin.storyboard */; };
 		68323F641CBCE14A00B7DEBE /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 68323F631CBCE14A00B7DEBE /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		68323F661CBCE1DF00B7DEBE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68323F651CBCE1DF00B7DEBE /* Security.framework */; };
+		683CF5E81CC3390200F69765 /* UserConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CF5E71CC3390200F69765 /* UserConfig.swift */; };
+		683CF5F51CC34E7F00F69765 /* PersonSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CF5F31CC34E7F00F69765 /* PersonSetting.swift */; };
+		683CF5F61CC34E7F00F69765 /* UserSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CF5F41CC34E7F00F69765 /* UserSetting.swift */; };
+		683CF5FA1CC34E8C00F69765 /* BaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CF5F81CC34E8C00F69765 /* BaseType.swift */; };
+		683CF5FB1CC34E8C00F69765 /* UserType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CF5F91CC34E8C00F69765 /* UserType.swift */; };
 		687E38341CBE4008009EDE17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687E38331CBE4008009EDE17 /* Main.storyboard */; };
-		68B7B5251CBE8EC60046FC7F /* LeaveMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7B5241CBE8EC60046FC7F /* LeaveMainViewController.swift */; };
-		68B7B5271CBE8ED50046FC7F /* Leave.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B7B5261CBE8ED50046FC7F /* Leave.storyboard */; };
-		68B7B5291CBE90220046FC7F /* LeaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7B5281CBE90220046FC7F /* LeaveView.swift */; };
-		68B7B52B1CBE903B0046FC7F /* Attendance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7B52A1CBE903B0046FC7F /* Attendance.swift */; };
-		68B7B52D1CBE90580046FC7F /* AttendanceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7B52C1CBE90580046FC7F /* AttendanceMainViewController.swift */; };
 		68B7B52F1CBE91C80046FC7F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7B52E1CBE91C80046FC7F /* MainTabBarController.swift */; };
-		68B7B5311CBE91F40046FC7F /* Attendance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B7B5301CBE91F40046FC7F /* Attendance.storyboard */; };
 		68B98EF41CBE49A9009D64D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B98EF21CBE49A9009D64D1 /* LaunchScreen.storyboard */; };
 		68B98EF71CBE4A00009D64D1 /* QJT.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 68B98EF61CBE4A00009D64D1 /* QJT.entitlements */; };
 		EF45F52F1CABF1800052AA1F /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45F52E1CABF1800052AA1F /* Student.swift */; };
@@ -74,6 +121,54 @@
 /* Begin PBXFileReference section */
 		421540CB059379FB231DBF0D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		451ED4D82C76F378DBB33D09 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		680359EC1CC756BA002F7C60 /* Attendance.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Attendance.storyboard; sourceTree = "<group>"; };
+		680359EE1CC756BA002F7C60 /* Attendance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attendance.swift; sourceTree = "<group>"; };
+		680359F01CC756BA002F7C60 /* AttendanceMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendanceMainViewController.swift; sourceTree = "<group>"; };
+		680359F21CC756BA002F7C60 /* Leave.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Leave.storyboard; sourceTree = "<group>"; };
+		680359F41CC756BA002F7C60 /* LeaveCourseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveCourseCell.swift; sourceTree = "<group>"; };
+		680359F51CC756BA002F7C60 /* LeaveCourseCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveCourseCollectionCell.swift; sourceTree = "<group>"; };
+		680359F61CC756BA002F7C60 /* LeaveNextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveNextCell.swift; sourceTree = "<group>"; };
+		680359F71CC756BA002F7C60 /* LeaveTimeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveTimeCell.swift; sourceTree = "<group>"; };
+		680359F91CC756BA002F7C60 /* LeaveMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveMainViewController.swift; sourceTree = "<group>"; };
+		680359FB1CC756BA002F7C60 /* Personal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Personal.storyboard; sourceTree = "<group>"; };
+		680359FD1CC756BA002F7C60 /* PersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalView.swift; sourceTree = "<group>"; };
+		680359FF1CC756BA002F7C60 /* PersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalMainViewController.swift; sourceTree = "<group>"; };
+		68035A481CC75757002F7C60 /* qqqView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = qqqView.swift; sourceTree = "<group>"; };
+		68035A4A1CC757B3002F7C60 /* CTAttendanceMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTAttendanceMainViewController.swift; sourceTree = "<group>"; };
+		68035A4C1CC757D9002F7C60 /* CTLeaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTLeaveView.swift; sourceTree = "<group>"; };
+		68035A4E1CC757E8002F7C60 /* CTLeaveMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTLeaveMainViewController.swift; sourceTree = "<group>"; };
+		68035A501CC75803002F7C60 /* CTPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPersonalView.swift; sourceTree = "<group>"; };
+		68035A521CC7581A002F7C60 /* CTPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPersonalMainViewController.swift; sourceTree = "<group>"; };
+		68035A541CC75B21002F7C60 /* TAttendanceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TAttendanceView.swift; sourceTree = "<group>"; };
+		68035A561CC75B2F002F7C60 /* TAttendanceMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TAttendanceMainViewController.swift; sourceTree = "<group>"; };
+		68035A581CC75B4A002F7C60 /* TLeaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLeaveView.swift; sourceTree = "<group>"; };
+		68035A5A1CC75B5D002F7C60 /* TLeaveViewMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLeaveViewMainController.swift; sourceTree = "<group>"; };
+		68035A5C1CC75B78002F7C60 /* TPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TPersonalView.swift; sourceTree = "<group>"; };
+		68035A5E1CC75B8A002F7C60 /* TPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TPersonalMainViewController.swift; sourceTree = "<group>"; };
+		68035A601CC75BAF002F7C60 /* CAttendanceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAttendanceView.swift; sourceTree = "<group>"; };
+		68035A621CC75BB8002F7C60 /* CAttendanceMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAttendanceMainViewController.swift; sourceTree = "<group>"; };
+		68035A641CC75BCF002F7C60 /* CLeaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLeaveView.swift; sourceTree = "<group>"; };
+		68035A661CC75BEE002F7C60 /* CLeaveMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLeaveMainViewController.swift; sourceTree = "<group>"; };
+		68035A681CC75C90002F7C60 /* CPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPersonalView.swift; sourceTree = "<group>"; };
+		68035A6A1CC75CA4002F7C60 /* CPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPersonalMainViewController.swift; sourceTree = "<group>"; };
+		68035A6C1CC75F1B002F7C60 /* BAttendanceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BAttendanceView.swift; sourceTree = "<group>"; };
+		68035A6E1CC75F56002F7C60 /* BAttendanceMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BAttendanceMainViewController.swift; sourceTree = "<group>"; };
+		68035A701CC75F73002F7C60 /* BLeaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLeaveView.swift; sourceTree = "<group>"; };
+		68035A721CC75F8F002F7C60 /* BLeaveMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLeaveMainViewController.swift; sourceTree = "<group>"; };
+		68035A741CC75FAA002F7C60 /* BPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPersonalView.swift; sourceTree = "<group>"; };
+		68035A761CC75FB7002F7C60 /* BPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPersonalMainViewController.swift; sourceTree = "<group>"; };
+		68035A781CC75FE8002F7C60 /* LAttendanceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LAttendanceView.swift; sourceTree = "<group>"; };
+		68035A7A1CC75FF9002F7C60 /* LAttendanceMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LAttendanceMainViewController.swift; sourceTree = "<group>"; };
+		68035A7C1CC7600F002F7C60 /* LLeaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLeaveView.swift; sourceTree = "<group>"; };
+		68035A7E1CC7601A002F7C60 /* LLeaveMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLeaveMainViewController.swift; sourceTree = "<group>"; };
+		68035A801CC7602D002F7C60 /* LPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LPersonalView.swift; sourceTree = "<group>"; };
+		68035A821CC761AE002F7C60 /* LPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LPersonalMainViewController.swift; sourceTree = "<group>"; };
+		68035A841CC761CB002F7C60 /* SWAttendanceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWAttendanceView.swift; sourceTree = "<group>"; };
+		68035A861CC761E3002F7C60 /* SWAttendanceMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWAttendanceMainViewController.swift; sourceTree = "<group>"; };
+		68035A881CC761FA002F7C60 /* SWLeaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWLeaveView.swift; sourceTree = "<group>"; };
+		68035A8A1CC7620A002F7C60 /* SWLeaveMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWLeaveMainViewController.swift; sourceTree = "<group>"; };
+		68035A8C1CC76220002F7C60 /* SWPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWPersonalView.swift; sourceTree = "<group>"; };
+		68035A8E1CC7622D002F7C60 /* SWPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWPersonalMainViewController.swift; sourceTree = "<group>"; };
 		68186BD21CB35178005AF62D /* QJT-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "QJT-Bridging-Header.h"; path = "Supporting Files/QJT-Bridging-Header.h"; sourceTree = "<group>"; };
 		68186BD61CB3525D005AF62D /* AnimationRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationRefresh.swift; sourceTree = "<group>"; };
 		68186BD91CB3525D005AF62D /* NVActivityIndicatorAnimationBallBeat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallBeat.swift; sourceTree = "<group>"; };
@@ -120,14 +215,13 @@
 		68323F621CBCE14A00B7DEBE /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
 		68323F631CBCE14A00B7DEBE /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
 		68323F651CBCE1DF00B7DEBE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		683CF5E71CC3390200F69765 /* UserConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserConfig.swift; sourceTree = "<group>"; };
+		683CF5F31CC34E7F00F69765 /* PersonSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersonSetting.swift; path = Entity/Model/PersonSetting.swift; sourceTree = "<group>"; };
+		683CF5F41CC34E7F00F69765 /* UserSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSetting.swift; path = Entity/Model/UserSetting.swift; sourceTree = "<group>"; };
+		683CF5F81CC34E8C00F69765 /* BaseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseType.swift; sourceTree = "<group>"; };
+		683CF5F91CC34E8C00F69765 /* UserType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserType.swift; sourceTree = "<group>"; };
 		687E38331CBE4008009EDE17 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		68B7B5241CBE8EC60046FC7F /* LeaveMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveMainViewController.swift; sourceTree = "<group>"; };
-		68B7B5261CBE8ED50046FC7F /* Leave.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Leave.storyboard; sourceTree = "<group>"; };
-		68B7B5281CBE90220046FC7F /* LeaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveView.swift; sourceTree = "<group>"; };
-		68B7B52A1CBE903B0046FC7F /* Attendance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attendance.swift; sourceTree = "<group>"; };
-		68B7B52C1CBE90580046FC7F /* AttendanceMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendanceMainViewController.swift; sourceTree = "<group>"; };
 		68B7B52E1CBE91C80046FC7F /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		68B7B5301CBE91F40046FC7F /* Attendance.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Attendance.storyboard; sourceTree = "<group>"; };
 		68B98EF21CBE49A9009D64D1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "Supporting Files/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		68B98EF61CBE4A00009D64D1 /* QJT.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = QJT.entitlements; sourceTree = "<group>"; };
 		AE37ED3E40352A6C9D2E6664 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -162,6 +256,614 @@
 				451ED4D82C76F378DBB33D09 /* Pods.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		680359EA1CC75686002F7C60 /* Student */ = {
+			isa = PBXGroup;
+			children = (
+				680359EB1CC756BA002F7C60 /* Attendance */,
+				680359F11CC756BA002F7C60 /* Leave */,
+				680359FA1CC756BA002F7C60 /* Personal */,
+			);
+			name = Student;
+			path = Module/Student;
+			sourceTree = "<group>";
+		};
+		680359EB1CC756BA002F7C60 /* Attendance */ = {
+			isa = PBXGroup;
+			children = (
+				680359EC1CC756BA002F7C60 /* Attendance.storyboard */,
+				680359ED1CC756BA002F7C60 /* View */,
+				680359EF1CC756BA002F7C60 /* ViewController */,
+			);
+			path = Attendance;
+			sourceTree = "<group>";
+		};
+		680359ED1CC756BA002F7C60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				680359EE1CC756BA002F7C60 /* Attendance.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		680359EF1CC756BA002F7C60 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				680359F01CC756BA002F7C60 /* AttendanceMainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		680359F11CC756BA002F7C60 /* Leave */ = {
+			isa = PBXGroup;
+			children = (
+				680359F21CC756BA002F7C60 /* Leave.storyboard */,
+				680359F31CC756BA002F7C60 /* View */,
+				680359F81CC756BA002F7C60 /* ViewController */,
+			);
+			path = Leave;
+			sourceTree = "<group>";
+		};
+		680359F31CC756BA002F7C60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				680359F41CC756BA002F7C60 /* LeaveCourseCell.swift */,
+				680359F51CC756BA002F7C60 /* LeaveCourseCollectionCell.swift */,
+				680359F61CC756BA002F7C60 /* LeaveNextCell.swift */,
+				680359F71CC756BA002F7C60 /* LeaveTimeCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		680359F81CC756BA002F7C60 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				680359F91CC756BA002F7C60 /* LeaveMainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		680359FA1CC756BA002F7C60 /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+				680359FB1CC756BA002F7C60 /* Personal.storyboard */,
+				680359FC1CC756BA002F7C60 /* View */,
+				680359FE1CC756BA002F7C60 /* ViewController */,
+			);
+			path = Personal;
+			sourceTree = "<group>";
+		};
+		680359FC1CC756BA002F7C60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				680359FD1CC756BA002F7C60 /* PersonalView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		680359FE1CC756BA002F7C60 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				680359FF1CC756BA002F7C60 /* PersonalMainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		68035A0C1CC756DA002F7C60 /* BranchLeader */ = {
+			isa = PBXGroup;
+			children = (
+				68035A0D1CC756DA002F7C60 /* Attendance */,
+				68035A101CC756DA002F7C60 /* Leave */,
+				68035A131CC756DA002F7C60 /* Personal */,
+			);
+			name = BranchLeader;
+			path = Module/BranchLeader;
+			sourceTree = "<group>";
+		};
+		68035A0D1CC756DA002F7C60 /* Attendance */ = {
+			isa = PBXGroup;
+			children = (
+				68035A0E1CC756DA002F7C60 /* View */,
+				68035A0F1CC756DA002F7C60 /* ViewController */,
+			);
+			path = Attendance;
+			sourceTree = "<group>";
+		};
+		68035A0E1CC756DA002F7C60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68035A6C1CC75F1B002F7C60 /* BAttendanceView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68035A0F1CC756DA002F7C60 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68035A6E1CC75F56002F7C60 /* BAttendanceMainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		68035A101CC756DA002F7C60 /* Leave */ = {
+			isa = PBXGroup;
+			children = (
+				68035A111CC756DA002F7C60 /* View */,
+				68035A121CC756DA002F7C60 /* ViewController */,
+			);
+			path = Leave;
+			sourceTree = "<group>";
+		};
+		68035A111CC756DA002F7C60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68035A701CC75F73002F7C60 /* BLeaveView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68035A121CC756DA002F7C60 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68035A721CC75F8F002F7C60 /* BLeaveMainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		68035A131CC756DA002F7C60 /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+				68035A141CC756DA002F7C60 /* View */,
+				68035A151CC756DA002F7C60 /* ViewController */,
+			);
+			path = Personal;
+			sourceTree = "<group>";
+		};
+		68035A141CC756DA002F7C60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68035A741CC75FAA002F7C60 /* BPersonalView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68035A151CC756DA002F7C60 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68035A761CC75FB7002F7C60 /* BPersonalMainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		68035A161CC756DA002F7C60 /* ClassTeacher */ = {
+			isa = PBXGroup;
+			children = (
+				68035A171CC756DA002F7C60 /* Attendance */,
+				68035A1A1CC756DA002F7C60 /* Leave */,
+				68035A1D1CC756DA002F7C60 /* Personal */,
+			);
+			name = ClassTeacher;
+			path = Module/ClassTeacher;
+			sourceTree = "<group>";
+		};
+		68035A171CC756DA002F7C60 /* Attendance */ = {
+			isa = PBXGroup;
+			children = (
+				68035A181CC756DA002F7C60 /* View */,
+				68035A191CC756DA002F7C60 /* ViewController */,
+			);
+			path = Attendance;
+			sourceTree = "<group>";
+		};
+		68035A181CC756DA002F7C60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68035A481CC75757002F7C60 /* qqqView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68035A191CC756DA002F7C60 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68035A4A1CC757B3002F7C60 /* CTAttendanceMainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		68035A1A1CC756DA002F7C60 /* Leave */ = {
+			isa = PBXGroup;
+			children = (
+				68035A1B1CC756DA002F7C60 /* View */,
+				68035A1C1CC756DA002F7C60 /* ViewController */,
+			);
+			path = Leave;
+			sourceTree = "<group>";
+		};
+		68035A1B1CC756DA002F7C60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68035A4C1CC757D9002F7C60 /* CTLeaveView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68035A1C1CC756DA002F7C60 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68035A4E1CC757E8002F7C60 /* CTLeaveMainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		68035A1D1CC756DA002F7C60 /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+				68035A1E1CC756DA002F7C60 /* View */,
+				68035A1F1CC756DA002F7C60 /* ViewController */,
+			);
+			path = Personal;
+			sourceTree = "<group>";
+		};
+		68035A1E1CC756DA002F7C60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68035A501CC75803002F7C60 /* CTPersonalView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68035A1F1CC756DA002F7C60 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68035A521CC7581A002F7C60 /* CTPersonalMainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		68035A201CC756DA002F7C60 /* Counsellor */ = {
+			isa = PBXGroup;
+			children = (
+				68035A211CC756DA002F7C60 /* Attendance */,
+				68035A241CC756DA002F7C60 /* Leave */,
+				68035A271CC756DA002F7C60 /* Personal */,
+			);
+			name = Counsellor;
+			path = Module/Counsellor;
+			sourceTree = "<group>";
+		};
+		68035A211CC756DA002F7C60 /* Attendance */ = {
+			isa = PBXGroup;
+			children = (
+				68035A221CC756DA002F7C60 /* View */,
+				68035A231CC756DA002F7C60 /* ViewController */,
+			);
+			path = Attendance;
+			sourceTree = "<group>";
+		};
+		68035A221CC756DA002F7C60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68035A601CC75BAF002F7C60 /* CAttendanceView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68035A231CC756DA002F7C60 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68035A621CC75BB8002F7C60 /* CAttendanceMainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		68035A241CC756DA002F7C60 /* Leave */ = {
+			isa = PBXGroup;
+			children = (
+				68035A251CC756DA002F7C60 /* View */,
+				68035A261CC756DA002F7C60 /* ViewController */,
+			);
+			path = Leave;
+			sourceTree = "<group>";
+		};
+		68035A251CC756DA002F7C60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68035A641CC75BCF002F7C60 /* CLeaveView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68035A261CC756DA002F7C60 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68035A661CC75BEE002F7C60 /* CLeaveMainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		68035A271CC756DA002F7C60 /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+				68035A281CC756DA002F7C60 /* View */,
+				68035A291CC756DA002F7C60 /* ViewController */,
+			);
+			path = Personal;
+			sourceTree = "<group>";
+		};
+		68035A281CC756DA002F7C60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68035A681CC75C90002F7C60 /* CPersonalView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68035A291CC756DA002F7C60 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68035A6A1CC75CA4002F7C60 /* CPersonalMainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		68035A2A1CC756DA002F7C60 /* Leader */ = {
+			isa = PBXGroup;
+			children = (
+				68035A2B1CC756DA002F7C60 /* Attendance */,
+				68035A2E1CC756DA002F7C60 /* Leave */,
+				68035A311CC756DA002F7C60 /* Personal */,
+			);
+			name = Leader;
+			path = Module/Leader;
+			sourceTree = "<group>";
+		};
+		68035A2B1CC756DA002F7C60 /* Attendance */ = {
+			isa = PBXGroup;
+			children = (
+				68035A2C1CC756DA002F7C60 /* View */,
+				68035A2D1CC756DA002F7C60 /* ViewController */,
+			);
+			path = Attendance;
+			sourceTree = "<group>";
+		};
+		68035A2C1CC756DA002F7C60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68035A781CC75FE8002F7C60 /* LAttendanceView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68035A2D1CC756DA002F7C60 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68035A7A1CC75FF9002F7C60 /* LAttendanceMainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		68035A2E1CC756DA002F7C60 /* Leave */ = {
+			isa = PBXGroup;
+			children = (
+				68035A2F1CC756DA002F7C60 /* View */,
+				68035A301CC756DA002F7C60 /* ViewController */,
+			);
+			path = Leave;
+			sourceTree = "<group>";
+		};
+		68035A2F1CC756DA002F7C60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68035A7C1CC7600F002F7C60 /* LLeaveView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68035A301CC756DA002F7C60 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68035A7E1CC7601A002F7C60 /* LLeaveMainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		68035A311CC756DA002F7C60 /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+				68035A321CC756DA002F7C60 /* View */,
+				68035A331CC756DA002F7C60 /* ViewController */,
+			);
+			path = Personal;
+			sourceTree = "<group>";
+		};
+		68035A321CC756DA002F7C60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68035A801CC7602D002F7C60 /* LPersonalView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68035A331CC756DA002F7C60 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68035A821CC761AE002F7C60 /* LPersonalMainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		68035A341CC756DA002F7C60 /* StudentWorker */ = {
+			isa = PBXGroup;
+			children = (
+				68035A351CC756DA002F7C60 /* Attendance */,
+				68035A381CC756DA002F7C60 /* Leave */,
+				68035A3B1CC756DA002F7C60 /* Personal */,
+			);
+			name = StudentWorker;
+			path = Module/StudentWorker;
+			sourceTree = "<group>";
+		};
+		68035A351CC756DA002F7C60 /* Attendance */ = {
+			isa = PBXGroup;
+			children = (
+				68035A361CC756DA002F7C60 /* View */,
+				68035A371CC756DA002F7C60 /* ViewController */,
+			);
+			path = Attendance;
+			sourceTree = "<group>";
+		};
+		68035A361CC756DA002F7C60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68035A841CC761CB002F7C60 /* SWAttendanceView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68035A371CC756DA002F7C60 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68035A861CC761E3002F7C60 /* SWAttendanceMainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		68035A381CC756DA002F7C60 /* Leave */ = {
+			isa = PBXGroup;
+			children = (
+				68035A391CC756DA002F7C60 /* View */,
+				68035A3A1CC756DA002F7C60 /* ViewController */,
+			);
+			path = Leave;
+			sourceTree = "<group>";
+		};
+		68035A391CC756DA002F7C60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68035A881CC761FA002F7C60 /* SWLeaveView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68035A3A1CC756DA002F7C60 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68035A8A1CC7620A002F7C60 /* SWLeaveMainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		68035A3B1CC756DA002F7C60 /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+				68035A3C1CC756DA002F7C60 /* View */,
+				68035A3D1CC756DA002F7C60 /* ViewController */,
+			);
+			path = Personal;
+			sourceTree = "<group>";
+		};
+		68035A3C1CC756DA002F7C60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68035A8C1CC76220002F7C60 /* SWPersonalView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68035A3D1CC756DA002F7C60 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68035A8E1CC7622D002F7C60 /* SWPersonalMainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		68035A3E1CC756DA002F7C60 /* Teacher */ = {
+			isa = PBXGroup;
+			children = (
+				68035A3F1CC756DA002F7C60 /* Attendance */,
+				68035A421CC756DA002F7C60 /* Leave */,
+				68035A451CC756DA002F7C60 /* Personal */,
+			);
+			name = Teacher;
+			path = Module/Teacher;
+			sourceTree = "<group>";
+		};
+		68035A3F1CC756DA002F7C60 /* Attendance */ = {
+			isa = PBXGroup;
+			children = (
+				68035A401CC756DA002F7C60 /* View */,
+				68035A411CC756DA002F7C60 /* ViewController */,
+			);
+			path = Attendance;
+			sourceTree = "<group>";
+		};
+		68035A401CC756DA002F7C60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68035A541CC75B21002F7C60 /* TAttendanceView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68035A411CC756DA002F7C60 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68035A561CC75B2F002F7C60 /* TAttendanceMainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		68035A421CC756DA002F7C60 /* Leave */ = {
+			isa = PBXGroup;
+			children = (
+				68035A431CC756DA002F7C60 /* View */,
+				68035A441CC756DA002F7C60 /* ViewController */,
+			);
+			path = Leave;
+			sourceTree = "<group>";
+		};
+		68035A431CC756DA002F7C60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68035A581CC75B4A002F7C60 /* TLeaveView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68035A441CC756DA002F7C60 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68035A5A1CC75B5D002F7C60 /* TLeaveViewMainController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		68035A451CC756DA002F7C60 /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+				68035A461CC756DA002F7C60 /* View */,
+				68035A471CC756DA002F7C60 /* ViewController */,
+			);
+			path = Personal;
+			sourceTree = "<group>";
+		};
+		68035A461CC756DA002F7C60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68035A5C1CC75B78002F7C60 /* TPersonalView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68035A471CC756DA002F7C60 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68035A5E1CC75B8A002F7C60 /* TPersonalMainViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		68186BD51CB3525D005AF62D /* CustomRefresh */ = {
@@ -231,74 +933,38 @@
 			path = Util/Keychain;
 			sourceTree = "<group>";
 		};
+		683CF5E61CC338F100F69765 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				683CF5E71CC3390200F69765 /* UserConfig.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		683CF5F71CC34E8C00F69765 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				683CF5F81CC34E8C00F69765 /* BaseType.swift */,
+				683CF5F91CC34E8C00F69765 /* UserType.swift */,
+			);
+			name = Enum;
+			path = Entity/Enum;
+			sourceTree = "<group>";
+		};
 		687E38321CBE3FE3009EDE17 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				68B98EED1CBE4942009D64D1 /* ViewController */,
 				687E38331CBE4008009EDE17 /* Main.storyboard */,
+				68B98EED1CBE4942009D64D1 /* ViewController */,
 			);
 			name = Main;
 			path = Module/Main;
-			sourceTree = "<group>";
-		};
-		68B98EE91CBE4843009D64D1 /* Leave */ = {
-			isa = PBXGroup;
-			children = (
-				68B98EF01CBE4968009D64D1 /* View */,
-				68B98EF11CBE4968009D64D1 /* ViewController */,
-				68B7B5261CBE8ED50046FC7F /* Leave.storyboard */,
-			);
-			name = Leave;
-			path = Module/Leave;
-			sourceTree = "<group>";
-		};
-		68B98EEA1CBE48CA009D64D1 /* Attendance */ = {
-			isa = PBXGroup;
-			children = (
-				68B98EEB1CBE4934009D64D1 /* View */,
-				68B98EEC1CBE4934009D64D1 /* ViewController */,
-				68B7B5301CBE91F40046FC7F /* Attendance.storyboard */,
-			);
-			name = Attendance;
-			path = Module/Attendance;
-			sourceTree = "<group>";
-		};
-		68B98EEB1CBE4934009D64D1 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				68B7B52A1CBE903B0046FC7F /* Attendance.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		68B98EEC1CBE4934009D64D1 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				68B7B52C1CBE90580046FC7F /* AttendanceMainViewController.swift */,
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 		68B98EED1CBE4942009D64D1 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				68B7B52E1CBE91C80046FC7F /* MainTabBarController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		68B98EF01CBE4968009D64D1 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				68B7B5281CBE90220046FC7F /* LeaveView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		68B98EF11CBE4968009D64D1 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				68B7B5241CBE8EC60046FC7F /* LeaveMainViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -372,6 +1038,7 @@
 			children = (
 				68B98EF61CBE4A00009D64D1 /* QJT.entitlements */,
 				EF9A30E21CA911F900D5EFA6 /* General */,
+				683CF5E61CC338F100F69765 /* Config */,
 				EF9A30DC1CA9119B00D5EFA6 /* NetWork */,
 				EF45F52B1CABF14B0052AA1F /* Lib */,
 				EF9A30DE1CA911AD00D5EFA6 /* Entity */,
@@ -403,23 +1070,18 @@
 		EF9A30DE1CA911AD00D5EFA6 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				683CF5F71CC34E8C00F69765 /* Enum */,
 				EF9A30E01CA911BD00D5EFA6 /* Model */,
-				EF9A30DF1CA911B600D5EFA6 /* Enum */,
 			);
 			name = Entity;
-			sourceTree = "<group>";
-		};
-		EF9A30DF1CA911B600D5EFA6 /* Enum */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Enum;
 			sourceTree = "<group>";
 		};
 		EF9A30E01CA911BD00D5EFA6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				EFB35AF61CAD62DC0002259A /* ResultModel */,
+				683CF5F31CC34E7F00F69765 /* PersonSetting.swift */,
+				683CF5F41CC34E7F00F69765 /* UserSetting.swift */,
 				EF45F52E1CABF1800052AA1F /* Student.swift */,
 			);
 			name = Model;
@@ -430,8 +1092,13 @@
 			children = (
 				687E38321CBE3FE3009EDE17 /* Main */,
 				EFA869201CAA703800CC1B71 /* RegLogin */,
-				68B98EE91CBE4843009D64D1 /* Leave */,
-				68B98EEA1CBE48CA009D64D1 /* Attendance */,
+				680359EA1CC75686002F7C60 /* Student */,
+				68035A161CC756DA002F7C60 /* ClassTeacher */,
+				68035A3E1CC756DA002F7C60 /* Teacher */,
+				68035A201CC756DA002F7C60 /* Counsellor */,
+				68035A0C1CC756DA002F7C60 /* BranchLeader */,
+				68035A2A1CC756DA002F7C60 /* Leader */,
+				68035A341CC756DA002F7C60 /* StudentWorker */,
 			);
 			name = Module;
 			sourceTree = "<group>";
@@ -558,11 +1225,12 @@
 			files = (
 				68B98EF71CBE4A00009D64D1 /* QJT.entitlements in Resources */,
 				682297C31CB13C50008CD1D4 /* RegLogin.storyboard in Resources */,
-				68B7B5271CBE8ED50046FC7F /* Leave.storyboard in Resources */,
 				68B98EF41CBE49A9009D64D1 /* LaunchScreen.storyboard in Resources */,
 				EF9A30D21CA90FD400D5EFA6 /* Assets.xcassets in Resources */,
-				68B7B5311CBE91F40046FC7F /* Attendance.storyboard in Resources */,
 				687E38341CBE4008009EDE17 /* Main.storyboard in Resources */,
+				68035A031CC756BA002F7C60 /* Leave.storyboard in Resources */,
+				68035A091CC756BA002F7C60 /* Personal.storyboard in Resources */,
+				68035A001CC756BA002F7C60 /* Attendance.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,58 +1289,104 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68035A021CC756BA002F7C60 /* AttendanceMainViewController.swift in Sources */,
+				68035A531CC7581A002F7C60 /* CTPersonalMainViewController.swift in Sources */,
 				68186C121CB3525D005AF62D /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
+				68035A071CC756BA002F7C60 /* LeaveTimeCell.swift in Sources */,
+				68035A771CC75FB7002F7C60 /* BPersonalMainViewController.swift in Sources */,
+				68035A7F1CC7601A002F7C60 /* LLeaveMainViewController.swift in Sources */,
 				68186BFF1CB3525D005AF62D /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */,
 				68186C081CB3525D005AF62D /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
+				68035A8D1CC76220002F7C60 /* SWPersonalView.swift in Sources */,
 				68186C331CB3554F005AF62D /* LoginGeniusViewController.swift in Sources */,
 				68186C0B1CB3525D005AF62D /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,
 				EFA869191CAA651900CC1B71 /* NetWorkManager.swift in Sources */,
 				68186C1F1CB354DB005AF62D /* UIScrollView_refresh.swift in Sources */,
+				68035A731CC75F8F002F7C60 /* BLeaveMainViewController.swift in Sources */,
 				68186C111CB3525D005AF62D /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
+				68035A871CC761E3002F7C60 /* SWAttendanceMainViewController.swift in Sources */,
+				68035A061CC756BA002F7C60 /* LeaveNextCell.swift in Sources */,
 				EF45F52F1CABF1800052AA1F /* Student.swift in Sources */,
+				68035A041CC756BA002F7C60 /* LeaveCourseCell.swift in Sources */,
+				68035A8B1CC7620A002F7C60 /* SWLeaveMainViewController.swift in Sources */,
 				68186C061CB3525D005AF62D /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
-				68B7B5291CBE90220046FC7F /* LeaveView.swift in Sources */,
+				683CF5E81CC3390200F69765 /* UserConfig.swift in Sources */,
 				68186C191CB3525D005AF62D /* NVActivityIndicatorView.swift in Sources */,
 				68186C031CB3525D005AF62D /* NVActivityIndicatorAnimationBallRotate.swift in Sources */,
 				68186C0A1CB3525D005AF62D /* NVActivityIndicatorAnimationBallZigZag.swift in Sources */,
 				68186C171CB3525D005AF62D /* NVActivityIndicatorAnimationDelegate.swift in Sources */,
+				68035A6D1CC75F1B002F7C60 /* BAttendanceView.swift in Sources */,
+				68035A551CC75B21002F7C60 /* TAttendanceView.swift in Sources */,
 				68186C341CB3554F005AF62D /* LoginMatchViewController.swift in Sources */,
+				683CF5F61CC34E7F00F69765 /* UserSetting.swift in Sources */,
 				68186BFE1CB3525D005AF62D /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */,
+				68035A6F1CC75F56002F7C60 /* BAttendanceMainViewController.swift in Sources */,
+				68035A491CC75757002F7C60 /* qqqView.swift in Sources */,
 				68186C1E1CB354DB005AF62D /* UIColor_extension.swift in Sources */,
 				EF9A30E81CA9133C00D5EFA6 /* AppDelegate.swift in Sources */,
 				68186BFC1CB3525D005AF62D /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
 				68186C011CB3525D005AF62D /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */,
 				68186C101CB3525D005AF62D /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
+				683CF5F51CC34E7F00F69765 /* PersonSetting.swift in Sources */,
+				68035A591CC75B4A002F7C60 /* TLeaveView.swift in Sources */,
+				68035A691CC75C90002F7C60 /* CPersonalView.swift in Sources */,
 				68186BFA1CB3525D005AF62D /* NVActivityIndicatorAnimationBallBeat.swift in Sources */,
 				68186C361CB3554F005AF62D /* LoginShowViewController.swift in Sources */,
 				68186C001CB3525D005AF62D /* NVActivityIndicatorAnimationBallPulse.swift in Sources */,
+				68035A5B1CC75B5D002F7C60 /* TLeaveViewMainController.swift in Sources */,
+				68035A4F1CC757E8002F7C60 /* CTLeaveMainViewController.swift in Sources */,
+				68035A611CC75BAF002F7C60 /* CAttendanceView.swift in Sources */,
+				68035A711CC75F73002F7C60 /* BLeaveView.swift in Sources */,
 				68186C351CB3554F005AF62D /* LoginMeetViewController.swift in Sources */,
 				68186BFB1CB3525D005AF62D /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */,
+				68035A0B1CC756BA002F7C60 /* PersonalMainViewController.swift in Sources */,
 				68186C141CB3525D005AF62D /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
+				68035A751CC75FAA002F7C60 /* BPersonalView.swift in Sources */,
+				68035A511CC75803002F7C60 /* CTPersonalView.swift in Sources */,
 				68186C0D1CB3525D005AF62D /* NVActivityIndicatorAnimationCubeTransition.swift in Sources */,
+				68035A8F1CC7622D002F7C60 /* SWPersonalMainViewController.swift in Sources */,
+				68035A5D1CC75B78002F7C60 /* TPersonalView.swift in Sources */,
+				68035A851CC761CB002F7C60 /* SWAttendanceView.swift in Sources */,
+				68035A831CC761AE002F7C60 /* LPersonalMainViewController.swift in Sources */,
 				68186C0C1CB3525D005AF62D /* NVActivityIndicatorAnimationBlank.swift in Sources */,
-				68B7B52D1CBE90580046FC7F /* AttendanceMainViewController.swift in Sources */,
 				68186C021CB3525D005AF62D /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */,
 				EFA8691D1CAA655C00CC1B71 /* Methods.swift in Sources */,
 				68186C091CB3525D005AF62D /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
+				68035A5F1CC75B8A002F7C60 /* TPersonalMainViewController.swift in Sources */,
 				68186C371CB3554F005AF62D /* LoginStepViewController.swift in Sources */,
+				68035A891CC761FA002F7C60 /* SWLeaveView.swift in Sources */,
 				68186C0E1CB3525D005AF62D /* NVActivityIndicatorAnimationLineScale.swift in Sources */,
 				68186C131CB3525D005AF62D /* NVActivityIndicatorAnimationPacman.swift in Sources */,
+				68035A811CC7602D002F7C60 /* LPersonalView.swift in Sources */,
+				683CF5FB1CC34E8C00F69765 /* UserType.swift in Sources */,
 				68186C041CB3525D005AF62D /* NVActivityIndicatorAnimationBallScale.swift in Sources */,
 				68186C161CB3525D005AF62D /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */,
+				68035A4D1CC757D9002F7C60 /* CTLeaveView.swift in Sources */,
+				68035A4B1CC757B3002F7C60 /* CTAttendanceMainViewController.swift in Sources */,
 				68186BFD1CB3525D005AF62D /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
-				68B7B5251CBE8EC60046FC7F /* LeaveMainViewController.swift in Sources */,
+				68035A0A1CC756BA002F7C60 /* PersonalView.swift in Sources */,
+				68035A081CC756BA002F7C60 /* LeaveMainViewController.swift in Sources */,
 				68186C181CB3525D005AF62D /* NVActivityIndicatorShape.swift in Sources */,
 				68186C071CB3525D005AF62D /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
+				68035A011CC756BA002F7C60 /* Attendance.swift in Sources */,
+				68035A7D1CC7600F002F7C60 /* LLeaveView.swift in Sources */,
+				68035A651CC75BCF002F7C60 /* CLeaveView.swift in Sources */,
+				683CF5FA1CC34E8C00F69765 /* BaseType.swift in Sources */,
 				68186C381CB3554F005AF62D /* LoginViewController.swift in Sources */,
 				EFF324FA1CB025B800603394 /* ReturnResult.swift in Sources */,
+				68035A571CC75B2F002F7C60 /* TAttendanceMainViewController.swift in Sources */,
 				EFA8691F1CAA659200CC1B71 /* SysConfig.swift in Sources */,
 				68186C051CB3525D005AF62D /* NVActivityIndicatorAnimationBallScaleMultiple.swift in Sources */,
+				68035A791CC75FE8002F7C60 /* LAttendanceView.swift in Sources */,
+				68035A051CC756BA002F7C60 /* LeaveCourseCollectionCell.swift in Sources */,
 				68323F641CBCE14A00B7DEBE /* KeychainItemWrapper.m in Sources */,
 				68186C0F1CB3525D005AF62D /* NVActivityIndicatorAnimationLineScaleParty.swift in Sources */,
+				68035A631CC75BB8002F7C60 /* CAttendanceMainViewController.swift in Sources */,
 				68186BF91CB3525D005AF62D /* AnimationRefresh.swift in Sources */,
-				68B7B52B1CBE903B0046FC7F /* Attendance.swift in Sources */,
 				68186C151CB3525D005AF62D /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */,
+				68035A671CC75BEE002F7C60 /* CLeaveMainViewController.swift in Sources */,
+				68035A7B1CC75FF9002F7C60 /* LAttendanceMainViewController.swift in Sources */,
+				68035A6B1CC75CA4002F7C60 /* CPersonalMainViewController.swift in Sources */,
 				68B7B52F1CBE91C80046FC7F /* MainTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

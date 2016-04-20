@@ -12,24 +12,37 @@ class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        configTabBar()
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+}
+
+// MARK: - private Method
+extension MainTabBarController {
+    
+    func configTabBar() {
+        
+        tabBar.tintColor = UIColor.qjtTintColor()
+        
+        let leaveItem = UITabBarItem(title: "请假", image: UIImage(named: "main_leave_normal"), selectedImage: UIImage(named: "main_leave_select"))
+        let leaveVC = UIStoryboard(name: "Leave", bundle: nil).instantiateInitialViewController() as! UINavigationController
+        leaveVC.tabBarItem = leaveItem
+        
+        let attendanceItem = UITabBarItem(title: "考勤", image: UIImage(named: "main_attendance_normal"), selectedImage: UIImage(named: "main_attendance_select"))
+        let attendanceVC = UIStoryboard(name: "Attendance", bundle: nil).instantiateInitialViewController() as! UINavigationController
+        attendanceVC.tabBarItem = attendanceItem
+        
+        let personalItem = UITabBarItem(title: "我的", image: UIImage(named: "main_personal_normal"), selectedImage: UIImage(named: "main_personal_select"))
+        let personalVC = UIStoryboard(name: "Personal", bundle: nil).instantiateInitialViewController() as! UINavigationController
+        personalVC.tabBarItem = personalItem
+        
+        viewControllers = [leaveVC,attendanceVC,personalVC]
+        
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

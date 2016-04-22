@@ -56,6 +56,10 @@
 		68035A8B1CC7620A002F7C60 /* SWLeaveMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A8A1CC7620A002F7C60 /* SWLeaveMainViewController.swift */; };
 		68035A8D1CC76220002F7C60 /* SWPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A8C1CC76220002F7C60 /* SWPersonalView.swift */; };
 		68035A8F1CC7622D002F7C60 /* SWPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A8E1CC7622D002F7C60 /* SWPersonalMainViewController.swift */; };
+		68035A931CC77791002F7C60 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A921CC77791002F7C60 /* Teacher.swift */; };
+		68035A971CC77BE4002F7C60 /* AppMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A961CC77BE4002F7C60 /* AppMenu.swift */; };
+		68035A991CC78066002F7C60 /* StudentSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A981CC78066002F7C60 /* StudentSetting.swift */; };
+		68035A9B1CC782F0002F7C60 /* TeacherSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A9A1CC782F0002F7C60 /* TeacherSetting.swift */; };
 		68186BF91CB3525D005AF62D /* AnimationRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68186BD61CB3525D005AF62D /* AnimationRefresh.swift */; };
 		68186BFA1CB3525D005AF62D /* NVActivityIndicatorAnimationBallBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68186BD91CB3525D005AF62D /* NVActivityIndicatorAnimationBallBeat.swift */; };
 		68186BFB1CB3525D005AF62D /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68186BDA1CB3525D005AF62D /* NVActivityIndicatorAnimationBallClipRotate.swift */; };
@@ -97,6 +101,7 @@
 		68186C361CB3554F005AF62D /* LoginShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68186C301CB3554F005AF62D /* LoginShowViewController.swift */; };
 		68186C371CB3554F005AF62D /* LoginStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68186C311CB3554F005AF62D /* LoginStepViewController.swift */; };
 		68186C381CB3554F005AF62D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68186C321CB3554F005AF62D /* LoginViewController.swift */; };
+		681DD1261CC7B685004CB295 /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681DD1251CC7B685004CB295 /* Week.swift */; };
 		682297C31CB13C50008CD1D4 /* RegLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 682297C21CB13C50008CD1D4 /* RegLogin.storyboard */; };
 		68323F641CBCE14A00B7DEBE /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 68323F631CBCE14A00B7DEBE /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		68323F661CBCE1DF00B7DEBE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68323F651CBCE1DF00B7DEBE /* Security.framework */; };
@@ -109,6 +114,10 @@
 		68B7B52F1CBE91C80046FC7F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7B52E1CBE91C80046FC7F /* MainTabBarController.swift */; };
 		68B98EF41CBE49A9009D64D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B98EF21CBE49A9009D64D1 /* LaunchScreen.storyboard */; };
 		68B98EF71CBE4A00009D64D1 /* QJT.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 68B98EF61CBE4A00009D64D1 /* QJT.entitlements */; };
+		68D8EFCC1CC882EA00906E3D /* SwiftNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8EFCB1CC882EA00906E3D /* SwiftNotice.swift */; };
+		68D8EFCE1CC8AABB00906E3D /* UILabel_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8EFCD1CC8AABB00906E3D /* UILabel_extension.swift */; };
+		68D8EFD01CC8AB7200906E3D /* NSString_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8EFCF1CC8AB7200906E3D /* NSString_extension.swift */; };
+		68D8EFD41CC8ABFE00906E3D /* UIViewController_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8EFD31CC8ABFE00906E3D /* UIViewController_extension.swift */; };
 		EF45F52F1CABF1800052AA1F /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45F52E1CABF1800052AA1F /* Student.swift */; };
 		EF9A30D21CA90FD400D5EFA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF9A30D11CA90FD400D5EFA6 /* Assets.xcassets */; };
 		EF9A30E81CA9133C00D5EFA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9A30E71CA9133C00D5EFA6 /* AppDelegate.swift */; };
@@ -169,6 +178,10 @@
 		68035A8A1CC7620A002F7C60 /* SWLeaveMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWLeaveMainViewController.swift; sourceTree = "<group>"; };
 		68035A8C1CC76220002F7C60 /* SWPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWPersonalView.swift; sourceTree = "<group>"; };
 		68035A8E1CC7622D002F7C60 /* SWPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWPersonalMainViewController.swift; sourceTree = "<group>"; };
+		68035A921CC77791002F7C60 /* Teacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Teacher.swift; path = Entity/Model/Teacher.swift; sourceTree = "<group>"; };
+		68035A961CC77BE4002F7C60 /* AppMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppMenu.swift; path = Entity/Model/AppMenu.swift; sourceTree = "<group>"; };
+		68035A981CC78066002F7C60 /* StudentSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StudentSetting.swift; path = Entity/Model/StudentSetting.swift; sourceTree = "<group>"; };
+		68035A9A1CC782F0002F7C60 /* TeacherSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeacherSetting.swift; path = Entity/Model/TeacherSetting.swift; sourceTree = "<group>"; };
 		68186BD21CB35178005AF62D /* QJT-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "QJT-Bridging-Header.h"; path = "Supporting Files/QJT-Bridging-Header.h"; sourceTree = "<group>"; };
 		68186BD61CB3525D005AF62D /* AnimationRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationRefresh.swift; sourceTree = "<group>"; };
 		68186BD91CB3525D005AF62D /* NVActivityIndicatorAnimationBallBeat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallBeat.swift; sourceTree = "<group>"; };
@@ -211,6 +224,7 @@
 		68186C301CB3554F005AF62D /* LoginShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginShowViewController.swift; path = Module/RegLogin/ViewController/LoginShowViewController.swift; sourceTree = "<group>"; };
 		68186C311CB3554F005AF62D /* LoginStepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginStepViewController.swift; path = Module/RegLogin/ViewController/LoginStepViewController.swift; sourceTree = "<group>"; };
 		68186C321CB3554F005AF62D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Module/RegLogin/ViewController/LoginViewController.swift; sourceTree = "<group>"; };
+		681DD1251CC7B685004CB295 /* Week.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
 		682297C21CB13C50008CD1D4 /* RegLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RegLogin.storyboard; path = Module/RegLogin/RegLogin.storyboard; sourceTree = "<group>"; };
 		68323F621CBCE14A00B7DEBE /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
 		68323F631CBCE14A00B7DEBE /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
@@ -224,6 +238,10 @@
 		68B7B52E1CBE91C80046FC7F /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		68B98EF21CBE49A9009D64D1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "Supporting Files/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		68B98EF61CBE4A00009D64D1 /* QJT.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = QJT.entitlements; sourceTree = "<group>"; };
+		68D8EFCB1CC882EA00906E3D /* SwiftNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftNotice.swift; sourceTree = "<group>"; };
+		68D8EFCD1CC8AABB00906E3D /* UILabel_extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UILabel_extension.swift; path = General/Extensions/UILabel_extension.swift; sourceTree = "<group>"; };
+		68D8EFCF1CC8AB7200906E3D /* NSString_extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSString_extension.swift; path = General/Extensions/NSString_extension.swift; sourceTree = "<group>"; };
+		68D8EFD31CC8ABFE00906E3D /* UIViewController_extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewController_extension.swift; path = General/Extensions/UIViewController_extension.swift; sourceTree = "<group>"; };
 		AE37ED3E40352A6C9D2E6664 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EF45F52E1CABF1800052AA1F /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Student.swift; path = Entity/Model/Student.swift; sourceTree = "<group>"; };
 		EF9A30C71CA90FD400D5EFA6 /* QJT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QJT.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -946,6 +964,7 @@
 			children = (
 				683CF5F81CC34E8C00F69765 /* BaseType.swift */,
 				683CF5F91CC34E8C00F69765 /* UserType.swift */,
+				681DD1251CC7B685004CB295 /* Week.swift */,
 			);
 			name = Enum;
 			path = Entity/Enum;
@@ -967,6 +986,15 @@
 				68B7B52E1CBE91C80046FC7F /* MainTabBarController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		68D8EFCA1CC882EA00906E3D /* SwiftNotice */ = {
+			isa = PBXGroup;
+			children = (
+				68D8EFCB1CC882EA00906E3D /* SwiftNotice.swift */,
+			);
+			name = SwiftNotice;
+			path = Util/SwiftNotice;
 			sourceTree = "<group>";
 		};
 		68FA520D1CAC18CA003DF699 /* ViewController */ = {
@@ -1003,6 +1031,9 @@
 			children = (
 				68186C1C1CB354DB005AF62D /* UIColor_extension.swift */,
 				68186C1D1CB354DB005AF62D /* UIScrollView_refresh.swift */,
+				68D8EFCD1CC8AABB00906E3D /* UILabel_extension.swift */,
+				68D8EFCF1CC8AB7200906E3D /* NSString_extension.swift */,
+				68D8EFD31CC8ABFE00906E3D /* UIViewController_extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -1061,6 +1092,7 @@
 		EF9A30DD1CA911A400D5EFA6 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				68D8EFCA1CC882EA00906E3D /* SwiftNotice */,
 				68323F611CBCE11600B7DEBE /* Keychain */,
 				68186BD51CB3525D005AF62D /* CustomRefresh */,
 			);
@@ -1083,6 +1115,10 @@
 				683CF5F31CC34E7F00F69765 /* PersonSetting.swift */,
 				683CF5F41CC34E7F00F69765 /* UserSetting.swift */,
 				EF45F52E1CABF1800052AA1F /* Student.swift */,
+				68035A921CC77791002F7C60 /* Teacher.swift */,
+				68035A961CC77BE4002F7C60 /* AppMenu.swift */,
+				68035A981CC78066002F7C60 /* StudentSetting.swift */,
+				68035A9A1CC782F0002F7C60 /* TeacherSetting.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1289,6 +1325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68035A9B1CC782F0002F7C60 /* TeacherSetting.swift in Sources */,
 				68035A021CC756BA002F7C60 /* AttendanceMainViewController.swift in Sources */,
 				68035A531CC7581A002F7C60 /* CTPersonalMainViewController.swift in Sources */,
 				68186C121CB3525D005AF62D /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
@@ -1304,7 +1341,9 @@
 				68186C1F1CB354DB005AF62D /* UIScrollView_refresh.swift in Sources */,
 				68035A731CC75F8F002F7C60 /* BLeaveMainViewController.swift in Sources */,
 				68186C111CB3525D005AF62D /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
+				68D8EFD41CC8ABFE00906E3D /* UIViewController_extension.swift in Sources */,
 				68035A871CC761E3002F7C60 /* SWAttendanceMainViewController.swift in Sources */,
+				68035A931CC77791002F7C60 /* Teacher.swift in Sources */,
 				68035A061CC756BA002F7C60 /* LeaveNextCell.swift in Sources */,
 				EF45F52F1CABF1800052AA1F /* Student.swift in Sources */,
 				68035A041CC756BA002F7C60 /* LeaveCourseCell.swift in Sources */,
@@ -1319,10 +1358,14 @@
 				68035A551CC75B21002F7C60 /* TAttendanceView.swift in Sources */,
 				68186C341CB3554F005AF62D /* LoginMatchViewController.swift in Sources */,
 				683CF5F61CC34E7F00F69765 /* UserSetting.swift in Sources */,
+				68035A971CC77BE4002F7C60 /* AppMenu.swift in Sources */,
+				68D8EFCC1CC882EA00906E3D /* SwiftNotice.swift in Sources */,
+				681DD1261CC7B685004CB295 /* Week.swift in Sources */,
 				68186BFE1CB3525D005AF62D /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */,
 				68035A6F1CC75F56002F7C60 /* BAttendanceMainViewController.swift in Sources */,
 				68035A491CC75757002F7C60 /* qqqView.swift in Sources */,
 				68186C1E1CB354DB005AF62D /* UIColor_extension.swift in Sources */,
+				68035A991CC78066002F7C60 /* StudentSetting.swift in Sources */,
 				EF9A30E81CA9133C00D5EFA6 /* AppDelegate.swift in Sources */,
 				68186BFC1CB3525D005AF62D /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
 				68186C011CB3525D005AF62D /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */,
@@ -1332,6 +1375,7 @@
 				68035A691CC75C90002F7C60 /* CPersonalView.swift in Sources */,
 				68186BFA1CB3525D005AF62D /* NVActivityIndicatorAnimationBallBeat.swift in Sources */,
 				68186C361CB3554F005AF62D /* LoginShowViewController.swift in Sources */,
+				68D8EFD01CC8AB7200906E3D /* NSString_extension.swift in Sources */,
 				68186C001CB3525D005AF62D /* NVActivityIndicatorAnimationBallPulse.swift in Sources */,
 				68035A5B1CC75B5D002F7C60 /* TLeaveViewMainController.swift in Sources */,
 				68035A4F1CC757E8002F7C60 /* CTLeaveMainViewController.swift in Sources */,
@@ -1343,6 +1387,7 @@
 				68186C141CB3525D005AF62D /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
 				68035A751CC75FAA002F7C60 /* BPersonalView.swift in Sources */,
 				68035A511CC75803002F7C60 /* CTPersonalView.swift in Sources */,
+				68D8EFCE1CC8AABB00906E3D /* UILabel_extension.swift in Sources */,
 				68186C0D1CB3525D005AF62D /* NVActivityIndicatorAnimationCubeTransition.swift in Sources */,
 				68035A8F1CC7622D002F7C60 /* SWPersonalMainViewController.swift in Sources */,
 				68035A5D1CC75B78002F7C60 /* TPersonalView.swift in Sources */,
@@ -1491,6 +1536,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = QJT/QJT.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Yan Wang (D794PDW38U)";
+				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -1516,6 +1562,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = QJT/QJT.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Yan Wang (D794PDW38U)";
+				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",

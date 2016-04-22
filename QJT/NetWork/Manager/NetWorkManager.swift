@@ -12,7 +12,7 @@ import ObjectMapper
 import AlamofireObjectMapper
 
 typealias SuccessedClosure = ([String:Any?])-> Void
-typealias FiledClosure = (String?)-> Void
+typealias FailedClosure = (String?)-> Void
 
 class NetWorkManager {
     
@@ -26,7 +26,7 @@ class NetWorkManager {
      - parameter completed:    成功返回闭包
      - parameter errorClosure: 失败返回错误信息闭包
      */
-    class func httpRequest<T: Mappable>(method: String, params:[String:AnyObject], modelType: T? = nil,listType: T? = nil,completed: SuccessedClosure?, errorClosure: FiledClosure) {
+    class func httpRequest<T: Mappable>(method: String, params:[String:AnyObject], modelType: T? = nil,listType: T? = nil,completed: SuccessedClosure?, errorClosure: FailedClosure) {
         var serviceName: String?
         let serviceDic = Methods.getServiceMethod()
         for (key, value) in serviceDic {
@@ -66,6 +66,7 @@ class NetWorkManager {
                 case 500:
                     errorClosure("服务器异常")
                 default:
+                    print(resp.statusCode)
                     errorClosure("网络异常，稍后再试")
                 }
             } else {

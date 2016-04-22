@@ -7,17 +7,48 @@
 //
 
 import Foundation
+import ObjectMapper
 
-class PersonSetting: NSObject {
+class PersonSetting: Mappable {
     
+    // 学号、工号
     var userID: Int
+    // 姓名
     var userName: String
-    var userType: UserType
+    // 联系方式
+    var phoneNum: String
+    // 用户类型
+    var userType: Int
+    // 头像编号
+    var portraitID: Int
+    // 菜单列表
+    var appMenus: [AppMenu]
     
-    override init() {
+    init() {
         userID = 0
         userName = ""
-        userType = UserType.Unknown
+        userType = 0
+        phoneNum = ""
+        portraitID = 0
+        appMenus = [AppMenu]()
+    }
+    
+    required init?(_ map: Map) {
+        userID = 0
+        userName = ""
+        userType = 0
+        phoneNum = ""
+        portraitID = 0
+        appMenus = [AppMenu]()
+    }
+    
+    func mapping(map: Map) {
+        userID      <- map["userID"]
+        userName    <- map["userName"]
+        phoneNum    <- map["phoneNum"]
+        userType    <- map["userType"]
+        portraitID  <- map["portraitID"]
+        appMenus    <- map["AppMenu"]
     }
     
 }

@@ -69,10 +69,6 @@ enum UserType: Int,BaseType {
         
     }
     
-    func parseString<T>(value : String) -> T {
-        return UserType(rawValue: self.fromString(value)) as! T
-    }
-    
     func toDescription() -> String {
         switch self {
         case .Unknown:

@@ -26,6 +26,10 @@ class Student: Mappable {
     var protraitID: Int
     // 班级名称
     var className: String
+    // JPushID
+    var registerID: String
+    // 设备唯一ID
+    var deviceID: String
     
     init(){
         studentID = ""
@@ -36,6 +40,8 @@ class Student: Mappable {
         schoolYear = 0
         protraitID = 0
         className = ""
+        registerID = ""
+        deviceID = ""
     }
     
     required init?(_ map: Map) {
@@ -47,6 +53,8 @@ class Student: Mappable {
         schoolYear = 0
         protraitID = 0
         className = ""
+        registerID = ""
+        deviceID = ""
     }
     
     
@@ -60,5 +68,7 @@ class Student: Mappable {
         schoolYear      <- map["schoolYear"]
         protraitID      <- map["protraitID"]
         className       <- map["className"]
+        registerID      <- map["registerID"]
+        deviceID        <- map["deviceID"]
     }
 }

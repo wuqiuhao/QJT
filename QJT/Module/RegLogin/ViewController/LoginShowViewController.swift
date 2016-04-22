@@ -68,8 +68,8 @@ extension LoginShowViewController {
         pageCtrl.pageIndicatorTintColor = UIColor.qjtBorderColor()
         pageCtrl.currentPageIndicatorTintColor = UIColor.qjtTintColor()
         
-        loginBtn.setTitle("登陆", forState: .Normal)
-        loginBtn.setTitleColor(UIColor.qjtInputTextColor(), forState: .Normal)
+        loginBtn.setTitle("登录", forState: .Normal)
+        loginBtn.setTitleColor(UIColor.qjtTintColor(), forState: .Normal)
         
         loginBtn.addTarget(self, action: #selector(LoginShowViewController.loginBtnClicked), forControlEvents: UIControlEvents.TouchUpInside)
         

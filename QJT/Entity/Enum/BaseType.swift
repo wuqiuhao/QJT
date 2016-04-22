@@ -12,5 +12,4 @@ protocol BaseType {
     func toString() -> String
     func fromString(value : String) -> Int
     func toInt() -> Int
-    func parseString<T>(value : String) -> T
 }

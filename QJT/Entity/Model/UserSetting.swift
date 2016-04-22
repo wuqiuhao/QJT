@@ -8,18 +8,20 @@
 
 import Foundation
 
-class UserSetting: PersonSetting,NSCoding {
-    
-    func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeInteger(userID, forKey: "userID")
-        aCoder.encodeObject(userName, forKey: "userName")
-        
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init()
-        userID = aDecoder.decodeIntegerForKey("userID")
-        userName = aDecoder.decodeObjectForKey("userName") as! String
-    }
-    
-}
+//class UserSetting: PersonSetting,NSCoding {
+//    
+//    func encodeWithCoder(aCoder: NSCoder) {
+//        aCoder.encodeInteger(userID, forKey: "userID")
+//        aCoder.encodeObject(userName, forKey: "userName")
+//        aCoder.encodeInteger(userType, forKey: "userType")
+//        
+//    }
+//    
+//    required init?(coder aDecoder: NSCoder) {
+//        super.init()
+//        userID = aDecoder.decodeIntegerForKey("userID")
+//        userName = aDecoder.decodeObjectForKey("userName") as! String
+//        userType = aDecoder.decodeIntegerForKey("userType")
+//    }
+//    
+//}

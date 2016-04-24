@@ -41,10 +41,11 @@ class StudentSetting: PersonSetting, NSCoding {
         className       <- map["className"]
         specialityName  <- map["specialityName"]
         deviceID        <- map["deviceID"]
+        super.mapping(map)
     }
     
     @objc func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeInteger(userID, forKey: "userID")
+        aCoder.encodeObject(userID, forKey: "userID")
         aCoder.encodeObject(userName, forKey: "userName")
         aCoder.encodeObject(phoneNum, forKey: "phoneNum")
         aCoder.encodeInteger(userType, forKey: "userType")
@@ -62,7 +63,7 @@ class StudentSetting: PersonSetting, NSCoding {
         specialityName = aDecoder.decodeObjectForKey("specialityName") as! String
         deviceID = aDecoder.decodeObjectForKey("deviceID") as! String
         super.init()
-        userID = aDecoder.decodeIntegerForKey("userID")
+        userID = aDecoder.decodeObjectForKey("userID") as! String
         userName = aDecoder.decodeObjectForKey("userName") as! String
         phoneNum = aDecoder.decodeObjectForKey("phoneNum") as! String
         userType = aDecoder.decodeIntegerForKey("userType")

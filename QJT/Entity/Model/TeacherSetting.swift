@@ -20,7 +20,6 @@ class TeacherSetting: PersonSetting, NSCoding {
     
     
     override init() {
-        
         title = ""
         qualification = ""
         brief = ""
@@ -28,7 +27,6 @@ class TeacherSetting: PersonSetting, NSCoding {
     }
     
     required init?(_ map: Map) {
-        
         title = ""
         qualification = ""
         brief = ""
@@ -39,11 +37,12 @@ class TeacherSetting: PersonSetting, NSCoding {
         title           <- map["title"]
         qualification   <- map["qualification"]
         brief           <- map["brief"]
+        super.mapping(map)
     }
     
     
     @objc func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeInteger(userID, forKey: "userID")
+        aCoder.encodeObject(userID, forKey: "userID")
         aCoder.encodeObject(userName, forKey: "userName")
         aCoder.encodeObject(phoneNum, forKey: "phoneNum")
         aCoder.encodeInteger(userType, forKey: "userType")
@@ -59,7 +58,7 @@ class TeacherSetting: PersonSetting, NSCoding {
         qualification = aDecoder.decodeObjectForKey("qualification") as! String
         brief = aDecoder.decodeObjectForKey("brief") as! String
         super.init()
-        userID = aDecoder.decodeIntegerForKey("userID")
+        userID = aDecoder.decodeObjectForKey("userID") as! String
         userName = aDecoder.decodeObjectForKey("userName") as! String
         phoneNum = aDecoder.decodeObjectForKey("phoneNum") as! String
         userType = aDecoder.decodeIntegerForKey("userType")

@@ -12,7 +12,7 @@ import ObjectMapper
 class PersonSetting: Mappable {
     
     // 学号、工号
-    var userID: Int
+    var userID: String
     // 姓名
     var userName: String
     // 联系方式
@@ -25,7 +25,7 @@ class PersonSetting: Mappable {
     var appMenus: [AppMenu]
     
     init() {
-        userID = 0
+        userID = ""
         userName = ""
         userType = 0
         phoneNum = ""
@@ -34,7 +34,7 @@ class PersonSetting: Mappable {
     }
     
     required init?(_ map: Map) {
-        userID = 0
+        userID = ""
         userName = ""
         userType = 0
         phoneNum = ""
@@ -42,7 +42,7 @@ class PersonSetting: Mappable {
         appMenus = [AppMenu]()
     }
     
-    func mapping(map: Map) {
+    func mapping(map: Map) { 
         userID      <- map["userID"]
         userName    <- map["userName"]
         phoneNum    <- map["phoneNum"]

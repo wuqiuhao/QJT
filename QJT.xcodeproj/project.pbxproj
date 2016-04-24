@@ -118,6 +118,7 @@
 		68D8EFCE1CC8AABB00906E3D /* UILabel_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8EFCD1CC8AABB00906E3D /* UILabel_extension.swift */; };
 		68D8EFD01CC8AB7200906E3D /* NSString_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8EFCF1CC8AB7200906E3D /* NSString_extension.swift */; };
 		68D8EFD41CC8ABFE00906E3D /* UIViewController_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8EFD31CC8ABFE00906E3D /* UIViewController_extension.swift */; };
+		68F0748D1CCCB3C10005DA20 /* CourseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F0748C1CCCB3C10005DA20 /* CourseClass.swift */; };
 		68FFBAF31CCB66A600878904 /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FFBAF21CCB66A600878904 /* CourseView.swift */; };
 		68FFBAF51CCB798E00878904 /* LeaveCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FFBAF41CCB798E00878904 /* LeaveCourseViewController.swift */; };
 		EF45F52F1CABF1800052AA1F /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45F52E1CABF1800052AA1F /* Student.swift */; };
@@ -244,6 +245,7 @@
 		68D8EFCD1CC8AABB00906E3D /* UILabel_extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UILabel_extension.swift; path = General/Extensions/UILabel_extension.swift; sourceTree = "<group>"; };
 		68D8EFCF1CC8AB7200906E3D /* NSString_extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSString_extension.swift; path = General/Extensions/NSString_extension.swift; sourceTree = "<group>"; };
 		68D8EFD31CC8ABFE00906E3D /* UIViewController_extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewController_extension.swift; path = General/Extensions/UIViewController_extension.swift; sourceTree = "<group>"; };
+		68F0748C1CCCB3C10005DA20 /* CourseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CourseClass.swift; path = Entity/Model/CourseClass.swift; sourceTree = "<group>"; };
 		68FFBAF21CCB66A600878904 /* CourseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
 		68FFBAF41CCB798E00878904 /* LeaveCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveCourseViewController.swift; sourceTree = "<group>"; };
 		AE37ED3E40352A6C9D2E6664 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -1135,6 +1137,7 @@
 				68035A961CC77BE4002F7C60 /* AppMenu.swift */,
 				68035A981CC78066002F7C60 /* StudentSetting.swift */,
 				68035A9A1CC782F0002F7C60 /* TeacherSetting.swift */,
+				68F0748C1CCCB3C10005DA20 /* CourseClass.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1389,6 +1392,7 @@
 				683CF5F51CC34E7F00F69765 /* PersonSetting.swift in Sources */,
 				68035A591CC75B4A002F7C60 /* TLeaveView.swift in Sources */,
 				68035A691CC75C90002F7C60 /* CPersonalView.swift in Sources */,
+				68F0748D1CCCB3C10005DA20 /* CourseClass.swift in Sources */,
 				68186BFA1CB3525D005AF62D /* NVActivityIndicatorAnimationBallBeat.swift in Sources */,
 				68186C361CB3554F005AF62D /* LoginShowViewController.swift in Sources */,
 				68D8EFD01CC8AB7200906E3D /* NSString_extension.swift in Sources */,

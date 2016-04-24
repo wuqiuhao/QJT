@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -21,10 +22,10 @@
             </objects>
             <point key="canvasLocation" x="4" y="487"/>
         </scene>
-        <!--Attendance Main View Controller-->
+        <!--Sign Main View Controller-->
         <scene sceneID="cdz-q7-85m">
             <objects>
-                <viewController id="BJB-Fe-hrR" customClass="AttendanceMainViewController" customModule="QJT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BJB-Fe-hrR" customClass="SignMainViewController" customModule="QJT" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RGZ-vs-Fpn"/>
                         <viewControllerLayoutGuide type="bottom" id="Wpy-QJ-Rpa"/>
@@ -32,9 +33,63 @@
                     <view key="view" contentMode="scaleToFill" id="Yge-X3-hYH">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="BlE-AZ-zNJ">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yQf-Jf-efv">
+                                <rect key="frame" x="20" y="452" width="240" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTB-SI-4oD">
+                                        <rect key="frame" x="8" y="8" width="224" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Long" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uuB-KO-BqX">
+                                        <rect key="frame" x="8" y="49" width="224" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1c-GB-x2L">
+                                        <rect key="frame" x="59" y="90" width="46" height="30"/>
+                                        <state key="normal" title="定位"/>
+                                        <connections>
+                                            <action selector="searchBtn:" destination="BJB-Fe-hrR" eventType="touchUpInside" id="evi-ig-Ol1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRh-cw-tAa">
+                                        <rect key="frame" x="138" y="90" width="46" height="30"/>
+                                        <state key="normal" title="签到"/>
+                                        <connections>
+                                            <action selector="searchBtn:" destination="BJB-Fe-hrR" eventType="touchUpInside" id="HWx-EV-380"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="BlE-AZ-zNJ" secondAttribute="trailing" constant="-20" id="0TB-2N-3mq"/>
+                            <constraint firstItem="BlE-AZ-zNJ" firstAttribute="leading" secondItem="Yge-X3-hYH" secondAttribute="leadingMargin" constant="-20" id="4Oe-ed-T50"/>
+                            <constraint firstItem="yQf-Jf-efv" firstAttribute="leading" secondItem="Yge-X3-hYH" secondAttribute="leadingMargin" id="9C7-xL-eBw"/>
+                            <constraint firstItem="Wpy-QJ-Rpa" firstAttribute="top" secondItem="BlE-AZ-zNJ" secondAttribute="bottom" id="AZt-IM-KCu"/>
+                            <constraint firstItem="Wpy-QJ-Rpa" firstAttribute="top" secondItem="yQf-Jf-efv" secondAttribute="bottom" constant="20" id="bc3-qF-cKq"/>
+                            <constraint firstItem="BlE-AZ-zNJ" firstAttribute="top" secondItem="RGZ-vs-Fpn" secondAttribute="bottom" id="fSj-uM-Ih8"/>
+                            <constraint firstItem="yQf-Jf-efv" firstAttribute="top" secondItem="RGZ-vs-Fpn" secondAttribute="bottom" constant="388" id="jay-YS-cjQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yQf-Jf-efv" secondAttribute="trailing" constant="320" id="pQO-ZI-PuM"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PAN-HS-Zok"/>
+                    <connections>
+                        <outlet property="latLabel" destination="ZTB-SI-4oD" id="Lly-yF-LPN"/>
+                        <outlet property="longLabel" destination="uuB-KO-BqX" id="vBf-Rq-qIR"/>
+                        <outlet property="mapView" destination="BlE-AZ-zNJ" id="Pek-dl-sQu"/>
+                        <outlet property="messageBack" destination="yQf-Jf-efv" id="Rlm-Cu-W8u"/>
+                        <outlet property="signBtn" destination="zRh-cw-tAa" id="aSs-MP-r8V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MPy-Gm-VlW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,13 +10,36 @@ import UIKit
 
 class LeaveCourseViewController: UIViewController {
 
+    var courseView: CourseView!
+    lazy var courseArrData = [CourseClass]()
+    
+    let weekExcelWidth: CGFloat = (UIScreen.mainScreen().bounds.width - 30) / 5
+    let partExcelHeight: CGFloat = (UIScreen.mainScreen().bounds.height - 64 - 30) / 10
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.automaticallyAdjustsScrollViewInsets = false
-        let courseView = CourseView(frame: CGRect(x: 0, y: 64, width: 375, height: 667 - 64))
-        self.view.addSubview(courseView)
-        
-        // Do any additional setup after loading the view.
+        setupCourseBackground()
     }
 
+}
+
+// MARK: - private Method
+extension LeaveCourseViewController {
+    
+    func setupCourseBackground() {
+        courseView = CourseView(frame: CGRect(x: 0, y: 64, width: UIScreen.mainScreen().bounds.width, height: UIScreen.mainScreen().bounds.height - 64))
+        self.view.addSubview(courseView)
+    }
+    
+    func configCourseExcel() {
+        
+        for course in courseArrData {
+            
+            let offsetX = CGFloat(course.fromSection) * partExcelHeight
+            let offsetY = 0
+            
+        }
+        
+    }
+    
 }

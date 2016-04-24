@@ -118,16 +118,17 @@
 		68D8EFCE1CC8AABB00906E3D /* UILabel_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8EFCD1CC8AABB00906E3D /* UILabel_extension.swift */; };
 		68D8EFD01CC8AB7200906E3D /* NSString_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8EFCF1CC8AB7200906E3D /* NSString_extension.swift */; };
 		68D8EFD41CC8ABFE00906E3D /* UIViewController_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8EFD31CC8ABFE00906E3D /* UIViewController_extension.swift */; };
-		68F0748D1CCCB3C10005DA20 /* CourseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F0748C1CCCB3C10005DA20 /* CourseClass.swift */; };
-		68FFBAF31CCB66A600878904 /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FFBAF21CCB66A600878904 /* CourseView.swift */; };
-		68FFBAF51CCB798E00878904 /* LeaveCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FFBAF41CCB798E00878904 /* LeaveCourseViewController.swift */; };
+		68FF20001CCD02F6005AC0B7 /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF1FFE1CCD02F6005AC0B7 /* CourseView.swift */; };
+		68FF20011CCD02F6005AC0B7 /* HLable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF1FFF1CCD02F6005AC0B7 /* HLable.swift */; };
+		68FF20031CCD0315005AC0B7 /* LeaveCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF20021CCD0315005AC0B7 /* LeaveCourseViewController.swift */; };
+		68FF20071CCD0376005AC0B7 /* CourseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF20061CCD0376005AC0B7 /* CourseClass.swift */; };
+		68FF200A1CCD0396005AC0B7 /* ReturnResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF20091CCD0396005AC0B7 /* ReturnResult.swift */; };
 		EF45F52F1CABF1800052AA1F /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45F52E1CABF1800052AA1F /* Student.swift */; };
 		EF9A30D21CA90FD400D5EFA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF9A30D11CA90FD400D5EFA6 /* Assets.xcassets */; };
 		EF9A30E81CA9133C00D5EFA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9A30E71CA9133C00D5EFA6 /* AppDelegate.swift */; };
 		EFA869191CAA651900CC1B71 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA869181CAA651900CC1B71 /* NetWorkManager.swift */; };
 		EFA8691D1CAA655C00CC1B71 /* Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8691C1CAA655C00CC1B71 /* Methods.swift */; };
 		EFA8691F1CAA659200CC1B71 /* SysConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8691E1CAA659200CC1B71 /* SysConfig.swift */; };
-		EFF324FA1CB025B800603394 /* ReturnResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF324F91CB025B800603394 /* ReturnResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -245,9 +246,11 @@
 		68D8EFCD1CC8AABB00906E3D /* UILabel_extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UILabel_extension.swift; path = General/Extensions/UILabel_extension.swift; sourceTree = "<group>"; };
 		68D8EFCF1CC8AB7200906E3D /* NSString_extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSString_extension.swift; path = General/Extensions/NSString_extension.swift; sourceTree = "<group>"; };
 		68D8EFD31CC8ABFE00906E3D /* UIViewController_extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewController_extension.swift; path = General/Extensions/UIViewController_extension.swift; sourceTree = "<group>"; };
-		68F0748C1CCCB3C10005DA20 /* CourseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CourseClass.swift; path = Entity/Model/CourseClass.swift; sourceTree = "<group>"; };
-		68FFBAF21CCB66A600878904 /* CourseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
-		68FFBAF41CCB798E00878904 /* LeaveCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveCourseViewController.swift; sourceTree = "<group>"; };
+		68FF1FFE1CCD02F6005AC0B7 /* CourseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
+		68FF1FFF1CCD02F6005AC0B7 /* HLable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLable.swift; sourceTree = "<group>"; };
+		68FF20021CCD0315005AC0B7 /* LeaveCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveCourseViewController.swift; sourceTree = "<group>"; };
+		68FF20061CCD0376005AC0B7 /* CourseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CourseClass.swift; path = Entity/Model/CourseClass.swift; sourceTree = "<group>"; };
+		68FF20091CCD0396005AC0B7 /* ReturnResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReturnResult.swift; sourceTree = "<group>"; };
 		AE37ED3E40352A6C9D2E6664 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EF45F52E1CABF1800052AA1F /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Student.swift; path = Entity/Model/Student.swift; sourceTree = "<group>"; };
 		EF9A30C71CA90FD400D5EFA6 /* QJT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QJT.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -257,7 +260,6 @@
 		EFA869181CAA651900CC1B71 /* NetWorkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetWorkManager.swift; path = NetWork/Manager/NetWorkManager.swift; sourceTree = "<group>"; };
 		EFA8691C1CAA655C00CC1B71 /* Methods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Methods.swift; path = NetWork/Config/Methods.swift; sourceTree = "<group>"; };
 		EFA8691E1CAA659200CC1B71 /* SysConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SysConfig.swift; path = NetWork/Config/SysConfig.swift; sourceTree = "<group>"; };
-		EFF324F91CB025B800603394 /* ReturnResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReturnResult.swift; path = Entity/Model/ResultModel/ReturnResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -344,8 +346,8 @@
 		680359F81CC756BA002F7C60 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				68FF20021CCD0315005AC0B7 /* LeaveCourseViewController.swift */,
 				680359F91CC756BA002F7C60 /* LeaveMainViewController.swift */,
-				68FFBAF41CCB798E00878904 /* LeaveCourseViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1018,10 +1020,20 @@
 			name = ViewController;
 			sourceTree = "<group>";
 		};
+		68FF20081CCD0396005AC0B7 /* ResultModel */ = {
+			isa = PBXGroup;
+			children = (
+				68FF20091CCD0396005AC0B7 /* ReturnResult.swift */,
+			);
+			name = ResultModel;
+			path = Entity/Model/ResultModel;
+			sourceTree = "<group>";
+		};
 		68FFBAEF1CCB657900878904 /* CourseUtil */ = {
 			isa = PBXGroup;
 			children = (
-				68FFBAF21CCB66A600878904 /* CourseView.swift */,
+				68FF1FFE1CCD02F6005AC0B7 /* CourseView.swift */,
+				68FF1FFF1CCD02F6005AC0B7 /* HLable.swift */,
 			);
 			name = CourseUtil;
 			path = Util/CourseUtil;
@@ -1129,15 +1141,15 @@
 		EF9A30E01CA911BD00D5EFA6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EFB35AF61CAD62DC0002259A /* ResultModel */,
+				68FF20081CCD0396005AC0B7 /* ResultModel */,
 				683CF5F31CC34E7F00F69765 /* PersonSetting.swift */,
+				68FF20061CCD0376005AC0B7 /* CourseClass.swift */,
 				683CF5F41CC34E7F00F69765 /* UserSetting.swift */,
 				EF45F52E1CABF1800052AA1F /* Student.swift */,
 				68035A921CC77791002F7C60 /* Teacher.swift */,
 				68035A961CC77BE4002F7C60 /* AppMenu.swift */,
 				68035A981CC78066002F7C60 /* StudentSetting.swift */,
 				68035A9A1CC782F0002F7C60 /* TeacherSetting.swift */,
-				68F0748C1CCCB3C10005DA20 /* CourseClass.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1202,14 +1214,6 @@
 				68FA520D1CAC18CA003DF699 /* ViewController */,
 			);
 			name = RegLogin;
-			sourceTree = "<group>";
-		};
-		EFB35AF61CAD62DC0002259A /* ResultModel */ = {
-			isa = PBXGroup;
-			children = (
-				EFF324F91CB025B800603394 /* ReturnResult.swift */,
-			);
-			name = ResultModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1347,6 +1351,7 @@
 				68035A9B1CC782F0002F7C60 /* TeacherSetting.swift in Sources */,
 				68035A021CC756BA002F7C60 /* SignMainViewController.swift in Sources */,
 				68035A531CC7581A002F7C60 /* CTPersonalMainViewController.swift in Sources */,
+				68FF20071CCD0376005AC0B7 /* CourseClass.swift in Sources */,
 				68186C121CB3525D005AF62D /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
 				68035A071CC756BA002F7C60 /* LeaveTimeCell.swift in Sources */,
 				68035A771CC75FB7002F7C60 /* BPersonalMainViewController.swift in Sources */,
@@ -1355,15 +1360,18 @@
 				68186C081CB3525D005AF62D /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				68035A8D1CC76220002F7C60 /* SWPersonalView.swift in Sources */,
 				68186C331CB3554F005AF62D /* LoginGeniusViewController.swift in Sources */,
+				68FF200A1CCD0396005AC0B7 /* ReturnResult.swift in Sources */,
 				68186C0B1CB3525D005AF62D /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,
 				EFA869191CAA651900CC1B71 /* NetWorkManager.swift in Sources */,
 				68186C1F1CB354DB005AF62D /* UIScrollView_refresh.swift in Sources */,
 				68035A731CC75F8F002F7C60 /* BLeaveMainViewController.swift in Sources */,
+				68FF20011CCD02F6005AC0B7 /* HLable.swift in Sources */,
 				68186C111CB3525D005AF62D /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
 				68D8EFD41CC8ABFE00906E3D /* UIViewController_extension.swift in Sources */,
 				68035A871CC761E3002F7C60 /* SWAttendanceMainViewController.swift in Sources */,
 				68035A931CC77791002F7C60 /* Teacher.swift in Sources */,
 				68035A061CC756BA002F7C60 /* LeaveNextCell.swift in Sources */,
+				68FF20001CCD02F6005AC0B7 /* CourseView.swift in Sources */,
 				EF45F52F1CABF1800052AA1F /* Student.swift in Sources */,
 				68035A041CC756BA002F7C60 /* LeaveCourseCell.swift in Sources */,
 				68035A8B1CC7620A002F7C60 /* SWLeaveMainViewController.swift in Sources */,
@@ -1392,7 +1400,6 @@
 				683CF5F51CC34E7F00F69765 /* PersonSetting.swift in Sources */,
 				68035A591CC75B4A002F7C60 /* TLeaveView.swift in Sources */,
 				68035A691CC75C90002F7C60 /* CPersonalView.swift in Sources */,
-				68F0748D1CCCB3C10005DA20 /* CourseClass.swift in Sources */,
 				68186BFA1CB3525D005AF62D /* NVActivityIndicatorAnimationBallBeat.swift in Sources */,
 				68186C361CB3554F005AF62D /* LoginShowViewController.swift in Sources */,
 				68D8EFD01CC8AB7200906E3D /* NSString_extension.swift in Sources */,
@@ -1416,7 +1423,6 @@
 				68186C0C1CB3525D005AF62D /* NVActivityIndicatorAnimationBlank.swift in Sources */,
 				68186C021CB3525D005AF62D /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */,
 				EFA8691D1CAA655C00CC1B71 /* Methods.swift in Sources */,
-				68FFBAF31CCB66A600878904 /* CourseView.swift in Sources */,
 				68186C091CB3525D005AF62D /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
 				68035A5F1CC75B8A002F7C60 /* TPersonalMainViewController.swift in Sources */,
 				68186C371CB3554F005AF62D /* LoginStepViewController.swift in Sources */,
@@ -1430,6 +1436,7 @@
 				68035A4D1CC757D9002F7C60 /* CTLeaveView.swift in Sources */,
 				68035A4B1CC757B3002F7C60 /* CTAttendanceMainViewController.swift in Sources */,
 				68186BFD1CB3525D005AF62D /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
+				68FF20031CCD0315005AC0B7 /* LeaveCourseViewController.swift in Sources */,
 				68035A0A1CC756BA002F7C60 /* PersonalView.swift in Sources */,
 				68035A081CC756BA002F7C60 /* LeaveMainViewController.swift in Sources */,
 				68186C181CB3525D005AF62D /* NVActivityIndicatorShape.swift in Sources */,
@@ -1439,7 +1446,6 @@
 				68035A651CC75BCF002F7C60 /* CLeaveView.swift in Sources */,
 				683CF5FA1CC34E8C00F69765 /* BaseType.swift in Sources */,
 				68186C381CB3554F005AF62D /* LoginViewController.swift in Sources */,
-				EFF324FA1CB025B800603394 /* ReturnResult.swift in Sources */,
 				68035A571CC75B2F002F7C60 /* TAttendanceMainViewController.swift in Sources */,
 				EFA8691F1CAA659200CC1B71 /* SysConfig.swift in Sources */,
 				68186C051CB3525D005AF62D /* NVActivityIndicatorAnimationBallScaleMultiple.swift in Sources */,
@@ -1450,7 +1456,6 @@
 				68035A631CC75BB8002F7C60 /* CAttendanceMainViewController.swift in Sources */,
 				68186BF91CB3525D005AF62D /* AnimationRefresh.swift in Sources */,
 				68186C151CB3525D005AF62D /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */,
-				68FFBAF51CCB798E00878904 /* LeaveCourseViewController.swift in Sources */,
 				68035A671CC75BEE002F7C60 /* CLeaveMainViewController.swift in Sources */,
 				68035A7B1CC75FF9002F7C60 /* LAttendanceMainViewController.swift in Sources */,
 				68035A6B1CC75CA4002F7C60 /* CPersonalMainViewController.swift in Sources */,

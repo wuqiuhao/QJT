@@ -11,10 +11,10 @@ import UIKit
 class CourseView: UIView {
     
     var row: Int = 6
-    var col: Int = 11
+    var col: Int = 12
     var backgroundImageView: UIImageView!
     let weekExcelWidth: CGFloat = (UIScreen.mainScreen().bounds.width - 30) / 5
-    let partExcelHeight: CGFloat = (UIScreen.mainScreen().bounds.height - 64 - 30) / 10
+    let partExcelHeight: CGFloat = (UIScreen.mainScreen().bounds.height - 64 - 30) / 11
     
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -48,7 +48,7 @@ class PersonSetting: Mappable {
         phoneNum    <- map["phoneNum"]
         userType    <- map["userType"]
         portraitID  <- map["portraitID"]
-        appMenus    <- map["AppMenu"]
+        appMenus    <- map["appMenus"]
     }
     
 }

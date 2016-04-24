@@ -18,9 +18,10 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        accountTfd.text = "2012812044"
+        passwordTfd.text = "2012812044"
         configUI()
         setupLoginBtn()
-
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -119,10 +120,8 @@ extension LoginViewController {
             self.clearAllNotice()
             let result = responseData["model"] as! StudentSetting
             print(result)
-            
             let mainWindow = UIApplication.sharedApplication().keyWindow
             mainWindow?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()! as UIViewController
-            
             }) { [weak self] (errorMsg) in
                 self?.clearAllNotice()
                 self?.errorNotice(errorMsg!)

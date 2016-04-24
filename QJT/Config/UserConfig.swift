@@ -9,7 +9,7 @@
 import Foundation
 
 class UserConfig: NSObject {
-
+    // 123
     class func isLogined() -> Bool {
 //        if let _ = UserConfig.userID() {
 //            return true

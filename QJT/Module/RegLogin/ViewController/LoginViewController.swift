@@ -13,8 +13,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var accountTfd: UITextField!
     @IBOutlet weak var passwordTfd: UITextField!
     @IBOutlet weak var loginBtn: UIButton!
-    @IBOutlet weak var resetBtn: UIButton!
-    @IBOutlet weak var loginViewLeadingLayoutConstraint: NSLayoutConstraint!
+    @IBOutlet var accountImg: UIImageView!
+    @IBOutlet var passwordImg: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +37,7 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     
     func configUI() {
-        
+        accountTfd.becomeFirstResponder()
         accountTfd.delegate = self
         passwordTfd.delegate = self
         
@@ -51,13 +51,13 @@ extension LoginViewController {
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        loginViewLeadingLayoutConstraint.constant = 180
-        UIView.animateWithDuration(0.5, animations: {() -> Void in
-            self.view.layoutIfNeeded()
-            self.accountTfd.resignFirstResponder()
-            self.passwordTfd.resignFirstResponder()
-
-        })
+//        loginViewLeadingLayoutConstraint.constant = 180
+//        UIView.animateWithDuration(0.5, animations: {() -> Void in
+//            self.view.layoutIfNeeded()
+//            
+//        })
+        self.accountTfd.resignFirstResponder()
+        self.passwordTfd.resignFirstResponder()
     }
     
     //获取设备唯一ID
@@ -88,13 +88,13 @@ extension LoginViewController {
     
     func loginBtnClicked() {
         
-        loginViewLeadingLayoutConstraint.constant = 180
-        UIView.animateWithDuration(0.5, animations: {() -> Void in
-            self.view.layoutIfNeeded()
-            self.accountTfd.resignFirstResponder()
-            self.passwordTfd.resignFirstResponder()
-            
-        })
+//        loginViewLeadingLayoutConstraint.constant = 180
+//        UIView.animateWithDuration(0.5, animations: {() -> Void in
+//            self.view.layoutIfNeeded()
+//            self.accountTfd.resignFirstResponder()
+//            self.passwordTfd.resignFirstResponder()
+//            
+//        })
         
         if accountTfd.text == "" && accountTfd.text?.characters.count == 0{
             self.errorNotice("账号为空")
@@ -118,8 +118,8 @@ extension LoginViewController {
         self.pleaseWait()
         NetWorkManager.httpRequest(Methods.login_studentLogin, params: params, modelType: StudentSetting(), listType: nil, completed: { (responseData) in
             self.clearAllNotice()
-            let result = responseData["model"] as! StudentSetting
-            print(result)
+            let studentSetting = responseData["model"] as! StudentSetting
+            UserConfig.saveStudentSetting(studentSetting)
             let mainWindow = UIApplication.sharedApplication().keyWindow
             mainWindow?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()! as UIViewController
             }) { [weak self] (errorMsg) in
@@ -135,10 +135,10 @@ extension LoginViewController: UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
 
-        loginViewLeadingLayoutConstraint.constant = 50
-        UIView.animateWithDuration(0.5) {
-            self.view.layoutIfNeeded()
-        }
+//        loginViewLeadingLayoutConstraint.constant = 50
+//        UIView.animateWithDuration(0.5) {
+//            self.view.layoutIfNeeded()
+//        }
 
         return true
     }

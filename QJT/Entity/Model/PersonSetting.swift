@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class PersonSetting: Mappable {
+class PersonSetting: NSObject,Mappable {
     
     // 学号、工号
     var userID: String
@@ -24,7 +24,7 @@ class PersonSetting: Mappable {
     // 菜单列表
     var appMenus: [AppMenu]
     
-    init() {
+    override init() {
         userID = ""
         userName = ""
         userType = 0

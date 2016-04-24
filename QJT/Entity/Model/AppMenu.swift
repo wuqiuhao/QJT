@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class AppMenu: Mappable,NSCoding {
+class AppMenu: NSObject,NSCoding,Mappable {
     
     // 菜单名
     var menuName: String
@@ -18,7 +18,7 @@ class AppMenu: Mappable,NSCoding {
     // 菜单自定义参数
     var menuParameter: String
     
-    init() {
+    override init() {
         menuName = ""
         uniqueCode = ""
         menuParameter = ""
@@ -34,7 +34,6 @@ class AppMenu: Mappable,NSCoding {
         menuName        <- map["menuName"]
         uniqueCode      <- map["uniqueCode"]
         menuParameter   <- map["menuParameter"]
-        
     }
     
     @objc func encodeWithCoder(aCoder: NSCoder) {
@@ -48,5 +47,4 @@ class AppMenu: Mappable,NSCoding {
         uniqueCode = aDecoder.decodeObjectForKey("uniqueCode") as! String
         menuParameter = aDecoder.decodeObjectForKey("menuParameter") as! String
     }
-    
 }

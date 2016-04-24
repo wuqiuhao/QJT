@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1A0F54FFF44B77ECE6EF942A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451ED4D82C76F378DBB33D09 /* Pods.framework */; };
-		68035A001CC756BA002F7C60 /* Attendance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680359EC1CC756BA002F7C60 /* Attendance.storyboard */; };
-		68035A011CC756BA002F7C60 /* Attendance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359EE1CC756BA002F7C60 /* Attendance.swift */; };
-		68035A021CC756BA002F7C60 /* AttendanceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359F01CC756BA002F7C60 /* AttendanceMainViewController.swift */; };
+		68035A001CC756BA002F7C60 /* Sign.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680359EC1CC756BA002F7C60 /* Sign.storyboard */; };
+		68035A011CC756BA002F7C60 /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359EE1CC756BA002F7C60 /* Sign.swift */; };
+		68035A021CC756BA002F7C60 /* SignMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359F01CC756BA002F7C60 /* SignMainViewController.swift */; };
 		68035A031CC756BA002F7C60 /* Leave.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680359F21CC756BA002F7C60 /* Leave.storyboard */; };
 		68035A041CC756BA002F7C60 /* LeaveCourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359F41CC756BA002F7C60 /* LeaveCourseCell.swift */; };
 		68035A051CC756BA002F7C60 /* LeaveCourseCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359F51CC756BA002F7C60 /* LeaveCourseCollectionCell.swift */; };
@@ -133,9 +133,9 @@
 /* Begin PBXFileReference section */
 		421540CB059379FB231DBF0D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		451ED4D82C76F378DBB33D09 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		680359EC1CC756BA002F7C60 /* Attendance.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Attendance.storyboard; sourceTree = "<group>"; };
-		680359EE1CC756BA002F7C60 /* Attendance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attendance.swift; sourceTree = "<group>"; };
-		680359F01CC756BA002F7C60 /* AttendanceMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendanceMainViewController.swift; sourceTree = "<group>"; };
+		680359EC1CC756BA002F7C60 /* Sign.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sign.storyboard; sourceTree = "<group>"; };
+		680359EE1CC756BA002F7C60 /* Sign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sign.swift; sourceTree = "<group>"; };
+		680359F01CC756BA002F7C60 /* SignMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignMainViewController.swift; sourceTree = "<group>"; };
 		680359F21CC756BA002F7C60 /* Leave.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Leave.storyboard; sourceTree = "<group>"; };
 		680359F41CC756BA002F7C60 /* LeaveCourseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveCourseCell.swift; sourceTree = "<group>"; };
 		680359F51CC756BA002F7C60 /* LeaveCourseCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveCourseCollectionCell.swift; sourceTree = "<group>"; };
@@ -285,7 +285,7 @@
 		680359EA1CC75686002F7C60 /* Student */ = {
 			isa = PBXGroup;
 			children = (
-				680359EB1CC756BA002F7C60 /* Attendance */,
+				680359EB1CC756BA002F7C60 /* Sign */,
 				680359F11CC756BA002F7C60 /* Leave */,
 				680359FA1CC756BA002F7C60 /* Personal */,
 			);
@@ -293,20 +293,21 @@
 			path = Module/Student;
 			sourceTree = "<group>";
 		};
-		680359EB1CC756BA002F7C60 /* Attendance */ = {
+		680359EB1CC756BA002F7C60 /* Sign */ = {
 			isa = PBXGroup;
 			children = (
-				680359EC1CC756BA002F7C60 /* Attendance.storyboard */,
+				680359EC1CC756BA002F7C60 /* Sign.storyboard */,
 				680359ED1CC756BA002F7C60 /* View */,
 				680359EF1CC756BA002F7C60 /* ViewController */,
 			);
+			name = Sign;
 			path = Attendance;
 			sourceTree = "<group>";
 		};
 		680359ED1CC756BA002F7C60 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				680359EE1CC756BA002F7C60 /* Attendance.swift */,
+				680359EE1CC756BA002F7C60 /* Sign.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -314,7 +315,7 @@
 		680359EF1CC756BA002F7C60 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				680359F01CC756BA002F7C60 /* AttendanceMainViewController.swift */,
+				680359F01CC756BA002F7C60 /* SignMainViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1284,7 +1285,7 @@
 				687E38341CBE4008009EDE17 /* Main.storyboard in Resources */,
 				68035A031CC756BA002F7C60 /* Leave.storyboard in Resources */,
 				68035A091CC756BA002F7C60 /* Personal.storyboard in Resources */,
-				68035A001CC756BA002F7C60 /* Attendance.storyboard in Resources */,
+				68035A001CC756BA002F7C60 /* Sign.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1344,7 +1345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68035A9B1CC782F0002F7C60 /* TeacherSetting.swift in Sources */,
-				68035A021CC756BA002F7C60 /* AttendanceMainViewController.swift in Sources */,
+				68035A021CC756BA002F7C60 /* SignMainViewController.swift in Sources */,
 				68035A531CC7581A002F7C60 /* CTPersonalMainViewController.swift in Sources */,
 				68186C121CB3525D005AF62D /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
 				68035A071CC756BA002F7C60 /* LeaveTimeCell.swift in Sources */,
@@ -1433,7 +1434,7 @@
 				68035A081CC756BA002F7C60 /* LeaveMainViewController.swift in Sources */,
 				68186C181CB3525D005AF62D /* NVActivityIndicatorShape.swift in Sources */,
 				68186C071CB3525D005AF62D /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
-				68035A011CC756BA002F7C60 /* Attendance.swift in Sources */,
+				68035A011CC756BA002F7C60 /* Sign.swift in Sources */,
 				68035A7D1CC7600F002F7C60 /* LLeaveView.swift in Sources */,
 				68035A651CC75BCF002F7C60 /* CLeaveView.swift in Sources */,
 				683CF5FA1CC34E8C00F69765 /* BaseType.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Sign: UIView {
+class Attendance: UIView {
 
     /*
     // Only override drawRect: if you perform custom drawing.

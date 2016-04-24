@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         registerJPush(launchOptions)
         
         receiveJPushRigsterNotice()
-        
+        //123123
         return true
     }
 }

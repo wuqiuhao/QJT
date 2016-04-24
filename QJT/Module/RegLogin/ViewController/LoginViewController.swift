@@ -37,6 +37,7 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     
     func configUI() {
+        navigationItem.title = "登录"
         accountTfd.becomeFirstResponder()
         accountTfd.delegate = self
         passwordTfd.delegate = self

@@ -430,15 +430,15 @@
                                         </constraints>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_account" translatesAutoresizingMaskIntoConstraints="NO" id="qrT-Bp-ypT">
-                                        <rect key="frame" x="25" y="15" width="15" height="15"/>
+                                        <rect key="frame" x="25" y="14" width="20" height="16"/>
                                         <color key="tintColor" red="0.19607843137254902" green="0.65490196078431373" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="15" id="MZL-4C-6qN"/>
-                                            <constraint firstAttribute="width" constant="15" id="q7x-xT-W7z"/>
+                                            <constraint firstAttribute="height" constant="16" id="IwR-un-eTy"/>
+                                            <constraint firstAttribute="width" constant="20" id="jpA-u7-22r"/>
                                         </constraints>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入学工号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ETV-mz-Pk0" userLabel="accountTfd">
-                                        <rect key="frame" x="50" y="0.0" width="525" height="44"/>
+                                        <rect key="frame" x="55" y="0.0" width="520" height="44"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
@@ -453,39 +453,41 @@
                                         </state>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kxr-H9-gVN" userLabel="passwordTfd">
-                                        <rect key="frame" x="50" y="45" width="525" height="44"/>
+                                        <rect key="frame" x="55" y="45" width="520" height="44"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="go" secureTextEntry="YES"/>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_password" translatesAutoresizingMaskIntoConstraints="NO" id="ZmD-1B-WRZ">
-                                        <rect key="frame" x="25" y="60" width="15" height="15"/>
+                                        <rect key="frame" x="25" y="59" width="16" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="LrK-85-5gk"/>
+                                            <constraint firstAttribute="width" constant="16" id="taN-oe-WWP"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="6Nv-yG-k4P" firstAttribute="top" secondItem="wAh-Vd-ruy" secondAttribute="bottom" constant="44" id="0QT-ND-M1T"/>
+                                    <constraint firstItem="qrT-Bp-ypT" firstAttribute="leading" secondItem="Ibl-4z-c77" secondAttribute="leading" constant="25" id="0Vh-U0-NCr"/>
                                     <constraint firstItem="WVs-j9-wZy" firstAttribute="leading" secondItem="Ibl-4z-c77" secondAttribute="leading" constant="25" id="3Ta-ED-lUT"/>
                                     <constraint firstAttribute="trailing" secondItem="ETV-mz-Pk0" secondAttribute="trailing" constant="25" id="A0U-7i-7AH"/>
+                                    <constraint firstItem="ETV-mz-Pk0" firstAttribute="leading" secondItem="qrT-Bp-ypT" secondAttribute="trailing" constant="10" id="Adp-Xz-cMa"/>
                                     <constraint firstItem="6Nv-yG-k4P" firstAttribute="top" secondItem="kxr-H9-gVN" secondAttribute="bottom" id="Erv-Rn-2qk"/>
-                                    <constraint firstItem="ZmD-1B-WRZ" firstAttribute="leading" secondItem="Ibl-4z-c77" secondAttribute="leading" constant="25" id="Fft-8q-GL1"/>
-                                    <constraint firstItem="6Nv-yG-k4P" firstAttribute="top" secondItem="ZmD-1B-WRZ" secondAttribute="bottom" constant="14" id="HX1-7Y-SPY"/>
-                                    <constraint firstItem="kxr-H9-gVN" firstAttribute="leading" secondItem="ZmD-1B-WRZ" secondAttribute="trailing" constant="10" id="JYi-dj-XVb"/>
                                     <constraint firstItem="ETV-mz-Pk0" firstAttribute="top" secondItem="Ibl-4z-c77" secondAttribute="top" id="K6r-Yh-EYr"/>
+                                    <constraint firstItem="qrT-Bp-ypT" firstAttribute="top" secondItem="Ibl-4z-c77" secondAttribute="top" constant="14" id="Lve-tf-pDx"/>
                                     <constraint firstAttribute="bottom" secondItem="WVs-j9-wZy" secondAttribute="bottom" constant="40" id="Oix-td-KOO"/>
-                                    <constraint firstItem="ETV-mz-Pk0" firstAttribute="leading" secondItem="qrT-Bp-ypT" secondAttribute="trailing" constant="10" id="QTY-rf-zaW"/>
-                                    <constraint firstItem="ZmD-1B-WRZ" firstAttribute="top" secondItem="wAh-Vd-ruy" secondAttribute="bottom" constant="15" id="XfX-T4-4Fg"/>
+                                    <constraint firstItem="ZmD-1B-WRZ" firstAttribute="leading" secondItem="Ibl-4z-c77" secondAttribute="leading" constant="25" id="Pf8-lK-6gq"/>
                                     <constraint firstAttribute="height" constant="200" id="YCB-8H-wFo"/>
+                                    <constraint firstItem="ZmD-1B-WRZ" firstAttribute="top" secondItem="wAh-Vd-ruy" secondAttribute="bottom" constant="14" id="Ywd-bb-RIW"/>
                                     <constraint firstItem="wAh-Vd-ruy" firstAttribute="leading" secondItem="Ibl-4z-c77" secondAttribute="leading" constant="25" id="baO-pA-CvM"/>
                                     <constraint firstAttribute="trailing" secondItem="6Nv-yG-k4P" secondAttribute="trailing" constant="25" id="ces-KX-P5L"/>
                                     <constraint firstItem="kxr-H9-gVN" firstAttribute="top" secondItem="wAh-Vd-ruy" secondAttribute="bottom" id="enC-aO-PwO"/>
+                                    <constraint firstItem="kxr-H9-gVN" firstAttribute="leading" secondItem="ZmD-1B-WRZ" secondAttribute="trailing" constant="14" id="fnq-lp-gRQ"/>
                                     <constraint firstAttribute="trailing" secondItem="wAh-Vd-ruy" secondAttribute="trailing" constant="25" id="guQ-eb-fYs"/>
-                                    <constraint firstItem="wAh-Vd-ruy" firstAttribute="top" secondItem="qrT-Bp-ypT" secondAttribute="bottom" constant="14" id="hmu-cE-1eO"/>
                                     <constraint firstAttribute="trailing" secondItem="WVs-j9-wZy" secondAttribute="trailing" constant="25" id="juA-1Z-t2i"/>
-                                    <constraint firstItem="qrT-Bp-ypT" firstAttribute="top" secondItem="Ibl-4z-c77" secondAttribute="top" constant="15" id="nUa-3J-q8e"/>
                                     <constraint firstAttribute="trailing" secondItem="kxr-H9-gVN" secondAttribute="trailing" constant="25" id="tVn-aD-rWa"/>
                                     <constraint firstItem="WVs-j9-wZy" firstAttribute="top" secondItem="6Nv-yG-k4P" secondAttribute="bottom" constant="30" id="uSu-OY-0oZ"/>
                                     <constraint firstItem="wAh-Vd-ruy" firstAttribute="top" secondItem="ETV-mz-Pk0" secondAttribute="bottom" id="unK-wV-t89"/>
-                                    <constraint firstItem="qrT-Bp-ypT" firstAttribute="leading" secondItem="Ibl-4z-c77" secondAttribute="leading" constant="25" id="uvw-xF-abk"/>
                                     <constraint firstItem="6Nv-yG-k4P" firstAttribute="leading" secondItem="Ibl-4z-c77" secondAttribute="leading" constant="25" id="yPZ-wB-Huw"/>
                                     <constraint firstItem="wAh-Vd-ruy" firstAttribute="top" secondItem="Ibl-4z-c77" secondAttribute="top" constant="44" id="zdE-LW-6Iv"/>
                                 </constraints>
@@ -549,7 +551,7 @@
         <image name="Oval9" width="11" height="11"/>
         <image name="Oval_big" width="73" height="58"/>
         <image name="Pen" width="7" height="66"/>
-        <image name="login_account" width="15" height="15"/>
-        <image name="login_password" width="15" height="15"/>
+        <image name="login_account" width="20" height="16"/>
+        <image name="login_password" width="16" height="16"/>
     </resources>
 </document>

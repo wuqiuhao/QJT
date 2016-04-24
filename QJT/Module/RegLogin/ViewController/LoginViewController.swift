@@ -20,7 +20,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         configUI()
         setupLoginBtn()
-        //print(JPUSHService.registrationID())
 
     }
     
@@ -88,12 +87,20 @@ extension LoginViewController {
     
     func loginBtnClicked() {
         
-        guard let _ = accountTfd.text else {
-            self.errorNotice("用户名为空")
+        loginViewLeadingLayoutConstraint.constant = 180
+        UIView.animateWithDuration(0.5, animations: {() -> Void in
+            self.view.layoutIfNeeded()
+            self.accountTfd.resignFirstResponder()
+            self.passwordTfd.resignFirstResponder()
+            
+        })
+        
+        if accountTfd.text == "" && accountTfd.text?.characters.count == 0{
+            self.errorNotice("账号为空")
             return
         }
         
-        guard let _ = passwordTfd.text else {
+        if passwordTfd.text == "" && passwordTfd.text?.characters.count == 0{
             self.errorNotice("密码为空")
             return
         }
@@ -106,13 +113,19 @@ extension LoginViewController {
         } else {
             params.updateValue("", forKey: "registerID")
         }
-        
         params.updateValue(getUUID(), forKey: "deviceID")
+        self.pleaseWait()
         NetWorkManager.httpRequest(Methods.login_studentLogin, params: params, modelType: StudentSetting(), listType: nil, completed: { (responseData) in
+            self.clearAllNotice()
             let result = responseData["model"] as! StudentSetting
             print(result)
-            }) { (errorMsg) in
-                print(errorMsg)
+            
+            let mainWindow = UIApplication.sharedApplication().keyWindow
+            mainWindow?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()! as UIViewController
+            
+            }) { [weak self] (errorMsg) in
+                self?.clearAllNotice()
+                self?.errorNotice(errorMsg!)
         }
         
     }
@@ -131,6 +144,11 @@ extension LoginViewController: UITextFieldDelegate {
         return true
     }
     
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        loginBtnClicked()
+        return true
+    }
 }
 
 

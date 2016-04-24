@@ -43,6 +43,8 @@ extension LeaveMainViewController {
     
     func rightItemClicked() {
         print("下一步")
+        let vc = UIStoryboard(name: "Leave", bundle: nil).instantiateViewControllerWithIdentifier("LeaveCourseViewController")
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func leftItemClicked() {

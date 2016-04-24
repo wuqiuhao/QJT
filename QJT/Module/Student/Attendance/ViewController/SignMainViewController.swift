@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AttendanceMainViewController: UIViewController {
+class SignMainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

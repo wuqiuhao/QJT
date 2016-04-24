@@ -13,6 +13,8 @@ class CourseClass: Mappable {
     
     // 课程班级编号
     var courseClassID: Int
+    // 课程名
+    var courseName: String
     // 上课地点
     var address: String
     // 课程编号
@@ -32,6 +34,7 @@ class CourseClass: Mappable {
     
     init() {
         courseClassID = 0
+        courseName = ""
         address = ""
         courseID = ""
         courseTime = NSDate()
@@ -44,6 +47,7 @@ class CourseClass: Mappable {
     
     required init?(_ map: Map) {
         courseClassID = 0
+        courseName = ""
         address = ""
         courseID = ""
         courseTime = NSDate()
@@ -56,6 +60,7 @@ class CourseClass: Mappable {
     
     func mapping(map: Map) {
         courseClassID       <- map["courseClassID"]
+        courseName          <- map["courseName"]
         address             <- map["address"]
         courseID            <- map["courseID"]
         courseTime          <- map["courseTime"]

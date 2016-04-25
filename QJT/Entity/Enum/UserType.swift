@@ -68,26 +68,24 @@ enum UserType: Int,BaseType {
         
     }
     
-    static func fromIntToAbbreviate(value: Int) -> String {
-        switch value {
-        case 0:
+    func ToAbbreviate() -> String {
+        switch self {
+        case .Unknown:
             return "Unknown"
-        case 1:
+        case .Student:
             return "S"
-        case 2:
+        case .CourseTeacher:
             return "CT"
-        case 3:
+        case .Teacher:
             return "T"
-        case 4:
+        case .Counsellor:
             return "C"
-        case 5:
+        case .BranchLeader:
             return "BL"
-        case 6:
+        case .Leader:
             return "L"
-        case 7:
+        case .StudentWorker:
             return "SW"
-        default:
-            return ""
         }
     }
     

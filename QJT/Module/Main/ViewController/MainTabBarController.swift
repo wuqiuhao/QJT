@@ -51,7 +51,7 @@ extension MainTabBarController {
             for tabMenu in UserConfig.teacherSetting()!.appMenus {
                 let item = UITabBarItem(title: tabMenu.menuName, image:  UIImage(named: "main_\(tabMenu.uniqueCode)_normal"), selectedImage: UIImage(named: "main_\(tabMenu.uniqueCode)_select"))
                 let vc: UIViewController?
-                let abbr = UserType.fromIntToAbbreviate(UserConfig.teacherSetting()!.userType)
+//                let abbr = UserType.fromIntToAbbreviate()
                 switch tabMenu.uniqueCode {
                 case "leave":
                     vc = UIStoryboard(name: "\(abbr)Leave", bundle: nil).instantiateInitialViewController()

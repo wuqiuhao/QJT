@@ -1661,7 +1661,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.design.qianjiangtong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "526aef8d-dd46-4abf-bec1-12247782ea89";
+				PROVISIONING_PROFILE = "40f9108c-1388-444b-a02d-395e57528594";
 				SWIFT_OBJC_BRIDGING_HEADER = "QJT/Supporting Files/QJT-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1688,7 +1688,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.design.qianjiangtong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "526aef8d-dd46-4abf-bec1-12247782ea89";
+				PROVISIONING_PROFILE = "40f9108c-1388-444b-a02d-395e57528594";
 				SWIFT_OBJC_BRIDGING_HEADER = "QJT/Supporting Files/QJT-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Pods/Headers/**";

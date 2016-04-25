@@ -18,7 +18,7 @@ class PersonSetting: NSObject,Mappable {
     // 联系方式
     var phoneNum: String
     // 用户类型
-    var userType: Int
+    var userType: UserType
     // 头像编号
     var portraitID: Int
     // 菜单列表
@@ -27,7 +27,7 @@ class PersonSetting: NSObject,Mappable {
     override init() {
         userID = ""
         userName = ""
-        userType = 0
+        userType = UserType.Unknown
         phoneNum = ""
         portraitID = 0
         appMenus = [AppMenu]()
@@ -36,7 +36,7 @@ class PersonSetting: NSObject,Mappable {
     required init?(_ map: Map) {
         userID = ""
         userName = ""
-        userType = 0
+        userType = UserType.Unknown
         phoneNum = ""
         portraitID = 0
         appMenus = [AppMenu]()

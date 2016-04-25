@@ -48,7 +48,7 @@ class StudentSetting: PersonSetting, NSCoding {
         aCoder.encodeObject(userID, forKey: "userID")
         aCoder.encodeObject(userName, forKey: "userName")
         aCoder.encodeObject(phoneNum, forKey: "phoneNum")
-        aCoder.encodeInteger(userType, forKey: "userType")
+//        aCoder.encodeInteger(userType, forKey: "userType")
         aCoder.encodeInteger(portraitID, forKey: "portraitID")
         aCoder.encodeInteger(schoolYear, forKey: "schoolYear")
         aCoder.encodeObject(className, forKey: "className")
@@ -66,7 +66,7 @@ class StudentSetting: PersonSetting, NSCoding {
         userID = aDecoder.decodeObjectForKey("userID") as! String
         userName = aDecoder.decodeObjectForKey("userName") as! String
         phoneNum = aDecoder.decodeObjectForKey("phoneNum") as! String
-        userType = aDecoder.decodeIntegerForKey("userType")
+//        userType = aDecoder.decodeIntegerForKey("userType")
         portraitID = aDecoder.decodeIntegerForKey("portraitID")
         appMenus = aDecoder.decodeObjectForKey("appMenus") as! [AppMenu]
     }

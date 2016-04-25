@@ -18,8 +18,7 @@ enum UserType: Int,BaseType {
     case BranchLeader //分院领导
     case Leader  // 学院领导
     case StudentWorker //学工教师
-    
-    
+
     func toString() -> String {
         switch self {
         case .Unknown:
@@ -112,5 +111,4 @@ enum UserType: Int,BaseType {
             return "学工教师"
         }
     }
-    
 }

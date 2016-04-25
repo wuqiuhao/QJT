@@ -15,17 +15,28 @@ class SignMainViewController: UIViewController,CLLocationManagerDelegate {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var latLabel: UILabel!
     @IBOutlet weak var longLabel: UILabel!
+    @IBOutlet weak var repositionBtn: UIButton!
     @IBOutlet weak var signBtn: UIButton!
     @IBOutlet weak var messageBack: UIView!
 
     var locationManager: CLLocationManager?
     var center: CLLocationCoordinate2D?
     var isLoaded = false
-    
+    var point: MKPointAnnotation?
     override func viewDidLoad() {
         super.viewDidLoad()
-        messageBack.layer.cornerRadius = 8
+        signBtn.layer.borderWidth = 1
+        signBtn.layer.borderColor = UIColor.cyanColor().CGColor
+        signBtn.layer.cornerRadius = 8
+        signBtn.backgroundColor = UIColor.clearColor()
         
+        repositionBtn.layer.borderWidth = 1
+        repositionBtn.layer.borderColor = UIColor.cyanColor().CGColor
+        repositionBtn.layer.cornerRadius = 8
+        repositionBtn.backgroundColor = UIColor.clearColor()
+        
+        messageBack.layer.cornerRadius = 8
+        messageBack.alpha = 0.6
         mapView?.mapType = MKMapType.Standard
         self.initLocationManager()
         // Do any additional setup after loading the view.
@@ -36,7 +47,15 @@ class SignMainViewController: UIViewController,CLLocationManagerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func searchBtn(sender: AnyObject) {
+    @IBAction func repositionBtn(sender: AnyObject) {
+        isLoaded = false
+        mapView.removeAnnotation(point!)
+    }
+    @IBAction func signBtn(sender: AnyObject) {
+        let signCourseVC = SignCourseViewController()
+        signCourseVC.lat = latLabel.text
+        signCourseVC.long = longLabel.text
+//        self.presentViewController(signCourseVC, animated: true, completion: nil)
     }
 
     func initLocationManager() {
@@ -70,10 +89,10 @@ class SignMainViewController: UIViewController,CLLocationManagerDelegate {
             latLabel.text = "维度：\(center!.latitude)"
             longLabel.text = "经度：\(center!.longitude)"
             
-            let point = MKPointAnnotation()
-            point.coordinate = center!
-            point.title = "我的位置"
-            mapView.addAnnotation(point)
+            point = MKPointAnnotation()
+            point!.coordinate = center!
+            point!.title = "我的位置"
+            mapView.addAnnotation(point!)
         }
     }
     
@@ -95,6 +114,11 @@ class SignMainViewController: UIViewController,CLLocationManagerDelegate {
         }
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let courseView = segue.destinationViewController as! SignCourseViewController
+        courseView.lat = String(center!.latitude)
+        courseView.long = String(center!.longitude)
+    }
     
     /*
     // MARK: - Navigation

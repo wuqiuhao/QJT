@@ -56,30 +56,33 @@
                                         <rect key="frame" x="59" y="90" width="46" height="30"/>
                                         <state key="normal" title="定位"/>
                                         <connections>
-                                            <action selector="searchBtn:" destination="BJB-Fe-hrR" eventType="touchUpInside" id="evi-ig-Ol1"/>
+                                            <action selector="repositionBtn:" destination="BJB-Fe-hrR" eventType="touchUpInside" id="p04-79-dVB"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRh-cw-tAa">
                                         <rect key="frame" x="138" y="90" width="46" height="30"/>
                                         <state key="normal" title="签到"/>
                                         <connections>
-                                            <action selector="searchBtn:" destination="BJB-Fe-hrR" eventType="touchUpInside" id="HWx-EV-380"/>
+                                            <action selector="signBtn:" destination="BJB-Fe-hrR" eventType="touchUpInside" id="iW0-ba-cTe"/>
+                                            <segue destination="9W5-S0-kh9" kind="show" identifier="signBtn" id="Oc1-VW-hPc"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="C1K-qT-Tlt"/>
+                                    <constraint firstAttribute="height" constant="128" id="t0e-TH-wa3"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="BlE-AZ-zNJ" secondAttribute="trailing" constant="-20" id="0TB-2N-3mq"/>
                             <constraint firstItem="BlE-AZ-zNJ" firstAttribute="leading" secondItem="Yge-X3-hYH" secondAttribute="leadingMargin" constant="-20" id="4Oe-ed-T50"/>
-                            <constraint firstItem="yQf-Jf-efv" firstAttribute="leading" secondItem="Yge-X3-hYH" secondAttribute="leadingMargin" id="9C7-xL-eBw"/>
+                            <constraint firstItem="Wpy-QJ-Rpa" firstAttribute="top" secondItem="yQf-Jf-efv" secondAttribute="bottom" constant="20" id="8Yy-pm-4qu"/>
                             <constraint firstItem="Wpy-QJ-Rpa" firstAttribute="top" secondItem="BlE-AZ-zNJ" secondAttribute="bottom" id="AZt-IM-KCu"/>
-                            <constraint firstItem="Wpy-QJ-Rpa" firstAttribute="top" secondItem="yQf-Jf-efv" secondAttribute="bottom" constant="20" id="bc3-qF-cKq"/>
+                            <constraint firstItem="yQf-Jf-efv" firstAttribute="leading" secondItem="Yge-X3-hYH" secondAttribute="leadingMargin" id="Dfk-2t-7KV"/>
                             <constraint firstItem="BlE-AZ-zNJ" firstAttribute="top" secondItem="RGZ-vs-Fpn" secondAttribute="bottom" id="fSj-uM-Ih8"/>
-                            <constraint firstItem="yQf-Jf-efv" firstAttribute="top" secondItem="RGZ-vs-Fpn" secondAttribute="bottom" constant="388" id="jay-YS-cjQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="yQf-Jf-efv" secondAttribute="trailing" constant="320" id="pQO-ZI-PuM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PAN-HS-Zok"/>
@@ -88,12 +91,32 @@
                         <outlet property="longLabel" destination="uuB-KO-BqX" id="vBf-Rq-qIR"/>
                         <outlet property="mapView" destination="BlE-AZ-zNJ" id="Pek-dl-sQu"/>
                         <outlet property="messageBack" destination="yQf-Jf-efv" id="Rlm-Cu-W8u"/>
+                        <outlet property="repositionBtn" destination="L1c-GB-x2L" id="0G1-j6-0Ds"/>
                         <outlet property="signBtn" destination="zRh-cw-tAa" id="aSs-MP-r8V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MPy-Gm-VlW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="737" y="487"/>
+        </scene>
+        <!--Sign Course View Controller-->
+        <scene sceneID="xr1-A6-hGc">
+            <objects>
+                <viewController id="9W5-S0-kh9" customClass="SignCourseViewController" customModule="QJT" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DP1-w5-jaJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="gLC-zQ-5re"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6YR-EW-C7a">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="U6r-bk-9JM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PQF-Zp-ehB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1485" y="487"/>
         </scene>
     </scenes>
 </document>

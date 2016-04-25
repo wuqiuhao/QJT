@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A0F54FFF44B77ECE6EF942A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451ED4D82C76F378DBB33D09 /* Pods.framework */; };
+		585122D41CCD0F790041A82F /* SignCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585122D31CCD0F790041A82F /* SignCourseViewController.swift */; };
 		68035A001CC756BA002F7C60 /* Sign.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680359EC1CC756BA002F7C60 /* Sign.storyboard */; };
 		68035A011CC756BA002F7C60 /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359EE1CC756BA002F7C60 /* Sign.swift */; };
 		68035A021CC756BA002F7C60 /* SignMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359F01CC756BA002F7C60 /* SignMainViewController.swift */; };
@@ -134,6 +135,7 @@
 /* Begin PBXFileReference section */
 		421540CB059379FB231DBF0D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		451ED4D82C76F378DBB33D09 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		585122D31CCD0F790041A82F /* SignCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignCourseViewController.swift; sourceTree = "<group>"; };
 		680359EC1CC756BA002F7C60 /* Sign.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sign.storyboard; sourceTree = "<group>"; };
 		680359EE1CC756BA002F7C60 /* Sign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sign.swift; sourceTree = "<group>"; };
 		680359F01CC756BA002F7C60 /* SignMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignMainViewController.swift; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				680359F01CC756BA002F7C60 /* SignMainViewController.swift */,
+				585122D31CCD0F790041A82F /* SignCourseViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1434,6 +1437,7 @@
 				68186C041CB3525D005AF62D /* NVActivityIndicatorAnimationBallScale.swift in Sources */,
 				68186C161CB3525D005AF62D /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */,
 				68035A4D1CC757D9002F7C60 /* CTLeaveView.swift in Sources */,
+				585122D41CCD0F790041A82F /* SignCourseViewController.swift in Sources */,
 				68035A4B1CC757B3002F7C60 /* CTAttendanceMainViewController.swift in Sources */,
 				68186BFD1CB3525D005AF62D /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
 				68FF20031CCD0315005AC0B7 /* LeaveCourseViewController.swift in Sources */,

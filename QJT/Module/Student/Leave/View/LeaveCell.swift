@@ -1,18 +1,20 @@
 //
-//  LeaveTimeCell.swift
+//  LeaveCell.swift
 //  QJT
 //
-//  Created by LZQ on 16/4/17.
+//  Created by LZQ on 16/4/25.
 //  Copyright © 2016年 Hale. All rights reserved.
 //
 
 import UIKit
 
-class LeaveTimeCell: UITableViewCell {
+class LeaveCell: UITableViewCell {
 
     
-    @IBOutlet weak var beginTimeTfd: UITextField!
-    @IBOutlet weak var endTimeTfd: UITextField!
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var detailLbl: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

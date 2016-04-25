@@ -9,7 +9,7 @@
 import UIKit
 
 class LeaveCourseViewController: UIViewController {
-
+    
     var courseView: CourseView!
     lazy var courseArrData = [CourseClass]()
     
@@ -18,34 +18,50 @@ class LeaveCourseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configUI()
         setupCourseBackground()
+        getNetwork()
         
-        
-        let model = CourseClass()
-        model.address = "B-301"
-        model.courseClassID = 104
-        model.week = Week.Tuesday
-        model.fromSection = 1
-        model.durationSection = 2
-        model.courseName = "C语言设计"
-        courseArrData.append(model)
-        
-        let model1 = CourseClass()
-        model1.address = "B-301"
-        model1.courseClassID = 104
-        model1.week = Week.Friday
-        model1.fromSection = 7
-        model1.durationSection = 3
-        model1.courseName = "C语言设计"
-        courseArrData.append(model1)
-        
-        configCourseExcel()
+        //        let model = CourseClass()
+        //        model.address = "B-301"
+        //        model.courseClassID = 104
+        //        model.week = Week.Tuesday
+        //        model.fromSection = 1
+        //        model.durationSection = 2
+        //        model.courseName = "C语言设计"
+        //        courseArrData.append(model)
+        //
+        //        let model1 = CourseClass()
+        //        model1.address = "B-301"
+        //        model1.courseClassID = 104
+        //        model1.week = Week.Friday
+        //        model1.fromSection = 7
+        //        model1.durationSection = 3
+        //        model1.courseName = "C语言设计"
+        //        courseArrData.append(model1)
     }
-
+    
 }
 
 // MARK: - private Method
 extension LeaveCourseViewController {
+    
+    func configUI() {
+        navigationItem.title = "课程表"
+    }
+    
+    func getNetwork() {
+        self.pleaseWait()
+        NetWorkManager.httpRequest(Methods.leave_studentGetCourseClasses, params: ["studentID":"2012812025"], modelType: CourseClass(), listType: CourseClass(), completed: { (responseData) in
+            self.clearAllNotice()
+            self.courseArrData = responseData["list"] as! [CourseClass]
+            self.configCourseExcel()
+            
+        }) { (errorMsg) in
+            self.clearAllNotice()
+            print(errorMsg!)
+        }
+    }
     
     func setupCourseBackground() {
         courseView = CourseView(frame: CGRect(x: 0, y: 64, width: UIScreen.mainScreen().bounds.width, height: UIScreen.mainScreen().bounds.height - 64))
@@ -53,25 +69,31 @@ extension LeaveCourseViewController {
     }
     
     func configCourseExcel() {
-        
         for course in courseArrData {
-            
             let offsetX = 30 + CGFloat(course.week.toInt() - 1) * weekExcelWidth + 1
             let offsetY = 30 + CGFloat(course.fromSection - 1) * partExcelHeight + 1
             let courseLbl = HLable()
             courseLbl.verticalAlignment = .Middle
             courseLbl.frame = CGRectMake(offsetX, offsetY, weekExcelWidth - 2, partExcelHeight * CGFloat(course.durationSection) - 2)
             courseLbl.text = course.courseName + "\n" + course.address
-            courseLbl.backgroundColor = UIColor.redColor()
+            courseLbl.backgroundColor = colorWithRandom()
             courseLbl.numberOfLines = 0
             courseLbl.font = UIFont.systemFontOfSize(14)
             courseLbl.layer.cornerRadius = 4
             courseLbl.layer.masksToBounds = true
             courseLbl.textColor = UIColor.whiteColor()
             courseView.addSubview(courseLbl)
-            
         }
-        
     }
     
+    func colorWithRandom() -> UIColor {
+        let redNum = random() % 255
+        let greenNum = random() % 255
+        let blueNum = random() % 255
+        if redNum < 200 || greenNum < 200 || blueNum < 200 {
+            return UIColor(red: CGFloat(redNum)/255, green: CGFloat(greenNum)/255, blue: CGFloat(blueNum)/255, alpha: 0.7)
+        } else {
+            return colorWithRandom()
+        }
+    }
 }

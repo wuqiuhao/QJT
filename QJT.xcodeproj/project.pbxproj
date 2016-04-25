@@ -9,60 +9,77 @@
 /* Begin PBXBuildFile section */
 		1A0F54FFF44B77ECE6EF942A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451ED4D82C76F378DBB33D09 /* Pods.framework */; };
 		585122D41CCD0F790041A82F /* SignCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585122D31CCD0F790041A82F /* SignCourseViewController.swift */; };
-		5851399E1CCE0F7600908BD5 /* CTAttendance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5851399D1CCE0F7600908BD5 /* CTAttendance.storyboard */; };
-		585139A01CCE14D200908BD5 /* CTSignCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5851399F1CCE14D200908BD5 /* CTSignCourseViewController.swift */; };
 		68035A001CC756BA002F7C60 /* Sign.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680359EC1CC756BA002F7C60 /* Sign.storyboard */; };
 		68035A011CC756BA002F7C60 /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359EE1CC756BA002F7C60 /* Sign.swift */; };
 		68035A021CC756BA002F7C60 /* SignMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359F01CC756BA002F7C60 /* SignMainViewController.swift */; };
-		68035A031CC756BA002F7C60 /* Leave.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680359F21CC756BA002F7C60 /* Leave.storyboard */; };
-		68035A041CC756BA002F7C60 /* LeaveCourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359F41CC756BA002F7C60 /* LeaveCourseCell.swift */; };
-		68035A051CC756BA002F7C60 /* LeaveCourseCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359F51CC756BA002F7C60 /* LeaveCourseCollectionCell.swift */; };
-		68035A061CC756BA002F7C60 /* LeaveNextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359F61CC756BA002F7C60 /* LeaveNextCell.swift */; };
-		68035A071CC756BA002F7C60 /* LeaveTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359F71CC756BA002F7C60 /* LeaveTimeCell.swift */; };
 		68035A081CC756BA002F7C60 /* LeaveMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359F91CC756BA002F7C60 /* LeaveMainViewController.swift */; };
 		68035A091CC756BA002F7C60 /* Personal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680359FB1CC756BA002F7C60 /* Personal.storyboard */; };
 		68035A0A1CC756BA002F7C60 /* PersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359FD1CC756BA002F7C60 /* PersonalView.swift */; };
 		68035A0B1CC756BA002F7C60 /* PersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359FF1CC756BA002F7C60 /* PersonalMainViewController.swift */; };
-		68035A491CC75757002F7C60 /* qqqView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A481CC75757002F7C60 /* qqqView.swift */; };
-		68035A4B1CC757B3002F7C60 /* CTAttendanceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A4A1CC757B3002F7C60 /* CTAttendanceMainViewController.swift */; };
-		68035A4D1CC757D9002F7C60 /* CTLeaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A4C1CC757D9002F7C60 /* CTLeaveView.swift */; };
-		68035A4F1CC757E8002F7C60 /* CTLeaveMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A4E1CC757E8002F7C60 /* CTLeaveMainViewController.swift */; };
-		68035A511CC75803002F7C60 /* CTPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A501CC75803002F7C60 /* CTPersonalView.swift */; };
-		68035A531CC7581A002F7C60 /* CTPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A521CC7581A002F7C60 /* CTPersonalMainViewController.swift */; };
-		68035A551CC75B21002F7C60 /* TAttendanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A541CC75B21002F7C60 /* TAttendanceView.swift */; };
-		68035A571CC75B2F002F7C60 /* TAttendanceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A561CC75B2F002F7C60 /* TAttendanceMainViewController.swift */; };
-		68035A591CC75B4A002F7C60 /* TLeaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A581CC75B4A002F7C60 /* TLeaveView.swift */; };
-		68035A5B1CC75B5D002F7C60 /* TLeaveViewMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A5A1CC75B5D002F7C60 /* TLeaveViewMainController.swift */; };
-		68035A5D1CC75B78002F7C60 /* TPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A5C1CC75B78002F7C60 /* TPersonalView.swift */; };
-		68035A5F1CC75B8A002F7C60 /* TPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A5E1CC75B8A002F7C60 /* TPersonalMainViewController.swift */; };
-		68035A611CC75BAF002F7C60 /* CAttendanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A601CC75BAF002F7C60 /* CAttendanceView.swift */; };
-		68035A631CC75BB8002F7C60 /* CAttendanceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A621CC75BB8002F7C60 /* CAttendanceMainViewController.swift */; };
-		68035A651CC75BCF002F7C60 /* CLeaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A641CC75BCF002F7C60 /* CLeaveView.swift */; };
-		68035A671CC75BEE002F7C60 /* CLeaveMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A661CC75BEE002F7C60 /* CLeaveMainViewController.swift */; };
-		68035A691CC75C90002F7C60 /* CPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A681CC75C90002F7C60 /* CPersonalView.swift */; };
-		68035A6B1CC75CA4002F7C60 /* CPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A6A1CC75CA4002F7C60 /* CPersonalMainViewController.swift */; };
-		68035A6D1CC75F1B002F7C60 /* BAttendanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A6C1CC75F1B002F7C60 /* BAttendanceView.swift */; };
-		68035A6F1CC75F56002F7C60 /* BAttendanceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A6E1CC75F56002F7C60 /* BAttendanceMainViewController.swift */; };
-		68035A711CC75F73002F7C60 /* BLeaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A701CC75F73002F7C60 /* BLeaveView.swift */; };
-		68035A731CC75F8F002F7C60 /* BLeaveMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A721CC75F8F002F7C60 /* BLeaveMainViewController.swift */; };
-		68035A751CC75FAA002F7C60 /* BPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A741CC75FAA002F7C60 /* BPersonalView.swift */; };
-		68035A771CC75FB7002F7C60 /* BPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A761CC75FB7002F7C60 /* BPersonalMainViewController.swift */; };
-		68035A791CC75FE8002F7C60 /* LAttendanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A781CC75FE8002F7C60 /* LAttendanceView.swift */; };
-		68035A7B1CC75FF9002F7C60 /* LAttendanceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A7A1CC75FF9002F7C60 /* LAttendanceMainViewController.swift */; };
-		68035A7D1CC7600F002F7C60 /* LLeaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A7C1CC7600F002F7C60 /* LLeaveView.swift */; };
-		68035A7F1CC7601A002F7C60 /* LLeaveMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A7E1CC7601A002F7C60 /* LLeaveMainViewController.swift */; };
-		68035A811CC7602D002F7C60 /* LPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A801CC7602D002F7C60 /* LPersonalView.swift */; };
-		68035A831CC761AE002F7C60 /* LPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A821CC761AE002F7C60 /* LPersonalMainViewController.swift */; };
-		68035A851CC761CB002F7C60 /* SWAttendanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A841CC761CB002F7C60 /* SWAttendanceView.swift */; };
-		68035A871CC761E3002F7C60 /* SWAttendanceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A861CC761E3002F7C60 /* SWAttendanceMainViewController.swift */; };
-		68035A891CC761FA002F7C60 /* SWLeaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A881CC761FA002F7C60 /* SWLeaveView.swift */; };
-		68035A8B1CC7620A002F7C60 /* SWLeaveMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A8A1CC7620A002F7C60 /* SWLeaveMainViewController.swift */; };
-		68035A8D1CC76220002F7C60 /* SWPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A8C1CC76220002F7C60 /* SWPersonalView.swift */; };
-		68035A8F1CC7622D002F7C60 /* SWPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A8E1CC7622D002F7C60 /* SWPersonalMainViewController.swift */; };
 		68035A931CC77791002F7C60 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A921CC77791002F7C60 /* Teacher.swift */; };
 		68035A971CC77BE4002F7C60 /* AppMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A961CC77BE4002F7C60 /* AppMenu.swift */; };
 		68035A991CC78066002F7C60 /* StudentSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A981CC78066002F7C60 /* StudentSetting.swift */; };
 		68035A9B1CC782F0002F7C60 /* TeacherSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A9A1CC782F0002F7C60 /* TeacherSetting.swift */; };
+		68083EC21CCE5691004BE4D4 /* NSDate_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083EC11CCE5691004BE4D4 /* NSDate_extension.swift */; };
+		68083ECA1CCE56CC004BE4D4 /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 68083EC91CCE56CC004BE4D4 /* DLRadioButton.m */; };
+		68083ECE1CCE571F004BE4D4 /* RegLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083ECD1CCE571F004BE4D4 /* RegLogin.storyboard */; };
+		68083F7E1CCE5909004BE4D4 /* BLAttendance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F0D1CCE5909004BE4D4 /* BLAttendance.storyboard */; };
+		68083F7F1CCE5909004BE4D4 /* BAttendanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F0F1CCE5909004BE4D4 /* BAttendanceView.swift */; };
+		68083F801CCE5909004BE4D4 /* BAttendanceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F111CCE5909004BE4D4 /* BAttendanceMainViewController.swift */; };
+		68083F811CCE5909004BE4D4 /* BLLeave.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F131CCE5909004BE4D4 /* BLLeave.storyboard */; };
+		68083F821CCE5909004BE4D4 /* BLeaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F151CCE5909004BE4D4 /* BLeaveView.swift */; };
+		68083F831CCE5909004BE4D4 /* BLeaveMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F171CCE5909004BE4D4 /* BLeaveMainViewController.swift */; };
+		68083F841CCE5909004BE4D4 /* BLPersonal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F191CCE5909004BE4D4 /* BLPersonal.storyboard */; };
+		68083F851CCE5909004BE4D4 /* BPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F1B1CCE5909004BE4D4 /* BPersonalView.swift */; };
+		68083F861CCE5909004BE4D4 /* BPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F1D1CCE5909004BE4D4 /* BPersonalMainViewController.swift */; };
+		68083F881CCE5909004BE4D4 /* qqqView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F221CCE5909004BE4D4 /* qqqView.swift */; };
+		68083F891CCE5909004BE4D4 /* CTAttendanceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F241CCE5909004BE4D4 /* CTAttendanceMainViewController.swift */; };
+		68083F8A1CCE5909004BE4D4 /* CTSignCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F251CCE5909004BE4D4 /* CTSignCourseViewController.swift */; };
+		68083F8B1CCE5909004BE4D4 /* CTLeave.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F271CCE5909004BE4D4 /* CTLeave.storyboard */; };
+		68083F8C1CCE5909004BE4D4 /* CTLeaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F291CCE5909004BE4D4 /* CTLeaveView.swift */; };
+		68083F8D1CCE5909004BE4D4 /* CTLeaveMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F2B1CCE5909004BE4D4 /* CTLeaveMainViewController.swift */; };
+		68083F8E1CCE5909004BE4D4 /* CTPersonal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F2D1CCE5909004BE4D4 /* CTPersonal.storyboard */; };
+		68083F8F1CCE5909004BE4D4 /* CTPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F2F1CCE5909004BE4D4 /* CTPersonalView.swift */; };
+		68083F901CCE5909004BE4D4 /* CTPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F311CCE5909004BE4D4 /* CTPersonalMainViewController.swift */; };
+		68083F911CCE5909004BE4D4 /* CAttendance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F341CCE5909004BE4D4 /* CAttendance.storyboard */; };
+		68083F921CCE5909004BE4D4 /* CAttendanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F361CCE5909004BE4D4 /* CAttendanceView.swift */; };
+		68083F931CCE5909004BE4D4 /* CAttendanceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F381CCE5909004BE4D4 /* CAttendanceMainViewController.swift */; };
+		68083F941CCE5909004BE4D4 /* CLeave.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F3A1CCE5909004BE4D4 /* CLeave.storyboard */; };
+		68083F951CCE5909004BE4D4 /* CLeaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F3C1CCE5909004BE4D4 /* CLeaveView.swift */; };
+		68083F961CCE5909004BE4D4 /* CLeaveMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F3E1CCE5909004BE4D4 /* CLeaveMainViewController.swift */; };
+		68083F971CCE5909004BE4D4 /* CPersonal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F401CCE5909004BE4D4 /* CPersonal.storyboard */; };
+		68083F981CCE5909004BE4D4 /* CPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F421CCE5909004BE4D4 /* CPersonalView.swift */; };
+		68083F991CCE5909004BE4D4 /* CPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F441CCE5909004BE4D4 /* CPersonalMainViewController.swift */; };
+		68083F9A1CCE5909004BE4D4 /* LAttendance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F471CCE5909004BE4D4 /* LAttendance.storyboard */; };
+		68083F9B1CCE5909004BE4D4 /* LAttendanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F491CCE5909004BE4D4 /* LAttendanceView.swift */; };
+		68083F9C1CCE5909004BE4D4 /* LAttendanceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F4B1CCE5909004BE4D4 /* LAttendanceMainViewController.swift */; };
+		68083F9D1CCE5909004BE4D4 /* LLeave.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F4D1CCE5909004BE4D4 /* LLeave.storyboard */; };
+		68083F9E1CCE5909004BE4D4 /* LLeaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F4F1CCE5909004BE4D4 /* LLeaveView.swift */; };
+		68083F9F1CCE5909004BE4D4 /* LLeaveMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F511CCE5909004BE4D4 /* LLeaveMainViewController.swift */; };
+		68083FA01CCE5909004BE4D4 /* LPersonal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F531CCE5909004BE4D4 /* LPersonal.storyboard */; };
+		68083FA11CCE5909004BE4D4 /* LPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F551CCE5909004BE4D4 /* LPersonalView.swift */; };
+		68083FA21CCE5909004BE4D4 /* LPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F571CCE5909004BE4D4 /* LPersonalMainViewController.swift */; };
+		68083FA31CCE5909004BE4D4 /* SWAttendance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F5A1CCE5909004BE4D4 /* SWAttendance.storyboard */; };
+		68083FA41CCE5909004BE4D4 /* SWAttendanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F5C1CCE5909004BE4D4 /* SWAttendanceView.swift */; };
+		68083FA51CCE5909004BE4D4 /* SWAttendanceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F5E1CCE5909004BE4D4 /* SWAttendanceMainViewController.swift */; };
+		68083FA61CCE5909004BE4D4 /* SWLeave.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F601CCE5909004BE4D4 /* SWLeave.storyboard */; };
+		68083FA71CCE5909004BE4D4 /* SWLeaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F621CCE5909004BE4D4 /* SWLeaveView.swift */; };
+		68083FA81CCE5909004BE4D4 /* SWLeaveMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F641CCE5909004BE4D4 /* SWLeaveMainViewController.swift */; };
+		68083FA91CCE5909004BE4D4 /* SWPersonal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F661CCE5909004BE4D4 /* SWPersonal.storyboard */; };
+		68083FAA1CCE5909004BE4D4 /* SWPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F681CCE5909004BE4D4 /* SWPersonalView.swift */; };
+		68083FAB1CCE5909004BE4D4 /* SWPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F6A1CCE5909004BE4D4 /* SWPersonalMainViewController.swift */; };
+		68083FAC1CCE5909004BE4D4 /* TAttendance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F6D1CCE5909004BE4D4 /* TAttendance.storyboard */; };
+		68083FAD1CCE5909004BE4D4 /* TAttendanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F6F1CCE5909004BE4D4 /* TAttendanceView.swift */; };
+		68083FAE1CCE5909004BE4D4 /* TAttendanceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F711CCE5909004BE4D4 /* TAttendanceMainViewController.swift */; };
+		68083FAF1CCE5909004BE4D4 /* TLeave.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F731CCE5909004BE4D4 /* TLeave.storyboard */; };
+		68083FB01CCE5909004BE4D4 /* TLeaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F751CCE5909004BE4D4 /* TLeaveView.swift */; };
+		68083FB11CCE5909004BE4D4 /* TLeaveViewMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F771CCE5909004BE4D4 /* TLeaveViewMainController.swift */; };
+		68083FB21CCE5909004BE4D4 /* TPersonal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F791CCE5909004BE4D4 /* TPersonal.storyboard */; };
+		68083FB31CCE5909004BE4D4 /* TPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F7B1CCE5909004BE4D4 /* TPersonalView.swift */; };
+		68083FB41CCE5909004BE4D4 /* TPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F7D1CCE5909004BE4D4 /* TPersonalMainViewController.swift */; };
+		68083FB61CCE59D7004BE4D4 /* CTAttendance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083FB51CCE59D7004BE4D4 /* CTAttendance.storyboard */; };
+		68083FB81CCE5A96004BE4D4 /* Leave.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083FB71CCE5A96004BE4D4 /* Leave.storyboard */; };
+		68083FBA1CCE5AAB004BE4D4 /* LeaveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083FB91CCE5AAB004BE4D4 /* LeaveCell.swift */; };
 		68186BF91CB3525D005AF62D /* AnimationRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68186BD61CB3525D005AF62D /* AnimationRefresh.swift */; };
 		68186BFA1CB3525D005AF62D /* NVActivityIndicatorAnimationBallBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68186BD91CB3525D005AF62D /* NVActivityIndicatorAnimationBallBeat.swift */; };
 		68186BFB1CB3525D005AF62D /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68186BDA1CB3525D005AF62D /* NVActivityIndicatorAnimationBallClipRotate.swift */; };
@@ -105,7 +122,6 @@
 		68186C371CB3554F005AF62D /* LoginStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68186C311CB3554F005AF62D /* LoginStepViewController.swift */; };
 		68186C381CB3554F005AF62D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68186C321CB3554F005AF62D /* LoginViewController.swift */; };
 		681DD1261CC7B685004CB295 /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 681DD1251CC7B685004CB295 /* Week.swift */; };
-		682297C31CB13C50008CD1D4 /* RegLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 682297C21CB13C50008CD1D4 /* RegLogin.storyboard */; };
 		68323F641CBCE14A00B7DEBE /* KeychainItemWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 68323F631CBCE14A00B7DEBE /* KeychainItemWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		68323F661CBCE1DF00B7DEBE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68323F651CBCE1DF00B7DEBE /* Security.framework */; };
 		683CF5E81CC3390200F69765 /* UserConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CF5E71CC3390200F69765 /* UserConfig.swift */; };
@@ -138,60 +154,78 @@
 		421540CB059379FB231DBF0D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		451ED4D82C76F378DBB33D09 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		585122D31CCD0F790041A82F /* SignCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignCourseViewController.swift; sourceTree = "<group>"; };
-		5851399D1CCE0F7600908BD5 /* CTAttendance.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CTAttendance.storyboard; sourceTree = "<group>"; };
-		5851399F1CCE14D200908BD5 /* CTSignCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTSignCourseViewController.swift; sourceTree = "<group>"; };
 		680359EC1CC756BA002F7C60 /* Sign.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sign.storyboard; sourceTree = "<group>"; };
 		680359EE1CC756BA002F7C60 /* Sign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sign.swift; sourceTree = "<group>"; };
 		680359F01CC756BA002F7C60 /* SignMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignMainViewController.swift; sourceTree = "<group>"; };
-		680359F21CC756BA002F7C60 /* Leave.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Leave.storyboard; sourceTree = "<group>"; };
-		680359F41CC756BA002F7C60 /* LeaveCourseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveCourseCell.swift; sourceTree = "<group>"; };
-		680359F51CC756BA002F7C60 /* LeaveCourseCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveCourseCollectionCell.swift; sourceTree = "<group>"; };
-		680359F61CC756BA002F7C60 /* LeaveNextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveNextCell.swift; sourceTree = "<group>"; };
-		680359F71CC756BA002F7C60 /* LeaveTimeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveTimeCell.swift; sourceTree = "<group>"; };
 		680359F91CC756BA002F7C60 /* LeaveMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveMainViewController.swift; sourceTree = "<group>"; };
 		680359FB1CC756BA002F7C60 /* Personal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Personal.storyboard; sourceTree = "<group>"; };
 		680359FD1CC756BA002F7C60 /* PersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalView.swift; sourceTree = "<group>"; };
 		680359FF1CC756BA002F7C60 /* PersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalMainViewController.swift; sourceTree = "<group>"; };
-		68035A481CC75757002F7C60 /* qqqView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = qqqView.swift; sourceTree = "<group>"; };
-		68035A4A1CC757B3002F7C60 /* CTAttendanceMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTAttendanceMainViewController.swift; sourceTree = "<group>"; };
-		68035A4C1CC757D9002F7C60 /* CTLeaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTLeaveView.swift; sourceTree = "<group>"; };
-		68035A4E1CC757E8002F7C60 /* CTLeaveMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTLeaveMainViewController.swift; sourceTree = "<group>"; };
-		68035A501CC75803002F7C60 /* CTPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPersonalView.swift; sourceTree = "<group>"; };
-		68035A521CC7581A002F7C60 /* CTPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPersonalMainViewController.swift; sourceTree = "<group>"; };
-		68035A541CC75B21002F7C60 /* TAttendanceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TAttendanceView.swift; sourceTree = "<group>"; };
-		68035A561CC75B2F002F7C60 /* TAttendanceMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TAttendanceMainViewController.swift; sourceTree = "<group>"; };
-		68035A581CC75B4A002F7C60 /* TLeaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLeaveView.swift; sourceTree = "<group>"; };
-		68035A5A1CC75B5D002F7C60 /* TLeaveViewMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLeaveViewMainController.swift; sourceTree = "<group>"; };
-		68035A5C1CC75B78002F7C60 /* TPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TPersonalView.swift; sourceTree = "<group>"; };
-		68035A5E1CC75B8A002F7C60 /* TPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TPersonalMainViewController.swift; sourceTree = "<group>"; };
-		68035A601CC75BAF002F7C60 /* CAttendanceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAttendanceView.swift; sourceTree = "<group>"; };
-		68035A621CC75BB8002F7C60 /* CAttendanceMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAttendanceMainViewController.swift; sourceTree = "<group>"; };
-		68035A641CC75BCF002F7C60 /* CLeaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLeaveView.swift; sourceTree = "<group>"; };
-		68035A661CC75BEE002F7C60 /* CLeaveMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLeaveMainViewController.swift; sourceTree = "<group>"; };
-		68035A681CC75C90002F7C60 /* CPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPersonalView.swift; sourceTree = "<group>"; };
-		68035A6A1CC75CA4002F7C60 /* CPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPersonalMainViewController.swift; sourceTree = "<group>"; };
-		68035A6C1CC75F1B002F7C60 /* BAttendanceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BAttendanceView.swift; sourceTree = "<group>"; };
-		68035A6E1CC75F56002F7C60 /* BAttendanceMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BAttendanceMainViewController.swift; sourceTree = "<group>"; };
-		68035A701CC75F73002F7C60 /* BLeaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLeaveView.swift; sourceTree = "<group>"; };
-		68035A721CC75F8F002F7C60 /* BLeaveMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLeaveMainViewController.swift; sourceTree = "<group>"; };
-		68035A741CC75FAA002F7C60 /* BPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPersonalView.swift; sourceTree = "<group>"; };
-		68035A761CC75FB7002F7C60 /* BPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPersonalMainViewController.swift; sourceTree = "<group>"; };
-		68035A781CC75FE8002F7C60 /* LAttendanceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LAttendanceView.swift; sourceTree = "<group>"; };
-		68035A7A1CC75FF9002F7C60 /* LAttendanceMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LAttendanceMainViewController.swift; sourceTree = "<group>"; };
-		68035A7C1CC7600F002F7C60 /* LLeaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLeaveView.swift; sourceTree = "<group>"; };
-		68035A7E1CC7601A002F7C60 /* LLeaveMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLeaveMainViewController.swift; sourceTree = "<group>"; };
-		68035A801CC7602D002F7C60 /* LPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LPersonalView.swift; sourceTree = "<group>"; };
-		68035A821CC761AE002F7C60 /* LPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LPersonalMainViewController.swift; sourceTree = "<group>"; };
-		68035A841CC761CB002F7C60 /* SWAttendanceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWAttendanceView.swift; sourceTree = "<group>"; };
-		68035A861CC761E3002F7C60 /* SWAttendanceMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWAttendanceMainViewController.swift; sourceTree = "<group>"; };
-		68035A881CC761FA002F7C60 /* SWLeaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWLeaveView.swift; sourceTree = "<group>"; };
-		68035A8A1CC7620A002F7C60 /* SWLeaveMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWLeaveMainViewController.swift; sourceTree = "<group>"; };
-		68035A8C1CC76220002F7C60 /* SWPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWPersonalView.swift; sourceTree = "<group>"; };
-		68035A8E1CC7622D002F7C60 /* SWPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWPersonalMainViewController.swift; sourceTree = "<group>"; };
 		68035A921CC77791002F7C60 /* Teacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Teacher.swift; path = Entity/Model/Teacher.swift; sourceTree = "<group>"; };
 		68035A961CC77BE4002F7C60 /* AppMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppMenu.swift; path = Entity/Model/AppMenu.swift; sourceTree = "<group>"; };
 		68035A981CC78066002F7C60 /* StudentSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StudentSetting.swift; path = Entity/Model/StudentSetting.swift; sourceTree = "<group>"; };
 		68035A9A1CC782F0002F7C60 /* TeacherSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeacherSetting.swift; path = Entity/Model/TeacherSetting.swift; sourceTree = "<group>"; };
+		68083EC11CCE5691004BE4D4 /* NSDate_extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSDate_extension.swift; path = General/Extensions/NSDate_extension.swift; sourceTree = "<group>"; };
+		68083EC81CCE56CC004BE4D4 /* DLRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLRadioButton.h; sourceTree = "<group>"; };
+		68083EC91CCE56CC004BE4D4 /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLRadioButton.m; sourceTree = "<group>"; };
+		68083ECD1CCE571F004BE4D4 /* RegLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RegLogin.storyboard; path = Module/RegLogin/RegLogin.storyboard; sourceTree = "<group>"; };
+		68083F0D1CCE5909004BE4D4 /* BLAttendance.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BLAttendance.storyboard; sourceTree = "<group>"; };
+		68083F0F1CCE5909004BE4D4 /* BAttendanceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BAttendanceView.swift; sourceTree = "<group>"; };
+		68083F111CCE5909004BE4D4 /* BAttendanceMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BAttendanceMainViewController.swift; sourceTree = "<group>"; };
+		68083F131CCE5909004BE4D4 /* BLLeave.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BLLeave.storyboard; sourceTree = "<group>"; };
+		68083F151CCE5909004BE4D4 /* BLeaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLeaveView.swift; sourceTree = "<group>"; };
+		68083F171CCE5909004BE4D4 /* BLeaveMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLeaveMainViewController.swift; sourceTree = "<group>"; };
+		68083F191CCE5909004BE4D4 /* BLPersonal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BLPersonal.storyboard; sourceTree = "<group>"; };
+		68083F1B1CCE5909004BE4D4 /* BPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPersonalView.swift; sourceTree = "<group>"; };
+		68083F1D1CCE5909004BE4D4 /* BPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPersonalMainViewController.swift; sourceTree = "<group>"; };
+		68083F221CCE5909004BE4D4 /* qqqView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = qqqView.swift; sourceTree = "<group>"; };
+		68083F241CCE5909004BE4D4 /* CTAttendanceMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTAttendanceMainViewController.swift; sourceTree = "<group>"; };
+		68083F251CCE5909004BE4D4 /* CTSignCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTSignCourseViewController.swift; sourceTree = "<group>"; };
+		68083F271CCE5909004BE4D4 /* CTLeave.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CTLeave.storyboard; sourceTree = "<group>"; };
+		68083F291CCE5909004BE4D4 /* CTLeaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTLeaveView.swift; sourceTree = "<group>"; };
+		68083F2B1CCE5909004BE4D4 /* CTLeaveMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTLeaveMainViewController.swift; sourceTree = "<group>"; };
+		68083F2D1CCE5909004BE4D4 /* CTPersonal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CTPersonal.storyboard; sourceTree = "<group>"; };
+		68083F2F1CCE5909004BE4D4 /* CTPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPersonalView.swift; sourceTree = "<group>"; };
+		68083F311CCE5909004BE4D4 /* CTPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPersonalMainViewController.swift; sourceTree = "<group>"; };
+		68083F341CCE5909004BE4D4 /* CAttendance.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CAttendance.storyboard; sourceTree = "<group>"; };
+		68083F361CCE5909004BE4D4 /* CAttendanceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAttendanceView.swift; sourceTree = "<group>"; };
+		68083F381CCE5909004BE4D4 /* CAttendanceMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAttendanceMainViewController.swift; sourceTree = "<group>"; };
+		68083F3A1CCE5909004BE4D4 /* CLeave.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CLeave.storyboard; sourceTree = "<group>"; };
+		68083F3C1CCE5909004BE4D4 /* CLeaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLeaveView.swift; sourceTree = "<group>"; };
+		68083F3E1CCE5909004BE4D4 /* CLeaveMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLeaveMainViewController.swift; sourceTree = "<group>"; };
+		68083F401CCE5909004BE4D4 /* CPersonal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CPersonal.storyboard; sourceTree = "<group>"; };
+		68083F421CCE5909004BE4D4 /* CPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPersonalView.swift; sourceTree = "<group>"; };
+		68083F441CCE5909004BE4D4 /* CPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPersonalMainViewController.swift; sourceTree = "<group>"; };
+		68083F471CCE5909004BE4D4 /* LAttendance.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LAttendance.storyboard; sourceTree = "<group>"; };
+		68083F491CCE5909004BE4D4 /* LAttendanceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LAttendanceView.swift; sourceTree = "<group>"; };
+		68083F4B1CCE5909004BE4D4 /* LAttendanceMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LAttendanceMainViewController.swift; sourceTree = "<group>"; };
+		68083F4D1CCE5909004BE4D4 /* LLeave.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LLeave.storyboard; sourceTree = "<group>"; };
+		68083F4F1CCE5909004BE4D4 /* LLeaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLeaveView.swift; sourceTree = "<group>"; };
+		68083F511CCE5909004BE4D4 /* LLeaveMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLeaveMainViewController.swift; sourceTree = "<group>"; };
+		68083F531CCE5909004BE4D4 /* LPersonal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LPersonal.storyboard; sourceTree = "<group>"; };
+		68083F551CCE5909004BE4D4 /* LPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LPersonalView.swift; sourceTree = "<group>"; };
+		68083F571CCE5909004BE4D4 /* LPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LPersonalMainViewController.swift; sourceTree = "<group>"; };
+		68083F5A1CCE5909004BE4D4 /* SWAttendance.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SWAttendance.storyboard; sourceTree = "<group>"; };
+		68083F5C1CCE5909004BE4D4 /* SWAttendanceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWAttendanceView.swift; sourceTree = "<group>"; };
+		68083F5E1CCE5909004BE4D4 /* SWAttendanceMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWAttendanceMainViewController.swift; sourceTree = "<group>"; };
+		68083F601CCE5909004BE4D4 /* SWLeave.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SWLeave.storyboard; sourceTree = "<group>"; };
+		68083F621CCE5909004BE4D4 /* SWLeaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWLeaveView.swift; sourceTree = "<group>"; };
+		68083F641CCE5909004BE4D4 /* SWLeaveMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWLeaveMainViewController.swift; sourceTree = "<group>"; };
+		68083F661CCE5909004BE4D4 /* SWPersonal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SWPersonal.storyboard; sourceTree = "<group>"; };
+		68083F681CCE5909004BE4D4 /* SWPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWPersonalView.swift; sourceTree = "<group>"; };
+		68083F6A1CCE5909004BE4D4 /* SWPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWPersonalMainViewController.swift; sourceTree = "<group>"; };
+		68083F6D1CCE5909004BE4D4 /* TAttendance.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TAttendance.storyboard; sourceTree = "<group>"; };
+		68083F6F1CCE5909004BE4D4 /* TAttendanceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TAttendanceView.swift; sourceTree = "<group>"; };
+		68083F711CCE5909004BE4D4 /* TAttendanceMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TAttendanceMainViewController.swift; sourceTree = "<group>"; };
+		68083F731CCE5909004BE4D4 /* TLeave.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TLeave.storyboard; sourceTree = "<group>"; };
+		68083F751CCE5909004BE4D4 /* TLeaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLeaveView.swift; sourceTree = "<group>"; };
+		68083F771CCE5909004BE4D4 /* TLeaveViewMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLeaveViewMainController.swift; sourceTree = "<group>"; };
+		68083F791CCE5909004BE4D4 /* TPersonal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TPersonal.storyboard; sourceTree = "<group>"; };
+		68083F7B1CCE5909004BE4D4 /* TPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TPersonalView.swift; sourceTree = "<group>"; };
+		68083F7D1CCE5909004BE4D4 /* TPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TPersonalMainViewController.swift; sourceTree = "<group>"; };
+		68083FB51CCE59D7004BE4D4 /* CTAttendance.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CTAttendance.storyboard; sourceTree = "<group>"; };
+		68083FB71CCE5A96004BE4D4 /* Leave.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Leave.storyboard; sourceTree = "<group>"; };
+		68083FB91CCE5AAB004BE4D4 /* LeaveCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveCell.swift; sourceTree = "<group>"; };
 		68186BD21CB35178005AF62D /* QJT-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "QJT-Bridging-Header.h"; path = "Supporting Files/QJT-Bridging-Header.h"; sourceTree = "<group>"; };
 		68186BD61CB3525D005AF62D /* AnimationRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationRefresh.swift; sourceTree = "<group>"; };
 		68186BD91CB3525D005AF62D /* NVActivityIndicatorAnimationBallBeat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallBeat.swift; sourceTree = "<group>"; };
@@ -235,7 +269,6 @@
 		68186C311CB3554F005AF62D /* LoginStepViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginStepViewController.swift; path = Module/RegLogin/ViewController/LoginStepViewController.swift; sourceTree = "<group>"; };
 		68186C321CB3554F005AF62D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Module/RegLogin/ViewController/LoginViewController.swift; sourceTree = "<group>"; };
 		681DD1251CC7B685004CB295 /* Week.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
-		682297C21CB13C50008CD1D4 /* RegLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RegLogin.storyboard; path = Module/RegLogin/RegLogin.storyboard; sourceTree = "<group>"; };
 		68323F621CBCE14A00B7DEBE /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
 		68323F631CBCE14A00B7DEBE /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainItemWrapper.m; sourceTree = "<group>"; };
 		68323F651CBCE1DF00B7DEBE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -332,7 +365,7 @@
 		680359F11CC756BA002F7C60 /* Leave */ = {
 			isa = PBXGroup;
 			children = (
-				680359F21CC756BA002F7C60 /* Leave.storyboard */,
+				68083FB71CCE5A96004BE4D4 /* Leave.storyboard */,
 				680359F31CC756BA002F7C60 /* View */,
 				680359F81CC756BA002F7C60 /* ViewController */,
 			);
@@ -342,10 +375,7 @@
 		680359F31CC756BA002F7C60 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				680359F41CC756BA002F7C60 /* LeaveCourseCell.swift */,
-				680359F51CC756BA002F7C60 /* LeaveCourseCollectionCell.swift */,
-				680359F61CC756BA002F7C60 /* LeaveNextCell.swift */,
-				680359F71CC756BA002F7C60 /* LeaveTimeCell.swift */,
+				68083FB91CCE5AAB004BE4D4 /* LeaveCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -385,520 +415,547 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		68035A0C1CC756DA002F7C60 /* BranchLeader */ = {
+		68083EC71CCE56CC004BE4D4 /* DLRadioButton */ = {
 			isa = PBXGroup;
 			children = (
-				68035A0D1CC756DA002F7C60 /* Attendance */,
-				68035A101CC756DA002F7C60 /* Leave */,
-				68035A131CC756DA002F7C60 /* Personal */,
+				68083EC81CCE56CC004BE4D4 /* DLRadioButton.h */,
+				68083EC91CCE56CC004BE4D4 /* DLRadioButton.m */,
+			);
+			name = DLRadioButton;
+			path = Util/DLRadioButton;
+			sourceTree = "<group>";
+		};
+		68083F0B1CCE5909004BE4D4 /* BranchLeader */ = {
+			isa = PBXGroup;
+			children = (
+				68083F0C1CCE5909004BE4D4 /* Attendance */,
+				68083F121CCE5909004BE4D4 /* Leave */,
+				68083F181CCE5909004BE4D4 /* Personal */,
 			);
 			name = BranchLeader;
 			path = Module/BranchLeader;
 			sourceTree = "<group>";
 		};
-		68035A0D1CC756DA002F7C60 /* Attendance */ = {
+		68083F0C1CCE5909004BE4D4 /* Attendance */ = {
 			isa = PBXGroup;
 			children = (
-				68035A0E1CC756DA002F7C60 /* View */,
-				68035A0F1CC756DA002F7C60 /* ViewController */,
+				68083F0D1CCE5909004BE4D4 /* BLAttendance.storyboard */,
+				68083F0E1CCE5909004BE4D4 /* View */,
+				68083F101CCE5909004BE4D4 /* ViewController */,
 			);
 			path = Attendance;
 			sourceTree = "<group>";
 		};
-		68035A0E1CC756DA002F7C60 /* View */ = {
+		68083F0E1CCE5909004BE4D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				68035A6C1CC75F1B002F7C60 /* BAttendanceView.swift */,
+				68083F0F1CCE5909004BE4D4 /* BAttendanceView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		68035A0F1CC756DA002F7C60 /* ViewController */ = {
+		68083F101CCE5909004BE4D4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				68035A6E1CC75F56002F7C60 /* BAttendanceMainViewController.swift */,
+				68083F111CCE5909004BE4D4 /* BAttendanceMainViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		68035A101CC756DA002F7C60 /* Leave */ = {
+		68083F121CCE5909004BE4D4 /* Leave */ = {
 			isa = PBXGroup;
 			children = (
-				68035A111CC756DA002F7C60 /* View */,
-				68035A121CC756DA002F7C60 /* ViewController */,
+				68083F131CCE5909004BE4D4 /* BLLeave.storyboard */,
+				68083F141CCE5909004BE4D4 /* View */,
+				68083F161CCE5909004BE4D4 /* ViewController */,
 			);
 			path = Leave;
 			sourceTree = "<group>";
 		};
-		68035A111CC756DA002F7C60 /* View */ = {
+		68083F141CCE5909004BE4D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				68035A701CC75F73002F7C60 /* BLeaveView.swift */,
+				68083F151CCE5909004BE4D4 /* BLeaveView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		68035A121CC756DA002F7C60 /* ViewController */ = {
+		68083F161CCE5909004BE4D4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				68035A721CC75F8F002F7C60 /* BLeaveMainViewController.swift */,
+				68083F171CCE5909004BE4D4 /* BLeaveMainViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		68035A131CC756DA002F7C60 /* Personal */ = {
+		68083F181CCE5909004BE4D4 /* Personal */ = {
 			isa = PBXGroup;
 			children = (
-				68035A141CC756DA002F7C60 /* View */,
-				68035A151CC756DA002F7C60 /* ViewController */,
+				68083F191CCE5909004BE4D4 /* BLPersonal.storyboard */,
+				68083F1A1CCE5909004BE4D4 /* View */,
+				68083F1C1CCE5909004BE4D4 /* ViewController */,
 			);
 			path = Personal;
 			sourceTree = "<group>";
 		};
-		68035A141CC756DA002F7C60 /* View */ = {
+		68083F1A1CCE5909004BE4D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				68035A741CC75FAA002F7C60 /* BPersonalView.swift */,
+				68083F1B1CCE5909004BE4D4 /* BPersonalView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		68035A151CC756DA002F7C60 /* ViewController */ = {
+		68083F1C1CCE5909004BE4D4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				68035A761CC75FB7002F7C60 /* BPersonalMainViewController.swift */,
+				68083F1D1CCE5909004BE4D4 /* BPersonalMainViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		68035A161CC756DA002F7C60 /* ClassTeacher */ = {
+		68083F1E1CCE5909004BE4D4 /* ClassTeacher */ = {
 			isa = PBXGroup;
 			children = (
-				68035A171CC756DA002F7C60 /* Attendance */,
-				68035A1A1CC756DA002F7C60 /* Leave */,
-				68035A1D1CC756DA002F7C60 /* Personal */,
+				68083F1F1CCE5909004BE4D4 /* Attendance */,
+				68083F261CCE5909004BE4D4 /* Leave */,
+				68083F2C1CCE5909004BE4D4 /* Personal */,
 			);
 			name = ClassTeacher;
 			path = Module/ClassTeacher;
 			sourceTree = "<group>";
 		};
-		68035A171CC756DA002F7C60 /* Attendance */ = {
+		68083F1F1CCE5909004BE4D4 /* Attendance */ = {
 			isa = PBXGroup;
 			children = (
-				5851399D1CCE0F7600908BD5 /* CTAttendance.storyboard */,
-				68035A181CC756DA002F7C60 /* View */,
-				68035A191CC756DA002F7C60 /* ViewController */,
+				68083FB51CCE59D7004BE4D4 /* CTAttendance.storyboard */,
+				68083F211CCE5909004BE4D4 /* View */,
+				68083F231CCE5909004BE4D4 /* ViewController */,
 			);
 			path = Attendance;
 			sourceTree = "<group>";
 		};
-		68035A181CC756DA002F7C60 /* View */ = {
+		68083F211CCE5909004BE4D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				68035A481CC75757002F7C60 /* qqqView.swift */,
+				68083F221CCE5909004BE4D4 /* qqqView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		68035A191CC756DA002F7C60 /* ViewController */ = {
+		68083F231CCE5909004BE4D4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				68035A4A1CC757B3002F7C60 /* CTAttendanceMainViewController.swift */,
-				5851399F1CCE14D200908BD5 /* CTSignCourseViewController.swift */,
+				68083F241CCE5909004BE4D4 /* CTAttendanceMainViewController.swift */,
+				68083F251CCE5909004BE4D4 /* CTSignCourseViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		68035A1A1CC756DA002F7C60 /* Leave */ = {
+		68083F261CCE5909004BE4D4 /* Leave */ = {
 			isa = PBXGroup;
 			children = (
-				68035A1B1CC756DA002F7C60 /* View */,
-				68035A1C1CC756DA002F7C60 /* ViewController */,
+				68083F271CCE5909004BE4D4 /* CTLeave.storyboard */,
+				68083F281CCE5909004BE4D4 /* View */,
+				68083F2A1CCE5909004BE4D4 /* ViewController */,
 			);
 			path = Leave;
 			sourceTree = "<group>";
 		};
-		68035A1B1CC756DA002F7C60 /* View */ = {
+		68083F281CCE5909004BE4D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				68035A4C1CC757D9002F7C60 /* CTLeaveView.swift */,
+				68083F291CCE5909004BE4D4 /* CTLeaveView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		68035A1C1CC756DA002F7C60 /* ViewController */ = {
+		68083F2A1CCE5909004BE4D4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				68035A4E1CC757E8002F7C60 /* CTLeaveMainViewController.swift */,
+				68083F2B1CCE5909004BE4D4 /* CTLeaveMainViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		68035A1D1CC756DA002F7C60 /* Personal */ = {
+		68083F2C1CCE5909004BE4D4 /* Personal */ = {
 			isa = PBXGroup;
 			children = (
-				68035A1E1CC756DA002F7C60 /* View */,
-				68035A1F1CC756DA002F7C60 /* ViewController */,
+				68083F2D1CCE5909004BE4D4 /* CTPersonal.storyboard */,
+				68083F2E1CCE5909004BE4D4 /* View */,
+				68083F301CCE5909004BE4D4 /* ViewController */,
 			);
 			path = Personal;
 			sourceTree = "<group>";
 		};
-		68035A1E1CC756DA002F7C60 /* View */ = {
+		68083F2E1CCE5909004BE4D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				68035A501CC75803002F7C60 /* CTPersonalView.swift */,
+				68083F2F1CCE5909004BE4D4 /* CTPersonalView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		68035A1F1CC756DA002F7C60 /* ViewController */ = {
+		68083F301CCE5909004BE4D4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				68035A521CC7581A002F7C60 /* CTPersonalMainViewController.swift */,
+				68083F311CCE5909004BE4D4 /* CTPersonalMainViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		68035A201CC756DA002F7C60 /* Counsellor */ = {
+		68083F321CCE5909004BE4D4 /* Counsellor */ = {
 			isa = PBXGroup;
 			children = (
-				68035A211CC756DA002F7C60 /* Attendance */,
-				68035A241CC756DA002F7C60 /* Leave */,
-				68035A271CC756DA002F7C60 /* Personal */,
+				68083F331CCE5909004BE4D4 /* Attendance */,
+				68083F391CCE5909004BE4D4 /* Leave */,
+				68083F3F1CCE5909004BE4D4 /* Personal */,
 			);
 			name = Counsellor;
 			path = Module/Counsellor;
 			sourceTree = "<group>";
 		};
-		68035A211CC756DA002F7C60 /* Attendance */ = {
+		68083F331CCE5909004BE4D4 /* Attendance */ = {
 			isa = PBXGroup;
 			children = (
-				68035A221CC756DA002F7C60 /* View */,
-				68035A231CC756DA002F7C60 /* ViewController */,
+				68083F341CCE5909004BE4D4 /* CAttendance.storyboard */,
+				68083F351CCE5909004BE4D4 /* View */,
+				68083F371CCE5909004BE4D4 /* ViewController */,
 			);
 			path = Attendance;
 			sourceTree = "<group>";
 		};
-		68035A221CC756DA002F7C60 /* View */ = {
+		68083F351CCE5909004BE4D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				68035A601CC75BAF002F7C60 /* CAttendanceView.swift */,
+				68083F361CCE5909004BE4D4 /* CAttendanceView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		68035A231CC756DA002F7C60 /* ViewController */ = {
+		68083F371CCE5909004BE4D4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				68035A621CC75BB8002F7C60 /* CAttendanceMainViewController.swift */,
+				68083F381CCE5909004BE4D4 /* CAttendanceMainViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		68035A241CC756DA002F7C60 /* Leave */ = {
+		68083F391CCE5909004BE4D4 /* Leave */ = {
 			isa = PBXGroup;
 			children = (
-				68035A251CC756DA002F7C60 /* View */,
-				68035A261CC756DA002F7C60 /* ViewController */,
+				68083F3A1CCE5909004BE4D4 /* CLeave.storyboard */,
+				68083F3B1CCE5909004BE4D4 /* View */,
+				68083F3D1CCE5909004BE4D4 /* ViewController */,
 			);
 			path = Leave;
 			sourceTree = "<group>";
 		};
-		68035A251CC756DA002F7C60 /* View */ = {
+		68083F3B1CCE5909004BE4D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				68035A641CC75BCF002F7C60 /* CLeaveView.swift */,
+				68083F3C1CCE5909004BE4D4 /* CLeaveView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		68035A261CC756DA002F7C60 /* ViewController */ = {
+		68083F3D1CCE5909004BE4D4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				68035A661CC75BEE002F7C60 /* CLeaveMainViewController.swift */,
+				68083F3E1CCE5909004BE4D4 /* CLeaveMainViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		68035A271CC756DA002F7C60 /* Personal */ = {
+		68083F3F1CCE5909004BE4D4 /* Personal */ = {
 			isa = PBXGroup;
 			children = (
-				68035A281CC756DA002F7C60 /* View */,
-				68035A291CC756DA002F7C60 /* ViewController */,
+				68083F401CCE5909004BE4D4 /* CPersonal.storyboard */,
+				68083F411CCE5909004BE4D4 /* View */,
+				68083F431CCE5909004BE4D4 /* ViewController */,
 			);
 			path = Personal;
 			sourceTree = "<group>";
 		};
-		68035A281CC756DA002F7C60 /* View */ = {
+		68083F411CCE5909004BE4D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				68035A681CC75C90002F7C60 /* CPersonalView.swift */,
+				68083F421CCE5909004BE4D4 /* CPersonalView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		68035A291CC756DA002F7C60 /* ViewController */ = {
+		68083F431CCE5909004BE4D4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				68035A6A1CC75CA4002F7C60 /* CPersonalMainViewController.swift */,
+				68083F441CCE5909004BE4D4 /* CPersonalMainViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		68035A2A1CC756DA002F7C60 /* Leader */ = {
+		68083F451CCE5909004BE4D4 /* Leader */ = {
 			isa = PBXGroup;
 			children = (
-				68035A2B1CC756DA002F7C60 /* Attendance */,
-				68035A2E1CC756DA002F7C60 /* Leave */,
-				68035A311CC756DA002F7C60 /* Personal */,
+				68083F461CCE5909004BE4D4 /* Attendance */,
+				68083F4C1CCE5909004BE4D4 /* Leave */,
+				68083F521CCE5909004BE4D4 /* Personal */,
 			);
 			name = Leader;
 			path = Module/Leader;
 			sourceTree = "<group>";
 		};
-		68035A2B1CC756DA002F7C60 /* Attendance */ = {
+		68083F461CCE5909004BE4D4 /* Attendance */ = {
 			isa = PBXGroup;
 			children = (
-				68035A2C1CC756DA002F7C60 /* View */,
-				68035A2D1CC756DA002F7C60 /* ViewController */,
+				68083F471CCE5909004BE4D4 /* LAttendance.storyboard */,
+				68083F481CCE5909004BE4D4 /* View */,
+				68083F4A1CCE5909004BE4D4 /* ViewController */,
 			);
 			path = Attendance;
 			sourceTree = "<group>";
 		};
-		68035A2C1CC756DA002F7C60 /* View */ = {
+		68083F481CCE5909004BE4D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				68035A781CC75FE8002F7C60 /* LAttendanceView.swift */,
+				68083F491CCE5909004BE4D4 /* LAttendanceView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		68035A2D1CC756DA002F7C60 /* ViewController */ = {
+		68083F4A1CCE5909004BE4D4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				68035A7A1CC75FF9002F7C60 /* LAttendanceMainViewController.swift */,
+				68083F4B1CCE5909004BE4D4 /* LAttendanceMainViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		68035A2E1CC756DA002F7C60 /* Leave */ = {
+		68083F4C1CCE5909004BE4D4 /* Leave */ = {
 			isa = PBXGroup;
 			children = (
-				68035A2F1CC756DA002F7C60 /* View */,
-				68035A301CC756DA002F7C60 /* ViewController */,
+				68083F4D1CCE5909004BE4D4 /* LLeave.storyboard */,
+				68083F4E1CCE5909004BE4D4 /* View */,
+				68083F501CCE5909004BE4D4 /* ViewController */,
 			);
 			path = Leave;
 			sourceTree = "<group>";
 		};
-		68035A2F1CC756DA002F7C60 /* View */ = {
+		68083F4E1CCE5909004BE4D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				68035A7C1CC7600F002F7C60 /* LLeaveView.swift */,
+				68083F4F1CCE5909004BE4D4 /* LLeaveView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		68035A301CC756DA002F7C60 /* ViewController */ = {
+		68083F501CCE5909004BE4D4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				68035A7E1CC7601A002F7C60 /* LLeaveMainViewController.swift */,
+				68083F511CCE5909004BE4D4 /* LLeaveMainViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		68035A311CC756DA002F7C60 /* Personal */ = {
+		68083F521CCE5909004BE4D4 /* Personal */ = {
 			isa = PBXGroup;
 			children = (
-				68035A321CC756DA002F7C60 /* View */,
-				68035A331CC756DA002F7C60 /* ViewController */,
+				68083F531CCE5909004BE4D4 /* LPersonal.storyboard */,
+				68083F541CCE5909004BE4D4 /* View */,
+				68083F561CCE5909004BE4D4 /* ViewController */,
 			);
 			path = Personal;
 			sourceTree = "<group>";
 		};
-		68035A321CC756DA002F7C60 /* View */ = {
+		68083F541CCE5909004BE4D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				68035A801CC7602D002F7C60 /* LPersonalView.swift */,
+				68083F551CCE5909004BE4D4 /* LPersonalView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		68035A331CC756DA002F7C60 /* ViewController */ = {
+		68083F561CCE5909004BE4D4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				68035A821CC761AE002F7C60 /* LPersonalMainViewController.swift */,
+				68083F571CCE5909004BE4D4 /* LPersonalMainViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		68035A341CC756DA002F7C60 /* StudentWorker */ = {
+		68083F581CCE5909004BE4D4 /* StudentWorker */ = {
 			isa = PBXGroup;
 			children = (
-				68035A351CC756DA002F7C60 /* Attendance */,
-				68035A381CC756DA002F7C60 /* Leave */,
-				68035A3B1CC756DA002F7C60 /* Personal */,
+				68083F591CCE5909004BE4D4 /* Attendance */,
+				68083F5F1CCE5909004BE4D4 /* Leave */,
+				68083F651CCE5909004BE4D4 /* Personal */,
 			);
 			name = StudentWorker;
 			path = Module/StudentWorker;
 			sourceTree = "<group>";
 		};
-		68035A351CC756DA002F7C60 /* Attendance */ = {
+		68083F591CCE5909004BE4D4 /* Attendance */ = {
 			isa = PBXGroup;
 			children = (
-				68035A361CC756DA002F7C60 /* View */,
-				68035A371CC756DA002F7C60 /* ViewController */,
+				68083F5A1CCE5909004BE4D4 /* SWAttendance.storyboard */,
+				68083F5B1CCE5909004BE4D4 /* View */,
+				68083F5D1CCE5909004BE4D4 /* ViewController */,
 			);
 			path = Attendance;
 			sourceTree = "<group>";
 		};
-		68035A361CC756DA002F7C60 /* View */ = {
+		68083F5B1CCE5909004BE4D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				68035A841CC761CB002F7C60 /* SWAttendanceView.swift */,
+				68083F5C1CCE5909004BE4D4 /* SWAttendanceView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		68035A371CC756DA002F7C60 /* ViewController */ = {
+		68083F5D1CCE5909004BE4D4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				68035A861CC761E3002F7C60 /* SWAttendanceMainViewController.swift */,
+				68083F5E1CCE5909004BE4D4 /* SWAttendanceMainViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		68035A381CC756DA002F7C60 /* Leave */ = {
+		68083F5F1CCE5909004BE4D4 /* Leave */ = {
 			isa = PBXGroup;
 			children = (
-				68035A391CC756DA002F7C60 /* View */,
-				68035A3A1CC756DA002F7C60 /* ViewController */,
+				68083F601CCE5909004BE4D4 /* SWLeave.storyboard */,
+				68083F611CCE5909004BE4D4 /* View */,
+				68083F631CCE5909004BE4D4 /* ViewController */,
 			);
 			path = Leave;
 			sourceTree = "<group>";
 		};
-		68035A391CC756DA002F7C60 /* View */ = {
+		68083F611CCE5909004BE4D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				68035A881CC761FA002F7C60 /* SWLeaveView.swift */,
+				68083F621CCE5909004BE4D4 /* SWLeaveView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		68035A3A1CC756DA002F7C60 /* ViewController */ = {
+		68083F631CCE5909004BE4D4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				68035A8A1CC7620A002F7C60 /* SWLeaveMainViewController.swift */,
+				68083F641CCE5909004BE4D4 /* SWLeaveMainViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		68035A3B1CC756DA002F7C60 /* Personal */ = {
+		68083F651CCE5909004BE4D4 /* Personal */ = {
 			isa = PBXGroup;
 			children = (
-				68035A3C1CC756DA002F7C60 /* View */,
-				68035A3D1CC756DA002F7C60 /* ViewController */,
+				68083F661CCE5909004BE4D4 /* SWPersonal.storyboard */,
+				68083F671CCE5909004BE4D4 /* View */,
+				68083F691CCE5909004BE4D4 /* ViewController */,
 			);
 			path = Personal;
 			sourceTree = "<group>";
 		};
-		68035A3C1CC756DA002F7C60 /* View */ = {
+		68083F671CCE5909004BE4D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				68035A8C1CC76220002F7C60 /* SWPersonalView.swift */,
+				68083F681CCE5909004BE4D4 /* SWPersonalView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		68035A3D1CC756DA002F7C60 /* ViewController */ = {
+		68083F691CCE5909004BE4D4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				68035A8E1CC7622D002F7C60 /* SWPersonalMainViewController.swift */,
+				68083F6A1CCE5909004BE4D4 /* SWPersonalMainViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		68035A3E1CC756DA002F7C60 /* Teacher */ = {
+		68083F6B1CCE5909004BE4D4 /* Teacher */ = {
 			isa = PBXGroup;
 			children = (
-				68035A3F1CC756DA002F7C60 /* Attendance */,
-				68035A421CC756DA002F7C60 /* Leave */,
-				68035A451CC756DA002F7C60 /* Personal */,
+				68083F6C1CCE5909004BE4D4 /* Attendance */,
+				68083F721CCE5909004BE4D4 /* Leave */,
+				68083F781CCE5909004BE4D4 /* Personal */,
 			);
 			name = Teacher;
 			path = Module/Teacher;
 			sourceTree = "<group>";
 		};
-		68035A3F1CC756DA002F7C60 /* Attendance */ = {
+		68083F6C1CCE5909004BE4D4 /* Attendance */ = {
 			isa = PBXGroup;
 			children = (
-				68035A401CC756DA002F7C60 /* View */,
-				68035A411CC756DA002F7C60 /* ViewController */,
+				68083F6D1CCE5909004BE4D4 /* TAttendance.storyboard */,
+				68083F6E1CCE5909004BE4D4 /* View */,
+				68083F701CCE5909004BE4D4 /* ViewController */,
 			);
 			path = Attendance;
 			sourceTree = "<group>";
 		};
-		68035A401CC756DA002F7C60 /* View */ = {
+		68083F6E1CCE5909004BE4D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				68035A541CC75B21002F7C60 /* TAttendanceView.swift */,
+				68083F6F1CCE5909004BE4D4 /* TAttendanceView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		68035A411CC756DA002F7C60 /* ViewController */ = {
+		68083F701CCE5909004BE4D4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				68035A561CC75B2F002F7C60 /* TAttendanceMainViewController.swift */,
+				68083F711CCE5909004BE4D4 /* TAttendanceMainViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		68035A421CC756DA002F7C60 /* Leave */ = {
+		68083F721CCE5909004BE4D4 /* Leave */ = {
 			isa = PBXGroup;
 			children = (
-				68035A431CC756DA002F7C60 /* View */,
-				68035A441CC756DA002F7C60 /* ViewController */,
+				68083F731CCE5909004BE4D4 /* TLeave.storyboard */,
+				68083F741CCE5909004BE4D4 /* View */,
+				68083F761CCE5909004BE4D4 /* ViewController */,
 			);
 			path = Leave;
 			sourceTree = "<group>";
 		};
-		68035A431CC756DA002F7C60 /* View */ = {
+		68083F741CCE5909004BE4D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				68035A581CC75B4A002F7C60 /* TLeaveView.swift */,
+				68083F751CCE5909004BE4D4 /* TLeaveView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		68035A441CC756DA002F7C60 /* ViewController */ = {
+		68083F761CCE5909004BE4D4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				68035A5A1CC75B5D002F7C60 /* TLeaveViewMainController.swift */,
+				68083F771CCE5909004BE4D4 /* TLeaveViewMainController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		68035A451CC756DA002F7C60 /* Personal */ = {
+		68083F781CCE5909004BE4D4 /* Personal */ = {
 			isa = PBXGroup;
 			children = (
-				68035A461CC756DA002F7C60 /* View */,
-				68035A471CC756DA002F7C60 /* ViewController */,
+				68083F791CCE5909004BE4D4 /* TPersonal.storyboard */,
+				68083F7A1CCE5909004BE4D4 /* View */,
+				68083F7C1CCE5909004BE4D4 /* ViewController */,
 			);
 			path = Personal;
 			sourceTree = "<group>";
 		};
-		68035A461CC756DA002F7C60 /* View */ = {
+		68083F7A1CCE5909004BE4D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				68035A5C1CC75B78002F7C60 /* TPersonalView.swift */,
+				68083F7B1CCE5909004BE4D4 /* TPersonalView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		68035A471CC756DA002F7C60 /* ViewController */ = {
+		68083F7C1CCE5909004BE4D4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				68035A5E1CC75B8A002F7C60 /* TPersonalMainViewController.swift */,
+				68083F7D1CCE5909004BE4D4 /* TPersonalMainViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1067,6 +1124,7 @@
 		EF45F5311CABF1E60052AA1F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				68083EC11CCE5691004BE4D4 /* NSDate_extension.swift */,
 				68186C1C1CB354DB005AF62D /* UIColor_extension.swift */,
 				68186C1D1CB354DB005AF62D /* UIScrollView_refresh.swift */,
 				68D8EFCD1CC8AABB00906E3D /* UILabel_extension.swift */,
@@ -1130,6 +1188,7 @@
 		EF9A30DD1CA911A400D5EFA6 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				68083EC71CCE56CC004BE4D4 /* DLRadioButton */,
 				68FFBAEF1CCB657900878904 /* CourseUtil */,
 				68D8EFCA1CC882EA00906E3D /* SwiftNotice */,
 				68323F611CBCE11600B7DEBE /* Keychain */,
@@ -1166,15 +1225,15 @@
 		EF9A30E11CA911CB00D5EFA6 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				687E38321CBE3FE3009EDE17 /* Main */,
 				EFA869201CAA703800CC1B71 /* RegLogin */,
+				687E38321CBE3FE3009EDE17 /* Main */,
 				680359EA1CC75686002F7C60 /* Student */,
-				68035A161CC756DA002F7C60 /* ClassTeacher */,
-				68035A3E1CC756DA002F7C60 /* Teacher */,
-				68035A201CC756DA002F7C60 /* Counsellor */,
-				68035A0C1CC756DA002F7C60 /* BranchLeader */,
-				68035A2A1CC756DA002F7C60 /* Leader */,
-				68035A341CC756DA002F7C60 /* StudentWorker */,
+				68083F1E1CCE5909004BE4D4 /* ClassTeacher */,
+				68083F6B1CCE5909004BE4D4 /* Teacher */,
+				68083F0B1CCE5909004BE4D4 /* BranchLeader */,
+				68083F321CCE5909004BE4D4 /* Counsellor */,
+				68083F451CCE5909004BE4D4 /* Leader */,
+				68083F581CCE5909004BE4D4 /* StudentWorker */,
 			);
 			name = Module;
 			sourceTree = "<group>";
@@ -1219,7 +1278,7 @@
 		EFA869201CAA703800CC1B71 /* RegLogin */ = {
 			isa = PBXGroup;
 			children = (
-				682297C21CB13C50008CD1D4 /* RegLogin.storyboard */,
+				68083ECD1CCE571F004BE4D4 /* RegLogin.storyboard */,
 				68FA520D1CAC18CA003DF699 /* ViewController */,
 			);
 			name = RegLogin;
@@ -1292,14 +1351,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				68B98EF71CBE4A00009D64D1 /* QJT.entitlements in Resources */,
-				682297C31CB13C50008CD1D4 /* RegLogin.storyboard in Resources */,
+				68083F8B1CCE5909004BE4D4 /* CTLeave.storyboard in Resources */,
+				68083FB81CCE5A96004BE4D4 /* Leave.storyboard in Resources */,
+				68083FA61CCE5909004BE4D4 /* SWLeave.storyboard in Resources */,
+				68083F841CCE5909004BE4D4 /* BLPersonal.storyboard in Resources */,
+				68083FAF1CCE5909004BE4D4 /* TLeave.storyboard in Resources */,
+				68083F9D1CCE5909004BE4D4 /* LLeave.storyboard in Resources */,
+				68083F7E1CCE5909004BE4D4 /* BLAttendance.storyboard in Resources */,
+				68083FA31CCE5909004BE4D4 /* SWAttendance.storyboard in Resources */,
 				68B98EF41CBE49A9009D64D1 /* LaunchScreen.storyboard in Resources */,
 				EF9A30D21CA90FD400D5EFA6 /* Assets.xcassets in Resources */,
+				68083F811CCE5909004BE4D4 /* BLLeave.storyboard in Resources */,
+				68083F971CCE5909004BE4D4 /* CPersonal.storyboard in Resources */,
+				68083ECE1CCE571F004BE4D4 /* RegLogin.storyboard in Resources */,
+				68083F941CCE5909004BE4D4 /* CLeave.storyboard in Resources */,
 				687E38341CBE4008009EDE17 /* Main.storyboard in Resources */,
-				68035A031CC756BA002F7C60 /* Leave.storyboard in Resources */,
+				68083F8E1CCE5909004BE4D4 /* CTPersonal.storyboard in Resources */,
+				68083FB61CCE59D7004BE4D4 /* CTAttendance.storyboard in Resources */,
+				68083F9A1CCE5909004BE4D4 /* LAttendance.storyboard in Resources */,
+				68083FAC1CCE5909004BE4D4 /* TAttendance.storyboard in Resources */,
+				68083FA01CCE5909004BE4D4 /* LPersonal.storyboard in Resources */,
+				68083F911CCE5909004BE4D4 /* CAttendance.storyboard in Resources */,
+				68083FB21CCE5909004BE4D4 /* TPersonal.storyboard in Resources */,
 				68035A091CC756BA002F7C60 /* Personal.storyboard in Resources */,
 				68035A001CC756BA002F7C60 /* Sign.storyboard in Resources */,
-				5851399E1CCE0F7600908BD5 /* CTAttendance.storyboard in Resources */,
+				68083FA91CCE5909004BE4D4 /* SWPersonal.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1360,117 +1436,116 @@
 			files = (
 				68035A9B1CC782F0002F7C60 /* TeacherSetting.swift in Sources */,
 				68035A021CC756BA002F7C60 /* SignMainViewController.swift in Sources */,
-				68035A531CC7581A002F7C60 /* CTPersonalMainViewController.swift in Sources */,
 				68FF20071CCD0376005AC0B7 /* CourseClass.swift in Sources */,
 				68186C121CB3525D005AF62D /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
-				68035A071CC756BA002F7C60 /* LeaveTimeCell.swift in Sources */,
-				68035A771CC75FB7002F7C60 /* BPersonalMainViewController.swift in Sources */,
-				68035A7F1CC7601A002F7C60 /* LLeaveMainViewController.swift in Sources */,
+				68083F7F1CCE5909004BE4D4 /* BAttendanceView.swift in Sources */,
+				68083FA11CCE5909004BE4D4 /* LPersonalView.swift in Sources */,
 				68186BFF1CB3525D005AF62D /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */,
 				68186C081CB3525D005AF62D /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
-				68035A8D1CC76220002F7C60 /* SWPersonalView.swift in Sources */,
 				68186C331CB3554F005AF62D /* LoginGeniusViewController.swift in Sources */,
 				68FF200A1CCD0396005AC0B7 /* ReturnResult.swift in Sources */,
 				68186C0B1CB3525D005AF62D /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,
 				EFA869191CAA651900CC1B71 /* NetWorkManager.swift in Sources */,
 				68186C1F1CB354DB005AF62D /* UIScrollView_refresh.swift in Sources */,
-				68035A731CC75F8F002F7C60 /* BLeaveMainViewController.swift in Sources */,
+				68083F961CCE5909004BE4D4 /* CLeaveMainViewController.swift in Sources */,
 				68FF20011CCD02F6005AC0B7 /* HLable.swift in Sources */,
 				68186C111CB3525D005AF62D /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
+				68083FA81CCE5909004BE4D4 /* SWLeaveMainViewController.swift in Sources */,
 				68D8EFD41CC8ABFE00906E3D /* UIViewController_extension.swift in Sources */,
-				68035A871CC761E3002F7C60 /* SWAttendanceMainViewController.swift in Sources */,
 				68035A931CC77791002F7C60 /* Teacher.swift in Sources */,
-				68035A061CC756BA002F7C60 /* LeaveNextCell.swift in Sources */,
+				68083FAA1CCE5909004BE4D4 /* SWPersonalView.swift in Sources */,
 				68FF20001CCD02F6005AC0B7 /* CourseView.swift in Sources */,
 				EF45F52F1CABF1800052AA1F /* Student.swift in Sources */,
-				68035A041CC756BA002F7C60 /* LeaveCourseCell.swift in Sources */,
-				68035A8B1CC7620A002F7C60 /* SWLeaveMainViewController.swift in Sources */,
 				68186C061CB3525D005AF62D /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
 				683CF5E81CC3390200F69765 /* UserConfig.swift in Sources */,
 				68186C191CB3525D005AF62D /* NVActivityIndicatorView.swift in Sources */,
+				68083F901CCE5909004BE4D4 /* CTPersonalMainViewController.swift in Sources */,
 				68186C031CB3525D005AF62D /* NVActivityIndicatorAnimationBallRotate.swift in Sources */,
 				68186C0A1CB3525D005AF62D /* NVActivityIndicatorAnimationBallZigZag.swift in Sources */,
 				68186C171CB3525D005AF62D /* NVActivityIndicatorAnimationDelegate.swift in Sources */,
-				68035A6D1CC75F1B002F7C60 /* BAttendanceView.swift in Sources */,
-				68035A551CC75B21002F7C60 /* TAttendanceView.swift in Sources */,
+				68083F931CCE5909004BE4D4 /* CAttendanceMainViewController.swift in Sources */,
+				68083FAB1CCE5909004BE4D4 /* SWPersonalMainViewController.swift in Sources */,
 				68186C341CB3554F005AF62D /* LoginMatchViewController.swift in Sources */,
+				68083F881CCE5909004BE4D4 /* qqqView.swift in Sources */,
 				683CF5F61CC34E7F00F69765 /* UserSetting.swift in Sources */,
+				68083FAE1CCE5909004BE4D4 /* TAttendanceMainViewController.swift in Sources */,
+				68083F8C1CCE5909004BE4D4 /* CTLeaveView.swift in Sources */,
 				68035A971CC77BE4002F7C60 /* AppMenu.swift in Sources */,
+				68083F8F1CCE5909004BE4D4 /* CTPersonalView.swift in Sources */,
 				68D8EFCC1CC882EA00906E3D /* SwiftNotice.swift in Sources */,
 				681DD1261CC7B685004CB295 /* Week.swift in Sources */,
 				68186BFE1CB3525D005AF62D /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */,
-				68035A6F1CC75F56002F7C60 /* BAttendanceMainViewController.swift in Sources */,
-				585139A01CCE14D200908BD5 /* CTSignCourseViewController.swift in Sources */,
-				68035A491CC75757002F7C60 /* qqqView.swift in Sources */,
 				68186C1E1CB354DB005AF62D /* UIColor_extension.swift in Sources */,
 				68035A991CC78066002F7C60 /* StudentSetting.swift in Sources */,
 				EF9A30E81CA9133C00D5EFA6 /* AppDelegate.swift in Sources */,
 				68186BFC1CB3525D005AF62D /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
 				68186C011CB3525D005AF62D /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */,
+				68083F8D1CCE5909004BE4D4 /* CTLeaveMainViewController.swift in Sources */,
+				68083F9B1CCE5909004BE4D4 /* LAttendanceView.swift in Sources */,
+				68083F981CCE5909004BE4D4 /* CPersonalView.swift in Sources */,
 				68186C101CB3525D005AF62D /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
 				683CF5F51CC34E7F00F69765 /* PersonSetting.swift in Sources */,
-				68035A591CC75B4A002F7C60 /* TLeaveView.swift in Sources */,
-				68035A691CC75C90002F7C60 /* CPersonalView.swift in Sources */,
 				68186BFA1CB3525D005AF62D /* NVActivityIndicatorAnimationBallBeat.swift in Sources */,
+				68083F991CCE5909004BE4D4 /* CPersonalMainViewController.swift in Sources */,
 				68186C361CB3554F005AF62D /* LoginShowViewController.swift in Sources */,
 				68D8EFD01CC8AB7200906E3D /* NSString_extension.swift in Sources */,
 				68186C001CB3525D005AF62D /* NVActivityIndicatorAnimationBallPulse.swift in Sources */,
-				68035A5B1CC75B5D002F7C60 /* TLeaveViewMainController.swift in Sources */,
-				68035A4F1CC757E8002F7C60 /* CTLeaveMainViewController.swift in Sources */,
-				68035A611CC75BAF002F7C60 /* CAttendanceView.swift in Sources */,
-				68035A711CC75F73002F7C60 /* BLeaveView.swift in Sources */,
 				68186C351CB3554F005AF62D /* LoginMeetViewController.swift in Sources */,
+				68083FB11CCE5909004BE4D4 /* TLeaveViewMainController.swift in Sources */,
 				68186BFB1CB3525D005AF62D /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */,
 				68035A0B1CC756BA002F7C60 /* PersonalMainViewController.swift in Sources */,
 				68186C141CB3525D005AF62D /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
-				68035A751CC75FAA002F7C60 /* BPersonalView.swift in Sources */,
-				68035A511CC75803002F7C60 /* CTPersonalView.swift in Sources */,
 				68D8EFCE1CC8AABB00906E3D /* UILabel_extension.swift in Sources */,
+				68083FA51CCE5909004BE4D4 /* SWAttendanceMainViewController.swift in Sources */,
 				68186C0D1CB3525D005AF62D /* NVActivityIndicatorAnimationCubeTransition.swift in Sources */,
-				68035A8F1CC7622D002F7C60 /* SWPersonalMainViewController.swift in Sources */,
-				68035A5D1CC75B78002F7C60 /* TPersonalView.swift in Sources */,
-				68035A851CC761CB002F7C60 /* SWAttendanceView.swift in Sources */,
-				68035A831CC761AE002F7C60 /* LPersonalMainViewController.swift in Sources */,
+				68083EC21CCE5691004BE4D4 /* NSDate_extension.swift in Sources */,
 				68186C0C1CB3525D005AF62D /* NVActivityIndicatorAnimationBlank.swift in Sources */,
 				68186C021CB3525D005AF62D /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */,
+				68083FA21CCE5909004BE4D4 /* LPersonalMainViewController.swift in Sources */,
+				68083FBA1CCE5AAB004BE4D4 /* LeaveCell.swift in Sources */,
+				68083F921CCE5909004BE4D4 /* CAttendanceView.swift in Sources */,
 				EFA8691D1CAA655C00CC1B71 /* Methods.swift in Sources */,
 				68186C091CB3525D005AF62D /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
-				68035A5F1CC75B8A002F7C60 /* TPersonalMainViewController.swift in Sources */,
 				68186C371CB3554F005AF62D /* LoginStepViewController.swift in Sources */,
-				68035A891CC761FA002F7C60 /* SWLeaveView.swift in Sources */,
 				68186C0E1CB3525D005AF62D /* NVActivityIndicatorAnimationLineScale.swift in Sources */,
+				68083FB01CCE5909004BE4D4 /* TLeaveView.swift in Sources */,
 				68186C131CB3525D005AF62D /* NVActivityIndicatorAnimationPacman.swift in Sources */,
-				68035A811CC7602D002F7C60 /* LPersonalView.swift in Sources */,
+				68083F9C1CCE5909004BE4D4 /* LAttendanceMainViewController.swift in Sources */,
+				68083F801CCE5909004BE4D4 /* BAttendanceMainViewController.swift in Sources */,
+				68083FB31CCE5909004BE4D4 /* TPersonalView.swift in Sources */,
 				683CF5FB1CC34E8C00F69765 /* UserType.swift in Sources */,
+				68083F861CCE5909004BE4D4 /* BPersonalMainViewController.swift in Sources */,
 				68186C041CB3525D005AF62D /* NVActivityIndicatorAnimationBallScale.swift in Sources */,
+				68083FA71CCE5909004BE4D4 /* SWLeaveView.swift in Sources */,
 				68186C161CB3525D005AF62D /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */,
-				68035A4D1CC757D9002F7C60 /* CTLeaveView.swift in Sources */,
 				585122D41CCD0F790041A82F /* SignCourseViewController.swift in Sources */,
-				68035A4B1CC757B3002F7C60 /* CTAttendanceMainViewController.swift in Sources */,
+				68083F831CCE5909004BE4D4 /* BLeaveMainViewController.swift in Sources */,
+				68083FAD1CCE5909004BE4D4 /* TAttendanceView.swift in Sources */,
 				68186BFD1CB3525D005AF62D /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
 				68FF20031CCD0315005AC0B7 /* LeaveCourseViewController.swift in Sources */,
+				68083F821CCE5909004BE4D4 /* BLeaveView.swift in Sources */,
+				68083F9F1CCE5909004BE4D4 /* LLeaveMainViewController.swift in Sources */,
+				68083F851CCE5909004BE4D4 /* BPersonalView.swift in Sources */,
 				68035A0A1CC756BA002F7C60 /* PersonalView.swift in Sources */,
 				68035A081CC756BA002F7C60 /* LeaveMainViewController.swift in Sources */,
+				68083FA41CCE5909004BE4D4 /* SWAttendanceView.swift in Sources */,
 				68186C181CB3525D005AF62D /* NVActivityIndicatorShape.swift in Sources */,
+				68083F9E1CCE5909004BE4D4 /* LLeaveView.swift in Sources */,
 				68186C071CB3525D005AF62D /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
 				68035A011CC756BA002F7C60 /* Sign.swift in Sources */,
-				68035A7D1CC7600F002F7C60 /* LLeaveView.swift in Sources */,
-				68035A651CC75BCF002F7C60 /* CLeaveView.swift in Sources */,
+				68083F951CCE5909004BE4D4 /* CLeaveView.swift in Sources */,
+				68083F891CCE5909004BE4D4 /* CTAttendanceMainViewController.swift in Sources */,
 				683CF5FA1CC34E8C00F69765 /* BaseType.swift in Sources */,
+				68083FB41CCE5909004BE4D4 /* TPersonalMainViewController.swift in Sources */,
 				68186C381CB3554F005AF62D /* LoginViewController.swift in Sources */,
-				68035A571CC75B2F002F7C60 /* TAttendanceMainViewController.swift in Sources */,
+				68083ECA1CCE56CC004BE4D4 /* DLRadioButton.m in Sources */,
 				EFA8691F1CAA659200CC1B71 /* SysConfig.swift in Sources */,
 				68186C051CB3525D005AF62D /* NVActivityIndicatorAnimationBallScaleMultiple.swift in Sources */,
-				68035A791CC75FE8002F7C60 /* LAttendanceView.swift in Sources */,
-				68035A051CC756BA002F7C60 /* LeaveCourseCollectionCell.swift in Sources */,
 				68323F641CBCE14A00B7DEBE /* KeychainItemWrapper.m in Sources */,
 				68186C0F1CB3525D005AF62D /* NVActivityIndicatorAnimationLineScaleParty.swift in Sources */,
-				68035A631CC75BB8002F7C60 /* CAttendanceMainViewController.swift in Sources */,
 				68186BF91CB3525D005AF62D /* AnimationRefresh.swift in Sources */,
 				68186C151CB3525D005AF62D /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */,
-				68035A671CC75BEE002F7C60 /* CLeaveMainViewController.swift in Sources */,
-				68035A7B1CC75FF9002F7C60 /* LAttendanceMainViewController.swift in Sources */,
-				68035A6B1CC75CA4002F7C60 /* CPersonalMainViewController.swift in Sources */,
+				68083F8A1CCE5909004BE4D4 /* CTSignCourseViewController.swift in Sources */,
 				68B7B52F1CBE91C80046FC7F /* MainTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

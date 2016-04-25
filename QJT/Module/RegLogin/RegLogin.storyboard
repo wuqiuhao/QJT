@@ -443,11 +443,12 @@
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVs-j9-wZy" userLabel="loginBtn">
-                                        <rect key="frame" x="25" y="120" width="550" height="44"/>
+                                        <rect key="frame" x="25" y="138" width="550" height="44"/>
                                         <color key="backgroundColor" red="0.1960784314" green="0.65490196079999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="gBm-Ac-tCE"/>
                                         </constraints>
+                                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="登录">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -464,6 +465,27 @@
                                             <constraint firstAttribute="width" constant="16" id="taN-oe-WWP"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYq-Hf-0au" userLabel="studentBtn" customClass="DLRadioButton">
+                                        <rect key="frame" x="30" y="100" width="50" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="XCK-Z5-Jvu"/>
+                                            <constraint firstAttribute="height" constant="30" id="l6c-Bq-dnD"/>
+                                        </constraints>
+                                        <state key="normal" title="mike"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="indicatorSize">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVd-jn-p7J" userLabel="teacherBtn" customClass="DLRadioButton">
+                                        <rect key="frame" x="90" y="100" width="50" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Fti-a6-CfC"/>
+                                            <constraint firstAttribute="height" constant="30" id="MSo-LD-3ab"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -472,11 +494,16 @@
                                     <constraint firstItem="WVs-j9-wZy" firstAttribute="leading" secondItem="Ibl-4z-c77" secondAttribute="leading" constant="25" id="3Ta-ED-lUT"/>
                                     <constraint firstAttribute="trailing" secondItem="ETV-mz-Pk0" secondAttribute="trailing" constant="25" id="A0U-7i-7AH"/>
                                     <constraint firstItem="ETV-mz-Pk0" firstAttribute="leading" secondItem="qrT-Bp-ypT" secondAttribute="trailing" constant="10" id="Adp-Xz-cMa"/>
+                                    <constraint firstItem="GVd-jn-p7J" firstAttribute="leading" secondItem="oYq-Hf-0au" secondAttribute="trailing" constant="10" id="BSO-zg-ILn"/>
+                                    <constraint firstItem="oYq-Hf-0au" firstAttribute="top" secondItem="6Nv-yG-k4P" secondAttribute="bottom" constant="10" id="Bt6-bn-RVF"/>
+                                    <constraint firstItem="GVd-jn-p7J" firstAttribute="centerX" secondItem="Ibl-4z-c77" secondAttribute="centerX" id="DyV-gI-BfQ"/>
                                     <constraint firstItem="6Nv-yG-k4P" firstAttribute="top" secondItem="kxr-H9-gVN" secondAttribute="bottom" id="Erv-Rn-2qk"/>
+                                    <constraint firstItem="GVd-jn-p7J" firstAttribute="top" secondItem="6Nv-yG-k4P" secondAttribute="bottom" constant="10" id="IRJ-n0-hn6"/>
                                     <constraint firstItem="ETV-mz-Pk0" firstAttribute="top" secondItem="Ibl-4z-c77" secondAttribute="top" id="K6r-Yh-EYr"/>
                                     <constraint firstItem="qrT-Bp-ypT" firstAttribute="top" secondItem="Ibl-4z-c77" secondAttribute="top" constant="14" id="Lve-tf-pDx"/>
                                     <constraint firstAttribute="bottom" secondItem="WVs-j9-wZy" secondAttribute="bottom" constant="40" id="Oix-td-KOO"/>
                                     <constraint firstItem="ZmD-1B-WRZ" firstAttribute="leading" secondItem="Ibl-4z-c77" secondAttribute="leading" constant="25" id="Pf8-lK-6gq"/>
+                                    <constraint firstItem="oYq-Hf-0au" firstAttribute="centerX" secondItem="Ibl-4z-c77" secondAttribute="centerX" constant="-100" id="U7p-Eq-KWh"/>
                                     <constraint firstAttribute="height" constant="200" id="YCB-8H-wFo"/>
                                     <constraint firstItem="ZmD-1B-WRZ" firstAttribute="top" secondItem="wAh-Vd-ruy" secondAttribute="bottom" constant="14" id="Ywd-bb-RIW"/>
                                     <constraint firstItem="wAh-Vd-ruy" firstAttribute="leading" secondItem="Ibl-4z-c77" secondAttribute="leading" constant="25" id="baO-pA-CvM"/>
@@ -485,14 +512,19 @@
                                     <constraint firstItem="kxr-H9-gVN" firstAttribute="leading" secondItem="ZmD-1B-WRZ" secondAttribute="trailing" constant="14" id="fnq-lp-gRQ"/>
                                     <constraint firstAttribute="trailing" secondItem="wAh-Vd-ruy" secondAttribute="trailing" constant="25" id="guQ-eb-fYs"/>
                                     <constraint firstAttribute="trailing" secondItem="WVs-j9-wZy" secondAttribute="trailing" constant="25" id="juA-1Z-t2i"/>
+                                    <constraint firstItem="oYq-Hf-0au" firstAttribute="leading" secondItem="Ibl-4z-c77" secondAttribute="leading" constant="30" id="lzL-tV-1xA"/>
+                                    <constraint firstAttribute="trailing" secondItem="GVd-jn-p7J" secondAttribute="trailing" constant="100" id="sJy-bz-pea"/>
                                     <constraint firstAttribute="trailing" secondItem="kxr-H9-gVN" secondAttribute="trailing" constant="25" id="tVn-aD-rWa"/>
-                                    <constraint firstItem="WVs-j9-wZy" firstAttribute="top" secondItem="6Nv-yG-k4P" secondAttribute="bottom" constant="30" id="uSu-OY-0oZ"/>
+                                    <constraint firstItem="WVs-j9-wZy" firstAttribute="top" secondItem="6Nv-yG-k4P" secondAttribute="bottom" constant="48" id="uSu-OY-0oZ"/>
                                     <constraint firstItem="wAh-Vd-ruy" firstAttribute="top" secondItem="ETV-mz-Pk0" secondAttribute="bottom" id="unK-wV-t89"/>
                                     <constraint firstItem="6Nv-yG-k4P" firstAttribute="leading" secondItem="Ibl-4z-c77" secondAttribute="leading" constant="25" id="yPZ-wB-Huw"/>
                                     <constraint firstItem="wAh-Vd-ruy" firstAttribute="top" secondItem="Ibl-4z-c77" secondAttribute="top" constant="44" id="zdE-LW-6Iv"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="U7p-Eq-KWh"/>
+                                        <exclude reference="DyV-gI-BfQ"/>
+                                        <exclude reference="sJy-bz-pea"/>
                                         <exclude reference="Oix-td-KOO"/>
                                     </mask>
                                 </variation>
@@ -518,6 +550,8 @@
                         <outlet property="loginView" destination="Ibl-4z-c77" id="oYQ-Gp-qjJ"/>
                         <outlet property="passwordImg" destination="ZmD-1B-WRZ" id="FM2-Mv-kTr"/>
                         <outlet property="passwordTfd" destination="kxr-H9-gVN" id="uv0-Zo-uXT"/>
+                        <outlet property="studentBtn" destination="oYq-Hf-0au" id="rVP-PW-Oe1"/>
+                        <outlet property="teacherBtn" destination="GVd-jn-p7J" id="bU1-XP-kYp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="siZ-jm-6eW" userLabel="First Responder" sceneMemberID="firstResponder"/>

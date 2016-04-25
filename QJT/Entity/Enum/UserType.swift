@@ -12,7 +12,7 @@ import Foundation
 enum UserType: Int,BaseType {
     case Unknown
     case Student //学生
-    case ClassTeacher //班主任
+    case CourseTeacher //班主任
     case Teacher //任课教师
     case Counsellor //辅导员
     case BranchLeader //分院领导
@@ -26,7 +26,7 @@ enum UserType: Int,BaseType {
             return "未知"
         case .Student:
             return "学生"
-        case .ClassTeacher:
+        case .CourseTeacher:
             return "班主任"
         case .Teacher:
             return "任课教师"
@@ -52,7 +52,7 @@ enum UserType: Int,BaseType {
         case "Student" :
             return UserType.Student.rawValue
         case "classTeacher" :
-            return UserType.ClassTeacher.rawValue
+            return UserType.CourseTeacher.rawValue
         case "Teacher" :
             return UserType.Teacher.rawValue
         case "Counsellor":
@@ -69,13 +69,36 @@ enum UserType: Int,BaseType {
         
     }
     
+    static func fromIntToAbbreviate(value: Int) -> String {
+        switch value {
+        case 0:
+            return "Unknown"
+        case 1:
+            return "S"
+        case 2:
+            return "CT"
+        case 3:
+            return "T"
+        case 4:
+            return "C"
+        case 5:
+            return "BL"
+        case 6:
+            return "L"
+        case 7:
+            return "SW"
+        default:
+            return ""
+        }
+    }
+    
     func toDescription() -> String {
         switch self {
         case .Unknown:
             return "未知"
         case .Student:
             return "学生"
-        case .ClassTeacher:
+        case .CourseTeacher:
             return "班主任"
         case .Teacher:
             return "任课教师"

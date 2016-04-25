@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import ObjectMapper
+
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var loginView: UIView!
@@ -15,11 +17,15 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet var accountImg: UIImageView!
     @IBOutlet var passwordImg: UIImageView!
+    @IBOutlet weak var studentBtn: DLRadioButton!
+    @IBOutlet weak var teacherBtn: DLRadioButton!
+    
+    var userType: String = "学生"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        accountTfd.text = "2012812044"
-        passwordTfd.text = "2012812044"
+        accountTfd.text = "2012812025"
+        passwordTfd.text = "2012812025"
         configUI()
         setupLoginBtn()
     }
@@ -28,9 +34,6 @@ class LoginViewController: UIViewController {
         super.viewWillAppear(true)
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
-    
-    
-        
 }
 
 // MARK: - private Method
@@ -41,7 +44,10 @@ extension LoginViewController {
         accountTfd.becomeFirstResponder()
         accountTfd.delegate = self
         passwordTfd.delegate = self
-        
+        createRadioButton(studentBtn, title: "学生", color: UIColor.qjtTintColor())
+        createRadioButton(teacherBtn, title: "教师", color: UIColor.qjtTintColor())
+        studentBtn.selected = true
+        studentBtn.otherButtons = [teacherBtn];
     }
     
     func setupLoginBtn() {
@@ -52,11 +58,6 @@ extension LoginViewController {
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-//        loginViewLeadingLayoutConstraint.constant = 180
-//        UIView.animateWithDuration(0.5, animations: {() -> Void in
-//            self.view.layoutIfNeeded()
-//            
-//        })
         self.accountTfd.resignFirstResponder()
         self.passwordTfd.resignFirstResponder()
     }
@@ -82,20 +83,22 @@ extension LoginViewController {
         return uuid
     }
     
+    func createRadioButton(button: DLRadioButton, title : String, color : UIColor) {
+        button.titleLabel!.font = UIFont.systemFontOfSize(13)
+        button.setTitle(title, forState: UIControlState.Normal)
+        button.setTitleColor(color, forState: UIControlState.Normal)
+        button.iconColor = color
+        button.indicatorColor = color
+        button.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Left;
+        button.addTarget(self, action: #selector(LoginViewController.idSelected), forControlEvents: UIControlEvents.TouchUpInside);
+    }
+    
 }
 
 // MARK: - IB Action
 extension LoginViewController {
     
     func loginBtnClicked() {
-        
-//        loginViewLeadingLayoutConstraint.constant = 180
-//        UIView.animateWithDuration(0.5, animations: {() -> Void in
-//            self.view.layoutIfNeeded()
-//            self.accountTfd.resignFirstResponder()
-//            self.passwordTfd.resignFirstResponder()
-//            
-//        })
         
         if accountTfd.text == "" && accountTfd.text?.characters.count == 0{
             self.errorNotice("账号为空")
@@ -107,53 +110,71 @@ extension LoginViewController {
             return
         }
         
-        var params = [String:AnyObject]()
-        params.updateValue(accountTfd.text!, forKey: "studentID")
-        params.updateValue(passwordTfd.text!, forKey: "password")
-        if let _ = JPUSHService.registrationID() {
-            params.updateValue(JPUSHService.registrationID(), forKey: "registerID")
-        } else {
-            params.updateValue("", forKey: "registerID")
+        if userType == "" && userType.characters.count == 0 {
+            self.errorNotice("身份未选择")
+            return
         }
-        params.updateValue(getUUID(), forKey: "deviceID")
-        self.pleaseWait()
-        NetWorkManager.httpRequest(Methods.login_studentLogin, params: params, modelType: StudentSetting(), listType: nil, completed: { (responseData) in
-            self.clearAllNotice()
-            let studentSetting = responseData["model"] as! StudentSetting
-            UserConfig.saveStudentSetting(studentSetting)
-            let mainWindow = UIApplication.sharedApplication().keyWindow
-            mainWindow?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()! as UIViewController
+        
+        var params = [String:AnyObject]()
+        var method = ""
+        if userType == "学生" {
+            params.updateValue(accountTfd.text!, forKey: "studentID")
+            params.updateValue(passwordTfd.text!, forKey: "password")
+            method = Methods.login_studentLogin
+            if let _ = JPUSHService.registrationID() {
+                params.updateValue(JPUSHService.registrationID(), forKey: "registerID")
+            } else {
+                params.updateValue("", forKey: "registerID")
+            }
+            params.updateValue(getUUID(), forKey: "deviceID")
+            self.pleaseWait()
+            NetWorkManager.httpRequest(method, params: params, modelType: StudentSetting(), listType: nil, completed: { (responseData) in
+                self.clearAllNotice()
+                let studentSetting = responseData["model"] as! StudentSetting
+                UserConfig.saveStudentSetting(studentSetting)
+                let mainWindow = UIApplication.sharedApplication().keyWindow
+                let mainTabBarVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()! as! MainTabBarController
+                mainTabBarVC.userType = self.userType
+                mainWindow?.rootViewController = mainTabBarVC
             }) { [weak self] (errorMsg) in
                 self?.clearAllNotice()
                 self?.errorNotice(errorMsg!)
+            }
+        } else {
+            params.updateValue(accountTfd.text!, forKey: "teacherID")
+            params.updateValue(passwordTfd.text!, forKey: "password")
+            params.updateValue(2, forKey: "userType")
+            method = Methods.login_teacherLogin
+            self.pleaseWait()
+            NetWorkManager.httpRequest(method, params: params, modelType: TeacherSetting(), listType: nil, completed: { (responseData) in
+                self.clearAllNotice()
+                let teacherSetting = responseData["model"] as! TeacherSetting
+                UserConfig.saveTeacherSetting(teacherSetting)
+                let mainWindow = UIApplication.sharedApplication().keyWindow
+                let mainTabBarVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()! as! MainTabBarController
+                mainTabBarVC.userType = self.userType
+                mainWindow?.rootViewController = mainTabBarVC
+            }) { [weak self] (errorMsg) in
+                self?.clearAllNotice()
+                self?.errorNotice(errorMsg!)
+            }
         }
-        
     }
     
+    func idSelected(button: DLRadioButton) {
+        if button.titleLabel!.text == "学生" {
+            userType = "学生"
+        } else {
+            userType = "教师"
+        }
+    }
 }
 
+// MARK: - UITextFieldDelegate
 extension LoginViewController: UITextFieldDelegate {
-    
-    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
-
-//        loginViewLeadingLayoutConstraint.constant = 50
-//        UIView.animateWithDuration(0.5) {
-//            self.view.layoutIfNeeded()
-//        }
-
-        return true
-    }
-    
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         loginBtnClicked()
         return true
     }
 }
-
-
-//        NetWorkManager.httpRequest(Methods.test, params: ["userName":"","passWord":""], modelType: Student(), completed: { (responseData) in
-//            print("\(responseData)")
-//        }) { (errorMsg) in
-//            debugPrint(errorMsg!)
-//        }

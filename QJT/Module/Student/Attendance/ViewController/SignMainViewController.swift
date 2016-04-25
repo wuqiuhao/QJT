@@ -23,6 +23,7 @@ class SignMainViewController: UIViewController,CLLocationManagerDelegate {
     var center: CLLocationCoordinate2D?
     var isLoaded = false
     var point: MKPointAnnotation?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         signBtn.layer.borderWidth = 1
@@ -39,6 +40,7 @@ class SignMainViewController: UIViewController,CLLocationManagerDelegate {
         messageBack.alpha = 0.6
         mapView?.mapType = MKMapType.Standard
         self.initLocationManager()
+        self.pleaseWait()
         // Do any additional setup after loading the view.
     }
 
@@ -50,12 +52,12 @@ class SignMainViewController: UIViewController,CLLocationManagerDelegate {
     @IBAction func repositionBtn(sender: AnyObject) {
         isLoaded = false
         mapView.removeAnnotation(point!)
+        self.pleaseWait()
     }
     @IBAction func signBtn(sender: AnyObject) {
-        let signCourseVC = SignCourseViewController()
-        signCourseVC.lat = latLabel.text
-        signCourseVC.long = longLabel.text
-//        self.presentViewController(signCourseVC, animated: true, completion: nil)
+//        let signCourseVC = SignCourseViewController()
+//        signCourseVC.lat = latLabel.text
+//        signCourseVC.long = longLabel.text
     }
 
     func initLocationManager() {
@@ -73,6 +75,7 @@ class SignMainViewController: UIViewController,CLLocationManagerDelegate {
         if center?.latitude != 0 && isLoaded != true {
             
             print("\(center!.latitude):\(center!.longitude)")
+            self.clearAllNotice()
             
             isLoaded = true
             mapView?.setCenterCoordinate(center!, animated: true)

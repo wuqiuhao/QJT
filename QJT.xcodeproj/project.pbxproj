@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1A0F54FFF44B77ECE6EF942A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451ED4D82C76F378DBB33D09 /* Pods.framework */; };
 		585122D41CCD0F790041A82F /* SignCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585122D31CCD0F790041A82F /* SignCourseViewController.swift */; };
+		5851399E1CCE0F7600908BD5 /* CTAttendance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5851399D1CCE0F7600908BD5 /* CTAttendance.storyboard */; };
+		585139A01CCE14D200908BD5 /* CTSignCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5851399F1CCE14D200908BD5 /* CTSignCourseViewController.swift */; };
 		68035A001CC756BA002F7C60 /* Sign.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680359EC1CC756BA002F7C60 /* Sign.storyboard */; };
 		68035A011CC756BA002F7C60 /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359EE1CC756BA002F7C60 /* Sign.swift */; };
 		68035A021CC756BA002F7C60 /* SignMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359F01CC756BA002F7C60 /* SignMainViewController.swift */; };
@@ -136,6 +138,8 @@
 		421540CB059379FB231DBF0D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		451ED4D82C76F378DBB33D09 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		585122D31CCD0F790041A82F /* SignCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignCourseViewController.swift; sourceTree = "<group>"; };
+		5851399D1CCE0F7600908BD5 /* CTAttendance.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CTAttendance.storyboard; sourceTree = "<group>"; };
+		5851399F1CCE14D200908BD5 /* CTSignCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTSignCourseViewController.swift; sourceTree = "<group>"; };
 		680359EC1CC756BA002F7C60 /* Sign.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sign.storyboard; sourceTree = "<group>"; };
 		680359EE1CC756BA002F7C60 /* Sign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sign.swift; sourceTree = "<group>"; };
 		680359F01CC756BA002F7C60 /* SignMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignMainViewController.swift; sourceTree = "<group>"; };
@@ -481,6 +485,7 @@
 		68035A171CC756DA002F7C60 /* Attendance */ = {
 			isa = PBXGroup;
 			children = (
+				5851399D1CCE0F7600908BD5 /* CTAttendance.storyboard */,
 				68035A181CC756DA002F7C60 /* View */,
 				68035A191CC756DA002F7C60 /* ViewController */,
 			);
@@ -499,6 +504,7 @@
 			isa = PBXGroup;
 			children = (
 				68035A4A1CC757B3002F7C60 /* CTAttendanceMainViewController.swift */,
+				5851399F1CCE14D200908BD5 /* CTSignCourseViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1293,6 +1299,7 @@
 				68035A031CC756BA002F7C60 /* Leave.storyboard in Resources */,
 				68035A091CC756BA002F7C60 /* Personal.storyboard in Resources */,
 				68035A001CC756BA002F7C60 /* Sign.storyboard in Resources */,
+				5851399E1CCE0F7600908BD5 /* CTAttendance.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1393,6 +1400,7 @@
 				681DD1261CC7B685004CB295 /* Week.swift in Sources */,
 				68186BFE1CB3525D005AF62D /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */,
 				68035A6F1CC75F56002F7C60 /* BAttendanceMainViewController.swift in Sources */,
+				585139A01CCE14D200908BD5 /* CTSignCourseViewController.swift in Sources */,
 				68035A491CC75757002F7C60 /* qqqView.swift in Sources */,
 				68186C1E1CB354DB005AF62D /* UIColor_extension.swift in Sources */,
 				68035A991CC78066002F7C60 /* StudentSetting.swift in Sources */,

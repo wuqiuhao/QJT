@@ -95,6 +95,39 @@ class UserConfig: NSObject {
         return nil
     }
     
+    /**
+     删除所有沙盒内的文件
+     
+     - returns: 是否成功
+     */
+    class func removeAllFileInSandbox() -> Bool {
+        let fileManager = NSFileManager()
+        let documents = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true) as [String]
+        let document = documents.last! as NSString
+        var userInfoPath = ""
+        if let userID = UserConfig.studentSetting()?.userID where userID.characters.count != 0 {
+            userInfoPath = document.stringByAppendingPathComponent("StudentSetting.archiver")
+        } else if let userID = UserConfig.teacherSetting()?.userID where userID.characters.count != 0 {
+            userInfoPath = document.stringByAppendingPathComponent("TeacherSetting.archiver")
+        }
+        let pathArr = [userInfoPath]
+        for path in pathArr {
+            if fileManager.fileExistsAtPath(path) {
+                do {
+                    try fileManager.removeItemAtPath(path)
+                    return true
+                } catch let error as NSError {
+                    debugPrint("删除文件: \(path) 失败 error: \(error)")
+                    return false
+                }
+            } else {
+                debugPrint("读取文件: \(path) 失败")
+                return false
+            }
+        }
+        return true
+    }
+
     
     
 }

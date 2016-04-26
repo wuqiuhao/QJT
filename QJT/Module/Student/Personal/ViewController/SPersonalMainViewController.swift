@@ -20,12 +20,7 @@ class SPersonalMainViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: false)
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: false)
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
 }
 
@@ -65,6 +60,17 @@ extension SPersonalMainViewController: UITableViewDelegate {
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
            headerView.layoutHeaderView(scrollView.contentOffset)
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        switch indexPath.row {
+        case 2:
+            //self.performSegueWithIdentifier("SPersonalMainViewController", sender: nil)
+            let vc = UIStoryboard(name: "SPersonal", bundle: nil).instantiateViewControllerWithIdentifier("SPersonalAccontViewController")
+            navigationController?.pushViewController(vc, animated: true)
+        default:
+            return
+        }
     }
 }
 

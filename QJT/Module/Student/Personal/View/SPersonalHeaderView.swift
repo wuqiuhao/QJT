@@ -13,7 +13,7 @@ import UIKit
 class TableViewHeaderView: UIView {
     var delegate : TableViewHeaderViewDelegate?
     var dataSource: TableViewHeaderViewDataSource?
-    var visualEffectView: UIVisualEffectView!
+//    var visualEffectView: UIVisualEffectView!
     
     private var backgroundImageView: UIImageView? {
         didSet {
@@ -31,9 +31,9 @@ class TableViewHeaderView: UIView {
             backgroundImageView = UIImageView(frame: self.bounds)
             backgroundImageView!.image = backgroundImage
             backgroundImageView!.contentMode = UIViewContentMode.ScaleAspectFill
-            visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Light)) as UIVisualEffectView
-            visualEffectView.frame = self.frame
-            backgroundImageView!.addSubview(visualEffectView)
+//            visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Light)) as UIVisualEffectView
+//            visualEffectView.frame = self.frame
+//            backgroundImageView!.addSubview(visualEffectView)
             
         }
     }

@@ -84,10 +84,19 @@ extension SignCourseViewController {
     func signNetwork(courseTag: Int) {
         var params = [String:AnyObject]()
         var method = ""
+        
+        
+        let date = NSDate()
+        let timeFormatter = NSDateFormatter()
+        timeFormatter.dateFormat = "yyyMMddHHmmss" //(格式可俺按自己需求修整)
+        let strNowTime = timeFormatter.stringFromDate(date) as String
+        
+        
         params.updateValue("2012812025", forKey: "studentID")
         params.updateValue("\(courseArrData[courseTag].courseClassID)", forKey: "courseClassID")
-        params.updateValue("\(self.long)", forKey: "longitude")
-        params.updateValue("\(self.lat)", forKey: "latitude")
+        params.updateValue(strNowTime, forKey: "signTime")
+        params.updateValue((self.long! as NSString).doubleValue, forKey: "longitude")
+        params.updateValue((self.lat! as NSString).doubleValue, forKey: "latitude")
         
         
         method = Methods.attendance_studentAttendance
@@ -167,7 +176,7 @@ extension SignCourseViewController {
         let cancelAction = UIAlertAction(title: "取消", style: .Cancel, handler: nil)
         let okAction = UIAlertAction(title: "签到", style: .Default,handler: {action in
             
-            self.signNetwork(label.tag - self.labelTag)
+            self.signNetwork(label.tag - 10000)
             
             
             

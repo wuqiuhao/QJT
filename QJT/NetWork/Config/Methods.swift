@@ -13,6 +13,10 @@ var LoginService = [
     "login_teacherLogin"
 ]
 
+var AttendanceService = [
+    "attendance_studentAttendance"
+]
+
 var LeaveService = [
     "leave_studentGetCourseClasses"
 ]
@@ -42,6 +46,7 @@ class Methods {
         let serviceMethods =
             ["LoginController":LoginService,
              "LeaveController":LeaveService,
+             "AttendanceController":AttendanceService,
              "TestController":TestService]
         return serviceMethods
     }

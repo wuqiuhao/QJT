@@ -15,7 +15,8 @@ class CourseView: UIView {
     var backgroundImageView: UIImageView!
     let weekExcelWidth: CGFloat = (UIScreen.mainScreen().bounds.width - 30) / 5
     let partExcelHeight: CGFloat = (UIScreen.mainScreen().bounds.height - 64 - 30) / 11
-    
+    let borderColor = UIColor.whiteColor().CGColor
+        
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundImageView = UIImageView(frame: CGRectMake(0, 0, frame.size.width, frame.size.height))
@@ -41,8 +42,8 @@ extension CourseView {
                 if i==0 && j==0 {
                     let emptyUtil = UILabel()
                     emptyUtil.frame = CGRectMake(0, 0, 30, 30)
-                    emptyUtil.layer.borderWidth = 1 / UIScreen.mainScreen().scale
-                    emptyUtil.layer.borderColor =  UIColor(red: 203/255, green: 199/255, blue: 204/255, alpha: 1.0).CGColor
+                    emptyUtil.layer.borderWidth = 1.0 / UIScreen.mainScreen().scale
+                    emptyUtil.layer.borderColor =  borderColor
                     self.addSubview(emptyUtil)
                 }
                 //第一列（节数）
@@ -50,8 +51,8 @@ extension CourseView {
                     let partLbl = UILabel()
                     let partOffsetY = partExcelHeight * CGFloat(j - 1) + 30
                     partLbl.frame = CGRectMake(0, partOffsetY, 30, partExcelHeight)
-                    partLbl.layer.borderWidth = 1 / UIScreen.mainScreen().scale
-                    partLbl.layer.borderColor = UIColor(red: 203/255, green: 199/255, blue: 204/255, alpha: 1.0).CGColor
+                    partLbl.layer.borderWidth = 1.0 / UIScreen.mainScreen().scale
+                    partLbl.layer.borderColor = borderColor
                     partLbl.text = "\(j)"
                     partLbl.textAlignment = .Center
                     partLbl.font = UIFont.systemFontOfSize(14)
@@ -63,8 +64,8 @@ extension CourseView {
                     let weekLbl = UILabel()
                     let weekOffsetX = weekExcelWidth * CGFloat(i - 1) + 30
                     weekLbl.frame = CGRectMake(weekOffsetX, 0, weekExcelWidth, 30)
-                    weekLbl.layer.borderWidth = 1 / UIScreen.mainScreen().scale
-                    weekLbl.layer.borderColor =  UIColor(red: 203/255, green: 199/255, blue: 204/255, alpha: 1.0).CGColor
+                    weekLbl.layer.borderWidth = 1.0 / UIScreen.mainScreen().scale
+                    weekLbl.layer.borderColor =  borderColor
                     weekLbl.text = calculateWeek(i)
                     weekLbl.textAlignment = .Center
                     weekLbl.font = UIFont.systemFontOfSize(14)
@@ -77,11 +78,11 @@ extension CourseView {
                     let vertLineView = UIView()
                     let vertLineOffsetX = 30 + weekExcelWidth * CGFloat(i)
                     let vertLineOffsetY = 30 + partExcelHeight * CGFloat(j) - 4
-                    vertLineView.frame = CGRectMake(vertLineOffsetX, vertLineOffsetY, 1/UIScreen.mainScreen().scale, 8)
+                    vertLineView.frame = CGRectMake(vertLineOffsetX, vertLineOffsetY, 1.0 / UIScreen.mainScreen().scale, 8)
                     let horiLineView = UIView()
                     let horiLineOffsetX = 30 + weekExcelWidth * CGFloat(i) - 4
                     let horiLineOffsetY = 30 + partExcelHeight * CGFloat(j)
-                    horiLineView.frame = CGRectMake(horiLineOffsetX, horiLineOffsetY, 8, 1/UIScreen.mainScreen().scale)
+                    horiLineView.frame = CGRectMake(horiLineOffsetX, horiLineOffsetY, 8, 1.0 / UIScreen.mainScreen().scale)
                     
                     vertLineView.backgroundColor = UIColor.qjtTintColor()
                     horiLineView.backgroundColor = UIColor.qjtTintColor()

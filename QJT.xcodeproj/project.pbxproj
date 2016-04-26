@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A0F54FFF44B77ECE6EF942A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451ED4D82C76F378DBB33D09 /* Pods.framework */; };
+		582A426B1CCF48980023F134 /* EmptyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582A426A1CCF48980023F134 /* EmptyModel.swift */; };
 		585122D41CCD0F790041A82F /* SignCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585122D31CCD0F790041A82F /* SignCourseViewController.swift */; };
 		68035A001CC756BA002F7C60 /* SSign.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680359EC1CC756BA002F7C60 /* SSign.storyboard */; };
 		68035A011CC756BA002F7C60 /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359EE1CC756BA002F7C60 /* Sign.swift */; };
@@ -150,6 +151,7 @@
 /* Begin PBXFileReference section */
 		421540CB059379FB231DBF0D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		451ED4D82C76F378DBB33D09 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		582A426A1CCF48980023F134 /* EmptyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyModel.swift; sourceTree = "<group>"; };
 		585122D31CCD0F790041A82F /* SignCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignCourseViewController.swift; sourceTree = "<group>"; };
 		680359EC1CC756BA002F7C60 /* SSign.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SSign.storyboard; sourceTree = "<group>"; };
 		680359EE1CC756BA002F7C60 /* Sign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sign.swift; sourceTree = "<group>"; };
@@ -1105,7 +1107,6 @@
 		EF9A30C91CA90FD400D5EFA6 /* QJT */ = {
 			isa = PBXGroup;
 			children = (
-				68B98EF61CBE4A00009D64D1 /* QJT.entitlements */,
 				EF9A30E21CA911F900D5EFA6 /* General */,
 				683CF5E61CC338F100F69765 /* Config */,
 				EF9A30DC1CA9119B00D5EFA6 /* NetWork */,
@@ -1160,6 +1161,7 @@
 				68035A961CC77BE4002F7C60 /* AppMenu.swift */,
 				68035A981CC78066002F7C60 /* StudentSetting.swift */,
 				68035A9A1CC782F0002F7C60 /* TeacherSetting.swift */,
+				582A426A1CCF48980023F134 /* EmptyModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1183,6 +1185,7 @@
 		EF9A30E21CA911F900D5EFA6 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				68B98EF61CBE4A00009D64D1 /* QJT.entitlements */,
 				EF9A30E71CA9133C00D5EFA6 /* AppDelegate.swift */,
 				EF9D7BA21CCF09D800FA79F7 /* Theme */,
 				EF45F5321CABF1F10052AA1F /* Protocols */,
@@ -1440,6 +1443,7 @@
 				68083FAB1CCE5909004BE4D4 /* SWPersonalMainViewController.swift in Sources */,
 				68186C341CB3554F005AF62D /* LoginMatchViewController.swift in Sources */,
 				68083F881CCE5909004BE4D4 /* qqqView.swift in Sources */,
+				582A426B1CCF48980023F134 /* EmptyModel.swift in Sources */,
 				683CF5F61CC34E7F00F69765 /* UserSetting.swift in Sources */,
 				68083FAE1CCE5909004BE4D4 /* TAttendanceMainViewController.swift in Sources */,
 				68083F8C1CCE5909004BE4D4 /* CTLeaveView.swift in Sources */,
@@ -1621,7 +1625,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = QJT/QJT.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yan Wang (D794PDW38U)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
@@ -1633,7 +1637,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.design.qianjiangtong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "40f9108c-1388-444b-a02d-395e57528594";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "QJT/Supporting Files/QJT-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1648,7 +1652,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = QJT/QJT.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yan Wang (D794PDW38U)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
@@ -1660,7 +1664,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.design.qianjiangtong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "40f9108c-1388-444b-a02d-395e57528594";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "QJT/Supporting Files/QJT-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Pods/Headers/**";

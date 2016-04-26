@@ -21,24 +21,6 @@ class LeaveCourseViewController: UIViewController {
         configUI()
         setupCourseBackground()
         getNetwork()
-        
-        //        let model = CourseClass()
-        //        model.address = "B-301"
-        //        model.courseClassID = 104
-        //        model.week = Week.Tuesday
-        //        model.fromSection = 1
-        //        model.durationSection = 2
-        //        model.courseName = "C语言设计"
-        //        courseArrData.append(model)
-        //
-        //        let model1 = CourseClass()
-        //        model1.address = "B-301"
-        //        model1.courseClassID = 104
-        //        model1.week = Week.Friday
-        //        model1.fromSection = 7
-        //        model1.durationSection = 3
-        //        model1.courseName = "C语言设计"
-        //        courseArrData.append(model1)
     }
     
 }

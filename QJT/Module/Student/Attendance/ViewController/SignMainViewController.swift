@@ -18,7 +18,7 @@ class SignMainViewController: UIViewController,CLLocationManagerDelegate {
     @IBOutlet weak var repositionBtn: UIButton!
     @IBOutlet weak var signBtn: UIButton!
     @IBOutlet weak var messageBack: UIView!
-
+    
     var locationManager: CLLocationManager?
     var center: CLLocationCoordinate2D?
     var isLoaded = false
@@ -26,27 +26,17 @@ class SignMainViewController: UIViewController,CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        signBtn.layer.borderWidth = 1
-        signBtn.layer.borderColor = UIColor.cyanColor().CGColor
-        signBtn.layer.cornerRadius = 8
-        signBtn.backgroundColor = UIColor.clearColor()
-        
-        repositionBtn.layer.borderWidth = 1
-        repositionBtn.layer.borderColor = UIColor.cyanColor().CGColor
-        repositionBtn.layer.cornerRadius = 8
-        repositionBtn.backgroundColor = UIColor.clearColor()
-        
-        messageBack.layer.cornerRadius = 8
-        messageBack.alpha = 0.6
+        // 设置UI显示
+        configUI()
+        // 设置基本图层
         mapView?.mapType = MKMapType.Standard
+        // 初始化定位
         self.initLocationManager()
         self.pleaseWait()
-        // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func repositionBtn(sender: AnyObject) {
@@ -54,14 +44,8 @@ class SignMainViewController: UIViewController,CLLocationManagerDelegate {
         mapView.removeAnnotation(point!)
         self.pleaseWait()
     }
-    @IBAction func signBtn(sender: AnyObject) {
-//        let signCourseVC = SignCourseViewController()
-//        signCourseVC.lat = latLabel.text
-//        signCourseVC.long = longLabel.text
-    }
-
+    
     func initLocationManager() {
-        
         locationManager = CLLocationManager()
         locationManager!.delegate = self
         locationManager!.desiredAccuracy = kCLLocationAccuracyBest
@@ -116,21 +100,28 @@ class SignMainViewController: UIViewController,CLLocationManagerDelegate {
             mapView?.showsUserLocation = false
         }
     }
-
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let courseView = segue.destinationViewController as! SignCourseViewController
         courseView.lat = String(center!.latitude)
         courseView.long = String(center!.longitude)
     }
-    
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+// MARK: - private method
+extension SignMainViewController {
+    func configUI() {
+        signBtn.layer.borderWidth = 1
+        signBtn.layer.borderColor = UIColor.cyanColor().CGColor
+        signBtn.layer.cornerRadius = 8
+        signBtn.backgroundColor = UIColor.clearColor()
+        
+        repositionBtn.layer.borderWidth = 1
+        repositionBtn.layer.borderColor = UIColor.cyanColor().CGColor
+        repositionBtn.layer.cornerRadius = 8
+        repositionBtn.backgroundColor = UIColor.clearColor()
+        
+        messageBack.layer.cornerRadius = 8
+        messageBack.alpha = 0.6
     }
-    */
-
 }

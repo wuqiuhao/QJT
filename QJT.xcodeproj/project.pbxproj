@@ -15,8 +15,7 @@
 		68035A021CC756BA002F7C60 /* SignMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359F01CC756BA002F7C60 /* SignMainViewController.swift */; };
 		68035A081CC756BA002F7C60 /* LeaveMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359F91CC756BA002F7C60 /* LeaveMainViewController.swift */; };
 		68035A091CC756BA002F7C60 /* SPersonal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680359FB1CC756BA002F7C60 /* SPersonal.storyboard */; };
-		68035A0A1CC756BA002F7C60 /* PersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359FD1CC756BA002F7C60 /* PersonalView.swift */; };
-		68035A0B1CC756BA002F7C60 /* PersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359FF1CC756BA002F7C60 /* PersonalMainViewController.swift */; };
+		68035A0B1CC756BA002F7C60 /* SPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359FF1CC756BA002F7C60 /* SPersonalMainViewController.swift */; };
 		68035A931CC77791002F7C60 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A921CC77791002F7C60 /* Teacher.swift */; };
 		68035A971CC77BE4002F7C60 /* AppMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A961CC77BE4002F7C60 /* AppMenu.swift */; };
 		68035A991CC78066002F7C60 /* StudentSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68035A981CC78066002F7C60 /* StudentSetting.swift */; };
@@ -128,6 +127,9 @@
 		68B7B52F1CBE91C80046FC7F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7B52E1CBE91C80046FC7F /* MainTabBarController.swift */; };
 		68B98EF41CBE49A9009D64D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B98EF21CBE49A9009D64D1 /* LaunchScreen.storyboard */; };
 		68B98EF71CBE4A00009D64D1 /* QJT.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 68B98EF61CBE4A00009D64D1 /* QJT.entitlements */; };
+		68BA68181CCF3FA20022C843 /* SPersonMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BA68171CCF3FA20022C843 /* SPersonMainCell.swift */; };
+		68BA681A1CCF43C00022C843 /* SPersonalHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BA68191CCF43C00022C843 /* SPersonalHeaderView.swift */; };
+		68BA681C1CCF501D0022C843 /* SPersonalTbCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BA681B1CCF501D0022C843 /* SPersonalTbCell.swift */; };
 		68D8EFCC1CC882EA00906E3D /* SwiftNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8EFCB1CC882EA00906E3D /* SwiftNotice.swift */; };
 		68D8EFCE1CC8AABB00906E3D /* UILabel_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8EFCD1CC8AABB00906E3D /* UILabel_extension.swift */; };
 		68D8EFD01CC8AB7200906E3D /* NSString_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8EFCF1CC8AB7200906E3D /* NSString_extension.swift */; };
@@ -157,8 +159,7 @@
 		680359F01CC756BA002F7C60 /* SignMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignMainViewController.swift; sourceTree = "<group>"; };
 		680359F91CC756BA002F7C60 /* LeaveMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveMainViewController.swift; sourceTree = "<group>"; };
 		680359FB1CC756BA002F7C60 /* SPersonal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SPersonal.storyboard; sourceTree = "<group>"; };
-		680359FD1CC756BA002F7C60 /* PersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalView.swift; sourceTree = "<group>"; };
-		680359FF1CC756BA002F7C60 /* PersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalMainViewController.swift; sourceTree = "<group>"; };
+		680359FF1CC756BA002F7C60 /* SPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPersonalMainViewController.swift; sourceTree = "<group>"; };
 		68035A921CC77791002F7C60 /* Teacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Teacher.swift; path = Entity/Model/Teacher.swift; sourceTree = "<group>"; };
 		68035A961CC77BE4002F7C60 /* AppMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppMenu.swift; path = Entity/Model/AppMenu.swift; sourceTree = "<group>"; };
 		68035A981CC78066002F7C60 /* StudentSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StudentSetting.swift; path = Entity/Model/StudentSetting.swift; sourceTree = "<group>"; };
@@ -273,6 +274,9 @@
 		68B7B52E1CBE91C80046FC7F /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		68B98EF21CBE49A9009D64D1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "Supporting Files/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		68B98EF61CBE4A00009D64D1 /* QJT.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = QJT.entitlements; sourceTree = "<group>"; };
+		68BA68171CCF3FA20022C843 /* SPersonMainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPersonMainCell.swift; sourceTree = "<group>"; };
+		68BA68191CCF43C00022C843 /* SPersonalHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPersonalHeaderView.swift; sourceTree = "<group>"; };
+		68BA681B1CCF501D0022C843 /* SPersonalTbCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPersonalTbCell.swift; sourceTree = "<group>"; };
 		68D8EFCB1CC882EA00906E3D /* SwiftNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftNotice.swift; sourceTree = "<group>"; };
 		68D8EFCD1CC8AABB00906E3D /* UILabel_extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UILabel_extension.swift; path = General/Extensions/UILabel_extension.swift; sourceTree = "<group>"; };
 		68D8EFCF1CC8AB7200906E3D /* NSString_extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSString_extension.swift; path = General/Extensions/NSString_extension.swift; sourceTree = "<group>"; };
@@ -396,7 +400,9 @@
 		680359FC1CC756BA002F7C60 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				680359FD1CC756BA002F7C60 /* PersonalView.swift */,
+				68BA68171CCF3FA20022C843 /* SPersonMainCell.swift */,
+				68BA68191CCF43C00022C843 /* SPersonalHeaderView.swift */,
+				68BA681B1CCF501D0022C843 /* SPersonalTbCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -404,7 +410,7 @@
 		680359FE1CC756BA002F7C60 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				680359FF1CC756BA002F7C60 /* PersonalMainViewController.swift */,
+				680359FF1CC756BA002F7C60 /* SPersonalMainViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1454,9 +1460,11 @@
 				EF9A30E81CA9133C00D5EFA6 /* AppDelegate.swift in Sources */,
 				68186BFC1CB3525D005AF62D /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
 				68186C011CB3525D005AF62D /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */,
+				68BA681C1CCF501D0022C843 /* SPersonalTbCell.swift in Sources */,
 				68083F8D1CCE5909004BE4D4 /* CTLeaveMainViewController.swift in Sources */,
 				68083F9B1CCE5909004BE4D4 /* LAttendanceView.swift in Sources */,
 				68083F981CCE5909004BE4D4 /* CPersonalView.swift in Sources */,
+				68BA681A1CCF43C00022C843 /* SPersonalHeaderView.swift in Sources */,
 				68186C101CB3525D005AF62D /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
 				683CF5F51CC34E7F00F69765 /* PersonSetting.swift in Sources */,
 				68186BFA1CB3525D005AF62D /* NVActivityIndicatorAnimationBallBeat.swift in Sources */,
@@ -1465,9 +1473,10 @@
 				68D8EFD01CC8AB7200906E3D /* NSString_extension.swift in Sources */,
 				68186C001CB3525D005AF62D /* NVActivityIndicatorAnimationBallPulse.swift in Sources */,
 				68186C351CB3554F005AF62D /* LoginMeetViewController.swift in Sources */,
+				68BA68181CCF3FA20022C843 /* SPersonMainCell.swift in Sources */,
 				68083FB11CCE5909004BE4D4 /* TLeaveViewMainController.swift in Sources */,
 				68186BFB1CB3525D005AF62D /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */,
-				68035A0B1CC756BA002F7C60 /* PersonalMainViewController.swift in Sources */,
+				68035A0B1CC756BA002F7C60 /* SPersonalMainViewController.swift in Sources */,
 				68186C141CB3525D005AF62D /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
 				68D8EFCE1CC8AABB00906E3D /* UILabel_extension.swift in Sources */,
 				68186C0D1CB3525D005AF62D /* NVActivityIndicatorAnimationCubeTransition.swift in Sources */,
@@ -1498,7 +1507,6 @@
 				68083F821CCE5909004BE4D4 /* BLeaveView.swift in Sources */,
 				68083F9F1CCE5909004BE4D4 /* LLeaveMainViewController.swift in Sources */,
 				68083F851CCE5909004BE4D4 /* BPersonalView.swift in Sources */,
-				68035A0A1CC756BA002F7C60 /* PersonalView.swift in Sources */,
 				68035A081CC756BA002F7C60 /* LeaveMainViewController.swift in Sources */,
 				68186C181CB3525D005AF62D /* NVActivityIndicatorShape.swift in Sources */,
 				68083F9E1CCE5909004BE4D4 /* LLeaveView.swift in Sources */,

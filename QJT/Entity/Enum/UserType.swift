@@ -22,21 +22,21 @@ enum UserType: Int,BaseType {
     func toString() -> String {
         switch self {
         case .Unknown:
-            return "未知"
+            return "Unknown"
         case .Student:
-            return "学生"
+            return "Student"
         case .CourseTeacher:
-            return "班主任"
+            return "CourseTeacher"
         case .Teacher:
-            return "任课教师"
+            return "任课Teacher"
         case .Counsellor:
-            return "辅导员"
+            return "Counsellor"
         case .BranchLeader:
-            return "分院领导"
+            return "BranchLeader"
         case .Leader:
-            return "学院领导"
+            return "Leader"
         case .StudentWorker:
-            return "学工教师"
+            return "StudentWorker"
         }
     }
     

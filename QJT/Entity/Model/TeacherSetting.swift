@@ -45,7 +45,7 @@ class TeacherSetting: PersonSetting, NSCoding {
         aCoder.encodeObject(userID, forKey: "userID")
         aCoder.encodeObject(userName, forKey: "userName")
         aCoder.encodeObject(phoneNum, forKey: "phoneNum")
-        aCoder.encodeInteger(userType.toInt(), forKey: "userType")
+        aCoder.encodeObject(userType.toString(), forKey: "userType")
         aCoder.encodeInteger(portraitID, forKey: "portraitID")
         aCoder.encodeObject(title, forKey: "title")
         aCoder.encodeObject(qualification, forKey: "qualification")
@@ -61,25 +61,25 @@ class TeacherSetting: PersonSetting, NSCoding {
         userID = aDecoder.decodeObjectForKey("userID") as! String
         userName = aDecoder.decodeObjectForKey("userName") as! String
         phoneNum = aDecoder.decodeObjectForKey("phoneNum") as! String
-        switch aDecoder.decodeIntegerForKey("userType") {
-        case 0:
-            userType = .Unknown
-        case 1:
-            userType = .Student
-        case 2:
-            userType = .CourseTeacher
-        case 3:
-            userType = .Teacher
-        case 4:
-            userType = .Counsellor
-        case 5:
-            userType = .BranchLeader
-        case 6:
-            userType = .Leader
-        case 7:
-            userType = .StudentWorker
+        switch  aDecoder.decodeObjectForKey("userType") as! String {
+        case "Uknown":
+            userType = UserType.Unknown
+        case "Student":
+            userType = UserType.Student
+        case "Teacher":
+            userType = UserType.Teacher
+        case "CourseTeacher":
+            userType = UserType.CourseTeacher
+        case "Counsellor":
+            userType = UserType.Counsellor
+        case "BranchLeader":
+            userType = UserType.BranchLeader
+        case "Leader":
+            userType = UserType.Leader
+        case "StudentWorker":
+            userType = UserType.StudentWorker
         default:
-            userType = .Unknown
+            userType = UserType.Unknown
         }
         portraitID = aDecoder.decodeIntegerForKey("portraitID")
         appMenus = aDecoder.decodeObjectForKey("appMenus") as! [AppMenu]

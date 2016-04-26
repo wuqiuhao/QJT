@@ -31,6 +31,8 @@ class CourseClass: Mappable {
     var semester: Int
     // 学年
     var year: Int
+    // 教师姓名
+    var teacherName: String
     
     init() {
         courseClassID = 0
@@ -43,6 +45,7 @@ class CourseClass: Mappable {
         durationSection = 0
         semester = 0
         year = 0
+        teacherName = ""
     }
     
     required init?(_ map: Map) {
@@ -56,6 +59,7 @@ class CourseClass: Mappable {
         durationSection = 0
         semester = 0
         year = 0
+        teacherName = ""
     }
     
     func mapping(map: Map) {
@@ -69,5 +73,6 @@ class CourseClass: Mappable {
         durationSection     <- map["durationSection"]
         semester            <- map["semester"]
         year                <- map["year"]
+        teacherName         <- map["teacherName"]
     }
 }

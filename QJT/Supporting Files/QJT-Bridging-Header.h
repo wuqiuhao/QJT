@@ -13,3 +13,5 @@
 #import "JPUSHService.h"
 
 #import "DLRadioButton.h"
+
+#import "UIImage+ImageEffects.h"

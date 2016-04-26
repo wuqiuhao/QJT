@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1A0F54FFF44B77ECE6EF942A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451ED4D82C76F378DBB33D09 /* Pods.framework */; };
-		582A426B1CCF48980023F134 /* EmptyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582A426A1CCF48980023F134 /* EmptyModel.swift */; };
 		585122D41CCD0F790041A82F /* SignCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585122D31CCD0F790041A82F /* SignCourseViewController.swift */; };
 		68035A001CC756BA002F7C60 /* SSign.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680359EC1CC756BA002F7C60 /* SSign.storyboard */; };
 		68035A011CC756BA002F7C60 /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359EE1CC756BA002F7C60 /* Sign.swift */; };
@@ -140,6 +139,8 @@
 		68FF20071CCD0376005AC0B7 /* CourseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF20061CCD0376005AC0B7 /* CourseClass.swift */; };
 		68FF200A1CCD0396005AC0B7 /* ReturnResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF20091CCD0396005AC0B7 /* ReturnResult.swift */; };
 		EF45F52F1CABF1800052AA1F /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45F52E1CABF1800052AA1F /* Student.swift */; };
+		EF6A8C061CCFB1970054282C /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6A8C051CCFB1970054282C /* UIImage+ImageEffects.m */; };
+		EF6A8C081CCFB1B10054282C /* EmptyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A8C071CCFB1B10054282C /* EmptyModel.swift */; };
 		EF9A30D21CA90FD400D5EFA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF9A30D11CA90FD400D5EFA6 /* Assets.xcassets */; };
 		EF9A30E81CA9133C00D5EFA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9A30E71CA9133C00D5EFA6 /* AppDelegate.swift */; };
 		EF9D7BA61CCF0A2000FA79F7 /* ThemeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D7BA51CCF0A2000FA79F7 /* ThemeConfig.swift */; };
@@ -152,7 +153,6 @@
 /* Begin PBXFileReference section */
 		421540CB059379FB231DBF0D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		451ED4D82C76F378DBB33D09 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		582A426A1CCF48980023F134 /* EmptyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyModel.swift; sourceTree = "<group>"; };
 		585122D31CCD0F790041A82F /* SignCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignCourseViewController.swift; sourceTree = "<group>"; };
 		680359EC1CC756BA002F7C60 /* SSign.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SSign.storyboard; sourceTree = "<group>"; };
 		680359EE1CC756BA002F7C60 /* Sign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sign.swift; sourceTree = "<group>"; };
@@ -288,6 +288,9 @@
 		68FF20091CCD0396005AC0B7 /* ReturnResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReturnResult.swift; sourceTree = "<group>"; };
 		AE37ED3E40352A6C9D2E6664 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EF45F52E1CABF1800052AA1F /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Student.swift; path = Entity/Model/Student.swift; sourceTree = "<group>"; };
+		EF6A8C041CCFB1970054282C /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ImageEffects.h"; path = "General/Extensions/UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		EF6A8C051CCFB1970054282C /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ImageEffects.m"; path = "General/Extensions/UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		EF6A8C071CCFB1B10054282C /* EmptyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmptyModel.swift; path = Entity/Model/EmptyModel.swift; sourceTree = "<group>"; };
 		EF9A30C71CA90FD400D5EFA6 /* QJT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QJT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF9A30D11CA90FD400D5EFA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = QJT/Assets.xcassets; sourceTree = "<group>"; };
 		EF9A30E41CA9130A00D5EFA6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
@@ -1071,6 +1074,8 @@
 		EF45F5311CABF1E60052AA1F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				EF6A8C041CCFB1970054282C /* UIImage+ImageEffects.h */,
+				EF6A8C051CCFB1970054282C /* UIImage+ImageEffects.m */,
 				68083EC11CCE5691004BE4D4 /* NSDate_extension.swift */,
 				68186C1C1CB354DB005AF62D /* UIColor_extension.swift */,
 				68186C1D1CB354DB005AF62D /* UIScrollView_refresh.swift */,
@@ -1156,6 +1161,7 @@
 			isa = PBXGroup;
 			children = (
 				68FF20081CCD0396005AC0B7 /* ResultModel */,
+				EF6A8C071CCFB1B10054282C /* EmptyModel.swift */,
 				683CF5F31CC34E7F00F69765 /* PersonSetting.swift */,
 				68FF20061CCD0376005AC0B7 /* CourseClass.swift */,
 				683CF5F41CC34E7F00F69765 /* UserSetting.swift */,
@@ -1164,7 +1170,6 @@
 				68035A961CC77BE4002F7C60 /* AppMenu.swift */,
 				68035A981CC78066002F7C60 /* StudentSetting.swift */,
 				68035A9A1CC782F0002F7C60 /* TeacherSetting.swift */,
-				582A426A1CCF48980023F134 /* EmptyModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1434,6 +1439,7 @@
 				68D8EFD41CC8ABFE00906E3D /* UIViewController_extension.swift in Sources */,
 				68035A931CC77791002F7C60 /* Teacher.swift in Sources */,
 				68083FAA1CCE5909004BE4D4 /* SWPersonalView.swift in Sources */,
+				EF6A8C081CCFB1B10054282C /* EmptyModel.swift in Sources */,
 				68FF20001CCD02F6005AC0B7 /* CourseView.swift in Sources */,
 				EF45F52F1CABF1800052AA1F /* Student.swift in Sources */,
 				68186C061CB3525D005AF62D /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
@@ -1447,7 +1453,6 @@
 				68083FAB1CCE5909004BE4D4 /* SWPersonalMainViewController.swift in Sources */,
 				68186C341CB3554F005AF62D /* LoginMatchViewController.swift in Sources */,
 				68083F881CCE5909004BE4D4 /* qqqView.swift in Sources */,
-				582A426B1CCF48980023F134 /* EmptyModel.swift in Sources */,
 				683CF5F61CC34E7F00F69765 /* UserSetting.swift in Sources */,
 				68083FAE1CCE5909004BE4D4 /* TAttendanceMainViewController.swift in Sources */,
 				68083F8C1CCE5909004BE4D4 /* CTLeaveView.swift in Sources */,
@@ -1525,6 +1530,7 @@
 				68186BF91CB3525D005AF62D /* AnimationRefresh.swift in Sources */,
 				68186C151CB3525D005AF62D /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */,
 				EF9D7BA61CCF0A2000FA79F7 /* ThemeConfig.swift in Sources */,
+				EF6A8C061CCFB1970054282C /* UIImage+ImageEffects.m in Sources */,
 				68083F8A1CCE5909004BE4D4 /* CTSignCourseViewController.swift in Sources */,
 				68B7B52F1CBE91C80046FC7F /* MainTabBarController.swift in Sources */,
 			);

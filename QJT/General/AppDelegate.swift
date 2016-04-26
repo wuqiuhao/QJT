@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! MainTabBarController
             if let userID = UserConfig.studentSetting()?.userID where userID.characters.count != 0 {
                 vc.userType = UserConfig.studentSetting()!.userType
+                print(vc.userType.toString())
             } else if let userID = UserConfig.teacherSetting()?.userID where userID.characters.count != 0 {
                 vc.userType = UserConfig.teacherSetting()!.userType
             }

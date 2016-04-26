@@ -52,7 +52,7 @@ extension LeaveMainViewController {
     }
     
     func rightItemClicked() {
-        let vc = UIStoryboard(name: "Leave", bundle: nil).instantiateViewControllerWithIdentifier("LeaveCourseViewController")
+        let vc = UIStoryboard(name: "SLeave", bundle: nil).instantiateViewControllerWithIdentifier("LeaveCourseViewController")
         navigationController?.pushViewController(vc, animated: true)
     }
     

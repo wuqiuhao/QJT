@@ -29,6 +29,9 @@ class Methods {
     static let login_studentLogin = "login_studentLogin"
     static let login_teacherLogin = "login_teacherLogin"
     
+    //签到模块
+    //学生签到
+    static let attendance_studentAttendance = "attendance_studentAttendance"
     
     // 请假模块
     // 学生获取课程表

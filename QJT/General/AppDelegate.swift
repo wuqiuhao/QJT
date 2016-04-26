@@ -23,9 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if UserConfig.isLogined() {
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! MainTabBarController
-            if UserConfig.studentSetting()!.userID != "" && UserConfig.studentSetting()!.userID.characters.count != 0 {
+            if let userID = UserConfig.studentSetting()?.userID where userID.characters.count != 0 {
                 vc.userType = UserConfig.studentSetting()!.userType
-            } else if UserConfig.teacherSetting()!.userID != "" && UserConfig.teacherSetting()!.userID.characters.count != 0 {
+            } else if let userID = UserConfig.teacherSetting()?.userID where userID.characters.count != 0 {
                 vc.userType = UserConfig.teacherSetting()!.userType
             }
             window?.rootViewController = vc

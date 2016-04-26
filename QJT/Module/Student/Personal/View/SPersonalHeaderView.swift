@@ -8,31 +8,75 @@
 
 import UIKit
 
-class SPersonalHeaderView: UIView {
+import UIKit
 
+class TableViewHeaderView: UIView {
+    var delegate : TableViewHeaderViewDelegate?
+    var dataSource: TableViewHeaderViewDataSource?
+    var visualEffectView: UIVisualEffectView!
+    
+    private var backgroundImageView: UIImageView? {
+        didSet {
+            guard backgroundImageView != nil else {
+                return
+            }
+            addSubview(backgroundImageView!)
+            backgroundImageView?.clipsToBounds = true
+            sendSubviewToBack(backgroundImageView!)
+        }
+    }
+    
+    var backgroundImage: UIImage? {
+        didSet {
+            backgroundImageView = UIImageView(frame: self.bounds)
+            backgroundImageView!.image = backgroundImage
+            backgroundImageView!.contentMode = UIViewContentMode.ScaleAspectFill
+            visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Light)) as UIVisualEffectView
+            visualEffectView.frame = self.frame
+            backgroundImageView!.addSubview(visualEffectView)
+            
+        }
+    }
+    
+    private var contentView = TableHeaderContentView()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        createHeaderView()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-
+    
 }
 
-extension SPersonalHeaderView {
-    
-    func createHeaderView() {
-        
-        let avatarImageView = UIImageView()
-        avatarImageView.bounds = CGRectMake(0, 0, 70, 70)
-        avatarImageView.center = self.center
-        avatarImageView.layer.cornerRadius = avatarImageView.bounds.width / 2
-        avatarImageView.layer.masksToBounds = true
-        avatarImageView.image = UIImage(named: "SPersonal_avatar")
-        self.addSubview(avatarImageView)
-        
+// MARK: - private Method
+extension TableViewHeaderView {
+    func layoutHeaderView(offset: CGPoint)  {
+        delegate?.tableViewDuringScrollingAnnimation(contentView,offset: offset)
+        var rect = CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, bounds.size.height)
+        rect.origin.y += offset.y
+        rect.size.height -= offset.y
+        backgroundImageView?.frame = rect
+        contentView.frame = rect
     }
     
+    func reloadData() {
+        contentView.removeFromSuperview()
+        contentView = dataSource?.tableHeaderView(self) as! TableHeaderContentView
+        contentView.clipsToBounds = true
+        addSubview(contentView)
+    }
+}
+
+protocol TableViewHeaderViewDelegate {
+    func tableViewDuringScrollingAnnimation(contentView: TableHeaderContentView,offset: CGPoint)
+}
+protocol TableViewHeaderViewDataSource {
+    func tableHeaderView(tableHeaderView: UIView) -> UIView
+}
+
+class TableHeaderContentView: UIView {
+    func layoutContentSubView(offset: CGPoint) {
+    }
 }

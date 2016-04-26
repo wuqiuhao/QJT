@@ -134,7 +134,7 @@ extension LoginViewController {
                 UserConfig.saveStudentSetting(studentSetting)
                 let mainWindow = UIApplication.sharedApplication().keyWindow
                 let mainTabBarVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()! as! MainTabBarController
-                mainTabBarVC.userType = self.userType
+                mainTabBarVC.userType = studentSetting.userType
                 mainWindow?.rootViewController = mainTabBarVC
             }) { [weak self] (errorMsg) in
                 self?.clearAllNotice()
@@ -152,7 +152,7 @@ extension LoginViewController {
                 UserConfig.saveTeacherSetting(teacherSetting)
                 let mainWindow = UIApplication.sharedApplication().keyWindow
                 let mainTabBarVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()! as! MainTabBarController
-                mainTabBarVC.userType = self.userType
+                mainTabBarVC.userType = teacherSetting.userType
                 mainWindow?.rootViewController = mainTabBarVC
             }) { [weak self] (errorMsg) in
                 self?.clearAllNotice()

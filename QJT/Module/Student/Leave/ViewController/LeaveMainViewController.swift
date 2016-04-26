@@ -70,7 +70,6 @@ extension LeaveMainViewController {
         datePicker?.maximumDate = NSDate.dateFromString("2016-5-20", dateformatter: "yyyy-MM-dd")
         datePicker!.frame = CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.width - 10, height: 162)
         //datePicker!.addTarget(self, action: #selector(ScheduleViewController.datePickerValueChange), forControlEvents: UIControlEvents.ValueChanged)
-        //datePicker!.datePickerMode = .Date
         datePicker?.setDate(pickerSelectDate, animated: false)
     }
     
@@ -80,8 +79,8 @@ extension LeaveMainViewController {
     func createTableViewData() {
         let dateStr = pickerSelectDate.stringForDateFormat("yyyy-MM-dd")
         let weekStr = pickerSelectDate.dateToWeek()
-        let cellData1 = ["title":"日期", "detail":"\(dateStr)  \(weekStr)"]
-        let cellData2 = ["title":"开始时间","detail":"\(dateStr)  \(weekStr)"]
+        let cellData1 = ["title":"datePicker", "detail":"\(dateStr)  \(weekStr)"]
+        let cellData2 = ["title":"datePicker","detail":"\(dateStr)  \(weekStr)"]
         dateArr = [cellData1, cellData2]
     }
 }
@@ -93,15 +92,18 @@ extension LeaveMainViewController: UITableViewDelegate {
     //    }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        switch indexPath.row {
-        case 0:
-            createDatePicker()
-            let alertVC = UIAlertController(title: "\n\n\n\n\n\n\n\n\n", message: "", preferredStyle: UIAlertControllerStyle.ActionSheet)
-            alertVC.view.backgroundColor = UIColor.clearColor()
-            alertVC.view.addSubview(datePicker!)
-            self.presentViewController(alertVC, animated: true, completion: nil)
-        default:
-            print("")
+        var i = 0
+        for temp in dateArr {
+            i += 1
+            for (_, value) in temp {
+                if value == "datePicker" || value == "timePicker" || value == "durationPicker" {
+                    removePicker(i, section: indexPath.section)
+                    return
+                }
+            }
+        }
+        if indexPath.row == 0 {
+            addPicker("datePicker", indexPath: indexPath)
         }
     }
     
@@ -110,24 +112,45 @@ private let cellIdentifierForLeave = "LeaveCell"
 extension LeaveMainViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return dateArr.count + 1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifierForLeave, forIndexPath: indexPath) as! LeaveCell
-        switch indexPath.row {
-        case 0:
-            //            cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifierForLeave, forIndexPath: indexPath) as! LeaveCell
-            cell.titleLbl.text = "开始时间:"
-        case 1:
-            cell.titleLbl.text = "结束时间:"
-        case 2:
-            cell.titleLbl.text = "选择课程:"
-        default:
-            return UITableViewCell()
+        for subView in cell.contentView.subviews {
+            if subView is UILabel == false {
+                subView.removeFromSuperview()
+            }
+        }
+        cell.selectionStyle = .None
+        if dateArr[indexPath.row]["title"] == "datePicker" {
+            //cell.addSubview(datePicker!)
         }
         return cell
     }
     
+    func addPicker(pickerType: String ,indexPath: NSIndexPath) {
+        let nextIndexPath = NSIndexPath(forItem: indexPath.row + 1, inSection: indexPath.section)
+        let cellDate = ["title":pickerType,"detail":dateArr[indexPath.row]["detail"]!]
+        dateArr.insert(cellDate, atIndex: indexPath.row + 1)
+        if pickerType == "datePicker" {
+            createDatePicker()
+        }
+        tableView.beginUpdates()
+        tableView.insertRowsAtIndexPaths([nextIndexPath], withRowAnimation: UITableViewRowAnimation.Middle)
+        tableView.endUpdates()
+    }
     
+    func removePicker(indexPath: Int, section: Int) {
+        dateArr.removeAtIndex(indexPath - 1)
+        tableView.beginUpdates()
+        let nextIndexPath = NSIndexPath(forItem: indexPath - 1, inSection: section)
+        tableView.deleteRowsAtIndexPaths([nextIndexPath], withRowAnimation: UITableViewRowAnimation.Middle)
+        if datePicker != nil {
+            datePicker?.removeFromSuperview()
+        }
+        tableView.endUpdates()
+    }
+
+
 }

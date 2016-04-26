@@ -9,13 +9,17 @@
 import Foundation
 
 class UserConfig: NSObject {
+    /**
+     判断是否登录
+     
+     */
     class func isLogined() -> Bool {
-//        if let _ = UserConfig.userID() {
-//            return true
-//        } else {
-//            return false
-//        }
-        return true
+        if UserConfig.studentSetting()!.userID != "" && UserConfig.studentSetting()!.userID.characters.count != 0 {
+            return true
+        } else if UserConfig.teacherSetting()!.userID != "" && UserConfig.teacherSetting()!.userID.characters.count != 0 {
+            return true
+        }
+        return false
     }
     
     /**
@@ -90,5 +94,7 @@ class UserConfig: NSObject {
         }
         return nil
     }
+    
+    
     
 }

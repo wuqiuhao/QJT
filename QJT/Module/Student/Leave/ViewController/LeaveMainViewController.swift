@@ -122,10 +122,10 @@ extension LeaveMainViewController: UITableViewDataSource {
                 subView.removeFromSuperview()
             }
         }
-        cell.selectionStyle = .None
-        if dateArr[indexPath.row]["title"] == "datePicker" {
-            //cell.addSubview(datePicker!)
-        }
+//        cell.selectionStyle = .None
+//        if dateArr[indexPath.row]["title"] == "datePicker" {
+//            //cell.addSubview(datePicker!)
+//        }
         return cell
     }
     

@@ -48,7 +48,7 @@ class StudentSetting: PersonSetting, NSCoding {
         aCoder.encodeObject(userID, forKey: "userID")
         aCoder.encodeObject(userName, forKey: "userName")
         aCoder.encodeObject(phoneNum, forKey: "phoneNum")
-//        aCoder.encodeInteger(userType, forKey: "userType")
+        aCoder.encodeObject(userType.toString(), forKey: "userType")
         aCoder.encodeInteger(portraitID, forKey: "portraitID")
         aCoder.encodeInteger(schoolYear, forKey: "schoolYear")
         aCoder.encodeObject(className, forKey: "className")
@@ -63,10 +63,29 @@ class StudentSetting: PersonSetting, NSCoding {
         specialityName = aDecoder.decodeObjectForKey("specialityName") as! String
         deviceID = aDecoder.decodeObjectForKey("deviceID") as! String
         super.init()
+        switch  aDecoder.decodeObjectForKey("userType") as! String {
+            case "Uknown":
+                userType = UserType.Unknown
+            case "Student":
+                userType = UserType.Student
+            case "Teacher":
+                userType = UserType.Teacher
+            case "CourseTeacher":
+                userType = UserType.CourseTeacher
+            case "Counsellor":
+                userType = UserType.Counsellor
+            case "BranchLeader":
+                userType = UserType.BranchLeader
+            case "Leader":
+                userType = UserType.Leader
+            case "StudentWorker":
+                userType = UserType.StudentWorker
+            default:
+                userType = UserType.Unknown
+        }
         userID = aDecoder.decodeObjectForKey("userID") as! String
         userName = aDecoder.decodeObjectForKey("userName") as! String
         phoneNum = aDecoder.decodeObjectForKey("phoneNum") as! String
-//        userType = aDecoder.decodeIntegerForKey("userType")
         portraitID = aDecoder.decodeIntegerForKey("portraitID")
         appMenus = aDecoder.decodeObjectForKey("appMenus") as! [AppMenu]
     }

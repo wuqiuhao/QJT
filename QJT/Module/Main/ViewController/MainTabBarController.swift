@@ -25,7 +25,7 @@ extension MainTabBarController {
     func configTabBar() {
         tabBar.tintColor = UIColor.qjtTintColor()
         
-        switch userType.toInt() {
+        switch userType.rawValue {
         case 1:
             for tabMenu in UserConfig.studentSetting()!.appMenus {
                 let item = UITabBarItem(title: tabMenu.menuName, image: UIImage(named: "main_\(tabMenu.uniqueCode)_normal"), selectedImage: UIImage(named: "main_\(tabMenu.uniqueCode)_select"))

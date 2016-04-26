@@ -1108,7 +1108,6 @@
 		EF9A30C91CA90FD400D5EFA6 /* QJT */ = {
 			isa = PBXGroup;
 			children = (
-				68B98EF61CBE4A00009D64D1 /* QJT.entitlements */,
 				EF9A30E21CA911F900D5EFA6 /* General */,
 				683CF5E61CC338F100F69765 /* Config */,
 				EF9A30DC1CA9119B00D5EFA6 /* NetWork */,
@@ -1186,6 +1185,7 @@
 		EF9A30E21CA911F900D5EFA6 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				68B98EF61CBE4A00009D64D1 /* QJT.entitlements */,
 				EF9A30E71CA9133C00D5EFA6 /* AppDelegate.swift */,
 				EF9D7BA21CCF09D800FA79F7 /* Theme */,
 				EF45F5321CABF1F10052AA1F /* Protocols */,

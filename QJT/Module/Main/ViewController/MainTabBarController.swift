@@ -10,7 +10,7 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
     var vcArray = [UIViewController]()
-    var userType: String!
+    var userType: UserType!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,9 @@ extension MainTabBarController {
     
     func configTabBar() {
         tabBar.tintColor = UIColor.qjtTintColor()
-        if userType == "学生" {
+        
+        switch userType.toInt() {
+        case 1:
             for tabMenu in UserConfig.studentSetting()!.appMenus {
                 let item = UITabBarItem(title: tabMenu.menuName, image: UIImage(named: "main_\(tabMenu.uniqueCode)_normal"), selectedImage: UIImage(named: "main_\(tabMenu.uniqueCode)_select"))
                 let vc: UIViewController?
@@ -47,11 +49,11 @@ extension MainTabBarController {
                 vc!.tabBarItem = item
                 vcArray.append(vc!)
             }
-        } else if userType == "教师" {
+        case 2,3,4,5,6,7:
             for tabMenu in UserConfig.teacherSetting()!.appMenus {
                 let item = UITabBarItem(title: tabMenu.menuName, image:  UIImage(named: "main_\(tabMenu.uniqueCode)_normal"), selectedImage: UIImage(named: "main_\(tabMenu.uniqueCode)_select"))
                 let vc: UIViewController?
-//                let abbr = UserType.fromIntToAbbreviate()
+                let abbr = UserConfig.teacherSetting()!.userType.ToAbbreviate()
                 switch tabMenu.uniqueCode {
                 case "leave":
                     vc = UIStoryboard(name: "\(abbr)Leave", bundle: nil).instantiateInitialViewController()
@@ -63,8 +65,10 @@ extension MainTabBarController {
                     return
                 }
                 vc!.tabBarItem = item
+                vcArray.append(vc!)
             }
+        default:
+            return
         }
-        self.viewControllers = vcArray
     }
 }

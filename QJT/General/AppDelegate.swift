@@ -20,6 +20,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.backgroundColor = UIColor.whiteColor()
         
+        
+        if UserConfig.isLogined() {
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! MainTabBarController
+            if UserConfig.studentSetting()!.userID != "" && UserConfig.studentSetting()!.userID.characters.count != 0 {
+                vc.userType = UserConfig.studentSetting()!.userType
+            } else if UserConfig.teacherSetting()!.userID != "" && UserConfig.teacherSetting()!.userID.characters.count != 0 {
+                vc.userType = UserConfig.teacherSetting()!.userType
+            }
+            window?.rootViewController = vc
+        } else {
+            window?.rootViewController = UIStoryboard(name: "RegLogin", bundle: nil).instantiateInitialViewController()
+        }
+        
         registerJPush(launchOptions)
         
         receiveJPushRigsterNotice()

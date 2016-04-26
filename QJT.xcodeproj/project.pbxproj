@@ -128,7 +128,6 @@
 		68B98EF71CBE4A00009D64D1 /* QJT.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 68B98EF61CBE4A00009D64D1 /* QJT.entitlements */; };
 		68BA68181CCF3FA20022C843 /* SPersonMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BA68171CCF3FA20022C843 /* SPersonMainCell.swift */; };
 		68BA681A1CCF43C00022C843 /* SPersonalHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BA68191CCF43C00022C843 /* SPersonalHeaderView.swift */; };
-		68BA681C1CCF501D0022C843 /* SPersonalTbCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BA681B1CCF501D0022C843 /* SPersonalTbCell.swift */; };
 		68D8EFCC1CC882EA00906E3D /* SwiftNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8EFCB1CC882EA00906E3D /* SwiftNotice.swift */; };
 		68D8EFCE1CC8AABB00906E3D /* UILabel_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8EFCD1CC8AABB00906E3D /* UILabel_extension.swift */; };
 		68D8EFD01CC8AB7200906E3D /* NSString_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8EFCF1CC8AB7200906E3D /* NSString_extension.swift */; };
@@ -274,7 +273,6 @@
 		68B98EF61CBE4A00009D64D1 /* QJT.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = QJT.entitlements; sourceTree = "<group>"; };
 		68BA68171CCF3FA20022C843 /* SPersonMainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPersonMainCell.swift; sourceTree = "<group>"; };
 		68BA68191CCF43C00022C843 /* SPersonalHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPersonalHeaderView.swift; sourceTree = "<group>"; };
-		68BA681B1CCF501D0022C843 /* SPersonalTbCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPersonalTbCell.swift; sourceTree = "<group>"; };
 		68D8EFCB1CC882EA00906E3D /* SwiftNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftNotice.swift; sourceTree = "<group>"; };
 		68D8EFCD1CC8AABB00906E3D /* UILabel_extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UILabel_extension.swift; path = General/Extensions/UILabel_extension.swift; sourceTree = "<group>"; };
 		68D8EFCF1CC8AB7200906E3D /* NSString_extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSString_extension.swift; path = General/Extensions/NSString_extension.swift; sourceTree = "<group>"; };
@@ -400,7 +398,6 @@
 			children = (
 				68BA68171CCF3FA20022C843 /* SPersonMainCell.swift */,
 				68BA68191CCF43C00022C843 /* SPersonalHeaderView.swift */,
-				68BA681B1CCF501D0022C843 /* SPersonalTbCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1456,7 +1453,6 @@
 				EF9A30E81CA9133C00D5EFA6 /* AppDelegate.swift in Sources */,
 				68186BFC1CB3525D005AF62D /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
 				68186C011CB3525D005AF62D /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */,
-				68BA681C1CCF501D0022C843 /* SPersonalTbCell.swift in Sources */,
 				68083F8D1CCE5909004BE4D4 /* CTLeaveMainViewController.swift in Sources */,
 				68083F9B1CCE5909004BE4D4 /* LAttendanceView.swift in Sources */,
 				68083F981CCE5909004BE4D4 /* CPersonalView.swift in Sources */,

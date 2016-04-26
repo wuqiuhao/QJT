@@ -26,6 +26,7 @@ class NetWorkManager {
      - parameter completed:    成功返回闭包
      - parameter errorClosure: 失败返回错误信息闭包
      */
+    
     class func httpRequest<T: Mappable>(method: String, params:[String:AnyObject], modelType: T? = nil,listType: T? = nil,completed: SuccessedClosure?, errorClosure: FailedClosure) {
         var serviceName: String?
         let serviceDic = Methods.getServiceMethod()

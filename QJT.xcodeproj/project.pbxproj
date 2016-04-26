@@ -145,6 +145,7 @@
 		EF45F52F1CABF1800052AA1F /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45F52E1CABF1800052AA1F /* Student.swift */; };
 		EF9A30D21CA90FD400D5EFA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF9A30D11CA90FD400D5EFA6 /* Assets.xcassets */; };
 		EF9A30E81CA9133C00D5EFA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9A30E71CA9133C00D5EFA6 /* AppDelegate.swift */; };
+		EF9D7BA61CCF0A2000FA79F7 /* ThemeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D7BA51CCF0A2000FA79F7 /* ThemeConfig.swift */; };
 		EFA869191CAA651900CC1B71 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA869181CAA651900CC1B71 /* NetWorkManager.swift */; };
 		EFA8691D1CAA655C00CC1B71 /* Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8691C1CAA655C00CC1B71 /* Methods.swift */; };
 		EFA8691F1CAA659200CC1B71 /* SysConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA8691E1CAA659200CC1B71 /* SysConfig.swift */; };
@@ -296,6 +297,7 @@
 		EF9A30D11CA90FD400D5EFA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = QJT/Assets.xcassets; sourceTree = "<group>"; };
 		EF9A30E41CA9130A00D5EFA6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
 		EF9A30E71CA9133C00D5EFA6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = General/AppDelegate.swift; sourceTree = "<group>"; };
+		EF9D7BA51CCF0A2000FA79F7 /* ThemeConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThemeConfig.swift; path = General/Theme/ThemeConfig.swift; sourceTree = "<group>"; };
 		EFA869181CAA651900CC1B71 /* NetWorkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetWorkManager.swift; path = NetWork/Manager/NetWorkManager.swift; sourceTree = "<group>"; };
 		EFA8691C1CAA655C00CC1B71 /* Methods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Methods.swift; path = NetWork/Config/Methods.swift; sourceTree = "<group>"; };
 		EFA8691E1CAA659200CC1B71 /* SysConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SysConfig.swift; path = NetWork/Config/SysConfig.swift; sourceTree = "<group>"; };
@@ -1242,6 +1244,7 @@
 			isa = PBXGroup;
 			children = (
 				EF9A30E71CA9133C00D5EFA6 /* AppDelegate.swift */,
+				EF9D7BA21CCF09D800FA79F7 /* Theme */,
 				EF45F5321CABF1F10052AA1F /* Protocols */,
 				EF45F5311CABF1E60052AA1F /* Extensions */,
 			);
@@ -1256,6 +1259,14 @@
 				EF9A30E41CA9130A00D5EFA6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF9D7BA21CCF09D800FA79F7 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				EF9D7BA51CCF0A2000FA79F7 /* ThemeConfig.swift */,
+			);
+			name = Theme;
 			sourceTree = "<group>";
 		};
 		EFA869141CAA62AF00CC1B71 /* Manager */ = {
@@ -1545,6 +1556,7 @@
 				68186C0F1CB3525D005AF62D /* NVActivityIndicatorAnimationLineScaleParty.swift in Sources */,
 				68186BF91CB3525D005AF62D /* AnimationRefresh.swift in Sources */,
 				68186C151CB3525D005AF62D /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */,
+				EF9D7BA61CCF0A2000FA79F7 /* ThemeConfig.swift in Sources */,
 				68083F8A1CCE5909004BE4D4 /* CTSignCourseViewController.swift in Sources */,
 				68B7B52F1CBE91C80046FC7F /* MainTabBarController.swift in Sources */,
 			);

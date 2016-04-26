@@ -70,5 +70,6 @@ extension MainTabBarController {
         default:
             return
         }
+        viewControllers = vcArray
     }
 }

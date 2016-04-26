@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let isProduction = false
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
         window?.backgroundColor = UIColor.whiteColor()
+        ThemeConfig.configUI()
         
         
         if UserConfig.isLogined() {

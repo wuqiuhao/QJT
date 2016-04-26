@@ -28,13 +28,9 @@ class TableViewHeaderView: UIView {
     
     var backgroundImage: UIImage? {
         didSet {
-            backgroundImageView = UIImageView(frame: self.bounds)
-            backgroundImageView!.image = backgroundImage
+            backgroundImageView = UIImageView(frame: self.frame)
+            backgroundImageView!.image = backgroundImage?.applyLightEffect()
             backgroundImageView!.contentMode = UIViewContentMode.ScaleAspectFill
-            visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .Light)) as UIVisualEffectView
-            visualEffectView.frame = self.frame
-            backgroundImageView!.addSubview(visualEffectView)
-            
         }
     }
     

@@ -94,7 +94,6 @@ extension SignMainViewController: CLLocationManagerDelegate {
             self.clearAllNotice()
         }
         center = mapView?.userLocation.coordinate
-        print("\(center!.latitude):\(center!.longitude)")
         mapView?.setCenterCoordinate(center!, animated: true)
         //设置地图范围
         let latDelta = 0.01

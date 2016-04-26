@@ -24,8 +24,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        accountTfd.text = "2012812025"
-        passwordTfd.text = "2012812025"
+        accountTfd.text = "2012812044"
+        passwordTfd.text = "2012812044"
         configUI()
         setupLoginBtn()
     }
@@ -44,8 +44,8 @@ extension LoginViewController {
         accountTfd.becomeFirstResponder()
         accountTfd.delegate = self
         passwordTfd.delegate = self
-        createRadioButton(studentBtn, title: "学生", color: UIColor.qjtTintColor())
-        createRadioButton(teacherBtn, title: "教师", color: UIColor.qjtTintColor())
+        createRadioButton(studentBtn, title: "学生", color: UIColor.qjtNavgationBarTitleColor())
+        createRadioButton(teacherBtn, title: "教师", color: UIColor.qjtNavgationBarTitleColor())
         studentBtn.selected = true
         studentBtn.otherButtons = [teacherBtn];
     }

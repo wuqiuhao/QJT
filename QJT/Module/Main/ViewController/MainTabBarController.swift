@@ -52,17 +52,17 @@ extension MainTabBarController {
                 let item = UITabBarItem(title: tabMenu.menuName, image:  UIImage(named: "main_\(tabMenu.uniqueCode)_normal"), selectedImage: UIImage(named: "main_\(tabMenu.uniqueCode)_select"))
                 let vc: UIViewController?
 //                let abbr = UserType.fromIntToAbbreviate()
-                switch tabMenu.uniqueCode {
-                case "leave":
-                    vc = UIStoryboard(name: "\(abbr)Leave", bundle: nil).instantiateInitialViewController()
-                case "attendance":
-                    vc = UIStoryboard(name: "\(abbr)Attendance", bundle: nil).instantiateInitialViewController()
-                case "personal":
-                    vc = UIStoryboard(name: "\(abbr)Personal", bundle: nil).instantiateInitialViewController()
-                default:
-                    return
-                }
-                vc!.tabBarItem = item
+//                switch tabMenu.uniqueCode {
+//                case "leave":
+//                    vc = UIStoryboard(name: "\(abbr)Leave", bundle: nil).instantiateInitialViewController()
+//                case "attendance":
+//                    vc = UIStoryboard(name: "\(abbr)Attendance", bundle: nil).instantiateInitialViewController()
+//                case "personal":
+//                    vc = UIStoryboard(name: "\(abbr)Personal", bundle: nil).instantiateInitialViewController()
+//                default:
+//                    return
+//                }
+//                vc!.tabBarItem = item
             }
         }
         self.viewControllers = vcArray

@@ -35,9 +35,9 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RW0-2U-qhM">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LeaveCell" id="weA-xV-hkw" customClass="LeaveCell" customModule="QJT" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="LeaveCell" id="weA-xV-hkw" customClass="LeaveCell" customModule="QJT" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="weA-xV-hkw" id="YKX-f2-bQh">
@@ -54,27 +54,37 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2C-w4-BZh" userLabel="detailLbl">
-                                                    <rect key="frame" x="95" y="13" width="490" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2C-w4-BZh" userLabel="detailLbl">
+                                                    <rect key="frame" x="95" y="12" width="490" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="yE4-Ga-nRW"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="yE4-Ga-nRW"/>
+                                                        </mask>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="r2C-w4-BZh" secondAttribute="bottom" constant="11.5" id="01m-Tx-M8k"/>
                                                 <constraint firstAttribute="trailing" secondItem="r2C-w4-BZh" secondAttribute="trailing" constant="15" id="77p-Fb-TyT"/>
                                                 <constraint firstItem="KWd-Ww-Nrg" firstAttribute="top" secondItem="YKX-f2-bQh" secondAttribute="top" constant="10" id="7AS-mI-Z2j"/>
                                                 <constraint firstItem="r2C-w4-BZh" firstAttribute="leading" secondItem="KWd-Ww-Nrg" secondAttribute="trailing" constant="5" id="9fz-yb-YOB"/>
                                                 <constraint firstItem="KWd-Ww-Nrg" firstAttribute="centerY" secondItem="YKX-f2-bQh" secondAttribute="centerY" id="AxV-Td-Glw"/>
                                                 <constraint firstItem="KWd-Ww-Nrg" firstAttribute="leading" secondItem="YKX-f2-bQh" secondAttribute="leading" constant="20" id="ans-ch-Nhp"/>
+                                                <constraint firstItem="KWd-Ww-Nrg" firstAttribute="top" secondItem="YKX-f2-bQh" secondAttribute="top" constant="12" id="e4d-1W-vHk"/>
                                                 <constraint firstItem="r2C-w4-BZh" firstAttribute="centerY" secondItem="YKX-f2-bQh" secondAttribute="centerY" id="iyw-ei-Ti2"/>
+                                                <constraint firstItem="r2C-w4-BZh" firstAttribute="top" secondItem="YKX-f2-bQh" secondAttribute="top" constant="12" id="qi2-bP-z8f"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
                                                     <exclude reference="7AS-mI-Z2j"/>
+                                                    <exclude reference="AxV-Td-Glw"/>
+                                                    <exclude reference="iyw-ei-Ti2"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>

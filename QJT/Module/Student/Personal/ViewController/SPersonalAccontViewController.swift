@@ -30,6 +30,7 @@ extension SPersonalAccontViewController {
     
     func configUI() {
         self.automaticallyAdjustsScrollViewInsets = false
+        navigationItem.title = "账号安全"
     }
     
     func setupButton() {

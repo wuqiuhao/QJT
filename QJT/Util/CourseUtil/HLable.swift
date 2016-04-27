@@ -16,6 +16,8 @@ enum VerticalAlignment {
 
 class HLable: UILabel {
     
+    var isCourseSelected: Bool = false
+    
     override init(frame: CGRect) {
         self.verticalAlignment = .Middle
         super.init(frame: frame)

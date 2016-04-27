@@ -74,6 +74,7 @@
 		68083FB81CCE5A96004BE4D4 /* SLeave.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083FB71CCE5A96004BE4D4 /* SLeave.storyboard */; };
 		68083FBA1CCE5AAB004BE4D4 /* LeaveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083FB91CCE5AAB004BE4D4 /* LeaveCell.swift */; };
 		6808AA511CCFA28900C2C324 /* SPersonalAccontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6808AA501CCFA28900C2C324 /* SPersonalAccontViewController.swift */; };
+		6808AA531CCFBF0B00C2C324 /* SPersonalHeadContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6808AA521CCFBF0B00C2C324 /* SPersonalHeadContentView.swift */; };
 		68186BF91CB3525D005AF62D /* AnimationRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68186BD61CB3525D005AF62D /* AnimationRefresh.swift */; };
 		68186BFA1CB3525D005AF62D /* NVActivityIndicatorAnimationBallBeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68186BD91CB3525D005AF62D /* NVActivityIndicatorAnimationBallBeat.swift */; };
 		68186BFB1CB3525D005AF62D /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68186BDA1CB3525D005AF62D /* NVActivityIndicatorAnimationBallClipRotate.swift */; };
@@ -220,6 +221,7 @@
 		68083FB71CCE5A96004BE4D4 /* SLeave.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SLeave.storyboard; sourceTree = "<group>"; };
 		68083FB91CCE5AAB004BE4D4 /* LeaveCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveCell.swift; sourceTree = "<group>"; };
 		6808AA501CCFA28900C2C324 /* SPersonalAccontViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPersonalAccontViewController.swift; sourceTree = "<group>"; };
+		6808AA521CCFBF0B00C2C324 /* SPersonalHeadContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPersonalHeadContentView.swift; sourceTree = "<group>"; };
 		68186BD21CB35178005AF62D /* QJT-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "QJT-Bridging-Header.h"; path = "Supporting Files/QJT-Bridging-Header.h"; sourceTree = "<group>"; };
 		68186BD61CB3525D005AF62D /* AnimationRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationRefresh.swift; sourceTree = "<group>"; };
 		68186BD91CB3525D005AF62D /* NVActivityIndicatorAnimationBallBeat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorAnimationBallBeat.swift; sourceTree = "<group>"; };
@@ -405,6 +407,7 @@
 			children = (
 				68BA68171CCF3FA20022C843 /* SPersonMainCell.swift */,
 				68BA68191CCF43C00022C843 /* SPersonalHeaderView.swift */,
+				6808AA521CCFBF0B00C2C324 /* SPersonalHeadContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1423,6 +1426,7 @@
 				68035A021CC756BA002F7C60 /* SignMainViewController.swift in Sources */,
 				68FF20071CCD0376005AC0B7 /* CourseClass.swift in Sources */,
 				68186C121CB3525D005AF62D /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
+				6808AA531CCFBF0B00C2C324 /* SPersonalHeadContentView.swift in Sources */,
 				68083F7F1CCE5909004BE4D4 /* BAttendanceView.swift in Sources */,
 				68083FA11CCE5909004BE4D4 /* LPersonalView.swift in Sources */,
 				68186BFF1CB3525D005AF62D /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */,

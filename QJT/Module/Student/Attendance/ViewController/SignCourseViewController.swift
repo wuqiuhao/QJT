@@ -23,36 +23,7 @@ class SignCourseViewController: UIViewController {
         super.viewDidLoad()
         configUI()
         setupCourseBackground()
-//        getNetwork()
-        
-        print("\(self.lat!):\(self.long!)")
-        
-        let model = CourseClass()
-        model.address = "B-301"
-        model.courseClassID = 104
-        model.week = Week.Tuesday
-        model.fromSection = 1
-        model.durationSection = 2
-        model.courseName = "C语言设计"
-        courseArrData.append(model)
-    
-        let model1 = CourseClass()
-        model1.address = "B-301"
-        model1.courseClassID = 104
-        model1.week = Week.Friday
-        model1.fromSection = 7
-        model1.durationSection = 3
-        model1.courseName = "C语言设计"
-        courseArrData.append(model1)
-        
-        let model2 = CourseClass()
-        model2.address = "B-301"
-        model2.courseClassID = 104
-        model2.week = Week.Monday
-        model2.fromSection = 7
-        model2.durationSection = 3
-        model2.courseName = "C语言设计"
-        courseArrData.append(model2)
+        getNetwork()
         
         self.configCourseExcel()
         
@@ -85,14 +56,13 @@ extension SignCourseViewController {
         var params = [String:AnyObject]()
         var method = ""
         
-        
         let date = NSDate()
         let timeFormatter = NSDateFormatter()
-        timeFormatter.dateFormat = "yyyMMddHHmmss" //(格式可俺按自己需求修整)
+        timeFormatter.dateFormat = "yyyMMddHHmmss"
         let strNowTime = timeFormatter.stringFromDate(date) as String
         
         
-        params.updateValue("2012812025", forKey: "studentID")
+        params.updateValue("\(UserConfig.studentSetting()?.userID)", forKey: "studentID")
         params.updateValue("\(courseArrData[courseTag].courseClassID)", forKey: "courseClassID")
         params.updateValue(strNowTime, forKey: "signTime")
         params.updateValue((self.long! as NSString).doubleValue, forKey: "longitude")

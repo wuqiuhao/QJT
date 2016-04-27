@@ -56,14 +56,13 @@ extension SignCourseViewController {
         var params = [String:AnyObject]()
         var method = ""
         
-        
         let date = NSDate()
         let timeFormatter = NSDateFormatter()
-        timeFormatter.dateFormat = "yyyMMddHHmmss" //(格式可俺按自己需求修整)
+        timeFormatter.dateFormat = "yyyMMddHHmmss"
         let strNowTime = timeFormatter.stringFromDate(date) as String
         
         
-        params.updateValue("2012812025", forKey: "studentID")
+        params.updateValue("\(UserConfig.studentSetting()?.userID)", forKey: "studentID")
         params.updateValue("\(courseArrData[courseTag].courseClassID)", forKey: "courseClassID")
         params.updateValue(strNowTime, forKey: "signTime")
         params.updateValue((self.long! as NSString).doubleValue, forKey: "longitude")

@@ -71,7 +71,7 @@ extension CTSignCourseViewController {
         let strNowTime = timeFormatter.stringFromDate(date) as String
         
         
-        params.updateValue("2012812025", forKey: "teacherID")
+        params.updateValue("\(UserConfig.teacherSetting()?.userID)", forKey: "teacherID")
         params.updateValue("\(courseArrData[courseTag].courseClassID)", forKey: "courseClassID")
         params.updateValue(strNowTime, forKey: "attendanceTime")
         params.updateValue((self.long! as NSString).doubleValue, forKey: "longitude")

@@ -127,7 +127,7 @@
         <!--Sign Course View Controller-->
         <scene sceneID="xr1-A6-hGc">
             <objects>
-                <viewController id="9W5-S0-kh9" customClass="SignCourseViewController" customModule="QJT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="9W5-S0-kh9" customClass="SignCourseViewController" customModule="QJT" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DP1-w5-jaJ"/>
                         <viewControllerLayoutGuide type="bottom" id="gLC-zQ-5re"/>

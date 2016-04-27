@@ -18,6 +18,7 @@ class LeaveMainViewController: UIViewController {
     var startDate: NSDate!
     var endDate: NSDate!
     var pickerSelectDate = NSDate()
+    var datePickerValue: NSDate!
     
     
     override func viewDidLoad() {
@@ -38,7 +39,6 @@ extension LeaveMainViewController {
         self.automaticallyAdjustsScrollViewInsets = false
         tableView.tableFooterView = UIView()
         tableView.estimatedRowHeight = 150
-        tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     func setupItem() {
@@ -69,34 +69,50 @@ extension LeaveMainViewController {
         datePicker?.minimumDate = NSDate.dateFromString("2016-4-20", dateformatter: "yyyy-MM-dd")
         datePicker?.maximumDate = NSDate.dateFromString("2016-5-20", dateformatter: "yyyy-MM-dd")
         datePicker!.frame = CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.width - 10, height: 162)
-        //datePicker!.addTarget(self, action: #selector(ScheduleViewController.datePickerValueChange), forControlEvents: UIControlEvents.ValueChanged)
+        datePicker!.addTarget(self, action: #selector(LeaveMainViewController.datePickerValueChange), forControlEvents: UIControlEvents.ValueChanged)
         datePicker?.setDate(pickerSelectDate, animated: false)
     }
     
+    func datePickerValueChange() {
+        datePickerValue = datePicker?.date
+        pickerSelectDate = datePickerValue
+        let dateStr = datePicker?.date.stringForDateFormat("yyyy-MM-dd")
+        let weekStr = datePicker?.date.dateToWeek()
+        dateArr[0].updateValue("\(dateStr!)  \(weekStr!)", forKey: "detail")
+        tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
+    }
+    
     /**
-     创建tableView数据
+     创建初始数据
      */
     func createTableViewData() {
         let dateStr = pickerSelectDate.stringForDateFormat("yyyy-MM-dd")
         let weekStr = pickerSelectDate.dateToWeek()
-        let cellData1 = ["title":"datePicker", "detail":"\(dateStr)  \(weekStr)"]
-        let cellData2 = ["title":"datePicker","detail":"\(dateStr)  \(weekStr)"]
-        dateArr = [cellData1, cellData2]
+        let cellData1 = ["title":"开始时间", "detail":"\(dateStr)  \(weekStr)"]
+        let cellData2 = ["title":"结束时间","detail":"\(dateStr)  \(weekStr)"]
+        let cellData3 = ["title":"课程选择","detail":"请选择请假课程"]
+        dateArr = [cellData1, cellData2, cellData3]
     }
 }
 
+// MARK: - UITableViewDelegate
 extension LeaveMainViewController: UITableViewDelegate {
     
-    //    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-    //       return 45
-    //    }
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        switch dateArr[indexPath.row]["title"]! {
+        case "datePicker":
+            return 162
+        default:
+            return UITableViewAutomaticDimension
+        }
+    }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var i = 0
         for temp in dateArr {
             i += 1
             for (_, value) in temp {
-                if value == "datePicker" || value == "timePicker" || value == "durationPicker" {
+                if value == "datePicker" {
                     removePicker(i, section: indexPath.section)
                     return
                 }
@@ -104,28 +120,41 @@ extension LeaveMainViewController: UITableViewDelegate {
         }
         if indexPath.row == 0 {
             addPicker("datePicker", indexPath: indexPath)
+        } else if indexPath.row == 1 {
+            addPicker("datePicker", indexPath: indexPath)
         }
     }
     
 }
+
 private let cellIdentifierForLeave = "LeaveCell"
+// MARK: - UITableViewDataSource
 extension LeaveMainViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dateArr.count + 1
+        return dateArr.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifierForLeave, forIndexPath: indexPath) as! LeaveCell
-        for subView in cell.contentView.subviews {
-            if subView is UILabel == false {
+        switch dateArr[indexPath.row]["title"]! {
+        case "开始时间":
+            cell.titleLbl.text = "开始时间:"
+            cell.detailLbl.text = dateArr[indexPath.row]["detail"]
+        case "结束时间":
+            cell.titleLbl.text = "结束时间:"
+            cell.detailLbl.text = dateArr[indexPath.row]["detail"]
+        case "课程选择":
+            cell.titleLbl.text = "课程选择:"
+            cell.detailLbl.text = dateArr[indexPath.row]["detail"]
+        case "datePicker":
+            for subView in cell.subviews {
                 subView.removeFromSuperview()
             }
+            cell.addSubview(datePicker!)
+        default:
+            return cell
         }
-//        cell.selectionStyle = .None
-//        if dateArr[indexPath.row]["title"] == "datePicker" {
-//            //cell.addSubview(datePicker!)
-//        }
         return cell
     }
     

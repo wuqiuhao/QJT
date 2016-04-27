@@ -38,6 +38,7 @@ extension SPersonalMainViewController {
         headerView.dataSource = self
         tableView.tableHeaderView = headerView
         headerView.backgroundImage = UIImage(named: "1")
+        headerView.reloadData()
     }
     
 }
@@ -52,7 +53,15 @@ extension SPersonalMainViewController {
 // MARK: - TableViewHeaderViewDataSource
 extension SPersonalMainViewController: TableViewHeaderViewDataSource {
     func tableHeaderView(tableHeaderView: UIView) -> UIView {
-        return UIView()
+        
+        let contentView = TableHeaderContentView()
+        contentView.frame = tableHeaderView.frame
+        
+        let avaterImg = UIImageView()
+        avaterImg.frame = CGRectMake(tableHeaderView.bounds.width / 2 - 35, tableHeaderView.bounds.height / 2 - 35, 70, 70)
+        avaterImg.image = UIImage(named: "SPersonal_avatar")
+        contentView.addSubview(avaterImg)
+        return contentView
     }
 }
 
@@ -64,6 +73,10 @@ extension SPersonalMainViewController: UITableViewDelegate {
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
            headerView.layoutHeaderView(scrollView.contentOffset)
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 12
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

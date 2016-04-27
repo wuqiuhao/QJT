@@ -139,6 +139,7 @@
 		68FF20031CCD0315005AC0B7 /* LeaveCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF20021CCD0315005AC0B7 /* LeaveCourseViewController.swift */; };
 		68FF20071CCD0376005AC0B7 /* CourseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF20061CCD0376005AC0B7 /* CourseClass.swift */; };
 		68FF200A1CCD0396005AC0B7 /* ReturnResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF20091CCD0396005AC0B7 /* ReturnResult.swift */; };
+		EF1370271CD0F9EC008C6D39 /* Digest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1370231CD0F9EC008C6D39 /* Digest.swift */; };
 		EF45F52F1CABF1800052AA1F /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45F52E1CABF1800052AA1F /* Student.swift */; };
 		EF6A8C061CCFB1970054282C /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6A8C051CCFB1970054282C /* UIImage+ImageEffects.m */; };
 		EF6A8C081CCFB1B10054282C /* EmptyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A8C071CCFB1B10054282C /* EmptyModel.swift */; };
@@ -289,6 +290,7 @@
 		68FF20061CCD0376005AC0B7 /* CourseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CourseClass.swift; path = Entity/Model/CourseClass.swift; sourceTree = "<group>"; };
 		68FF20091CCD0396005AC0B7 /* ReturnResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReturnResult.swift; sourceTree = "<group>"; };
 		AE37ED3E40352A6C9D2E6664 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		EF1370231CD0F9EC008C6D39 /* Digest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Digest.swift; path = Util/Encrypt/Digest.swift; sourceTree = "<group>"; };
 		EF45F52E1CABF1800052AA1F /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Student.swift; path = Entity/Model/Student.swift; sourceTree = "<group>"; };
 		EF6A8C041CCFB1970054282C /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ImageEffects.h"; path = "General/Extensions/UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		EF6A8C051CCFB1970054282C /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ImageEffects.m"; path = "General/Extensions/UIImage+ImageEffects.m"; sourceTree = "<group>"; };
@@ -1067,6 +1069,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EF1370201CD0F9AB008C6D39 /* Encrypt */ = {
+			isa = PBXGroup;
+			children = (
+				EF1370231CD0F9EC008C6D39 /* Digest.swift */,
+			);
+			name = Encrypt;
+			sourceTree = "<group>";
+		};
 		EF45F52B1CABF14B0052AA1F /* Lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -1142,6 +1152,7 @@
 		EF9A30DD1CA911A400D5EFA6 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				EF1370201CD0F9AB008C6D39 /* Encrypt */,
 				68083EC71CCE56CC004BE4D4 /* DLRadioButton */,
 				68FFBAEF1CCB657900878904 /* CourseUtil */,
 				68D8EFCA1CC882EA00906E3D /* SwiftNotice */,
@@ -1513,6 +1524,7 @@
 				68083FAD1CCE5909004BE4D4 /* TAttendanceView.swift in Sources */,
 				68186BFD1CB3525D005AF62D /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
 				68FF20031CCD0315005AC0B7 /* LeaveCourseViewController.swift in Sources */,
+				EF1370271CD0F9EC008C6D39 /* Digest.swift in Sources */,
 				68083F821CCE5909004BE4D4 /* BLeaveView.swift in Sources */,
 				68083F9F1CCE5909004BE4D4 /* LLeaveMainViewController.swift in Sources */,
 				68083F851CCE5909004BE4D4 /* BPersonalView.swift in Sources */,

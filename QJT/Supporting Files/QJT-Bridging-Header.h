@@ -15,3 +15,5 @@
 #import "DLRadioButton.h"
 
 #import "UIImage+ImageEffects.h"
+
+#import <CommonCrypto/CommonCrypto.h>

@@ -28,7 +28,7 @@ class LeaveCourseViewController: UIViewController {
         super.viewDidLoad()
         configUI()
         setupCourseBackground()
-        asyncLoading()
+        getNetwork()
         
     }
     
@@ -47,7 +47,6 @@ extension LeaveCourseViewController {
             self.clearAllNotice()
             self.courseDataArr = responseData["list"] as! [CourseClass]
             self.configCourseExcel()
-            
         }) { (errorMsg) in
             self.clearAllNotice()
             print(errorMsg!)
@@ -56,18 +55,7 @@ extension LeaveCourseViewController {
     
     func setupCourseBackground() {
         courseView = CourseView(frame: CGRect(x: 0, y: 64, width: UIScreen.mainScreen().bounds.width, height: UIScreen.mainScreen().bounds.height - 64))
-    }
-    
-    
-    func asyncLoading() {
-        //添加异步代码块到dispatch_get_global_queue队列
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
-            self.configCourseExcel()
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            self.view.addSubview(self.courseView)
-            self.getNetwork()
-            })
-        })
+        view.addSubview(courseView)
     }
     
     func configCourseExcel() {

@@ -8,10 +8,10 @@
 
 import UIKit
 
-class CTSignCourseViewController: UIViewController {
+class CLTSignCourseViewController: UIViewController {
 
-    var lat: String?
-    var long: String?
+    var lat: Double!
+    var long: Double!
     var labelTag = 10000
     var courseView: CourseView!
     lazy var courseArrData = [CourseClass]()
@@ -38,7 +38,7 @@ class CTSignCourseViewController: UIViewController {
 }
 
 // MARK: - private Method
-extension CTSignCourseViewController {
+extension CLTSignCourseViewController {
     
     func configUI() {
         navigationItem.title = "教师课程表"
@@ -47,7 +47,7 @@ extension CTSignCourseViewController {
     //获取课程表
     func getNetwork() {
         self.pleaseWait()
-        NetWorkManager.httpRequest(Methods.attendance_teacherGetCourseClasses, params: ["teacherID":"2012812025"], modelType: CourseClass(), listType: CourseClass(), completed: { (responseData) in
+        NetWorkManager.httpRequest(Methods.attendance_teacherGetCourseClasses, params: ["teacherID":"\(UserConfig.teacherSetting()?.userID)"], modelType: CourseClass(), listType: CourseClass(), completed: { (responseData) in
             
             self.clearAllNotice()
             self.courseArrData = responseData["list"] as! [CourseClass]
@@ -64,18 +64,11 @@ extension CTSignCourseViewController {
         var params = [String:AnyObject]()
         var method = ""
         
-        
-        let date = NSDate()
-        let timeFormatter = NSDateFormatter()
-        timeFormatter.dateFormat = "yyyMMddHHmmss" //(格式可俺按自己需求修整)
-        let strNowTime = timeFormatter.stringFromDate(date) as String
-        
-        
-        params.updateValue("\(UserConfig.teacherSetting()?.userID)", forKey: "teacherID")
+        params.updateValue("\(UserConfig.teacherSetting()!.userID)", forKey: "teacherID")
         params.updateValue("\(courseArrData[courseTag].courseClassID)", forKey: "courseClassID")
-        params.updateValue(strNowTime, forKey: "attendanceTime")
-        params.updateValue((self.long! as NSString).doubleValue, forKey: "longitude")
-        params.updateValue((self.lat! as NSString).doubleValue, forKey: "latitude")
+        params.updateValue(NSDate(), forKey: "attendanceTime")
+        params.updateValue(long, forKey: "longitude")
+        params.updateValue(lat, forKey: "latitude")
         
         
         method = Methods.attendance_teacherBeginClass
@@ -84,28 +77,12 @@ extension CTSignCourseViewController {
         NetWorkManager.httpRequest(method, params: params, modelType: EmptyModel(), listType: nil, completed: { (responseData) in
             self.clearAllNotice()
             
-            let alertController = UIAlertController(title: "",
-                message: "发起考勤成功", preferredStyle: .Alert)
-            let okAction = UIAlertAction(title: "确定", style: .Default,handler: {action in
-                
-            })
-            
-            alertController.addAction(okAction)
-            self.presentViewController(alertController, animated: true, completion: nil)
+            self.successNotice("发起考勤成功")
             
             
         }) { [weak self] (errorMsg) in
             self?.clearAllNotice()
             self?.errorNotice(errorMsg!)
-            
-            let alertController = UIAlertController(title: "",
-                                                    message: "发起考勤失败，请重新操作", preferredStyle: .Alert)
-            let okAction = UIAlertAction(title: "确定", style: .Default,handler: {action in
-                
-            })
-            
-            alertController.addAction(okAction)
-            self!.presentViewController(alertController, animated: true, completion: nil)
             
         }
     }

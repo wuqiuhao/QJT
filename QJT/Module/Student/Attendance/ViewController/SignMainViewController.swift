@@ -40,8 +40,8 @@ class SignMainViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let courseView = segue.destinationViewController as! SignCourseViewController
-        courseView.lat = String(center!.latitude)
-        courseView.long = String(center!.longitude)
+        courseView.lat = center!.latitude
+        courseView.long = center!.longitude
     }
 }
 

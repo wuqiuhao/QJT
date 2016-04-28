@@ -32,12 +32,12 @@
 		68083F851CCE5909004BE4D4 /* BPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F1B1CCE5909004BE4D4 /* BPersonalView.swift */; };
 		68083F861CCE5909004BE4D4 /* BPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F1D1CCE5909004BE4D4 /* BPersonalMainViewController.swift */; };
 		68083F881CCE5909004BE4D4 /* qqqView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F221CCE5909004BE4D4 /* qqqView.swift */; };
-		68083F891CCE5909004BE4D4 /* CTAttendanceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F241CCE5909004BE4D4 /* CTAttendanceMainViewController.swift */; };
-		68083F8A1CCE5909004BE4D4 /* CTSignCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F251CCE5909004BE4D4 /* CTSignCourseViewController.swift */; };
-		68083F8B1CCE5909004BE4D4 /* CTLeave.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F271CCE5909004BE4D4 /* CTLeave.storyboard */; };
+		68083F891CCE5909004BE4D4 /* CLTAttendanceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F241CCE5909004BE4D4 /* CLTAttendanceMainViewController.swift */; };
+		68083F8A1CCE5909004BE4D4 /* CLTSignCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F251CCE5909004BE4D4 /* CLTSignCourseViewController.swift */; };
+		68083F8B1CCE5909004BE4D4 /* CLTLeave.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F271CCE5909004BE4D4 /* CLTLeave.storyboard */; };
 		68083F8C1CCE5909004BE4D4 /* CTLeaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F291CCE5909004BE4D4 /* CTLeaveView.swift */; };
 		68083F8D1CCE5909004BE4D4 /* CTLeaveMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F2B1CCE5909004BE4D4 /* CTLeaveMainViewController.swift */; };
-		68083F8E1CCE5909004BE4D4 /* CTPersonal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F2D1CCE5909004BE4D4 /* CTPersonal.storyboard */; };
+		68083F8E1CCE5909004BE4D4 /* CLTPersonal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F2D1CCE5909004BE4D4 /* CLTPersonal.storyboard */; };
 		68083F8F1CCE5909004BE4D4 /* CTPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F2F1CCE5909004BE4D4 /* CTPersonalView.swift */; };
 		68083F901CCE5909004BE4D4 /* CTPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F311CCE5909004BE4D4 /* CTPersonalMainViewController.swift */; };
 		68083F911CCE5909004BE4D4 /* CAttendance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F341CCE5909004BE4D4 /* CAttendance.storyboard */; };
@@ -70,7 +70,7 @@
 		68083FB21CCE5909004BE4D4 /* TPersonal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F791CCE5909004BE4D4 /* TPersonal.storyboard */; };
 		68083FB31CCE5909004BE4D4 /* TPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F7B1CCE5909004BE4D4 /* TPersonalView.swift */; };
 		68083FB41CCE5909004BE4D4 /* TPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F7D1CCE5909004BE4D4 /* TPersonalMainViewController.swift */; };
-		68083FB61CCE59D7004BE4D4 /* CTAttendance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083FB51CCE59D7004BE4D4 /* CTAttendance.storyboard */; };
+		68083FB61CCE59D7004BE4D4 /* CLTAttendance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083FB51CCE59D7004BE4D4 /* CLTAttendance.storyboard */; };
 		68083FB81CCE5A96004BE4D4 /* SLeave.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083FB71CCE5A96004BE4D4 /* SLeave.storyboard */; };
 		68083FBA1CCE5AAB004BE4D4 /* LeaveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083FB91CCE5AAB004BE4D4 /* LeaveCell.swift */; };
 		6808AA511CCFA28900C2C324 /* SPersonalAccontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6808AA501CCFA28900C2C324 /* SPersonalAccontViewController.swift */; };
@@ -179,12 +179,12 @@
 		68083F1B1CCE5909004BE4D4 /* BPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPersonalView.swift; sourceTree = "<group>"; };
 		68083F1D1CCE5909004BE4D4 /* BPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPersonalMainViewController.swift; sourceTree = "<group>"; };
 		68083F221CCE5909004BE4D4 /* qqqView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = qqqView.swift; sourceTree = "<group>"; };
-		68083F241CCE5909004BE4D4 /* CTAttendanceMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTAttendanceMainViewController.swift; sourceTree = "<group>"; };
-		68083F251CCE5909004BE4D4 /* CTSignCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTSignCourseViewController.swift; sourceTree = "<group>"; };
-		68083F271CCE5909004BE4D4 /* CTLeave.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CTLeave.storyboard; sourceTree = "<group>"; };
+		68083F241CCE5909004BE4D4 /* CLTAttendanceMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTAttendanceMainViewController.swift; sourceTree = "<group>"; };
+		68083F251CCE5909004BE4D4 /* CLTSignCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTSignCourseViewController.swift; sourceTree = "<group>"; };
+		68083F271CCE5909004BE4D4 /* CLTLeave.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CLTLeave.storyboard; sourceTree = "<group>"; };
 		68083F291CCE5909004BE4D4 /* CTLeaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTLeaveView.swift; sourceTree = "<group>"; };
 		68083F2B1CCE5909004BE4D4 /* CTLeaveMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTLeaveMainViewController.swift; sourceTree = "<group>"; };
-		68083F2D1CCE5909004BE4D4 /* CTPersonal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CTPersonal.storyboard; sourceTree = "<group>"; };
+		68083F2D1CCE5909004BE4D4 /* CLTPersonal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CLTPersonal.storyboard; sourceTree = "<group>"; };
 		68083F2F1CCE5909004BE4D4 /* CTPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPersonalView.swift; sourceTree = "<group>"; };
 		68083F311CCE5909004BE4D4 /* CTPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPersonalMainViewController.swift; sourceTree = "<group>"; };
 		68083F341CCE5909004BE4D4 /* CAttendance.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CAttendance.storyboard; sourceTree = "<group>"; };
@@ -217,7 +217,7 @@
 		68083F791CCE5909004BE4D4 /* TPersonal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TPersonal.storyboard; sourceTree = "<group>"; };
 		68083F7B1CCE5909004BE4D4 /* TPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TPersonalView.swift; sourceTree = "<group>"; };
 		68083F7D1CCE5909004BE4D4 /* TPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TPersonalMainViewController.swift; sourceTree = "<group>"; };
-		68083FB51CCE59D7004BE4D4 /* CTAttendance.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CTAttendance.storyboard; sourceTree = "<group>"; };
+		68083FB51CCE59D7004BE4D4 /* CLTAttendance.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CLTAttendance.storyboard; sourceTree = "<group>"; };
 		68083FB71CCE5A96004BE4D4 /* SLeave.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SLeave.storyboard; sourceTree = "<group>"; };
 		68083FB91CCE5AAB004BE4D4 /* LeaveCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveCell.swift; sourceTree = "<group>"; };
 		6808AA501CCFA28900C2C324 /* SPersonalAccontViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPersonalAccontViewController.swift; sourceTree = "<group>"; };
@@ -534,7 +534,7 @@
 		68083F1F1CCE5909004BE4D4 /* Attendance */ = {
 			isa = PBXGroup;
 			children = (
-				68083FB51CCE59D7004BE4D4 /* CTAttendance.storyboard */,
+				68083FB51CCE59D7004BE4D4 /* CLTAttendance.storyboard */,
 				68083F211CCE5909004BE4D4 /* View */,
 				68083F231CCE5909004BE4D4 /* ViewController */,
 			);
@@ -552,8 +552,8 @@
 		68083F231CCE5909004BE4D4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				68083F241CCE5909004BE4D4 /* CTAttendanceMainViewController.swift */,
-				68083F251CCE5909004BE4D4 /* CTSignCourseViewController.swift */,
+				68083F241CCE5909004BE4D4 /* CLTAttendanceMainViewController.swift */,
+				68083F251CCE5909004BE4D4 /* CLTSignCourseViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -561,7 +561,7 @@
 		68083F261CCE5909004BE4D4 /* Leave */ = {
 			isa = PBXGroup;
 			children = (
-				68083F271CCE5909004BE4D4 /* CTLeave.storyboard */,
+				68083F271CCE5909004BE4D4 /* CLTLeave.storyboard */,
 				68083F281CCE5909004BE4D4 /* View */,
 				68083F2A1CCE5909004BE4D4 /* ViewController */,
 			);
@@ -587,7 +587,7 @@
 		68083F2C1CCE5909004BE4D4 /* Personal */ = {
 			isa = PBXGroup;
 			children = (
-				68083F2D1CCE5909004BE4D4 /* CTPersonal.storyboard */,
+				68083F2D1CCE5909004BE4D4 /* CLTPersonal.storyboard */,
 				68083F2E1CCE5909004BE4D4 /* View */,
 				68083F301CCE5909004BE4D4 /* ViewController */,
 			);
@@ -824,14 +824,14 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		68083F6B1CCE5909004BE4D4 /* Teacher */ = {
+		68083F6B1CCE5909004BE4D4 /* CourseTeacher */ = {
 			isa = PBXGroup;
 			children = (
 				68083F6C1CCE5909004BE4D4 /* Attendance */,
 				68083F721CCE5909004BE4D4 /* Leave */,
 				68083F781CCE5909004BE4D4 /* Personal */,
 			);
-			name = Teacher;
+			name = CourseTeacher;
 			path = Module/Teacher;
 			sourceTree = "<group>";
 		};
@@ -1184,7 +1184,7 @@
 				687E38321CBE3FE3009EDE17 /* Main */,
 				680359EA1CC75686002F7C60 /* Student */,
 				68083F1E1CCE5909004BE4D4 /* ClassTeacher */,
-				68083F6B1CCE5909004BE4D4 /* Teacher */,
+				68083F6B1CCE5909004BE4D4 /* CourseTeacher */,
 				68083F0B1CCE5909004BE4D4 /* BranchLeader */,
 				68083F321CCE5909004BE4D4 /* Counsellor */,
 				68083F451CCE5909004BE4D4 /* Leader */,
@@ -1340,7 +1340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68B98EF71CBE4A00009D64D1 /* QJT.entitlements in Resources */,
-				68083F8B1CCE5909004BE4D4 /* CTLeave.storyboard in Resources */,
+				68083F8B1CCE5909004BE4D4 /* CLTLeave.storyboard in Resources */,
 				68083FB81CCE5A96004BE4D4 /* SLeave.storyboard in Resources */,
 				68083F841CCE5909004BE4D4 /* BLPersonal.storyboard in Resources */,
 				68083FAF1CCE5909004BE4D4 /* TLeave.storyboard in Resources */,
@@ -1353,8 +1353,8 @@
 				68083ECE1CCE571F004BE4D4 /* RegLogin.storyboard in Resources */,
 				68083F941CCE5909004BE4D4 /* CLeave.storyboard in Resources */,
 				687E38341CBE4008009EDE17 /* Main.storyboard in Resources */,
-				68083F8E1CCE5909004BE4D4 /* CTPersonal.storyboard in Resources */,
-				68083FB61CCE59D7004BE4D4 /* CTAttendance.storyboard in Resources */,
+				68083F8E1CCE5909004BE4D4 /* CLTPersonal.storyboard in Resources */,
+				68083FB61CCE59D7004BE4D4 /* CLTAttendance.storyboard in Resources */,
 				68083F9A1CCE5909004BE4D4 /* LAttendance.storyboard in Resources */,
 				68083FAC1CCE5909004BE4D4 /* TAttendance.storyboard in Resources */,
 				68083FA01CCE5909004BE4D4 /* LPersonal.storyboard in Resources */,
@@ -1522,7 +1522,7 @@
 				68186C071CB3525D005AF62D /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
 				68035A011CC756BA002F7C60 /* Sign.swift in Sources */,
 				68083F951CCE5909004BE4D4 /* CLeaveView.swift in Sources */,
-				68083F891CCE5909004BE4D4 /* CTAttendanceMainViewController.swift in Sources */,
+				68083F891CCE5909004BE4D4 /* CLTAttendanceMainViewController.swift in Sources */,
 				683CF5FA1CC34E8C00F69765 /* BaseType.swift in Sources */,
 				68083FB41CCE5909004BE4D4 /* TPersonalMainViewController.swift in Sources */,
 				68186C381CB3554F005AF62D /* LoginViewController.swift in Sources */,
@@ -1535,7 +1535,7 @@
 				68186C151CB3525D005AF62D /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */,
 				EF9D7BA61CCF0A2000FA79F7 /* ThemeConfig.swift in Sources */,
 				EF6A8C061CCFB1970054282C /* UIImage+ImageEffects.m in Sources */,
-				68083F8A1CCE5909004BE4D4 /* CTSignCourseViewController.swift in Sources */,
+				68083F8A1CCE5909004BE4D4 /* CLTSignCourseViewController.swift in Sources */,
 				68B7B52F1CBE91C80046FC7F /* MainTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

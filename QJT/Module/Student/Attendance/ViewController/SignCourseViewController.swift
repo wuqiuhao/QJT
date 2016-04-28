@@ -10,8 +10,8 @@ import UIKit
 
 class SignCourseViewController: UIViewController {
 
-    var lat: String?
-    var long: String?
+    var lat: Double!
+    var long: Double!
     var labelTag = 10000
     var courseView: CourseView!
     lazy var courseArrData = [CourseClass]()
@@ -40,7 +40,7 @@ extension SignCourseViewController {
     
     func getNetwork() {
         self.pleaseWait()
-        NetWorkManager.httpRequest(Methods.leave_studentGetCourseClasses, params: ["studentID":"2012812025"], modelType: CourseClass(), listType: CourseClass(), completed: { (responseData) in
+        NetWorkManager.httpRequest(Methods.leave_studentGetCourseClasses, params: ["studentID":"\(UserConfig.studentSetting()!.userID)"], modelType: CourseClass(), listType: CourseClass(), completed: { (responseData) in
             
             self.clearAllNotice()
             self.courseArrData = responseData["list"] as! [CourseClass]
@@ -56,17 +56,11 @@ extension SignCourseViewController {
         var params = [String:AnyObject]()
         var method = ""
         
-        let date = NSDate()
-        let timeFormatter = NSDateFormatter()
-        timeFormatter.dateFormat = "yyyMMddHHmmss"
-        let strNowTime = timeFormatter.stringFromDate(date) as String
-        
-        
-        params.updateValue("\(UserConfig.studentSetting()?.userID)", forKey: "studentID")
+        params.updateValue("\(UserConfig.studentSetting()!.userID)", forKey: "studentID")
         params.updateValue("\(courseArrData[courseTag].courseClassID)", forKey: "courseClassID")
-        params.updateValue(strNowTime, forKey: "signTime")
-        params.updateValue((self.long! as NSString).doubleValue, forKey: "longitude")
-        params.updateValue((self.lat! as NSString).doubleValue, forKey: "latitude")
+        params.updateValue(NSDate(), forKey: "signTime")
+        params.updateValue(long, forKey: "longitude")
+        params.updateValue(lat, forKey: "latitude")
         
         
         method = Methods.attendance_studentAttendance
@@ -75,28 +69,12 @@ extension SignCourseViewController {
         NetWorkManager.httpRequest(method, params: params, modelType: EmptyModel(), listType: nil, completed: { (responseData) in
             self.clearAllNotice()
             
-            let alertController = UIAlertController(title: "",
-                message: "签到成功", preferredStyle: .Alert)
-            let okAction = UIAlertAction(title: "确定", style: .Default,handler: {action in
-                
-            })
-            
-            alertController.addAction(okAction)
-            self.presentViewController(alertController, animated: true, completion: nil)
+            self.successNotice("签到成功")
             
             
         }) { [weak self] (errorMsg) in
             self?.clearAllNotice()
             self?.errorNotice(errorMsg!)
-            
-            let alertController = UIAlertController(title: "",
-                                                    message: "签到失败", preferredStyle: .Alert)
-            let okAction = UIAlertAction(title: "确定", style: .Default,handler: {action in
-                
-            })
-            
-            alertController.addAction(okAction)
-            self!.presentViewController(alertController, animated: true, completion: nil)
             
         }
     }

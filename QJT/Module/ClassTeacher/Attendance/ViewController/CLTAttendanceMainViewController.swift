@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class CTAttendanceMainViewController: UIViewController {
+class CLTAttendanceMainViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var msgBack: UIView!
     @IBOutlet weak var latLabel: UILabel!
@@ -39,15 +39,15 @@ class CTAttendanceMainViewController: UIViewController {
 
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let courseView = segue.destinationViewController as! CTSignCourseViewController
-        courseView.lat = String(center!.latitude)
-        courseView.long = String(center!.longitude)
+        let courseView = segue.destinationViewController as! CLTSignCourseViewController
+        courseView.lat = center!.latitude
+        courseView.long = center!.longitude
     }
 
 }
 
 // MARK: - private method
-extension CTAttendanceMainViewController {
+extension CLTAttendanceMainViewController {
     @IBAction func repositionBtn(sender: AnyObject) {
         mapView.removeAnnotation(point!)
         startUpdatingLocation()
@@ -89,7 +89,7 @@ extension CTAttendanceMainViewController {
 }
 
 // MARK: - CoreLocationManagerDelegate
-extension CTAttendanceMainViewController:CLLocationManagerDelegate{
+extension CLTAttendanceMainViewController:CLLocationManagerDelegate{
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if isPlease {
             isPlease = false
@@ -123,7 +123,7 @@ extension CTAttendanceMainViewController:CLLocationManagerDelegate{
     }
 }
 
-extension CTAttendanceMainViewController: MKMapViewDelegate {
+extension CLTAttendanceMainViewController: MKMapViewDelegate {
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
         // 初始化定位
         self.initLocationManager()

@@ -25,7 +25,7 @@
         <!--Attendance Main View Controller-->
         <scene sceneID="MdV-eK-urP">
             <objects>
-                <viewController id="xKd-xY-QmZ" customClass="CTAttendanceMainViewController" customModule="QJT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xKd-xY-QmZ" customClass="CLTAttendanceMainViewController" customModule="QJT" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zkN-Y8-2BR"/>
                         <viewControllerLayoutGuide type="bottom" id="SHH-F2-6H4"/>
@@ -123,7 +123,7 @@
         <!--Sign Course View Controller-->
         <scene sceneID="1NE-nb-m72">
             <objects>
-                <viewController id="P65-Sh-e1f" customClass="CTSignCourseViewController" customModule="QJT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="P65-Sh-e1f" customClass="CLTSignCourseViewController" customModule="QJT" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HQY-Lx-gUp"/>
                         <viewControllerLayoutGuide type="bottom" id="Gdj-fP-ac7"/>

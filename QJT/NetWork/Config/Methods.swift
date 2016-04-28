@@ -14,7 +14,8 @@ var LoginService = [
 ]
 
 var AttendanceService = [
-    "attendance_studentAttendance"
+    "attendance_studentAttendance",
+    "attendance_teacherGetCourseClasses"
 ]
 
 var LeaveService = [
@@ -36,10 +37,15 @@ class Methods {
     //签到模块
     //学生签到
     static let attendance_studentAttendance = "attendance_studentAttendance"
+    //教师获取课程表
+    static let attendance_teacherGetCourseClasses = "attendance_teacherGetCourseClasses"
+    //教师发起考勤
+    static let attendance_teacherBeginClass = "attendance_teacherBeginClass"
     
     // 请假模块
     // 学生获取课程表
     static let leave_studentGetCourseClasses = "leave_studentGetCourseClasses"
+    
     
     
     class func getServiceMethod() -> [String:AnyObject] {

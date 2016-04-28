@@ -72,8 +72,6 @@ class TeacherSetting: PersonSetting, NSCoding {
             userType = UserType.CourseTeacher
         case "Counsellor":
             userType = UserType.Counsellor
-        case "BranchLeader":
-            userType = UserType.BranchLeader
         case "Leader":
             userType = UserType.Leader
         case "StudentWorker":

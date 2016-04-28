@@ -1,8 +1,8 @@
 //
-//  AttendanceMainViewController.swift
+//  CTAttendanceMainViewController.swift
 //  QJT
 //
-//  Created by LZQ on 16/4/13.
+//  Created by LZQ on 16/4/20.
 //  Copyright © 2016年 Hale. All rights reserved.
 //
 
@@ -10,15 +10,14 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class SignMainViewController: UIViewController {
-    
+class CLTAttendanceMainViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var msgBack: UIView!
     @IBOutlet weak var latLabel: UILabel!
     @IBOutlet weak var longLabel: UILabel!
     @IBOutlet weak var repositionBtn: UIButton!
     @IBOutlet weak var signBtn: UIButton!
-    @IBOutlet weak var messageBack: UIView!
-    
+
     var locationManager: CLLocationManager?
     var center: CLLocationCoordinate2D?
     var isPlease = false
@@ -33,20 +32,22 @@ class SignMainViewController: UIViewController {
         mapView?.mapType = MKMapType.Standard
         mapView?.showsUserLocation = true
     }
-    
+
     override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+        super.didReceiveMemoryWarning()    }
+    
+
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let courseView = segue.destinationViewController as! SignCourseViewController
+        let courseView = segue.destinationViewController as! CLTSignCourseViewController
         courseView.lat = center!.latitude
         courseView.long = center!.longitude
     }
+
 }
 
 // MARK: - private method
-extension SignMainViewController {
+extension CLTAttendanceMainViewController {
     @IBAction func repositionBtn(sender: AnyObject) {
         mapView.removeAnnotation(point!)
         startUpdatingLocation()
@@ -63,17 +64,17 @@ extension SignMainViewController {
     }
     
     func configUI() {
-        navigationItem.title = "学生签到"
+        navigationItem.title = "教师签到"
         signBtn.layer.cornerRadius = 5
         signBtn.backgroundColor = UIColor.qjtTintColor()
         signBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-
+        
         repositionBtn.layer.cornerRadius = 5
         repositionBtn.backgroundColor = UIColor.qjtTintColor()
         repositionBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        messageBack.layer.cornerRadius = 8
-        messageBack.alpha = 0.6
-        view.bringSubviewToFront(messageBack)
+        msgBack.layer.cornerRadius = 8
+        msgBack.alpha = 0.6
+        view.bringSubviewToFront(msgBack)
     }
     
     /**
@@ -84,10 +85,11 @@ extension SignMainViewController {
         self.pleaseWait()
         isPlease = true
     }
+
 }
 
 // MARK: - CoreLocationManagerDelegate
-extension SignMainViewController: CLLocationManagerDelegate {
+extension CLTAttendanceMainViewController:CLLocationManagerDelegate{
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if isPlease {
             isPlease = false
@@ -121,7 +123,7 @@ extension SignMainViewController: CLLocationManagerDelegate {
     }
 }
 
-extension SignMainViewController: MKMapViewDelegate {
+extension CLTAttendanceMainViewController: MKMapViewDelegate {
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
         // 初始化定位
         self.initLocationManager()

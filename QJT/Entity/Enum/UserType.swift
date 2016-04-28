@@ -12,11 +12,11 @@ import Foundation
 enum UserType: Int,BaseType {
     case Unknown
     case Student //学生
-    case CourseTeacher //班主任
-    case Teacher //任课教师
+    case Teacher //所有教师统称
+    case CourseTeacher //任课教师
+    case ClassTeacher //班主任
     case Counsellor //辅导员
-    case BranchLeader //分院领导
-    case Leader  // 学院领导
+    case Leader  // 分院领导
     case StudentWorker //学工教师
 
     func toString() -> String {
@@ -28,11 +28,11 @@ enum UserType: Int,BaseType {
         case .CourseTeacher:
             return "CourseTeacher"
         case .Teacher:
-            return "任课Teacher"
+            return "Teacher"
+        case .ClassTeacher:
+            return "ClassTeacher"
         case .Counsellor:
             return "Counsellor"
-        case .BranchLeader:
-            return "BranchLeader"
         case .Leader:
             return "Leader"
         case .StudentWorker:
@@ -54,10 +54,10 @@ enum UserType: Int,BaseType {
             return UserType.CourseTeacher.rawValue
         case "Teacher" :
             return UserType.Teacher.rawValue
+        case "ClassTeacher" :
+            return UserType.ClassTeacher.rawValue
         case "Counsellor":
             return UserType.Counsellor.rawValue
-        case "BranchLeader":
-            return UserType.BranchLeader.rawValue
         case "Leader":
             return UserType.Leader.rawValue
         case "StudentWorker":
@@ -76,12 +76,12 @@ enum UserType: Int,BaseType {
             return "S"
         case .CourseTeacher:
             return "CT"
+        case .ClassTeacher:
+            return "CLT"
         case .Teacher:
             return "T"
         case .Counsellor:
             return "C"
-        case .BranchLeader:
-            return "BL"
         case .Leader:
             return "L"
         case .StudentWorker:
@@ -96,13 +96,13 @@ enum UserType: Int,BaseType {
         case .Student:
             return "学生"
         case .CourseTeacher:
+            return "任课教师"
+        case .ClassTeacher:
             return "班主任"
         case .Teacher:
-            return "任课教师"
+            return "教师"
         case .Counsellor:
             return "辅导员"
-        case .BranchLeader:
-            return "分院领导"
         case .Leader:
             return "学院领导"
         case .StudentWorker:

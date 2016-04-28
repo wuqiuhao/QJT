@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ObjectMapper
 
 class LoginViewController: UIViewController {
     
@@ -120,6 +119,7 @@ extension LoginViewController {
         if userType == "学生" {
             params.updateValue(accountTfd.text!, forKey: "studentID")
             params.updateValue(passwordTfd.text!, forKey: "password")
+            
             method = Methods.login_studentLogin
             if let _ = JPUSHService.registrationID() {
                 params.updateValue(JPUSHService.registrationID(), forKey: "registerID")

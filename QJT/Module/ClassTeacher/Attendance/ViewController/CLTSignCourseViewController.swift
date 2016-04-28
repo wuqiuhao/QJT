@@ -1,14 +1,14 @@
 //
-//  SignCourseViewController.swift
+//  CTSignCourseViewController.swift
 //  QJT
 //
-//  Created by YC on 16/4/24.
+//  Created by YC on 16/4/25.
 //  Copyright © 2016年 Hale. All rights reserved.
 //
 
 import UIKit
 
-class SignCourseViewController: UIViewController {
+class CLTSignCourseViewController: UIViewController {
 
     var lat: Double!
     var long: Double!
@@ -26,21 +26,28 @@ class SignCourseViewController: UIViewController {
         getNetwork()
         
         self.configCourseExcel()
+
         
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 
 }
 
 // MARK: - private Method
-extension SignCourseViewController {
+extension CLTSignCourseViewController {
     
     func configUI() {
-        navigationItem.title = "课程表"
+        navigationItem.title = "教师课程表"
     }
     
+    //获取课程表
     func getNetwork() {
         self.pleaseWait()
-        NetWorkManager.httpRequest(Methods.leave_studentGetCourseClasses, params: ["studentID":"\(UserConfig.studentSetting()!.userID)"], modelType: CourseClass(), listType: CourseClass(), completed: { (responseData) in
+        NetWorkManager.httpRequest(Methods.attendance_teacherGetCourseClasses, params: ["teacherID":"\(UserConfig.teacherSetting()?.userID)"], modelType: CourseClass(), listType: CourseClass(), completed: { (responseData) in
             
             self.clearAllNotice()
             self.courseArrData = responseData["list"] as! [CourseClass]
@@ -52,24 +59,25 @@ extension SignCourseViewController {
         }
     }
     
-    func signNetwork(courseTag: Int) {
+    //教师发起考勤
+    func startSignNetwork(courseTag: Int) {
         var params = [String:AnyObject]()
         var method = ""
         
-        params.updateValue("\(UserConfig.studentSetting()!.userID)", forKey: "studentID")
+        params.updateValue("\(UserConfig.teacherSetting()!.userID)", forKey: "teacherID")
         params.updateValue("\(courseArrData[courseTag].courseClassID)", forKey: "courseClassID")
-        params.updateValue(NSDate(), forKey: "signTime")
+        params.updateValue(NSDate(), forKey: "attendanceTime")
         params.updateValue(long, forKey: "longitude")
         params.updateValue(lat, forKey: "latitude")
         
         
-        method = Methods.attendance_studentAttendance
+        method = Methods.attendance_teacherBeginClass
         
         self.pleaseWait()
         NetWorkManager.httpRequest(method, params: params, modelType: EmptyModel(), listType: nil, completed: { (responseData) in
             self.clearAllNotice()
             
-            self.successNotice("签到成功")
+            self.successNotice("发起考勤成功")
             
             
         }) { [weak self] (errorMsg) in
@@ -112,19 +120,18 @@ extension SignCourseViewController {
             courseView.addSubview(courseLbl)
         }
     }
-    
+    //课程标签的点击相应事件
     func handleTapGesture(sender: UITapGestureRecognizer) {
-        
+        //获取当前标签
         let label =  sender.view as! UILabel
-        
         print("\(label.tag)")
-        
+        //提示
         let alertController = UIAlertController(title: "\(label.text!)",
-                                                message: "您确定现在要签到吗？", preferredStyle: .Alert)
+                                                message: "您确定现在要发起考勤吗？", preferredStyle: .Alert)
         let cancelAction = UIAlertAction(title: "取消", style: .Cancel, handler: nil)
-        let okAction = UIAlertAction(title: "签到", style: .Default,handler: {action in
+        let okAction = UIAlertAction(title: "发起", style: .Default,handler: {action in
             
-            self.signNetwork(label.tag - 10000)
+            self.startSignNetwork(label.tag - 10000)
             
             
             

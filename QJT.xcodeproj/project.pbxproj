@@ -32,12 +32,12 @@
 		68083F851CCE5909004BE4D4 /* BPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F1B1CCE5909004BE4D4 /* BPersonalView.swift */; };
 		68083F861CCE5909004BE4D4 /* BPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F1D1CCE5909004BE4D4 /* BPersonalMainViewController.swift */; };
 		68083F881CCE5909004BE4D4 /* qqqView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F221CCE5909004BE4D4 /* qqqView.swift */; };
-		68083F891CCE5909004BE4D4 /* CTAttendanceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F241CCE5909004BE4D4 /* CTAttendanceMainViewController.swift */; };
-		68083F8A1CCE5909004BE4D4 /* CTSignCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F251CCE5909004BE4D4 /* CTSignCourseViewController.swift */; };
-		68083F8B1CCE5909004BE4D4 /* CTLeave.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F271CCE5909004BE4D4 /* CTLeave.storyboard */; };
+		68083F891CCE5909004BE4D4 /* CLTAttendanceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F241CCE5909004BE4D4 /* CLTAttendanceMainViewController.swift */; };
+		68083F8A1CCE5909004BE4D4 /* CLTSignCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F251CCE5909004BE4D4 /* CLTSignCourseViewController.swift */; };
+		68083F8B1CCE5909004BE4D4 /* CLTLeave.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F271CCE5909004BE4D4 /* CLTLeave.storyboard */; };
 		68083F8C1CCE5909004BE4D4 /* CTLeaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F291CCE5909004BE4D4 /* CTLeaveView.swift */; };
 		68083F8D1CCE5909004BE4D4 /* CTLeaveMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F2B1CCE5909004BE4D4 /* CTLeaveMainViewController.swift */; };
-		68083F8E1CCE5909004BE4D4 /* CTPersonal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F2D1CCE5909004BE4D4 /* CTPersonal.storyboard */; };
+		68083F8E1CCE5909004BE4D4 /* CLTPersonal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F2D1CCE5909004BE4D4 /* CLTPersonal.storyboard */; };
 		68083F8F1CCE5909004BE4D4 /* CTPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F2F1CCE5909004BE4D4 /* CTPersonalView.swift */; };
 		68083F901CCE5909004BE4D4 /* CTPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F311CCE5909004BE4D4 /* CTPersonalMainViewController.swift */; };
 		68083F911CCE5909004BE4D4 /* CAttendance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F341CCE5909004BE4D4 /* CAttendance.storyboard */; };
@@ -70,7 +70,7 @@
 		68083FB21CCE5909004BE4D4 /* TPersonal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F791CCE5909004BE4D4 /* TPersonal.storyboard */; };
 		68083FB31CCE5909004BE4D4 /* TPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F7B1CCE5909004BE4D4 /* TPersonalView.swift */; };
 		68083FB41CCE5909004BE4D4 /* TPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F7D1CCE5909004BE4D4 /* TPersonalMainViewController.swift */; };
-		68083FB61CCE59D7004BE4D4 /* CTAttendance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083FB51CCE59D7004BE4D4 /* CTAttendance.storyboard */; };
+		68083FB61CCE59D7004BE4D4 /* CLTAttendance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083FB51CCE59D7004BE4D4 /* CLTAttendance.storyboard */; };
 		68083FB81CCE5A96004BE4D4 /* SLeave.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083FB71CCE5A96004BE4D4 /* SLeave.storyboard */; };
 		68083FBA1CCE5AAB004BE4D4 /* LeaveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083FB91CCE5AAB004BE4D4 /* LeaveCell.swift */; };
 		6808AA511CCFA28900C2C324 /* SPersonalAccontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6808AA501CCFA28900C2C324 /* SPersonalAccontViewController.swift */; };
@@ -125,9 +125,6 @@
 		683CF5FA1CC34E8C00F69765 /* BaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CF5F81CC34E8C00F69765 /* BaseType.swift */; };
 		683CF5FB1CC34E8C00F69765 /* UserType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CF5F91CC34E8C00F69765 /* UserType.swift */; };
 		687E38341CBE4008009EDE17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687E38331CBE4008009EDE17 /* Main.storyboard */; };
-		68B4E16F1CD0FDB4006D833D /* LeaveReasonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B4E16E1CD0FDB4006D833D /* LeaveReasonViewController.swift */; };
-		68B4E1711CD103D1006D833D /* LeaveReasonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B4E1701CD103D1006D833D /* LeaveReasonCell.swift */; };
-		68B4E1741CD10CFF006D833D /* ViewControllerTransmitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B4E1731CD10CFF006D833D /* ViewControllerTransmitDelegate.swift */; };
 		68B7B52F1CBE91C80046FC7F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7B52E1CBE91C80046FC7F /* MainTabBarController.swift */; };
 		68B98EF41CBE49A9009D64D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B98EF21CBE49A9009D64D1 /* LaunchScreen.storyboard */; };
 		68B98EF71CBE4A00009D64D1 /* QJT.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 68B98EF61CBE4A00009D64D1 /* QJT.entitlements */; };
@@ -142,6 +139,7 @@
 		68FF20031CCD0315005AC0B7 /* LeaveCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF20021CCD0315005AC0B7 /* LeaveCourseViewController.swift */; };
 		68FF20071CCD0376005AC0B7 /* CourseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF20061CCD0376005AC0B7 /* CourseClass.swift */; };
 		68FF200A1CCD0396005AC0B7 /* ReturnResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF20091CCD0396005AC0B7 /* ReturnResult.swift */; };
+		EF1370271CD0F9EC008C6D39 /* Digest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1370231CD0F9EC008C6D39 /* Digest.swift */; };
 		EF45F52F1CABF1800052AA1F /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45F52E1CABF1800052AA1F /* Student.swift */; };
 		EF6A8C061CCFB1970054282C /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6A8C051CCFB1970054282C /* UIImage+ImageEffects.m */; };
 		EF6A8C081CCFB1B10054282C /* EmptyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A8C071CCFB1B10054282C /* EmptyModel.swift */; };
@@ -182,12 +180,12 @@
 		68083F1B1CCE5909004BE4D4 /* BPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPersonalView.swift; sourceTree = "<group>"; };
 		68083F1D1CCE5909004BE4D4 /* BPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPersonalMainViewController.swift; sourceTree = "<group>"; };
 		68083F221CCE5909004BE4D4 /* qqqView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = qqqView.swift; sourceTree = "<group>"; };
-		68083F241CCE5909004BE4D4 /* CTAttendanceMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTAttendanceMainViewController.swift; sourceTree = "<group>"; };
-		68083F251CCE5909004BE4D4 /* CTSignCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTSignCourseViewController.swift; sourceTree = "<group>"; };
-		68083F271CCE5909004BE4D4 /* CTLeave.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CTLeave.storyboard; sourceTree = "<group>"; };
+		68083F241CCE5909004BE4D4 /* CLTAttendanceMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTAttendanceMainViewController.swift; sourceTree = "<group>"; };
+		68083F251CCE5909004BE4D4 /* CLTSignCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTSignCourseViewController.swift; sourceTree = "<group>"; };
+		68083F271CCE5909004BE4D4 /* CLTLeave.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CLTLeave.storyboard; sourceTree = "<group>"; };
 		68083F291CCE5909004BE4D4 /* CTLeaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTLeaveView.swift; sourceTree = "<group>"; };
 		68083F2B1CCE5909004BE4D4 /* CTLeaveMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTLeaveMainViewController.swift; sourceTree = "<group>"; };
-		68083F2D1CCE5909004BE4D4 /* CTPersonal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CTPersonal.storyboard; sourceTree = "<group>"; };
+		68083F2D1CCE5909004BE4D4 /* CLTPersonal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CLTPersonal.storyboard; sourceTree = "<group>"; };
 		68083F2F1CCE5909004BE4D4 /* CTPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPersonalView.swift; sourceTree = "<group>"; };
 		68083F311CCE5909004BE4D4 /* CTPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPersonalMainViewController.swift; sourceTree = "<group>"; };
 		68083F341CCE5909004BE4D4 /* CAttendance.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CAttendance.storyboard; sourceTree = "<group>"; };
@@ -220,7 +218,7 @@
 		68083F791CCE5909004BE4D4 /* TPersonal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TPersonal.storyboard; sourceTree = "<group>"; };
 		68083F7B1CCE5909004BE4D4 /* TPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TPersonalView.swift; sourceTree = "<group>"; };
 		68083F7D1CCE5909004BE4D4 /* TPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TPersonalMainViewController.swift; sourceTree = "<group>"; };
-		68083FB51CCE59D7004BE4D4 /* CTAttendance.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CTAttendance.storyboard; sourceTree = "<group>"; };
+		68083FB51CCE59D7004BE4D4 /* CLTAttendance.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CLTAttendance.storyboard; sourceTree = "<group>"; };
 		68083FB71CCE5A96004BE4D4 /* SLeave.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SLeave.storyboard; sourceTree = "<group>"; };
 		68083FB91CCE5AAB004BE4D4 /* LeaveCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveCell.swift; sourceTree = "<group>"; };
 		6808AA501CCFA28900C2C324 /* SPersonalAccontViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPersonalAccontViewController.swift; sourceTree = "<group>"; };
@@ -277,9 +275,6 @@
 		683CF5F81CC34E8C00F69765 /* BaseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseType.swift; sourceTree = "<group>"; };
 		683CF5F91CC34E8C00F69765 /* UserType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserType.swift; sourceTree = "<group>"; };
 		687E38331CBE4008009EDE17 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		68B4E16E1CD0FDB4006D833D /* LeaveReasonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveReasonViewController.swift; sourceTree = "<group>"; };
-		68B4E1701CD103D1006D833D /* LeaveReasonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveReasonCell.swift; sourceTree = "<group>"; };
-		68B4E1731CD10CFF006D833D /* ViewControllerTransmitDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTransmitDelegate.swift; sourceTree = "<group>"; };
 		68B7B52E1CBE91C80046FC7F /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		68B98EF21CBE49A9009D64D1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "Supporting Files/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		68B98EF61CBE4A00009D64D1 /* QJT.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = QJT.entitlements; sourceTree = "<group>"; };
@@ -295,6 +290,7 @@
 		68FF20061CCD0376005AC0B7 /* CourseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CourseClass.swift; path = Entity/Model/CourseClass.swift; sourceTree = "<group>"; };
 		68FF20091CCD0396005AC0B7 /* ReturnResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReturnResult.swift; sourceTree = "<group>"; };
 		AE37ED3E40352A6C9D2E6664 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		EF1370231CD0F9EC008C6D39 /* Digest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Digest.swift; path = Util/Encrypt/Digest.swift; sourceTree = "<group>"; };
 		EF45F52E1CABF1800052AA1F /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Student.swift; path = Entity/Model/Student.swift; sourceTree = "<group>"; };
 		EF6A8C041CCFB1970054282C /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ImageEffects.h"; path = "General/Extensions/UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		EF6A8C051CCFB1970054282C /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ImageEffects.m"; path = "General/Extensions/UIImage+ImageEffects.m"; sourceTree = "<group>"; };
@@ -385,7 +381,6 @@
 			isa = PBXGroup;
 			children = (
 				68083FB91CCE5AAB004BE4D4 /* LeaveCell.swift */,
-				68B4E1701CD103D1006D833D /* LeaveReasonCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -395,7 +390,6 @@
 			children = (
 				68FF20021CCD0315005AC0B7 /* LeaveCourseViewController.swift */,
 				680359F91CC756BA002F7C60 /* LeaveMainViewController.swift */,
-				68B4E16E1CD0FDB4006D833D /* LeaveReasonViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -542,7 +536,7 @@
 		68083F1F1CCE5909004BE4D4 /* Attendance */ = {
 			isa = PBXGroup;
 			children = (
-				68083FB51CCE59D7004BE4D4 /* CTAttendance.storyboard */,
+				68083FB51CCE59D7004BE4D4 /* CLTAttendance.storyboard */,
 				68083F211CCE5909004BE4D4 /* View */,
 				68083F231CCE5909004BE4D4 /* ViewController */,
 			);
@@ -560,8 +554,8 @@
 		68083F231CCE5909004BE4D4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				68083F241CCE5909004BE4D4 /* CTAttendanceMainViewController.swift */,
-				68083F251CCE5909004BE4D4 /* CTSignCourseViewController.swift */,
+				68083F241CCE5909004BE4D4 /* CLTAttendanceMainViewController.swift */,
+				68083F251CCE5909004BE4D4 /* CLTSignCourseViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -569,7 +563,7 @@
 		68083F261CCE5909004BE4D4 /* Leave */ = {
 			isa = PBXGroup;
 			children = (
-				68083F271CCE5909004BE4D4 /* CTLeave.storyboard */,
+				68083F271CCE5909004BE4D4 /* CLTLeave.storyboard */,
 				68083F281CCE5909004BE4D4 /* View */,
 				68083F2A1CCE5909004BE4D4 /* ViewController */,
 			);
@@ -595,7 +589,7 @@
 		68083F2C1CCE5909004BE4D4 /* Personal */ = {
 			isa = PBXGroup;
 			children = (
-				68083F2D1CCE5909004BE4D4 /* CTPersonal.storyboard */,
+				68083F2D1CCE5909004BE4D4 /* CLTPersonal.storyboard */,
 				68083F2E1CCE5909004BE4D4 /* View */,
 				68083F301CCE5909004BE4D4 /* ViewController */,
 			);
@@ -832,14 +826,14 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		68083F6B1CCE5909004BE4D4 /* Teacher */ = {
+		68083F6B1CCE5909004BE4D4 /* CourseTeacher */ = {
 			isa = PBXGroup;
 			children = (
 				68083F6C1CCE5909004BE4D4 /* Attendance */,
 				68083F721CCE5909004BE4D4 /* Leave */,
 				68083F781CCE5909004BE4D4 /* Personal */,
 			);
-			name = Teacher;
+			name = CourseTeacher;
 			path = Module/Teacher;
 			sourceTree = "<group>";
 		};
@@ -1017,15 +1011,6 @@
 			path = Module/Main;
 			sourceTree = "<group>";
 		};
-		68B4E1721CD10CF3006D833D /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				68B4E1731CD10CFF006D833D /* ViewControllerTransmitDelegate.swift */,
-			);
-			name = Protocol;
-			path = General/Protocol;
-			sourceTree = "<group>";
-		};
 		68B98EED1CBE4942009D64D1 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1084,6 +1069,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EF1370201CD0F9AB008C6D39 /* Encrypt */ = {
+			isa = PBXGroup;
+			children = (
+				EF1370231CD0F9EC008C6D39 /* Digest.swift */,
+			);
+			name = Encrypt;
+			sourceTree = "<group>";
+		};
 		EF45F52B1CABF14B0052AA1F /* Lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -1104,6 +1097,13 @@
 				68D8EFD31CC8ABFE00906E3D /* UIViewController_extension.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		EF45F5321CABF1F10052AA1F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 		EF9A30BE1CA90FD400D5EFA6 = {
@@ -1152,6 +1152,7 @@
 		EF9A30DD1CA911A400D5EFA6 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				EF1370201CD0F9AB008C6D39 /* Encrypt */,
 				68083EC71CCE56CC004BE4D4 /* DLRadioButton */,
 				68FFBAEF1CCB657900878904 /* CourseUtil */,
 				68D8EFCA1CC882EA00906E3D /* SwiftNotice */,
@@ -1194,7 +1195,7 @@
 				687E38321CBE3FE3009EDE17 /* Main */,
 				680359EA1CC75686002F7C60 /* Student */,
 				68083F1E1CCE5909004BE4D4 /* ClassTeacher */,
-				68083F6B1CCE5909004BE4D4 /* Teacher */,
+				68083F6B1CCE5909004BE4D4 /* CourseTeacher */,
 				68083F0B1CCE5909004BE4D4 /* BranchLeader */,
 				68083F321CCE5909004BE4D4 /* Counsellor */,
 				68083F451CCE5909004BE4D4 /* Leader */,
@@ -1209,8 +1210,8 @@
 				68B98EF61CBE4A00009D64D1 /* QJT.entitlements */,
 				EF9A30E71CA9133C00D5EFA6 /* AppDelegate.swift */,
 				EF9D7BA21CCF09D800FA79F7 /* Theme */,
+				EF45F5321CABF1F10052AA1F /* Protocols */,
 				EF45F5311CABF1E60052AA1F /* Extensions */,
-				68B4E1721CD10CF3006D833D /* Protocol */,
 			);
 			name = General;
 			sourceTree = "<group>";
@@ -1350,7 +1351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68B98EF71CBE4A00009D64D1 /* QJT.entitlements in Resources */,
-				68083F8B1CCE5909004BE4D4 /* CTLeave.storyboard in Resources */,
+				68083F8B1CCE5909004BE4D4 /* CLTLeave.storyboard in Resources */,
 				68083FB81CCE5A96004BE4D4 /* SLeave.storyboard in Resources */,
 				68083F841CCE5909004BE4D4 /* BLPersonal.storyboard in Resources */,
 				68083FAF1CCE5909004BE4D4 /* TLeave.storyboard in Resources */,
@@ -1363,8 +1364,8 @@
 				68083ECE1CCE571F004BE4D4 /* RegLogin.storyboard in Resources */,
 				68083F941CCE5909004BE4D4 /* CLeave.storyboard in Resources */,
 				687E38341CBE4008009EDE17 /* Main.storyboard in Resources */,
-				68083F8E1CCE5909004BE4D4 /* CTPersonal.storyboard in Resources */,
-				68083FB61CCE59D7004BE4D4 /* CTAttendance.storyboard in Resources */,
+				68083F8E1CCE5909004BE4D4 /* CLTPersonal.storyboard in Resources */,
+				68083FB61CCE59D7004BE4D4 /* CLTAttendance.storyboard in Resources */,
 				68083F9A1CCE5909004BE4D4 /* LAttendance.storyboard in Resources */,
 				68083FAC1CCE5909004BE4D4 /* TAttendance.storyboard in Resources */,
 				68083FA01CCE5909004BE4D4 /* LPersonal.storyboard in Resources */,
@@ -1481,7 +1482,6 @@
 				68186BFC1CB3525D005AF62D /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
 				68186C011CB3525D005AF62D /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */,
 				68083F8D1CCE5909004BE4D4 /* CTLeaveMainViewController.swift in Sources */,
-				68B4E1711CD103D1006D833D /* LeaveReasonCell.swift in Sources */,
 				68083F9B1CCE5909004BE4D4 /* LAttendanceView.swift in Sources */,
 				68083F981CCE5909004BE4D4 /* CPersonalView.swift in Sources */,
 				68BA681A1CCF43C00022C843 /* SPersonalHeaderView.swift in Sources */,
@@ -1503,7 +1503,6 @@
 				68083EC21CCE5691004BE4D4 /* NSDate_extension.swift in Sources */,
 				68186C0C1CB3525D005AF62D /* NVActivityIndicatorAnimationBlank.swift in Sources */,
 				68186C021CB3525D005AF62D /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */,
-				68B4E16F1CD0FDB4006D833D /* LeaveReasonViewController.swift in Sources */,
 				68083FA21CCE5909004BE4D4 /* LPersonalMainViewController.swift in Sources */,
 				68083FBA1CCE5AAB004BE4D4 /* LeaveCell.swift in Sources */,
 				68083F921CCE5909004BE4D4 /* CAttendanceView.swift in Sources */,
@@ -1525,7 +1524,7 @@
 				68083FAD1CCE5909004BE4D4 /* TAttendanceView.swift in Sources */,
 				68186BFD1CB3525D005AF62D /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
 				68FF20031CCD0315005AC0B7 /* LeaveCourseViewController.swift in Sources */,
-				68B4E1741CD10CFF006D833D /* ViewControllerTransmitDelegate.swift in Sources */,
+				EF1370271CD0F9EC008C6D39 /* Digest.swift in Sources */,
 				68083F821CCE5909004BE4D4 /* BLeaveView.swift in Sources */,
 				68083F9F1CCE5909004BE4D4 /* LLeaveMainViewController.swift in Sources */,
 				68083F851CCE5909004BE4D4 /* BPersonalView.swift in Sources */,
@@ -1535,7 +1534,7 @@
 				68186C071CB3525D005AF62D /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
 				68035A011CC756BA002F7C60 /* Sign.swift in Sources */,
 				68083F951CCE5909004BE4D4 /* CLeaveView.swift in Sources */,
-				68083F891CCE5909004BE4D4 /* CTAttendanceMainViewController.swift in Sources */,
+				68083F891CCE5909004BE4D4 /* CLTAttendanceMainViewController.swift in Sources */,
 				683CF5FA1CC34E8C00F69765 /* BaseType.swift in Sources */,
 				68083FB41CCE5909004BE4D4 /* TPersonalMainViewController.swift in Sources */,
 				68186C381CB3554F005AF62D /* LoginViewController.swift in Sources */,
@@ -1548,7 +1547,7 @@
 				68186C151CB3525D005AF62D /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */,
 				EF9D7BA61CCF0A2000FA79F7 /* ThemeConfig.swift in Sources */,
 				EF6A8C061CCFB1970054282C /* UIImage+ImageEffects.m in Sources */,
-				68083F8A1CCE5909004BE4D4 /* CTSignCourseViewController.swift in Sources */,
+				68083F8A1CCE5909004BE4D4 /* CLTSignCourseViewController.swift in Sources */,
 				68B7B52F1CBE91C80046FC7F /* MainTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

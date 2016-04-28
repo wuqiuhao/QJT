@@ -1,5 +1,5 @@
 //
-//  CTLeaveMainViewController.swift
+//  TPersonalMainViewController.swift
 //  QJT
 //
 //  Created by LZQ on 16/4/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CTLeaveMainViewController: UIViewController {
+class CTPersonalMainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -1,5 +1,5 @@
 //
-//  CTPersonalView.swift
+//  BAttendanceView.swift
 //  QJT
 //
 //  Created by LZQ on 16/4/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CTPersonalView: UIView {
+class BLAttendanceView: UIView {
 
     /*
     // Only override drawRect: if you perform custom drawing.

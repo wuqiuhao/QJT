@@ -1,5 +1,5 @@
 //
-//  LAttendanceMainViewController.swift
+//  CTPersonalMainViewController.swift
 //  QJT
 //
 //  Created by LZQ on 16/4/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LAttendanceMainViewController: UIViewController {
+class CLTPersonalMainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

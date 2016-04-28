@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TPersonalView: UIView {
+class CTPersonalView: UIView {
 
     /*
     // Only override drawRect: if you perform custom drawing.

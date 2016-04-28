@@ -1,5 +1,5 @@
 //
-//  BLeaveView.swift
+//  TLeaveView.swift
 //  QJT
 //
 //  Created by LZQ on 16/4/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BLeaveView: UIView {
+class CTLeaveView: UIView {
 
     /*
     // Only override drawRect: if you perform custom drawing.

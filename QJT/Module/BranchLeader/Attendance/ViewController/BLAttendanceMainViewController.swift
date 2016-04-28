@@ -1,5 +1,5 @@
 //
-//  LLeaveMainViewController.swift
+//  BAttendanceMainViewController.swift
 //  QJT
 //
 //  Created by LZQ on 16/4/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LLeaveMainViewController: UIViewController {
+class BLAttendanceMainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

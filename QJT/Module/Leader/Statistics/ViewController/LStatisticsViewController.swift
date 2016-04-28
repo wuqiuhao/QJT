@@ -1,14 +1,14 @@
 //
-//  TLeaveViewMainController.swift
+//  LStatisticsViewController.swift
 //  QJT
 //
-//  Created by LZQ on 16/4/20.
+//  Created by wuqiuhao on 16/4/28.
 //  Copyright © 2016年 Hale. All rights reserved.
 //
 
 import UIKit
 
-class TLeaveViewMainController: UIViewController {
+class LStatisticsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

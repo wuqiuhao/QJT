@@ -1,5 +1,5 @@
 //
-//  BAttendanceMainViewController.swift
+//  CTLeaveMainViewController.swift
 //  QJT
 //
 //  Created by LZQ on 16/4/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BAttendanceMainViewController: UIViewController {
+class CLTeaveMainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

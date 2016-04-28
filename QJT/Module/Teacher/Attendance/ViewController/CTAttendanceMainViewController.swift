@@ -1,5 +1,5 @@
 //
-//  BLeaveMainViewController.swift
+//  TAttendanceMainViewController.swift
 //  QJT
 //
 //  Created by LZQ on 16/4/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BLeaveMainViewController: UIViewController {
+class CTAttendanceMainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -44,6 +44,8 @@ extension MainTabBarController {
                 vc = UIStoryboard(name: "\(abbr)Personal", bundle: nil).instantiateInitialViewController()
             case "sign":
                 vc = UIStoryboard(name: "\(abbr)Sign", bundle: nil).instantiateInitialViewController()
+            case "statistics":
+                vc = UIStoryboard(name: "\(abbr)Statistics", bundle: nil).instantiateInitialViewController()
             default:
                 return
             }

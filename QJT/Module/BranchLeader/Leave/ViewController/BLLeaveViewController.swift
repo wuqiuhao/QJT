@@ -1,14 +1,14 @@
 //
-//  TPersonalMainViewController.swift
+//  BLLeaveViewController.swift
 //  QJT
 //
-//  Created by LZQ on 16/4/20.
+//  Created by wuqiuhao on 16/4/28.
 //  Copyright © 2016年 Hale. All rights reserved.
 //
 
 import UIKit
 
-class TPersonalMainViewController: UIViewController {
+class BLLeaveViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

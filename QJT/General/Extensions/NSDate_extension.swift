@@ -111,4 +111,16 @@ extension NSDate {
             return "\(hour):00"
         }
     }
+    
+    
+    func getEarlyOrLaterMonthFromDate(date: NSDate, month: Int) -> NSDate{
+        
+        let comps = NSDateComponents()
+        comps.month = month
+        let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
+        let anotherDate = calendar!.dateByAddingComponents(comps, toDate: date, options: NSCalendarOptions.MatchNextTime)
+        return anotherDate!
+        
+        
+    }
 }

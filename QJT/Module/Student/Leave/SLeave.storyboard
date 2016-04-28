@@ -111,11 +111,78 @@
                     <navigationItem key="navigationItem" id="c9l-GV-89f"/>
                     <connections>
                         <outlet property="tableView" destination="RW0-2U-qhM" id="NDj-MA-paD"/>
+                        <segue destination="4ky-oE-H39" kind="show" identifier="LeaveCourseViewController" id="H4u-w2-Z3z"/>
+                        <segue destination="ZUK-8w-nhP" kind="show" identifier="LeaveReasonViewController" id="A7F-4d-UPz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oLd-Lw-FTp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="807" y="719"/>
+        </scene>
+        <!--Leave Reason View Controller-->
+        <scene sceneID="XN9-Lb-cAZ">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="ZUK-8w-nhP" customClass="LeaveReasonViewController" customModule="QJT" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rpY-fo-Qub"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ra0-3V-Ubi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KwO-fz-JJy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="fZO-mS-cs2">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LeaveReasonCell" rowHeight="200" id="y3l-JE-QPS" customClass="LeaveReasonCell" customModule="QJT" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="113.5" width="600" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y3l-JE-QPS" id="VeX-IB-oHI">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="199.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0Hc-Li-mDR" userLabel="reasonTextView">
+                                                    <rect key="frame" x="15" y="10" width="570" height="179.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="0Hc-Li-mDR" secondAttribute="bottom" constant="10" id="FtY-gh-U2u"/>
+                                                <constraint firstItem="0Hc-Li-mDR" firstAttribute="leading" secondItem="VeX-IB-oHI" secondAttribute="leading" constant="15" id="PW6-Te-90q"/>
+                                                <constraint firstItem="0Hc-Li-mDR" firstAttribute="top" secondItem="VeX-IB-oHI" secondAttribute="top" constant="10" id="TMW-qE-HTz"/>
+                                                <constraint firstAttribute="trailing" secondItem="0Hc-Li-mDR" secondAttribute="trailing" constant="15" id="o75-kn-wOD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="reasonTextView" destination="0Hc-Li-mDR" id="Qnh-74-OEp"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZUK-8w-nhP" id="0q6-Rg-lgS"/>
+                                    <outlet property="delegate" destination="ZUK-8w-nhP" id="xZE-3G-T6q"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fZO-mS-cs2" firstAttribute="top" secondItem="rpY-fo-Qub" secondAttribute="bottom" id="5hv-ew-BWN"/>
+                            <constraint firstAttribute="bottom" secondItem="fZO-mS-cs2" secondAttribute="bottom" id="7Ue-bM-mV8"/>
+                            <constraint firstItem="fZO-mS-cs2" firstAttribute="leading" secondItem="KwO-fz-JJy" secondAttribute="leading" id="RzO-zW-pL7"/>
+                            <constraint firstAttribute="trailing" secondItem="fZO-mS-cs2" secondAttribute="trailing" id="qvg-dW-lmb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="fZO-mS-cs2" id="Bth-CX-YfR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YSy-kG-E5n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1589" y="1202"/>
         </scene>
         <!--Leave Course View Controller-->
         <scene sceneID="5Za-1v-NVR">
@@ -133,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dn7-EH-30h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="807" y="-195"/>
+            <point key="canvasLocation" x="1589" y="145"/>
         </scene>
     </scenes>
 </document>

@@ -65,22 +65,26 @@ class StudentSetting: PersonSetting, NSCoding {
         print(aDecoder.decodeObjectForKey("userType") as! String)
         super.init()
         switch  aDecoder.decodeObjectForKey("userType") as! String {
-            case "Uknown":
-                userType = UserType.Unknown
-            case "Student":
-                userType = UserType.Student
-            case "Teacher":
-                userType = UserType.Teacher
-            case "CourseTeacher":
-                userType = UserType.CourseTeacher
-            case "Counsellor":
-                userType = UserType.Counsellor
-            case "Leader":
-                userType = UserType.Leader
-            case "StudentWorker":
-                userType = UserType.StudentWorker
-            default:
-                userType = UserType.Unknown
+        case "Uknown":
+            userType = UserType.Unknown
+        case "Student":
+            userType = UserType.Student
+        case "Teacher":
+            userType = UserType.Teacher
+        case "CourseTeacher":
+            userType = UserType.CourseTeacher
+        case "ClassTeacher":
+            userType = UserType.ClassTeacher
+        case "Counsellor":
+            userType = UserType.Counsellor
+        case "BranchLeader":
+            userType = UserType.BranchLeader
+        case "Leader":
+            userType = UserType.Leader
+        case "StudentWorker":
+            userType = UserType.StudentWorker
+        default:
+            userType = UserType.Unknown
         }
         userID = aDecoder.decodeObjectForKey("userID") as! String
         userName = aDecoder.decodeObjectForKey("userName") as! String

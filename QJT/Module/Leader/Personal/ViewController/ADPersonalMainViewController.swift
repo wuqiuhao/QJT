@@ -1,5 +1,5 @@
 //
-//  SWPersonalMainViewController.swift
+//  LPersonalMainViewController.swift
 //  QJT
 //
 //  Created by LZQ on 16/4/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SWPersonalMainViewController: UIViewController {
+class ADPersonalMainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

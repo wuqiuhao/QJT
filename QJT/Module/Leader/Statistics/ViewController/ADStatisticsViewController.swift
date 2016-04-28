@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LStatisticsViewController: UIViewController {
+class ADStatisticsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

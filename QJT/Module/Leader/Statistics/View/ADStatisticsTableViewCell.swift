@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LStatisticsTableViewCell: UITableViewCell {
+class ADStatisticsTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

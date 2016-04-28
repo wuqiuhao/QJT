@@ -90,9 +90,9 @@ enum UserType: Int,BaseType {
         case .BranchLeader:
             return "BL"
         case .Leader:
-            return "L"
+            return "AD"
         case .StudentWorker:
-            return "SW"
+            return "AD"
         }
     }
     

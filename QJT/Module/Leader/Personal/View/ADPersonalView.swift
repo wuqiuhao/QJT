@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LPersonalView: UIView {
+class ADPersonalView: UIView {
 
     /*
     // Only override drawRect: if you perform custom drawing.

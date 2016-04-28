@@ -34,9 +34,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vzi-jh-xki">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                            </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2Y-Da-yd9">
                                 <rect key="frame" x="20" y="452" width="240" height="128"/>
                                 <subviews>
@@ -95,15 +92,18 @@
                                     <constraint firstAttribute="trailing" secondItem="WAr-Ft-q3p" secondAttribute="trailing" constant="40" id="iDo-NI-EjK"/>
                                 </constraints>
                             </view>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vzi-jh-xki">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="J2Y-Da-yd9" firstAttribute="leading" secondItem="FGd-sd-HQT" secondAttribute="leadingMargin" id="4TH-7B-vpw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vzi-jh-xki" secondAttribute="trailing" constant="-20" id="7lx-hm-ytU"/>
-                            <constraint firstItem="vzi-jh-xki" firstAttribute="top" secondItem="zkN-Y8-2BR" secondAttribute="bottom" id="Pqp-Uz-Pid"/>
                             <constraint firstItem="SHH-F2-6H4" firstAttribute="top" secondItem="J2Y-Da-yd9" secondAttribute="bottom" constant="20" id="hSx-cP-WVA"/>
                             <constraint firstItem="vzi-jh-xki" firstAttribute="leading" secondItem="FGd-sd-HQT" secondAttribute="leadingMargin" constant="-20" id="nie-Ty-PTr"/>
-                            <constraint firstItem="SHH-F2-6H4" firstAttribute="top" secondItem="vzi-jh-xki" secondAttribute="bottom" id="oMC-9M-N1k"/>
+                            <constraint firstAttribute="bottom" secondItem="vzi-jh-xki" secondAttribute="bottom" id="qP3-ZP-i72"/>
+                            <constraint firstItem="vzi-jh-xki" firstAttribute="top" secondItem="FGd-sd-HQT" secondAttribute="top" id="wkL-xF-qdN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hmP-aj-Tcu"/>
@@ -123,7 +123,7 @@
         <!--Sign Course View Controller-->
         <scene sceneID="1NE-nb-m72">
             <objects>
-                <viewController id="P65-Sh-e1f" customClass="CLTSignCourseViewController" customModule="QJT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="P65-Sh-e1f" customClass="CLTSignCourseViewController" customModule="QJT" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HQY-Lx-gUp"/>
                         <viewControllerLayoutGuide type="bottom" id="Gdj-fP-ac7"/>

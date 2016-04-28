@@ -130,6 +130,9 @@
 		68B98EF71CBE4A00009D64D1 /* QJT.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 68B98EF61CBE4A00009D64D1 /* QJT.entitlements */; };
 		68BA68181CCF3FA20022C843 /* SPersonMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BA68171CCF3FA20022C843 /* SPersonMainCell.swift */; };
 		68BA681A1CCF43C00022C843 /* SPersonalHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BA68191CCF43C00022C843 /* SPersonalHeaderView.swift */; };
+		68CE13C31CD1A12A009C8E6C /* LeaveReasonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CE13C21CD1A12A009C8E6C /* LeaveReasonViewController.swift */; };
+		68CE13C51CD1A14E009C8E6C /* ViewControllerTransmitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CE13C41CD1A14E009C8E6C /* ViewControllerTransmitDelegate.swift */; };
+		68CE13C71CD1A16D009C8E6C /* LeaveReasonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CE13C61CD1A16D009C8E6C /* LeaveReasonCell.swift */; };
 		68D8EFCC1CC882EA00906E3D /* SwiftNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8EFCB1CC882EA00906E3D /* SwiftNotice.swift */; };
 		68D8EFCE1CC8AABB00906E3D /* UILabel_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8EFCD1CC8AABB00906E3D /* UILabel_extension.swift */; };
 		68D8EFD01CC8AB7200906E3D /* NSString_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8EFCF1CC8AB7200906E3D /* NSString_extension.swift */; };
@@ -280,6 +283,9 @@
 		68B98EF61CBE4A00009D64D1 /* QJT.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = QJT.entitlements; sourceTree = "<group>"; };
 		68BA68171CCF3FA20022C843 /* SPersonMainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPersonMainCell.swift; sourceTree = "<group>"; };
 		68BA68191CCF43C00022C843 /* SPersonalHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPersonalHeaderView.swift; sourceTree = "<group>"; };
+		68CE13C21CD1A12A009C8E6C /* LeaveReasonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveReasonViewController.swift; sourceTree = "<group>"; };
+		68CE13C41CD1A14E009C8E6C /* ViewControllerTransmitDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerTransmitDelegate.swift; path = General/Protocol/ViewControllerTransmitDelegate.swift; sourceTree = "<group>"; };
+		68CE13C61CD1A16D009C8E6C /* LeaveReasonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveReasonCell.swift; sourceTree = "<group>"; };
 		68D8EFCB1CC882EA00906E3D /* SwiftNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftNotice.swift; sourceTree = "<group>"; };
 		68D8EFCD1CC8AABB00906E3D /* UILabel_extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UILabel_extension.swift; path = General/Extensions/UILabel_extension.swift; sourceTree = "<group>"; };
 		68D8EFCF1CC8AB7200906E3D /* NSString_extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSString_extension.swift; path = General/Extensions/NSString_extension.swift; sourceTree = "<group>"; };
@@ -380,6 +386,7 @@
 		680359F31CC756BA002F7C60 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				68CE13C61CD1A16D009C8E6C /* LeaveReasonCell.swift */,
 				68083FB91CCE5AAB004BE4D4 /* LeaveCell.swift */,
 			);
 			path = View;
@@ -388,6 +395,7 @@
 		680359F81CC756BA002F7C60 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				68CE13C21CD1A12A009C8E6C /* LeaveReasonViewController.swift */,
 				68FF20021CCD0315005AC0B7 /* LeaveCourseViewController.swift */,
 				680359F91CC756BA002F7C60 /* LeaveMainViewController.swift */,
 			);
@@ -1102,6 +1110,7 @@
 		EF45F5321CABF1F10052AA1F /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				68CE13C41CD1A14E009C8E6C /* ViewControllerTransmitDelegate.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -1475,6 +1484,7 @@
 				68083F8F1CCE5909004BE4D4 /* CTPersonalView.swift in Sources */,
 				68D8EFCC1CC882EA00906E3D /* SwiftNotice.swift in Sources */,
 				681DD1261CC7B685004CB295 /* Week.swift in Sources */,
+				68CE13C71CD1A16D009C8E6C /* LeaveReasonCell.swift in Sources */,
 				68186BFE1CB3525D005AF62D /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */,
 				68186C1E1CB354DB005AF62D /* UIColor_extension.swift in Sources */,
 				68035A991CC78066002F7C60 /* StudentSetting.swift in Sources */,
@@ -1511,6 +1521,7 @@
 				68186C371CB3554F005AF62D /* LoginStepViewController.swift in Sources */,
 				68186C0E1CB3525D005AF62D /* NVActivityIndicatorAnimationLineScale.swift in Sources */,
 				68083FB01CCE5909004BE4D4 /* TLeaveView.swift in Sources */,
+				68CE13C31CD1A12A009C8E6C /* LeaveReasonViewController.swift in Sources */,
 				68186C131CB3525D005AF62D /* NVActivityIndicatorAnimationPacman.swift in Sources */,
 				68083F9C1CCE5909004BE4D4 /* LAttendanceMainViewController.swift in Sources */,
 				68083F801CCE5909004BE4D4 /* BAttendanceMainViewController.swift in Sources */,
@@ -1525,6 +1536,7 @@
 				68186BFD1CB3525D005AF62D /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
 				68FF20031CCD0315005AC0B7 /* LeaveCourseViewController.swift in Sources */,
 				EF1370271CD0F9EC008C6D39 /* Digest.swift in Sources */,
+				68CE13C51CD1A14E009C8E6C /* ViewControllerTransmitDelegate.swift in Sources */,
 				68083F821CCE5909004BE4D4 /* BLeaveView.swift in Sources */,
 				68083F9F1CCE5909004BE4D4 /* LLeaveMainViewController.swift in Sources */,
 				68083F851CCE5909004BE4D4 /* BPersonalView.swift in Sources */,

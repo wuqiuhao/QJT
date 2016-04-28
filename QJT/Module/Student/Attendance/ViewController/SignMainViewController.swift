@@ -32,6 +32,8 @@ class SignMainViewController: UIViewController {
         mapView.delegate = self
         mapView?.mapType = MKMapType.Standard
         mapView?.showsUserLocation = true
+        // 初始化定位
+        self.initLocationManager()
     }
     
     override func didReceiveMemoryWarning() {
@@ -59,7 +61,7 @@ extension SignMainViewController {
         locationManager!.distanceFilter = kCLLocationAccuracyNearestTenMeters
         // 定位精度
         locationManager!.desiredAccuracy = kCLLocationAccuracyBest
-        startUpdatingLocation()
+        locationManager!.requestWhenInUseAuthorization()
     }
     
     func configUI() {
@@ -123,7 +125,6 @@ extension SignMainViewController: CLLocationManagerDelegate {
 
 extension SignMainViewController: MKMapViewDelegate {
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
-        // 初始化定位
-        self.initLocationManager()
+        startUpdatingLocation()
     }
 }

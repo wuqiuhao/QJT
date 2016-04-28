@@ -8,9 +8,9 @@
 
 import UIKit
 
-protocol CourseViewDelegate {
-    func refreshCourseData(courseDataArr: [CourseClass])
-}
+//protocol CourseViewDelegate {
+//    func refreshCourseData(courseDataArr: [CourseClass])
+//}
 
 class LeaveCourseViewController: UIViewController {
     
@@ -18,8 +18,7 @@ class LeaveCourseViewController: UIViewController {
     lazy var courseDataArr = [CourseClass]()
     lazy var refreshDataArr = [CourseClass]()
     var isCourseSelected: Bool = false
-    var delegate: CourseViewDelegate?
-    var index: Int = 0
+    var delegate: ViewControllerTransmitDelegate?
     
     let weekExcelWidth: CGFloat = (UIScreen.mainScreen().bounds.width - 30) / 5
     let partExcelHeight: CGFloat = (UIScreen.mainScreen().bounds.height - 64 - 30) / 11
@@ -30,6 +29,10 @@ class LeaveCourseViewController: UIViewController {
         setupCourseBackground()
         getNetwork()
         
+    }
+    
+    deinit {
+        print("课程表释放了!")
     }
     
 }
@@ -125,7 +128,6 @@ extension LeaveCourseViewController {
                 }
             }
         }
-        delegate?.refreshCourseData(refreshDataArr)
-        
+        delegate?.transmitMessage(refreshDataArr)
     }
 }

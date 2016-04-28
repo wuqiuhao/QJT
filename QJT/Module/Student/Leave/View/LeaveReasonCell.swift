@@ -25,16 +25,16 @@ class LeaveReasonCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        //reasonTextView.becomeFirstResponder()
+        reasonTextView.becomeFirstResponder()
         reasonTextView.layer.borderColor = UIColor(red: 200/255.0, green: 199/255.0, blue: 204/255.0, alpha: 1).CGColor
         reasonTextView.textContainerInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.width, height: 40))
-        toolBar.barTintColor = UIColor.whiteColor()
-        toolBar.layer.borderWidth = 0
-        let completeBtn = UIBarButtonItem(title: "完成", style: .Plain, target: self, action: #selector(LeaveReasonCell.completeBtnClicked))
-        let fixedButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
-        toolBar.items = [fixedButton,completeBtn]
-        reasonTextView.inputAccessoryView = toolBar
+//        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.width, height: 40))
+//        toolBar.barTintColor = UIColor.whiteColor()
+//        toolBar.layer.borderWidth = 0
+//        let completeBtn = UIBarButtonItem(title: "完成", style: .Plain, target: self, action: #selector(LeaveReasonCell.completeBtnClicked))
+//        let fixedButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
+//        toolBar.items = [fixedButton,completeBtn]
+//        reasonTextView.inputAccessoryView = toolBar
         reasonTextView.delegate = self
     }
 }

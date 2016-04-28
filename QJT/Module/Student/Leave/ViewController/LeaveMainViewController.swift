@@ -19,6 +19,7 @@ class LeaveMainViewController: UIViewController {
     var endDate: NSDate!
     var pickerSelectDate = NSDate()
     var datePickerValue: NSDate!
+    var courseArrData = [CourseClass]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -108,7 +109,7 @@ extension LeaveMainViewController {
         let cellData1 = ["title":"开始时间", "detail":"\(dateStr)  \(weekStr)"]
         let cellData2 = ["title":"结束时间","detail":"\(dateStr)  \(weekStr)"]
         let cellData3 = ["title":"课程选择","detail":"请选择请假课程"]
-        let cellData4 = ["title":"请假原因","detail":"请填写请假理由"]
+        let cellData4 = ["title":"请假原因","detail":"请填写请假原因"]
         dateArr = [cellData1, cellData2, cellData3,cellData4]
     }
     
@@ -116,6 +117,9 @@ extension LeaveMainViewController {
         if segue.destinationViewController is LeaveReasonViewController {
             let vc = segue.destinationViewController as! LeaveReasonViewController
             vc.delegate = self
+            if dateArr[3]["detail"] != "请填写请假原因" {
+                vc.textViewContent = dateArr[3]["detail"]!
+            }
         } else if segue.destinationViewController is LeaveCourseViewController {
             let vc = segue.destinationViewController as! LeaveCourseViewController
             vc.delegate = self
@@ -142,6 +146,7 @@ extension LeaveMainViewController: ViewControllerTransmitDelegate {
                 }
                 i += 1
             }
+            courseArrData = data as! [CourseClass]
             dateArr[2]["detail"] = detailStr
             tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: 2, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
         }

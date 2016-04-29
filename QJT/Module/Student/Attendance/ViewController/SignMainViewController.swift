@@ -13,19 +13,17 @@ import MapKit
 class SignMainViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var latLabel: UILabel!
-    @IBOutlet weak var longLabel: UILabel!
-    @IBOutlet weak var repositionBtn: UIButton!
-    @IBOutlet weak var signBtn: UIButton!
-    @IBOutlet weak var messageBack: UIView!
+    @IBOutlet var repositionBtn: UIButton!
     
     var locationManager: CLLocationManager?
     var center: CLLocationCoordinate2D?
     var isPlease = false
     var point: MKPointAnnotation?
+    var geocoder: CLGeocoder!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "签到", style: .Plain, target: self, action: #selector(SignMainViewController.signItemClicked))
         // 设置UI显示
         configUI()
         // 设置基本图层
@@ -49,13 +47,20 @@ class SignMainViewController: UIViewController {
 
 // MARK: - private method
 extension SignMainViewController {
+    // 定位
     @IBAction func repositionBtn(sender: AnyObject) {
         mapView.removeAnnotation(point!)
         startUpdatingLocation()
     }
     
+    // 签到
+    func signItemClicked() {
+        self.performSegueWithIdentifier("signCourseViewController", sender: nil)
+    }
+    
     func initLocationManager() {
         locationManager = CLLocationManager()
+        geocoder = CLGeocoder()
         locationManager!.delegate = self
         // 移动10米重新定位
         locationManager!.distanceFilter = kCLLocationAccuracyNearestTenMeters
@@ -66,16 +71,7 @@ extension SignMainViewController {
     
     func configUI() {
         navigationItem.title = "学生签到"
-        signBtn.layer.cornerRadius = 5
-        signBtn.backgroundColor = UIColor.qjtTintColor()
-        signBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-
-        repositionBtn.layer.cornerRadius = 5
-        repositionBtn.backgroundColor = UIColor.qjtTintColor()
-        repositionBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        messageBack.layer.cornerRadius = 8
-        messageBack.alpha = 0.6
-        view.bringSubviewToFront(messageBack)
+        view.bringSubviewToFront(repositionBtn)
     }
     
     /**
@@ -107,13 +103,7 @@ extension SignMainViewController: CLLocationManagerDelegate {
         mapView!.setRegion(currentRegion, animated: true)
         
         mapView?.showsUserLocation = false
-        latLabel.text = "纬度：\(center!.latitude)"
-        longLabel.text = "经度：\(center!.longitude)"
-        
-        point = MKPointAnnotation()
-        point!.coordinate = center!
-        point!.title = "我的位置"
-        mapView.addAnnotation(point!)
+        reverseGeoAction()
         manager.stopUpdatingLocation()
     }
     
@@ -126,5 +116,33 @@ extension SignMainViewController: CLLocationManagerDelegate {
 extension SignMainViewController: MKMapViewDelegate {
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
         startUpdatingLocation()
+    }
+}
+
+// MARK: - 地址解析
+extension SignMainViewController {
+    // 反地址解析
+    func reverseGeoAction() {
+        if let longitude = center?.longitude, latitude = center?.latitude {
+            let location = CLLocation(latitude: latitude, longitude: longitude)
+            geocoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) in
+                var address:String!
+                if let error = error {
+                    print(error)
+                    return
+                } else {
+                    if let places = placemarks where !places.isEmpty {
+                        address = places.first!.name
+                    } else {
+                        address = "暂无地址信息"
+                    }
+                }
+                self.point = MKPointAnnotation()
+                self.point!.coordinate = self.center!
+                self.point!.title = address
+                self.mapView.addAnnotation(self.point!)
+                self.mapView.selectAnnotation(self.point!, animated: true)
+            })
+        }
     }
 }

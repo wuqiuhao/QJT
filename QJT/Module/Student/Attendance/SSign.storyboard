@@ -43,7 +43,7 @@
                                             <constraint firstAttribute="height" constant="20" id="ZZ1-UE-oyF"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uuB-KO-BqX">
@@ -52,7 +52,7 @@
                                             <constraint firstAttribute="height" constant="20" id="ydW-97-z6t"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1c-GB-x2L">
@@ -104,9 +104,9 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="BlE-AZ-zNJ" secondAttribute="trailing" constant="-20" id="0TB-2N-3mq"/>
                             <constraint firstItem="BlE-AZ-zNJ" firstAttribute="leading" secondItem="Yge-X3-hYH" secondAttribute="leadingMargin" constant="-20" id="4Oe-ed-T50"/>
+                            <constraint firstAttribute="bottom" secondItem="BlE-AZ-zNJ" secondAttribute="bottom" id="5P1-tZ-43P"/>
                             <constraint firstItem="Wpy-QJ-Rpa" firstAttribute="top" secondItem="yQf-Jf-efv" secondAttribute="bottom" constant="20" id="8Yy-pm-4qu"/>
                             <constraint firstItem="yQf-Jf-efv" firstAttribute="leading" secondItem="Yge-X3-hYH" secondAttribute="leadingMargin" id="Dfk-2t-7KV"/>
-                            <constraint firstAttribute="bottom" secondItem="BlE-AZ-zNJ" secondAttribute="bottom" id="asF-Tu-vXQ"/>
                             <constraint firstItem="BlE-AZ-zNJ" firstAttribute="top" secondItem="Yge-X3-hYH" secondAttribute="top" id="h1f-Pg-t94"/>
                         </constraints>
                     </view>

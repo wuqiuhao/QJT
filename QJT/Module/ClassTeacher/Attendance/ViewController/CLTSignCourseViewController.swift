@@ -47,7 +47,7 @@ extension CLTSignCourseViewController {
     //获取课程表
     func getNetwork() {
         self.pleaseWait()
-        NetWorkManager.httpRequest(Methods.attendance_teacherGetCourseClasses, params: ["teacherID":"\(UserConfig.teacherSetting()?.userID)"], modelType: CourseClass(), listType: CourseClass(), completed: { (responseData) in
+        NetWorkManager.httpRequest(Methods.attendance_teacherGetCourseClasses, params: ["teacherID":"\(UserConfig.teacherSetting()!.userID)"], modelType: CourseClass(), listType: CourseClass(), completed: { (responseData) in
             
             self.clearAllNotice()
             self.courseArrData = responseData["list"] as! [CourseClass]
@@ -70,6 +70,7 @@ extension CLTSignCourseViewController {
         params.updateValue(long, forKey: "longitude")
         params.updateValue(lat, forKey: "latitude")
         
+        print("\(long,lat)")
         
         method = Methods.attendance_teacherBeginClass
         

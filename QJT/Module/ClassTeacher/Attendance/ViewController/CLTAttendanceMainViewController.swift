@@ -31,6 +31,8 @@ class CLTAttendanceMainViewController: UIViewController {
         mapView.delegate = self
         mapView?.mapType = MKMapType.Standard
         mapView?.showsUserLocation = true
+        // 初始化定位
+        self.initLocationManager()
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,7 +62,7 @@ extension CLTAttendanceMainViewController {
         locationManager!.distanceFilter = kCLLocationAccuracyNearestTenMeters
         // 定位精度
         locationManager!.desiredAccuracy = kCLLocationAccuracyBest
-        startUpdatingLocation()
+        locationManager!.requestWhenInUseAuthorization()
     }
     
     func configUI() {
@@ -126,6 +128,6 @@ extension CLTAttendanceMainViewController:CLLocationManagerDelegate{
 extension CLTAttendanceMainViewController: MKMapViewDelegate {
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
         // 初始化定位
-        self.initLocationManager()
+        startUpdatingLocation()
     }
 }

@@ -15,7 +15,8 @@ var LoginService = [
 
 var AttendanceService = [
     "attendance_studentAttendance",
-    "attendance_teacherGetCourseClasses"
+    "attendance_teacherGetCourseClasses",
+    "attendance_teacherBeginClass"
 ]
 
 var LeaveService = [

@@ -37,23 +37,35 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="BlE-AZ-zNJ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbp-vB-Te4">
-                                <rect key="frame" x="540" y="540" width="30" height="30"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Yo-RO-Kdw">
+                                <rect key="frame" x="6" y="551" width="40" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taa-Cw-bhA">
+                                        <rect key="frame" x="5" y="5" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="oBb-wJ-Sjp"/>
+                                            <constraint firstAttribute="width" constant="30" id="s3r-zt-vdc"/>
+                                        </constraints>
+                                        <state key="normal" image="Map_repoint"/>
+                                        <connections>
+                                            <action selector="repositionBtn:" destination="BJB-Fe-hrR" eventType="touchUpInside" id="RTg-DD-woU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="1Vc-nE-jsC"/>
-                                    <constraint firstAttribute="width" constant="30" id="W9d-6h-Siv"/>
+                                    <constraint firstAttribute="width" constant="40" id="16s-rN-E9O"/>
+                                    <constraint firstAttribute="height" constant="40" id="7Ht-iS-dAv"/>
+                                    <constraint firstItem="taa-Cw-bhA" firstAttribute="centerX" secondItem="9Yo-RO-Kdw" secondAttribute="centerX" id="EGK-yZ-Aah"/>
+                                    <constraint firstItem="taa-Cw-bhA" firstAttribute="centerY" secondItem="9Yo-RO-Kdw" secondAttribute="centerY" id="bRQ-ze-C9E"/>
                                 </constraints>
-                                <state key="normal" image="Map_repoint"/>
-                                <connections>
-                                    <action selector="repositionBtn:" destination="BJB-Fe-hrR" eventType="touchUpInside" id="YXc-gZ-T0q"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Wpy-QJ-Rpa" firstAttribute="top" secondItem="qbp-vB-Te4" secondAttribute="bottom" constant="30" id="03f-Cc-slR"/>
-                            <constraint firstAttribute="trailing" secondItem="qbp-vB-Te4" secondAttribute="trailing" constant="30" id="0M5-Jk-Oei"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BlE-AZ-zNJ" secondAttribute="trailing" constant="-20" id="0TB-2N-3mq"/>
+                            <constraint firstItem="9Yo-RO-Kdw" firstAttribute="leading" secondItem="Yge-X3-hYH" secondAttribute="leading" constant="6" id="1e9-KZ-6sF"/>
+                            <constraint firstItem="Wpy-QJ-Rpa" firstAttribute="top" secondItem="9Yo-RO-Kdw" secondAttribute="bottom" constant="9" id="3ed-JI-IUL"/>
                             <constraint firstItem="BlE-AZ-zNJ" firstAttribute="leading" secondItem="Yge-X3-hYH" secondAttribute="leadingMargin" constant="-20" id="4Oe-ed-T50"/>
                             <constraint firstAttribute="bottom" secondItem="BlE-AZ-zNJ" secondAttribute="bottom" id="asF-Tu-vXQ"/>
                             <constraint firstItem="BlE-AZ-zNJ" firstAttribute="top" secondItem="Yge-X3-hYH" secondAttribute="top" id="h1f-Pg-t94"/>
@@ -62,7 +74,8 @@
                     <navigationItem key="navigationItem" id="PAN-HS-Zok"/>
                     <connections>
                         <outlet property="mapView" destination="BlE-AZ-zNJ" id="Pek-dl-sQu"/>
-                        <outlet property="repositionBtn" destination="qbp-vB-Te4" id="3y2-5S-dSs"/>
+                        <outlet property="repointView" destination="9Yo-RO-Kdw" id="hWS-p1-EaI"/>
+                        <outlet property="repositionBtn" destination="taa-Cw-bhA" id="y0O-iz-Xm1"/>
                         <segue destination="9W5-S0-kh9" kind="show" identifier="signCourseViewController" id="wgI-3g-5f6"/>
                     </connections>
                 </viewController>

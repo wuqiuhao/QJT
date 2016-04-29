@@ -14,6 +14,7 @@ class SignMainViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet var repositionBtn: UIButton!
+    @IBOutlet var repointView: UIView!
     
     var locationManager: CLLocationManager?
     var center: CLLocationCoordinate2D?
@@ -49,7 +50,9 @@ class SignMainViewController: UIViewController {
 extension SignMainViewController {
     // 定位
     @IBAction func repositionBtn(sender: AnyObject) {
-        mapView.removeAnnotation(point!)
+        if let point = point {
+            mapView.removeAnnotation(point)
+        }
         startUpdatingLocation()
     }
     
@@ -71,7 +74,12 @@ extension SignMainViewController {
     
     func configUI() {
         navigationItem.title = "学生签到"
-        view.bringSubviewToFront(repositionBtn)
+        repointView.layer.cornerRadius = 4
+        repointView.layer.shadowColor = UIColor.grayColor().CGColor
+        repointView.layer.shadowOffset = CGSize(width: 2,height: 2)
+        repointView.layer.shadowOpacity = 0.5
+        repositionBtn.setImageColor(UIColor.qjtTintColor())
+        view.bringSubviewToFront(repointView)
     }
     
     /**
@@ -139,7 +147,8 @@ extension SignMainViewController {
                 }
                 self.point = MKPointAnnotation()
                 self.point!.coordinate = self.center!
-                self.point!.title = address
+                self.point!.title = "当前位置"
+                self.point!.subtitle = address
                 self.mapView.addAnnotation(self.point!)
                 self.mapView.selectAnnotation(self.point!, animated: true)
             })

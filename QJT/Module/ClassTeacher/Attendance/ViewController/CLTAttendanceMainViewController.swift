@@ -1,8 +1,8 @@
 //
-//  CTAttendanceMainViewController.swift
+//  AttendanceMainViewController.swift
 //  QJT
 //
-//  Created by LZQ on 16/4/20.
+//  Created by LZQ on 16/4/13.
 //  Copyright © 2016年 Hale. All rights reserved.
 //
 
@@ -11,20 +11,20 @@ import CoreLocation
 import MapKit
 
 class CLTAttendanceMainViewController: UIViewController {
+    
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var msgBack: UIView!
-    @IBOutlet weak var latLabel: UILabel!
-    @IBOutlet weak var longLabel: UILabel!
-    @IBOutlet weak var repositionBtn: UIButton!
-    @IBOutlet weak var signBtn: UIButton!
-
+    @IBOutlet var repositionBtn: UIButton!
+    @IBOutlet var repointView: UIView!
+    
     var locationManager: CLLocationManager?
     var center: CLLocationCoordinate2D?
     var isPlease = false
     var point: MKPointAnnotation?
+    var geocoder: CLGeocoder!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "考勤", style: .Plain, target: self, action: #selector(SignMainViewController.signItemClicked))
         // 设置UI显示
         configUI()
         // 设置基本图层
@@ -34,29 +34,36 @@ class CLTAttendanceMainViewController: UIViewController {
         // 初始化定位
         self.initLocationManager()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()    }
     
-
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let courseView = segue.destinationViewController as! CLTSignCourseViewController
         courseView.lat = center!.latitude
         courseView.long = center!.longitude
     }
-
 }
 
 // MARK: - private method
 extension CLTAttendanceMainViewController {
+    // 定位
     @IBAction func repositionBtn(sender: AnyObject) {
-        mapView.removeAnnotation(point!)
+        if let point = point {
+            mapView.removeAnnotation(point)
+        }
         startUpdatingLocation()
+    }
+    
+    // 签到
+    func signItemClicked() {
+        self.performSegueWithIdentifier("cltSignCourseViewController", sender: nil)
     }
     
     func initLocationManager() {
         locationManager = CLLocationManager()
+        geocoder = CLGeocoder()
         locationManager!.delegate = self
         // 移动10米重新定位
         locationManager!.distanceFilter = kCLLocationAccuracyNearestTenMeters
@@ -66,17 +73,13 @@ extension CLTAttendanceMainViewController {
     }
     
     func configUI() {
-        navigationItem.title = "教师签到"
-        signBtn.layer.cornerRadius = 5
-        signBtn.backgroundColor = UIColor.qjtTintColor()
-        signBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        
-        repositionBtn.layer.cornerRadius = 5
-        repositionBtn.backgroundColor = UIColor.qjtTintColor()
-        repositionBtn.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        msgBack.layer.cornerRadius = 8
-        msgBack.alpha = 0.6
-        view.bringSubviewToFront(msgBack)
+        navigationItem.title = "教师考勤"
+        repointView.layer.cornerRadius = 4
+        repointView.layer.shadowColor = UIColor.grayColor().CGColor
+        repointView.layer.shadowOffset = CGSize(width: 2,height: 2)
+        repointView.layer.shadowOpacity = 0.5
+        repositionBtn.setImageColor(UIColor.qjtTintColor())
+        view.bringSubviewToFront(repointView)
     }
     
     /**
@@ -87,11 +90,10 @@ extension CLTAttendanceMainViewController {
         self.pleaseWait()
         isPlease = true
     }
-
 }
 
 // MARK: - CoreLocationManagerDelegate
-extension CLTAttendanceMainViewController:CLLocationManagerDelegate{
+extension CLTAttendanceMainViewController: CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if isPlease {
             isPlease = false
@@ -109,13 +111,7 @@ extension CLTAttendanceMainViewController:CLLocationManagerDelegate{
         mapView!.setRegion(currentRegion, animated: true)
         
         mapView?.showsUserLocation = false
-        latLabel.text = "纬度：\(center!.latitude)"
-        longLabel.text = "经度：\(center!.longitude)"
-        
-        point = MKPointAnnotation()
-        point!.coordinate = center!
-        point!.title = "我的位置"
-        mapView.addAnnotation(point!)
+        reverseGeoAction()
         manager.stopUpdatingLocation()
     }
     
@@ -127,7 +123,35 @@ extension CLTAttendanceMainViewController:CLLocationManagerDelegate{
 
 extension CLTAttendanceMainViewController: MKMapViewDelegate {
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
-        // 初始化定位
         startUpdatingLocation()
+    }
+}
+
+// MARK: - 地址解析
+extension CLTAttendanceMainViewController {
+    // 反地址解析
+    func reverseGeoAction() {
+        if let longitude = center?.longitude, latitude = center?.latitude {
+            let location = CLLocation(latitude: latitude, longitude: longitude)
+            geocoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) in
+                var address:String!
+                if let error = error {
+                    print(error)
+                    return
+                } else {
+                    if let places = placemarks where !places.isEmpty {
+                        address = places.first!.name
+                    } else {
+                        address = "暂无地址信息"
+                    }
+                }
+                self.point = MKPointAnnotation()
+                self.point!.coordinate = self.center!
+                self.point!.title = "当前位置"
+                self.point!.subtitle = address
+                self.mapView.addAnnotation(self.point!)
+                self.mapView.selectAnnotation(self.point!, animated: true)
+            })
+        }
     }
 }

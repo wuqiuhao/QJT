@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class LeaveMainViewController: UIViewController {
     
@@ -20,6 +21,9 @@ class LeaveMainViewController: UIViewController {
     var pickerSelectDate = NSDate()
     var datePickerValue: NSDate!
     var selectCourseDataArr = [CourseClass]()
+    var fromTime = NSDate()
+    var toTime = NSDate()
+    var reason = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,19 +46,30 @@ extension LeaveMainViewController {
     }
     
     func setupItem() {
-        var params = [String:AnyObject]()
-        params.updateValue("", forKey: "leave")
-        
         let rightItem = UIBarButtonItem(title: "提交", style: UIBarButtonItemStyle.Done, target: self, action: #selector(LeaveMainViewController.rightItemClicked))
         navigationItem.rightBarButtonItem = rightItem
-        
     }
     
     func rightItemClicked() {
-        NetWorkManager.httpRequest(Methods.leave_leaveApplication, params: ["":""], modelType: EmptyModel(), listType: nil, completed: { (responseData) in
+        var params = [String:AnyObject]()
+        var uniqueID = [Int]()
+        params.updateValue(UserConfig.studentSetting()!.userID, forKey: "studentID")
+        params.updateValue(UserConfig.studentSetting()!.userName, forKey: "studentName")
+        params.updateValue(UserConfig.studentSetting()!.className, forKey: "className")
+        params.updateValue(fromTime.localDate(), forKey: "fromTime")
+        params.updateValue(toTime.localDate(), forKey: "toTime")
+        params.updateValue(reason, forKey: "reason")
+        for data in selectCourseDataArr {
+            uniqueID.append(data.courseClassUniqueID)
+        }
+        params.updateValue(Mapper<EmptyModel>.toJSONString(uniqueID, prettyPrint: false)!, forKey: "applyCourseJsonString")
+        self.pleaseWait()
+        NetWorkManager.httpRequest(Methods.leave_leaveApplication, params: params, modelType: EmptyModel(), listType: nil, completed: { (responseData) in
+            self.clearAllNotice()
             
-            }) { (errorMsg) in
-                
+            }) {[weak self](errorMsg) in
+                self?.clearAllNotice()
+                self?.errorNotice(errorMsg!)
         }
     }
     
@@ -82,6 +97,7 @@ extension LeaveMainViewController {
             if data["title"] == "datePicker" && i == 1 {
                 datePickerValue = datePicker?.date
                 pickerSelectDate = datePickerValue
+                fromTime = datePickerValue
                 let dateStr = datePicker?.date.stringForDateFormat("yyyy-MM-dd")
                 let weekStr = datePicker?.date.dateToWeek()
                 dateArr[i - 1].updateValue("\(dateStr!)  \(weekStr!)", forKey: "detail")
@@ -89,6 +105,7 @@ extension LeaveMainViewController {
             } else if data["title"] == "datePicker" && i == 2 {
                 datePickerValue = datePicker?.date
                 pickerSelectDate = datePickerValue
+                toTime = datePickerValue
                 let dateStr = datePicker?.date.stringForDateFormat("yyyy-MM-dd")
                 let weekStr = datePicker?.date.dateToWeek()
                 dateArr[i - 1].updateValue("\(dateStr!)  \(weekStr!)", forKey: "detail")
@@ -132,6 +149,7 @@ extension LeaveMainViewController: ViewControllerTransmitDelegate {
             if data[0] as? String != "" {
                 dateArr[3]["detail"] = data[0] as? String
             }
+            reason = dateArr[3]["detail"]!
             UIView.performWithoutAnimation({ 
                 self.tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: 3, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
             })
@@ -171,7 +189,7 @@ extension LeaveMainViewController: UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 20
+        return CGFloat.min
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -190,6 +208,16 @@ extension LeaveMainViewController: UITableViewDelegate {
         } else if indexPath.row == 1 {
             addPicker("datePicker", indexPath: indexPath)
         } else if indexPath.row == 2 {
+            switch NSDate.judegeDateState(fromTime, end: toTime) {
+            case DateState.error:
+                self.errorNotice("请假时间错误！")
+                return
+            case DateState.beyondFive:
+                self.successNotice("请假时间超出五天，无需选课！")
+                return
+            case DateState.withinFive:
+                print("5天之内")
+            }
             self.performSegueWithIdentifier("LeaveCourseViewController", sender: nil)
         } else if indexPath.row == 3 {
             self.performSegueWithIdentifier("LeaveReasonViewController", sender: nil)

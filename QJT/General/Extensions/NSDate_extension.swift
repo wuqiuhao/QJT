@@ -121,6 +121,7 @@ extension NSDate {
         let anotherDate = calendar!.dateByAddingComponents(comps, toDate: date, options: NSCalendarOptions.MatchNextTime)
         return anotherDate!
     }
+    
     // GMT时间转成本地时间
     func localDate()-> NSDate {
         let zone = NSTimeZone.systemTimeZone();
@@ -128,4 +129,22 @@ extension NSDate {
         let localDate = self.dateByAddingTimeInterval(interval)
         return localDate
     }
+    
+    static func judegeDateState(begin: NSDate, end: NSDate) -> DateState {
+        let value = end.timeIntervalSince1970 - begin.timeIntervalSince1970
+        let dayNum = value / (3600 * 24)
+        if dayNum < -1 {
+            return DateState.error
+        } else if dayNum >= -1 && dayNum <= 5 {
+            return DateState.withinFive
+        } else {
+            return DateState.beyondFive
+        }
+    }
+}
+
+enum DateState {
+    case beyondFive // 时间正常并且超出7天
+    case error //时间错误
+    case withinFive // 时间正常并且在7天之内
 }

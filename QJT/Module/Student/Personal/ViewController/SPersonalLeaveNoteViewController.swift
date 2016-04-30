@@ -16,6 +16,7 @@ class SPersonalLeaveNoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
+        getNetWork()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -31,13 +32,14 @@ extension SPersonalLeaveNoteViewController {
         navigationItem.title = "请假记录"
     }
     
-//    func getNetWork() {
-//        NetWorkManager.httpRequest(Methods.leave_getLeaveInfosByStudentID, params: ["":""], modelType: nil, listType: [Leave], completed: { (responseData) in
-//            
-//            }) { (errorMsg) in
-//                
-//        }
-//    }
+    func getNetWork() {
+        NetWorkManager.httpRequest(Methods.leave_getLeaveInfosByStudentID, params: ["studentID":UserConfig.studentSetting()!.userID], modelType: nil, listType: Leave(), completed: { (responseData) in
+            let result = responseData["List"] as! [Leave]
+            print(result)
+            }) { [weak self] (errorMsg) in
+                self?.errorNotice(errorMsg!)
+        }
+    }
 }
 
 // MARK: - UITableViewDelegate

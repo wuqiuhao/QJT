@@ -62,10 +62,6 @@ extension SPersonalMainViewController: UITableViewDelegate {
            headerView.layoutHeaderView(scrollView.contentOffset)
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 12
-    }
-    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch indexPath.row {
         case 0:

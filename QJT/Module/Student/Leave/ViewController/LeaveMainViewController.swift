@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class LeaveMainViewController: UIViewController {
     
@@ -51,19 +52,23 @@ extension LeaveMainViewController {
     
     func rightItemClicked() {
         var params = [String:AnyObject]()
-        let leave = Leave()
-        leave.studentID = UserConfig.studentSetting()!.userID
-        leave.studentName = UserConfig.studentSetting()!.userName
-        leave.className = UserConfig.studentSetting()!.className
-        leave.fromTime = fromTime.localDate()
-        leave.toTime = toTime.localDate()
-        leave.reason = reason
-        params.updateValue(leave, forKey: "leave")
-        print(selectCourseDataArr.toJSONString()!)
-        params.updateValue(selectCourseDataArr.toJSONString()!, forKey: "applyCourseJsonString")
+        var uniqueID = [Int]()
+        params.updateValue(UserConfig.studentSetting()!.userID, forKey: "studentID")
+        params.updateValue(UserConfig.studentSetting()!.userName, forKey: "studentName")
+        params.updateValue(UserConfig.studentSetting()!.className, forKey: "className")
+        params.updateValue(fromTime.localDate(), forKey: "fromTime")
+        params.updateValue(toTime.localDate(), forKey: "toTime")
+        params.updateValue(reason, forKey: "reason")
+        for data in selectCourseDataArr {
+            uniqueID.append(data.courseClassUniqueID)
+        }
+        params.updateValue(Mapper<EmptyModel>.toJSONString(uniqueID, prettyPrint: false)!, forKey: "applyCourseJsonString")
+        self.pleaseWait()
         NetWorkManager.httpRequest(Methods.leave_leaveApplication, params: params, modelType: EmptyModel(), listType: nil, completed: { (responseData) in
+            self.clearAllNotice()
             
             }) {[weak self](errorMsg) in
+                self?.clearAllNotice()
                 self?.errorNotice(errorMsg!)
         }
     }
@@ -92,9 +97,9 @@ extension LeaveMainViewController {
             if data["title"] == "datePicker" && i == 1 {
                 datePickerValue = datePicker?.date
                 pickerSelectDate = datePickerValue
+                fromTime = datePickerValue
                 let dateStr = datePicker?.date.stringForDateFormat("yyyy-MM-dd")
                 let weekStr = datePicker?.date.dateToWeek()
-                print(NSDate.dateFromString(dateStr!, dateformatter: "yyyy-MM-dd"))
                 dateArr[i - 1].updateValue("\(dateStr!)  \(weekStr!)", forKey: "detail")
                 tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: i - 1, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
             } else if data["title"] == "datePicker" && i == 2 {
@@ -184,7 +189,7 @@ extension LeaveMainViewController: UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 20
+        return CGFloat.min
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

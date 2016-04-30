@@ -20,6 +20,9 @@ class LeaveMainViewController: UIViewController {
     var pickerSelectDate = NSDate()
     var datePickerValue: NSDate!
     var selectCourseDataArr = [CourseClass]()
+    var fromTime = NSDate()
+    var toTime = NSDate()
+    var reason = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,19 +45,26 @@ extension LeaveMainViewController {
     }
     
     func setupItem() {
-        var params = [String:AnyObject]()
-        params.updateValue("", forKey: "leave")
-        
         let rightItem = UIBarButtonItem(title: "提交", style: UIBarButtonItemStyle.Done, target: self, action: #selector(LeaveMainViewController.rightItemClicked))
         navigationItem.rightBarButtonItem = rightItem
-        
     }
     
     func rightItemClicked() {
-        NetWorkManager.httpRequest(Methods.leave_leaveApplication, params: ["":""], modelType: EmptyModel(), listType: nil, completed: { (responseData) in
+        var params = [String:AnyObject]()
+        let leave = Leave()
+        leave.studentID = UserConfig.studentSetting()!.userID
+        leave.studentName = UserConfig.studentSetting()!.userName
+        leave.className = UserConfig.studentSetting()!.className
+        leave.fromTime = fromTime.localDate()
+        leave.toTime = toTime.localDate()
+        leave.reason = reason
+        params.updateValue(leave, forKey: "leave")
+        print(selectCourseDataArr.toJSONString()!)
+        params.updateValue(selectCourseDataArr.toJSONString()!, forKey: "applyCourseJsonString")
+        NetWorkManager.httpRequest(Methods.leave_leaveApplication, params: params, modelType: EmptyModel(), listType: nil, completed: { (responseData) in
             
-            }) { (errorMsg) in
-                
+            }) {[weak self](errorMsg) in
+                self?.errorNotice(errorMsg!)
         }
     }
     
@@ -84,11 +94,13 @@ extension LeaveMainViewController {
                 pickerSelectDate = datePickerValue
                 let dateStr = datePicker?.date.stringForDateFormat("yyyy-MM-dd")
                 let weekStr = datePicker?.date.dateToWeek()
+                print(NSDate.dateFromString(dateStr!, dateformatter: "yyyy-MM-dd"))
                 dateArr[i - 1].updateValue("\(dateStr!)  \(weekStr!)", forKey: "detail")
                 tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: i - 1, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
             } else if data["title"] == "datePicker" && i == 2 {
                 datePickerValue = datePicker?.date
                 pickerSelectDate = datePickerValue
+                toTime = datePickerValue
                 let dateStr = datePicker?.date.stringForDateFormat("yyyy-MM-dd")
                 let weekStr = datePicker?.date.dateToWeek()
                 dateArr[i - 1].updateValue("\(dateStr!)  \(weekStr!)", forKey: "detail")
@@ -132,6 +144,7 @@ extension LeaveMainViewController: ViewControllerTransmitDelegate {
             if data[0] as? String != "" {
                 dateArr[3]["detail"] = data[0] as? String
             }
+            reason = dateArr[3]["detail"]!
             UIView.performWithoutAnimation({ 
                 self.tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: 3, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
             })
@@ -190,6 +203,16 @@ extension LeaveMainViewController: UITableViewDelegate {
         } else if indexPath.row == 1 {
             addPicker("datePicker", indexPath: indexPath)
         } else if indexPath.row == 2 {
+            switch NSDate.judegeDateState(fromTime, end: toTime) {
+            case DateState.error:
+                self.errorNotice("请假时间错误！")
+                return
+            case DateState.beyondFive:
+                self.successNotice("请假时间超出五天，无需选课！")
+                return
+            case DateState.withinFive:
+                print("5天之内")
+            }
             self.performSegueWithIdentifier("LeaveCourseViewController", sender: nil)
         } else if indexPath.row == 3 {
             self.performSegueWithIdentifier("LeaveReasonViewController", sender: nil)

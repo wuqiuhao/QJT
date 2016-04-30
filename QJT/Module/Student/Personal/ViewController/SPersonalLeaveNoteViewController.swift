@@ -32,11 +32,11 @@ extension SPersonalLeaveNoteViewController {
     }
     
     func getNetWork() {
-        NetWorkManager.httpRequest(Methods.leave_getLeaveInfosByStudentID, params: ["":""], modelType: nil, listType: [Leave], completed: { (responseData) in
-            
-            }) { (errorMsg) in
-                
-        }
+//        NetWorkManager.httpRequest(Methods.leave_getLeaveInfosByStudentID, params: ["":""], modelType: nil, listType: [Leave], completed: { (responseData) in
+//            
+//            }) { (errorMsg) in
+//                
+//        }
     }
 }
 

@@ -32,7 +32,8 @@ class LeaveCell: UITableViewCell {
         //指定直线样式
         CGContextSetLineCap(context, CGLineCap.Square)
         //直线宽度
-        CGContextSetLineWidth(context,1 / UIScreen.mainScreen().scale)
+        CGContextSetLineWidth(context,1.0 / UIScreen.mainScreen().scale)
+        CGContextSetAllowsAntialiasing(context, false)
         //设置颜色
         CGContextSetRGBStrokeColor(context,203/255, 199/255, 204/255, 1.0)
         //开始绘制

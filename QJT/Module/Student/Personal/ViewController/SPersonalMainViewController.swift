@@ -34,7 +34,6 @@ extension SPersonalMainViewController {
     func configUI() {
         tableView.tableFooterView = UIView()
         headerView = TableViewHeaderView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, 250))
-//        headerView.delegate = self
         headerView.dataSource = self
         tableView.tableHeaderView = headerView
         headerView.backgroundImage = UIImage(named: "1")
@@ -42,13 +41,6 @@ extension SPersonalMainViewController {
     }
     
 }
-
-// MARK: - TableViewHeaderViewDelegate
-//extension SPersonalMainViewController: TableViewHeaderViewDelegate {
-//    func tableViewDuringScrollingAnnimation(contentView: TableHeaderContentView, offset: CGPoint) {
-//        headerView.reloadData()
-//    }
-//}
 
 // MARK: - TableViewHeaderViewDataSource
 extension SPersonalMainViewController: TableViewHeaderViewDataSource {
@@ -81,7 +73,6 @@ extension SPersonalMainViewController: UITableViewDelegate {
         case 1:
             self.performSegueWithIdentifier("SPersonalSignViewController", sender: nil)
         case 2:
-            //self.performSegueWithIdentifier("SPersonalMainViewController", sender: nil)
             let vc = UIStoryboard(name: "SPersonal", bundle: nil).instantiateViewControllerWithIdentifier("SPersonalAccontViewController")
             navigationController?.pushViewController(vc, animated: true)
         default:
@@ -97,7 +88,6 @@ extension SPersonalMainViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCellWithIdentifier("SPersonMainCell", forIndexPath: indexPath) as! SPersonMainCell
         switch indexPath.row {
         case 0:

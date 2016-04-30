@@ -28,6 +28,15 @@ class SPersonalLeaveNoteViewController: UIViewController {
 extension SPersonalLeaveNoteViewController {
     func configUI() {
         self.automaticallyAdjustsScrollViewInsets = false
+        navigationItem.title = "请假记录"
+    }
+    
+    func getNetWork() {
+        NetWorkManager.httpRequest(Methods.leave_getLeaveInfosByStudentID, params: ["":""], modelType: nil, listType: [Leave], completed: { (responseData) in
+            
+            }) { (errorMsg) in
+                
+        }
     }
 }
 
@@ -43,6 +52,12 @@ extension SPersonalLeaveNoteViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return CGFloat.min
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //self.performSegueWithIdentifier("SPersonalLNDetailViewController", sender: nil)
+        let vc = UIStoryboard(name: "SPersonal", bundle: nil).instantiateViewControllerWithIdentifier("SPersonalLNDetailViewController")
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

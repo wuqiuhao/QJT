@@ -9,7 +9,7 @@
 import UIKit
 
 class CLTSignCourseViewController: UIViewController {
-
+    
     var lat: Double!
     var long: Double!
     var labelTag = 10000
@@ -26,15 +26,15 @@ class CLTSignCourseViewController: UIViewController {
         getNetwork()
         
         self.configCourseExcel()
-
+        
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }
 
 // MARK: - private Method
@@ -66,7 +66,7 @@ extension CLTSignCourseViewController {
         
         params.updateValue(UserConfig.teacherSetting()!.userID, forKey: "teacherID")
         params.updateValue(courseArrData[courseTag].courseClassUniqueID, forKey: "courseClassUniqueID")
-        params.updateValue(NSDate(), forKey: "attendanceTime")
+        params.updateValue(NSDate().localDate(), forKey: "attendanceTime")
         params.updateValue(long, forKey: "longitude")
         params.updateValue(lat, forKey: "latitude")
         
@@ -123,7 +123,6 @@ extension CLTSignCourseViewController {
     func handleTapGesture(sender: UITapGestureRecognizer) {
         //获取当前标签
         let label =  sender.view as! UILabel
-        print("\(label.tag)")
         //提示
         let alertController = UIAlertController(title: "\(label.text!)",
                                                 message: "您确定现在要发起考勤吗？", preferredStyle: .Alert)

@@ -268,6 +268,24 @@
             </objects>
             <point key="canvasLocation" x="1411" y="465"/>
         </scene>
+        <!--Personal Sign View Controller-->
+        <scene sceneID="rfy-80-Stb">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="yz9-gj-ubM" customClass="SPersonalSignViewController" customModule="QJT" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iiI-Z5-NlB"/>
+                        <viewControllerLayoutGuide type="bottom" id="zqD-k4-zeg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Blw-jd-raL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RmU-z1-VyH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1411" y="1240"/>
+        </scene>
         <!--Personal Main View Controller-->
         <scene sceneID="Lvc-Cn-022">
             <objects>
@@ -347,6 +365,7 @@
                         <outlet property="tableView" destination="Ngd-pP-vMC" id="98m-hx-3Ew"/>
                         <segue destination="1Xx-oJ-M0h" kind="show" identifier="SPersonalMainViewController" action="showDetailViewController:sender:" id="L5b-0O-gUb"/>
                         <segue destination="JX4-zp-hyc" kind="show" identifier="SPersonalLeaveNoteViewController" id="pE7-Kk-SKR"/>
+                        <segue destination="yz9-gj-ubM" kind="show" identifier="SPersonalSignViewController" id="eaq-4z-Qby"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lFo-E6-fhZ" userLabel="First Responder" sceneMemberID="firstResponder"/>

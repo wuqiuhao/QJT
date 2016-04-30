@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1A0F54FFF44B77ECE6EF942A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451ED4D82C76F378DBB33D09 /* Pods.framework */; };
+		580C95791CD4929300F332A3 /* SPersonalSignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C95781CD4929300F332A3 /* SPersonalSignViewController.swift */; };
+		580C957B1CD4998C00F332A3 /* Attendance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C957A1CD4998C00F332A3 /* Attendance.swift */; };
 		585122D41CCD0F790041A82F /* SignCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585122D31CCD0F790041A82F /* SignCourseViewController.swift */; };
 		68035A001CC756BA002F7C60 /* SSign.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680359EC1CC756BA002F7C60 /* SSign.storyboard */; };
 		68035A011CC756BA002F7C60 /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359EE1CC756BA002F7C60 /* Sign.swift */; };
@@ -155,6 +157,8 @@
 /* Begin PBXFileReference section */
 		421540CB059379FB231DBF0D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		451ED4D82C76F378DBB33D09 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		580C95781CD4929300F332A3 /* SPersonalSignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPersonalSignViewController.swift; sourceTree = "<group>"; };
+		580C957A1CD4998C00F332A3 /* Attendance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attendance.swift; sourceTree = "<group>"; };
 		585122D31CCD0F790041A82F /* SignCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignCourseViewController.swift; sourceTree = "<group>"; };
 		680359EC1CC756BA002F7C60 /* SSign.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SSign.storyboard; sourceTree = "<group>"; };
 		680359EE1CC756BA002F7C60 /* Sign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sign.swift; sourceTree = "<group>"; };
@@ -423,6 +427,7 @@
 				680359FF1CC756BA002F7C60 /* SPersonalMainViewController.swift */,
 				6808AA501CCFA28900C2C324 /* SPersonalAccontViewController.swift */,
 				68D8F1101CD25CAF008111D9 /* SPersonalLeaveNoteViewController.swift */,
+				580C95781CD4929300F332A3 /* SPersonalSignViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1129,6 +1134,7 @@
 				68035A961CC77BE4002F7C60 /* AppMenu.swift */,
 				68035A981CC78066002F7C60 /* StudentSetting.swift */,
 				68035A9A1CC782F0002F7C60 /* TeacherSetting.swift */,
+				580C957A1CD4998C00F332A3 /* Attendance.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1407,6 +1413,7 @@
 				68186BFC1CB3525D005AF62D /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
 				68186C011CB3525D005AF62D /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */,
 				68083F981CCE5909004BE4D4 /* CPersonalView.swift in Sources */,
+				580C95791CD4929300F332A3 /* SPersonalSignViewController.swift in Sources */,
 				68BA681A1CCF43C00022C843 /* SPersonalHeaderView.swift in Sources */,
 				68186C101CB3525D005AF62D /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
 				683CF5F51CC34E7F00F69765 /* PersonSetting.swift in Sources */,
@@ -1437,6 +1444,7 @@
 				EF796D8F1CD2F2970066A9F9 /* UIButton_extension.swift in Sources */,
 				68186C131CB3525D005AF62D /* NVActivityIndicatorAnimationPacman.swift in Sources */,
 				EF055D811CD1AB65004DD466 /* ADStatisticsViewController.swift in Sources */,
+				580C957B1CD4998C00F332A3 /* Attendance.swift in Sources */,
 				683CF5FB1CC34E8C00F69765 /* UserType.swift in Sources */,
 				68083F861CCE5909004BE4D4 /* BPersonalMainViewController.swift in Sources */,
 				68186C041CB3525D005AF62D /* NVActivityIndicatorAnimationBallScale.swift in Sources */,

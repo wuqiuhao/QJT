@@ -16,7 +16,8 @@ var LoginService = [
 var AttendanceService = [
     "attendance_studentAttendance",
     "attendance_teacherGetCourseClasses",
-    "attendance_teacherBeginClass"
+    "attendance_teacherBeginClass",
+    "attendance_getAttendanceInfosByTeacherID"
 ]
 
 var LeaveService = [
@@ -42,6 +43,8 @@ class Methods {
     static let attendance_teacherGetCourseClasses = "attendance_teacherGetCourseClasses"
     //教师发起考勤
     static let attendance_teacherBeginClass = "attendance_teacherBeginClass"
+    //教师获取所有考勤列表
+    static let attendance_getAttendanceInfosByTeacherID = "attendance_getAttendanceInfosByTeacherID"
     
     // 请假模块
     // 学生获取课程表

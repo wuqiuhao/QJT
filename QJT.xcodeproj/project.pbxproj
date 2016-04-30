@@ -142,6 +142,8 @@
 		EF45F52F1CABF1800052AA1F /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45F52E1CABF1800052AA1F /* Student.swift */; };
 		EF6A8C061CCFB1970054282C /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6A8C051CCFB1970054282C /* UIImage+ImageEffects.m */; };
 		EF6A8C081CCFB1B10054282C /* EmptyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A8C071CCFB1B10054282C /* EmptyModel.swift */; };
+		EF796D8F1CD2F2970066A9F9 /* UIButton_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF796D8E1CD2F2970066A9F9 /* UIButton_extension.swift */; };
+		EF796D911CD2F33B0066A9F9 /* UIImage_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF796D901CD2F33B0066A9F9 /* UIImage_extension.swift */; };
 		EF9A30D21CA90FD400D5EFA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF9A30D11CA90FD400D5EFA6 /* Assets.xcassets */; };
 		EF9A30E81CA9133C00D5EFA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9A30E71CA9133C00D5EFA6 /* AppDelegate.swift */; };
 		EF9D7BA61CCF0A2000FA79F7 /* ThemeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9D7BA51CCF0A2000FA79F7 /* ThemeConfig.swift */; };
@@ -292,6 +294,8 @@
 		EF6A8C041CCFB1970054282C /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ImageEffects.h"; path = "General/Extensions/UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		EF6A8C051CCFB1970054282C /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ImageEffects.m"; path = "General/Extensions/UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		EF6A8C071CCFB1B10054282C /* EmptyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmptyModel.swift; path = Entity/Model/EmptyModel.swift; sourceTree = "<group>"; };
+		EF796D8E1CD2F2970066A9F9 /* UIButton_extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIButton_extension.swift; path = General/Extensions/UIButton_extension.swift; sourceTree = "<group>"; };
+		EF796D901CD2F33B0066A9F9 /* UIImage_extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImage_extension.swift; path = General/Extensions/UIImage_extension.swift; sourceTree = "<group>"; };
 		EF9A30C71CA90FD400D5EFA6 /* QJT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QJT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF9A30D11CA90FD400D5EFA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = QJT/Assets.xcassets; sourceTree = "<group>"; };
 		EF9A30E41CA9130A00D5EFA6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
@@ -1033,6 +1037,8 @@
 				68D8EFCD1CC8AABB00906E3D /* UILabel_extension.swift */,
 				68D8EFCF1CC8AB7200906E3D /* NSString_extension.swift */,
 				68D8EFD31CC8ABFE00906E3D /* UIViewController_extension.swift */,
+				EF796D8E1CD2F2970066A9F9 /* UIButton_extension.swift */,
+				EF796D901CD2F33B0066A9F9 /* UIImage_extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -1387,6 +1393,7 @@
 				68083F881CCE5909004BE4D4 /* qqqView.swift in Sources */,
 				683CF5F61CC34E7F00F69765 /* UserSetting.swift in Sources */,
 				68035A971CC77BE4002F7C60 /* AppMenu.swift in Sources */,
+				EF796D911CD2F33B0066A9F9 /* UIImage_extension.swift in Sources */,
 				EF055D8D1CD1ABE9004DD466 /* CTAttendanceView.swift in Sources */,
 				68D8EFCC1CC882EA00906E3D /* SwiftNotice.swift in Sources */,
 				EF055D991CD1AC0F004DD466 /* CTPersonalView.swift in Sources */,
@@ -1427,6 +1434,7 @@
 				68186C0E1CB3525D005AF62D /* NVActivityIndicatorAnimationLineScale.swift in Sources */,
 				68CE13C31CD1A12A009C8E6C /* LeaveReasonViewController.swift in Sources */,
 				EF055D8F1CD1ABED004DD466 /* CTAttendanceMainViewController.swift in Sources */,
+				EF796D8F1CD2F2970066A9F9 /* UIButton_extension.swift in Sources */,
 				68186C131CB3525D005AF62D /* NVActivityIndicatorAnimationPacman.swift in Sources */,
 				EF055D811CD1AB65004DD466 /* ADStatisticsViewController.swift in Sources */,
 				683CF5FB1CC34E8C00F69765 /* UserType.swift in Sources */,

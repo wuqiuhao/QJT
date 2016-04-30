@@ -12,7 +12,7 @@ import ObjectMapper
 class CourseClass: Mappable {
     
     // 课程班级编号
-    var courseClassID: Int
+    var courseClassID: String
     // 课程名
     var courseName: String
     // 上课地点
@@ -37,7 +37,7 @@ class CourseClass: Mappable {
     var className: String
     
     init() {
-        courseClassID = 0
+        courseClassID = ""
         courseName = ""
         address = ""
         courseID = ""
@@ -52,7 +52,7 @@ class CourseClass: Mappable {
     }
     
     required init?(_ map: Map) {
-        courseClassID = 0
+        courseClassID = ""
         courseName = ""
         address = ""
         courseID = ""

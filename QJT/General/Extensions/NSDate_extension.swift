@@ -120,7 +120,12 @@ extension NSDate {
         let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
         let anotherDate = calendar!.dateByAddingComponents(comps, toDate: date, options: NSCalendarOptions.MatchNextTime)
         return anotherDate!
-        
-        
+    }
+    // GMT时间转成本地时间
+    func localDate()-> NSDate {
+        let zone = NSTimeZone.systemTimeZone();
+        let interval = NSTimeInterval(zone.secondsFromGMTForDate(self))
+        let localDate = self.dateByAddingTimeInterval(interval)
+        return localDate
     }
 }

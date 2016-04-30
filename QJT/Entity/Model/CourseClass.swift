@@ -11,6 +11,9 @@ import ObjectMapper
 
 class CourseClass: Mappable {
     
+    // 课程班级唯一编号
+    var courseClassUniqueID: Int
+    
     // 课程班级编号
     var courseClassID: String
     // 课程名

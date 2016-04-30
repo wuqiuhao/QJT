@@ -81,6 +81,8 @@ extension SPersonalMainViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch indexPath.row {
+        case 0:
+            self.performSegueWithIdentifier("SPersonalLeaveNoteViewController", sender: nil)
         case 2:
             //self.performSegueWithIdentifier("SPersonalMainViewController", sender: nil)
             let vc = UIStoryboard(name: "SPersonal", bundle: nil).instantiateViewControllerWithIdentifier("SPersonalAccontViewController")

@@ -8,15 +8,12 @@
 
 import UIKit
 
-//protocol CourseViewDelegate {
-//    func refreshCourseData(courseDataArr: [CourseClass])
-//}
-
 class LeaveCourseViewController: UIViewController {
     
     var courseView: CourseView!
     lazy var courseDataArr = [CourseClass]()
     lazy var refreshDataArr = [CourseClass]()
+    lazy var selectCourseDataArr = [CourseClass]()
     var isCourseSelected: Bool = false
     var delegate: ViewControllerTransmitDelegate?
     
@@ -42,6 +39,9 @@ extension LeaveCourseViewController {
     
     func configUI() {
         navigationItem.title = "课程表"
+        let rightItem = UIBarButtonItem(title: "确定", style: UIBarButtonItemStyle.Done, target: self, action: #selector(LeaveReasonViewController.rightItemClicked))
+        navigationItem.rightBarButtonItem = rightItem
+        
     }
     
     func getNetwork() {
@@ -61,6 +61,15 @@ extension LeaveCourseViewController {
         view.addSubview(courseView)
     }
     
+    func rightItemClicked() {
+        if refreshDataArr.count == 0 {
+            self.errorNotice("请填写请假课程")
+            return
+        }
+        delegate?.transmitMessage(refreshDataArr)
+        navigationController?.popViewControllerAnimated(true)
+    }
+    
     func configCourseExcel() {
         var i = 0
         for course in courseDataArr {
@@ -72,8 +81,17 @@ extension LeaveCourseViewController {
             courseLbl.frame = CGRectMake(offsetX, offsetY, weekExcelWidth - 2, partExcelHeight * CGFloat(course.durationSection) - 2)
             courseHook.frame = CGRectMake(weekExcelWidth - 19, courseLbl.bounds.height - 17, 15, 15)
             courseHook.image = UIImage(named: "course_hook")
-            courseHook.tintColor = UIColor.qjtTintColor()
-            courseHook.hidden = true
+            
+            if isSelectedChange(course) {
+                courseHook.hidden = false
+                courseLbl.layer.borderWidth = 2
+                courseLbl.isCourseSelected = true
+                refreshDataArr.append(course)
+            } else {
+                courseHook.hidden = true
+                courseLbl.layer.borderWidth = 0
+                courseLbl.isCourseSelected = false
+            }
             courseLbl.text = course.courseName + "\n" + course.address + "\n" + course.teacherName
             courseLbl.backgroundColor = colorWithRandom()
             courseLbl.numberOfLines = 0
@@ -81,6 +99,7 @@ extension LeaveCourseViewController {
             courseLbl.layer.cornerRadius = 4
             courseLbl.layer.masksToBounds = true
             courseLbl.textColor = UIColor.whiteColor()
+            courseLbl.layer.borderColor = UIColor.qjtTintColor().CGColor
             courseLbl.tag = i + 1000
             let tap = UITapGestureRecognizer(target: self, action: #selector(LeaveCourseViewController.courseLblClicked(_:)))
             courseLbl.addGestureRecognizer(tap)
@@ -102,6 +121,15 @@ extension LeaveCourseViewController {
         }
     }
     
+    func isSelectedChange(course: CourseClass) -> Bool {
+        for data in selectCourseDataArr {
+            if (data.week == course.week) && (data.courseID == course.courseID) {
+                return true
+            }
+        }
+        return false
+    }
+    
     func courseLblClicked(sender: UITapGestureRecognizer) {
         let courseLbl = sender.view as! HLable
         var hookImageView = UIImageView()
@@ -113,7 +141,6 @@ extension LeaveCourseViewController {
         }
         if !courseLbl.isCourseSelected {
             courseLbl.layer.borderWidth = 2
-            courseLbl.layer.borderColor = UIColor.qjtTintColor().CGColor
             courseLbl.isCourseSelected = true
             hookImageView.hidden = false
             refreshDataArr.append(data)
@@ -128,6 +155,5 @@ extension LeaveCourseViewController {
                 }
             }
         }
-        delegate?.transmitMessage(refreshDataArr)
     }
 }

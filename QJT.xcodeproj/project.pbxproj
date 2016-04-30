@@ -111,6 +111,8 @@
 		68D8EFCE1CC8AABB00906E3D /* UILabel_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8EFCD1CC8AABB00906E3D /* UILabel_extension.swift */; };
 		68D8EFD01CC8AB7200906E3D /* NSString_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8EFCF1CC8AB7200906E3D /* NSString_extension.swift */; };
 		68D8EFD41CC8ABFE00906E3D /* UIViewController_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8EFD31CC8ABFE00906E3D /* UIViewController_extension.swift */; };
+		68D8F1111CD25CAF008111D9 /* SPersonalLeaveNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8F1101CD25CAF008111D9 /* SPersonalLeaveNoteViewController.swift */; };
+		68D8F1131CD25CCC008111D9 /* SPersonalLeaveNoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D8F1121CD25CCC008111D9 /* SPersonalLeaveNoteCell.swift */; };
 		68FF20001CCD02F6005AC0B7 /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF1FFE1CCD02F6005AC0B7 /* CourseView.swift */; };
 		68FF20011CCD02F6005AC0B7 /* HLable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF1FFF1CCD02F6005AC0B7 /* HLable.swift */; };
 		68FF20031CCD0315005AC0B7 /* LeaveCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF20021CCD0315005AC0B7 /* LeaveCourseViewController.swift */; };
@@ -257,6 +259,8 @@
 		68D8EFCD1CC8AABB00906E3D /* UILabel_extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UILabel_extension.swift; path = General/Extensions/UILabel_extension.swift; sourceTree = "<group>"; };
 		68D8EFCF1CC8AB7200906E3D /* NSString_extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSString_extension.swift; path = General/Extensions/NSString_extension.swift; sourceTree = "<group>"; };
 		68D8EFD31CC8ABFE00906E3D /* UIViewController_extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewController_extension.swift; path = General/Extensions/UIViewController_extension.swift; sourceTree = "<group>"; };
+		68D8F1101CD25CAF008111D9 /* SPersonalLeaveNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPersonalLeaveNoteViewController.swift; sourceTree = "<group>"; };
+		68D8F1121CD25CCC008111D9 /* SPersonalLeaveNoteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPersonalLeaveNoteCell.swift; sourceTree = "<group>"; };
 		68FF1FFE1CCD02F6005AC0B7 /* CourseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
 		68FF1FFF1CCD02F6005AC0B7 /* HLable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HLable.swift; sourceTree = "<group>"; };
 		68FF20021CCD0315005AC0B7 /* LeaveCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveCourseViewController.swift; sourceTree = "<group>"; };
@@ -404,6 +408,7 @@
 				68BA68171CCF3FA20022C843 /* SPersonMainCell.swift */,
 				68BA68191CCF43C00022C843 /* SPersonalHeaderView.swift */,
 				6808AA521CCFBF0B00C2C324 /* SPersonalHeadContentView.swift */,
+				68D8F1121CD25CCC008111D9 /* SPersonalLeaveNoteCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -413,6 +418,7 @@
 			children = (
 				680359FF1CC756BA002F7C60 /* SPersonalMainViewController.swift */,
 				6808AA501CCFA28900C2C324 /* SPersonalAccontViewController.swift */,
+				68D8F1101CD25CAF008111D9 /* SPersonalLeaveNoteViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1352,10 +1358,12 @@
 				68186C0B1CB3525D005AF62D /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,
 				EFA869191CAA651900CC1B71 /* NetWorkManager.swift in Sources */,
 				68186C1F1CB354DB005AF62D /* UIScrollView_refresh.swift in Sources */,
+				68D8F1131CD25CCC008111D9 /* SPersonalLeaveNoteCell.swift in Sources */,
 				EF055DA31CD1AC5E004DD466 /* CLTeaveMainViewController.swift in Sources */,
 				EF055D831CD1AB9F004DD466 /* BLAttendanceView.swift in Sources */,
 				6808AA511CCFA28900C2C324 /* SPersonalAccontViewController.swift in Sources */,
 				68083F961CCE5909004BE4D4 /* CLeaveMainViewController.swift in Sources */,
+				68D8F1111CD25CAF008111D9 /* SPersonalLeaveNoteViewController.swift in Sources */,
 				68FF20011CCD02F6005AC0B7 /* HLable.swift in Sources */,
 				68186C111CB3525D005AF62D /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
 				68D8EFD41CC8ABFE00906E3D /* UIViewController_extension.swift in Sources */,

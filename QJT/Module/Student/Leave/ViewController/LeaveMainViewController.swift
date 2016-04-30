@@ -19,7 +19,7 @@ class LeaveMainViewController: UIViewController {
     var endDate: NSDate!
     var pickerSelectDate = NSDate()
     var datePickerValue: NSDate!
-    var courseArrData = [CourseClass]()
+    var selectCourseDataArr = [CourseClass]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,20 +43,12 @@ extension LeaveMainViewController {
     
     func setupItem() {
         
-        let rightItem = UIBarButtonItem(title: "下一步", style: UIBarButtonItemStyle.Done, target: self, action: #selector(LeaveMainViewController.rightItemClicked))
+        let rightItem = UIBarButtonItem(title: "提交", style: UIBarButtonItemStyle.Done, target: self, action: #selector(LeaveMainViewController.rightItemClicked))
         navigationItem.rightBarButtonItem = rightItem
-        
-        let leftItem = UIBarButtonItem(title: "历史记录", style: UIBarButtonItemStyle.Done, target: self, action: #selector(LeaveMainViewController.leftItemClicked))
-        navigationItem.leftBarButtonItem = leftItem
         
     }
     
     func rightItemClicked() {
-        let vc = UIStoryboard(name: "SLeave", bundle: nil).instantiateViewControllerWithIdentifier("LeaveCourseViewController")
-        navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    func leftItemClicked() {
         
     }
     
@@ -122,6 +114,7 @@ extension LeaveMainViewController {
             }
         } else if segue.destinationViewController is LeaveCourseViewController {
             let vc = segue.destinationViewController as! LeaveCourseViewController
+            vc.selectCourseDataArr = selectCourseDataArr
             vc.delegate = self
         }
     }
@@ -133,7 +126,10 @@ extension LeaveMainViewController: ViewControllerTransmitDelegate {
             if data[0] as? String != "" {
                 dateArr[3]["detail"] = data[0] as? String
             }
-            tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: 3, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
+            UIView.performWithoutAnimation({ 
+                self.tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: 3, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
+            })
+            
         } else {
             var detailStr = ""
             var i = 0
@@ -146,9 +142,12 @@ extension LeaveMainViewController: ViewControllerTransmitDelegate {
                 }
                 i += 1
             }
-            courseArrData = data as! [CourseClass]
+            selectCourseDataArr = data as! [CourseClass]
             dateArr[2]["detail"] = detailStr
-            tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: 2, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
+            UIView.performWithoutAnimation({ 
+                self.tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: 2, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
+            })
+            
         }
     }
 }
@@ -163,6 +162,10 @@ extension LeaveMainViewController: UITableViewDelegate {
         default:
             return UITableViewAutomaticDimension
         }
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 20
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -199,6 +202,8 @@ extension LeaveMainViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifierForLeave, forIndexPath: indexPath) as! LeaveCell
+        cell.titleLbl.hidden = false
+        cell.detailLbl.hidden = false
         switch dateArr[indexPath.row]["title"]! {
         case "开始时间":
             cell.titleLbl.text = "开始时间:"
@@ -213,9 +218,8 @@ extension LeaveMainViewController: UITableViewDataSource {
             cell.titleLbl.text = "请假原因:"
             cell.detailLbl.text = dateArr[indexPath.row]["detail"]
         case "datePicker":
-            for subView in cell.subviews {
-                subView.removeFromSuperview()
-            }
+            cell.titleLbl.hidden = true
+            cell.detailLbl.hidden = true
             cell.addSubview(datePicker!)
         default:
             return cell

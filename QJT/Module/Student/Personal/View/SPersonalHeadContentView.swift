@@ -7,19 +7,45 @@
 //
 
 import UIKit
+import SnapKit
 
 class SPersonalHeadContentView: TableHeaderContentView {
 
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
+    var avatarImg: UIImageView!
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        configUI()
     }
-    */
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     
     override func layoutContentSubView(offset: CGPoint) {
         
     }
 
+}
+
+// MARK: - private Method
+extension SPersonalHeadContentView {
+    
+    func configUI() {
+        avatarImg = UIImageView()
+        avatarImg.image = UIImage(named: "SPersonal_avatar")
+        self.addSubview(avatarImg)
+    }
+    
+    func configConstraintes() {
+        
+        avatarImg.snp_makeConstraints { (make) -> Void in
+            make.centerX.equalTo(self)
+            make.centerY.equalTo(self)
+            make.width.equalTo(70)
+            make.height.equalTo(70)
+        }
+        
+    }
 }

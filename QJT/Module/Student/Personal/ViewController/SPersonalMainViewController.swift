@@ -54,13 +54,8 @@ extension SPersonalMainViewController {
 extension SPersonalMainViewController: TableViewHeaderViewDataSource {
     func tableHeaderView(tableHeaderView: UIView) -> UIView {
         
-        let contentView = TableHeaderContentView()
-        contentView.frame = tableHeaderView.frame
-        
-        let avaterImg = UIImageView()
-        avaterImg.frame = CGRectMake(tableHeaderView.bounds.width / 2 - 35, tableHeaderView.bounds.height / 2 - 35, 70, 70)
-        avaterImg.image = UIImage(named: "SPersonal_avatar")
-        contentView.addSubview(avaterImg)
+        let contentView = SPersonalHeadContentView(frame: tableHeaderView.frame)
+        contentView.configConstraintes()
         return contentView
     }
 }

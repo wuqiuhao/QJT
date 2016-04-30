@@ -123,7 +123,7 @@ extension LeaveCourseViewController {
     
     func isSelectedChange(course: CourseClass) -> Bool {
         for data in selectCourseDataArr {
-            if (data.week == course.week) && (data.courseID == course.courseID) {
+            if data.courseClassUniqueID == course.courseClassUniqueID {
                 return true
             }
         }
@@ -149,7 +149,7 @@ extension LeaveCourseViewController {
             courseLbl.isCourseSelected = false
             hookImageView.hidden = true
             for i in 0..<refreshDataArr.count {
-                if (data.week == refreshDataArr[i].week) && (data.courseID == refreshDataArr[i].courseID) {
+                if data.courseClassUniqueID == refreshDataArr[i].courseClassUniqueID {
                     refreshDataArr.removeAtIndex(i)
                     break
                 }

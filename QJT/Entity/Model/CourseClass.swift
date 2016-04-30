@@ -52,6 +52,7 @@ class CourseClass: Mappable {
         year = 0
         teacherName = ""
         className = ""
+        courseClassUniqueID = 0
     }
     
     required init?(_ map: Map) {
@@ -67,6 +68,7 @@ class CourseClass: Mappable {
         year = 0
         teacherName = ""
         className = ""
+        courseClassUniqueID = 0
     }
     
     func mapping(map: Map) {
@@ -82,5 +84,6 @@ class CourseClass: Mappable {
         year                <- map["year"]
         teacherName         <- map["teacherName"]
         className           <- map["className"]
+        courseClassUniqueID <- map["courseClassUniqueID"]
     }
 }

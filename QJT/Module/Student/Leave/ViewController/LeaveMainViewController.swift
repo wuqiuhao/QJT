@@ -42,6 +42,8 @@ extension LeaveMainViewController {
     }
     
     func setupItem() {
+        var params = [String:AnyObject]()
+        params.updateValue("", forKey: "leave")
         
         let rightItem = UIBarButtonItem(title: "提交", style: UIBarButtonItemStyle.Done, target: self, action: #selector(LeaveMainViewController.rightItemClicked))
         navigationItem.rightBarButtonItem = rightItem
@@ -49,7 +51,11 @@ extension LeaveMainViewController {
     }
     
     func rightItemClicked() {
-        
+        NetWorkManager.httpRequest(Methods.leave_leaveApplication, params: ["":""], modelType: EmptyModel(), listType: nil, completed: { (responseData) in
+            
+            }) { (errorMsg) in
+                
+        }
     }
     
     /**

@@ -20,7 +20,9 @@ var AttendanceService = [
 ]
 
 var LeaveService = [
-    "leave_studentGetCourseClasses"
+    "leave_studentGetCourseClasses",
+    "leave_leaveApplication",
+    "leave_getLeaveInfosByStudentID"
 ]
 
 var TestService = [
@@ -46,6 +48,10 @@ class Methods {
     // 请假模块
     // 学生获取课程表
     static let leave_studentGetCourseClasses = "leave_studentGetCourseClasses"
+    // 学生发起请假
+    static let leave_leaveApplication = "leave_leaveApplication"
+    // 学生获取历史请假列表
+    static let leave_getLeaveInfosByStudentID = "leave_getLeaveInfosByStudentID"
     
     
     

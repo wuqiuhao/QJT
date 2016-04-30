@@ -65,11 +65,10 @@ extension CLTSignCourseViewController {
         var method = ""
         
         params.updateValue(UserConfig.teacherSetting()!.userID, forKey: "teacherID")
-        params.updateValue(courseArrData[courseTag].courseClassID, forKey: "courseClassID")
+        params.updateValue(courseArrData[courseTag].courseClassUniqueID, forKey: "courseClassUniqueID")
         params.updateValue(NSDate(), forKey: "attendanceTime")
         params.updateValue(long, forKey: "longitude")
         params.updateValue(lat, forKey: "latitude")
-        params.updateValue(courseArrData[courseTag].week.rawValue, forKey: "week")
         
         method = Methods.attendance_teacherBeginClass
         

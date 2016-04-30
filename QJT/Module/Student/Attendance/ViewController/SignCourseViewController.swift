@@ -57,8 +57,7 @@ extension SignCourseViewController {
         var method = ""
         
         params.updateValue(UserConfig.studentSetting()!.userID, forKey: "studentID")
-        params.updateValue(courseArrData[courseTag].courseClassID, forKey: "courseClassID")
-        params.updateValue(courseArrData[courseTag].week.rawValue, forKey: "week")
+        params.updateValue(courseArrData[courseTag].courseClassUniqueID, forKey: "courseClassUniqueID")
         params.updateValue(NSDate(), forKey: "signTime")
         params.updateValue(long, forKey: "longitude")
         params.updateValue(lat, forKey: "latitude")

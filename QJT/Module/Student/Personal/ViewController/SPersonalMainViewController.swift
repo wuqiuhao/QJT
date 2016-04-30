@@ -70,6 +70,8 @@ extension SPersonalMainViewController: UITableViewDelegate {
         switch indexPath.row {
         case 0:
             self.performSegueWithIdentifier("SPersonalLeaveNoteViewController", sender: nil)
+        case 1:
+            self.performSegueWithIdentifier("SPersonalSignViewController", sender: nil)
         case 2:
             let vc = UIStoryboard(name: "SPersonal", bundle: nil).instantiateViewControllerWithIdentifier("SPersonalAccontViewController")
             navigationController?.pushViewController(vc, animated: true)

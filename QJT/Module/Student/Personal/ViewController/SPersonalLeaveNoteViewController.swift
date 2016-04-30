@@ -31,13 +31,13 @@ extension SPersonalLeaveNoteViewController {
         navigationItem.title = "请假记录"
     }
     
-    func getNetWork() {
-        NetWorkManager.httpRequest(Methods.leave_getLeaveInfosByStudentID, params: ["":""], modelType: nil, listType: [Leave], completed: { (responseData) in
-            
-            }) { (errorMsg) in
-                
-        }
-    }
+//    func getNetWork() {
+//        NetWorkManager.httpRequest(Methods.leave_getLeaveInfosByStudentID, params: ["":""], modelType: nil, listType: [Leave], completed: { (responseData) in
+//            
+//            }) { (errorMsg) in
+//                
+//        }
+//    }
 }
 
 // MARK: - UITableViewDelegate

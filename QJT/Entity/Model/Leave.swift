@@ -24,7 +24,7 @@ class Leave: Mappable {
     // 截止时间
     var toTime: NSDate
     // 是否通过
-    var isVerify: Bool
+    var leaveState: LeaveState
     // 请假原因
     var reason: String
     // 教师编号
@@ -37,6 +37,8 @@ class Leave: Mappable {
     var year: Int
     // 学期
     var semester: Int
+    // 拒绝理由
+    var refuseReason: String
     
     init() {
         leaveID = 0
@@ -45,13 +47,14 @@ class Leave: Mappable {
         className = ""
         fromTime = NSDate()
         toTime = NSDate()
-        isVerify = false
+        leaveState = LeaveState.Unknown
         reason = ""
         teacherID = ""
         teacherName = ""
         leaveCourses = [String]()
         year = 0
         semester = 0
+        refuseReason = ""
     }
     
     required init?(_ map: Map) {
@@ -61,13 +64,14 @@ class Leave: Mappable {
         className = ""
         fromTime = NSDate()
         toTime = NSDate()
-        isVerify = false
+        leaveState = LeaveState.Unknown
         reason = ""
         teacherID = ""
         teacherName = ""
         leaveCourses = [String]()
         year = 0
         semester = 0
+        refuseReason = ""
     }
     
     func mapping(map: Map) {
@@ -77,13 +81,14 @@ class Leave: Mappable {
         className       <- map["className"]
         fromTime        <- map["fromTime"]
         toTime          <- map["toTime"]
-        isVerify        <- map["isVerify"]
+        leaveState      <- map["leaveState"]
         reason          <- map["reason"]
         teacherID       <- map["teacherID"]
         teacherName     <- map["teacherName"]
         leaveCourses    <- map["leaveCourses"]
         year            <- map["year"]
         semester        <- map["semester"]
+        refuseReason    <- map["refuseReason"]
     }
     
 }

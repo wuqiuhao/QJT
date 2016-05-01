@@ -33,7 +33,7 @@ extension SPersonalMainViewController {
     
     func configUI() {
         tableView.tableFooterView = UIView()
-        headerView = TableViewHeaderView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, 250))
+        headerView = TableViewHeaderView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height * 0.392 - 44))
         headerView.dataSource = self
         tableView.tableHeaderView = headerView
         headerView.backgroundImage = UIImage(named: "1")

@@ -99,6 +99,8 @@
 		683CF5FA1CC34E8C00F69765 /* BaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CF5F81CC34E8C00F69765 /* BaseType.swift */; };
 		683CF5FB1CC34E8C00F69765 /* UserType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CF5F91CC34E8C00F69765 /* UserType.swift */; };
 		687E38341CBE4008009EDE17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687E38331CBE4008009EDE17 /* Main.storyboard */; };
+		688E3ABA1CD5C360004011AE /* CLTLeaveDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688E3AB91CD5C360004011AE /* CLTLeaveDetailViewController.swift */; };
+		688E3ABC1CD5C3F6004011AE /* CLTLeaveDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688E3ABB1CD5C3F6004011AE /* CLTLeaveDetailCell.swift */; };
 		68B7B52F1CBE91C80046FC7F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7B52E1CBE91C80046FC7F /* MainTabBarController.swift */; };
 		68B98EF41CBE49A9009D64D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B98EF21CBE49A9009D64D1 /* LaunchScreen.storyboard */; };
 		68B98EF71CBE4A00009D64D1 /* QJT.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 68B98EF61CBE4A00009D64D1 /* QJT.entitlements */; };
@@ -107,6 +109,10 @@
 		68C8B5501CD47CDA00B407AB /* SPersonalLNDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C8B54F1CD47CDA00B407AB /* SPersonalLNDetailViewController.swift */; };
 		68C8B5521CD47D0800B407AB /* SPersonalLNDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C8B5511CD47D0800B407AB /* SPersonalLNDetailCell.swift */; };
 		68C8B5541CD499DB00B407AB /* Leave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C8B5531CD499DB00B407AB /* Leave.swift */; };
+		68C8B5561CD4E57800B407AB /* LeaveState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C8B5551CD4E57800B407AB /* LeaveState.swift */; };
+		68C8B5581CD4F97700B407AB /* CLTPersonalMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C8B5571CD4F97700B407AB /* CLTPersonalMainCell.swift */; };
+		68C8B55A1CD50BD200B407AB /* CLTLeaveMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C8B5591CD50BD200B407AB /* CLTLeaveMainCell.swift */; };
+		68C8B55C1CD5119900B407AB /* CLTPersonalAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C8B55B1CD5119900B407AB /* CLTPersonalAccountViewController.swift */; };
 		68CE13C31CD1A12A009C8E6C /* LeaveReasonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CE13C21CD1A12A009C8E6C /* LeaveReasonViewController.swift */; };
 		68CE13C51CD1A14E009C8E6C /* ViewControllerTransmitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CE13C41CD1A14E009C8E6C /* ViewControllerTransmitDelegate.swift */; };
 		68CE13C71CD1A16D009C8E6C /* LeaveReasonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CE13C61CD1A16D009C8E6C /* LeaveReasonCell.swift */; };
@@ -137,10 +143,8 @@
 		EF055D971CD1AC0A004DD466 /* CTPersonal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF055D961CD1AC0A004DD466 /* CTPersonal.storyboard */; };
 		EF055D991CD1AC0F004DD466 /* CTPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF055D981CD1AC0F004DD466 /* CTPersonalView.swift */; };
 		EF055D9B1CD1AC14004DD466 /* CTPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF055D9A1CD1AC14004DD466 /* CTPersonalMainViewController.swift */; };
-		EF055D9D1CD1AC4A004DD466 /* CLTPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF055D9C1CD1AC4A004DD466 /* CLTPersonalView.swift */; };
 		EF055D9F1CD1AC4F004DD466 /* CLTPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF055D9E1CD1AC4F004DD466 /* CLTPersonalMainViewController.swift */; };
-		EF055DA11CD1AC59004DD466 /* CLTeaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF055DA01CD1AC59004DD466 /* CLTeaveView.swift */; };
-		EF055DA31CD1AC5E004DD466 /* CLTeaveMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF055DA21CD1AC5E004DD466 /* CLTeaveMainViewController.swift */; };
+		EF055DA31CD1AC5E004DD466 /* CLTLeaveMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF055DA21CD1AC5E004DD466 /* CLTLeaveMainViewController.swift */; };
 		EF1370271CD0F9EC008C6D39 /* Digest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1370231CD0F9EC008C6D39 /* Digest.swift */; };
 		EF45F52F1CABF1800052AA1F /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45F52E1CABF1800052AA1F /* Student.swift */; };
 		EF6A8C061CCFB1970054282C /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6A8C051CCFB1970054282C /* UIImage+ImageEffects.m */; };
@@ -252,6 +256,8 @@
 		683CF5F81CC34E8C00F69765 /* BaseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseType.swift; sourceTree = "<group>"; };
 		683CF5F91CC34E8C00F69765 /* UserType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserType.swift; sourceTree = "<group>"; };
 		687E38331CBE4008009EDE17 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		688E3AB91CD5C360004011AE /* CLTLeaveDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTLeaveDetailViewController.swift; sourceTree = "<group>"; };
+		688E3ABB1CD5C3F6004011AE /* CLTLeaveDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTLeaveDetailCell.swift; sourceTree = "<group>"; };
 		68B7B52E1CBE91C80046FC7F /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		68B98EF21CBE49A9009D64D1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "Supporting Files/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		68B98EF61CBE4A00009D64D1 /* QJT.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = QJT.entitlements; sourceTree = "<group>"; };
@@ -260,6 +266,10 @@
 		68C8B54F1CD47CDA00B407AB /* SPersonalLNDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPersonalLNDetailViewController.swift; sourceTree = "<group>"; };
 		68C8B5511CD47D0800B407AB /* SPersonalLNDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPersonalLNDetailCell.swift; sourceTree = "<group>"; };
 		68C8B5531CD499DB00B407AB /* Leave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Leave.swift; path = Entity/Model/Leave.swift; sourceTree = "<group>"; };
+		68C8B5551CD4E57800B407AB /* LeaveState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveState.swift; sourceTree = "<group>"; };
+		68C8B5571CD4F97700B407AB /* CLTPersonalMainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTPersonalMainCell.swift; sourceTree = "<group>"; };
+		68C8B5591CD50BD200B407AB /* CLTLeaveMainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTLeaveMainCell.swift; sourceTree = "<group>"; };
+		68C8B55B1CD5119900B407AB /* CLTPersonalAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTPersonalAccountViewController.swift; sourceTree = "<group>"; };
 		68CE13C21CD1A12A009C8E6C /* LeaveReasonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveReasonViewController.swift; sourceTree = "<group>"; };
 		68CE13C41CD1A14E009C8E6C /* ViewControllerTransmitDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerTransmitDelegate.swift; path = General/Protocol/ViewControllerTransmitDelegate.swift; sourceTree = "<group>"; };
 		68CE13C61CD1A16D009C8E6C /* LeaveReasonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveReasonCell.swift; sourceTree = "<group>"; };
@@ -291,10 +301,8 @@
 		EF055D961CD1AC0A004DD466 /* CTPersonal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CTPersonal.storyboard; sourceTree = "<group>"; };
 		EF055D981CD1AC0F004DD466 /* CTPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPersonalView.swift; sourceTree = "<group>"; };
 		EF055D9A1CD1AC14004DD466 /* CTPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPersonalMainViewController.swift; sourceTree = "<group>"; };
-		EF055D9C1CD1AC4A004DD466 /* CLTPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTPersonalView.swift; sourceTree = "<group>"; };
 		EF055D9E1CD1AC4F004DD466 /* CLTPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTPersonalMainViewController.swift; sourceTree = "<group>"; };
-		EF055DA01CD1AC59004DD466 /* CLTeaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTeaveView.swift; sourceTree = "<group>"; };
-		EF055DA21CD1AC5E004DD466 /* CLTeaveMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTeaveMainViewController.swift; sourceTree = "<group>"; };
+		EF055DA21CD1AC5E004DD466 /* CLTLeaveMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTLeaveMainViewController.swift; sourceTree = "<group>"; };
 		EF1370231CD0F9EC008C6D39 /* Digest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Digest.swift; path = Util/Encrypt/Digest.swift; sourceTree = "<group>"; };
 		EF45F52E1CABF1800052AA1F /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Student.swift; path = Entity/Model/Student.swift; sourceTree = "<group>"; };
 		EF6A8C041CCFB1970054282C /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ImageEffects.h"; path = "General/Extensions/UIImage+ImageEffects.h"; sourceTree = "<group>"; };
@@ -585,7 +593,8 @@
 		68083F281CCE5909004BE4D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EF055DA01CD1AC59004DD466 /* CLTeaveView.swift */,
+				68C8B5591CD50BD200B407AB /* CLTLeaveMainCell.swift */,
+				688E3ABB1CD5C3F6004011AE /* CLTLeaveDetailCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -593,7 +602,8 @@
 		68083F2A1CCE5909004BE4D4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				EF055DA21CD1AC5E004DD466 /* CLTeaveMainViewController.swift */,
+				EF055DA21CD1AC5E004DD466 /* CLTLeaveMainViewController.swift */,
+				688E3AB91CD5C360004011AE /* CLTLeaveDetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -611,7 +621,7 @@
 		68083F2E1CCE5909004BE4D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EF055D9C1CD1AC4A004DD466 /* CLTPersonalView.swift */,
+				68C8B5571CD4F97700B407AB /* CLTPersonalMainCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -620,6 +630,7 @@
 			isa = PBXGroup;
 			children = (
 				EF055D9E1CD1AC4F004DD466 /* CLTPersonalMainViewController.swift */,
+				68C8B55B1CD5119900B407AB /* CLTPersonalAccountViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -946,6 +957,7 @@
 				683CF5F81CC34E8C00F69765 /* BaseType.swift */,
 				683CF5F91CC34E8C00F69765 /* UserType.swift */,
 				681DD1251CC7B685004CB295 /* Week.swift */,
+				68C8B5551CD4E57800B407AB /* LeaveState.swift */,
 			);
 			name = Enum;
 			path = Entity/Enum;
@@ -1375,7 +1387,7 @@
 				EFA869191CAA651900CC1B71 /* NetWorkManager.swift in Sources */,
 				68186C1F1CB354DB005AF62D /* UIScrollView_refresh.swift in Sources */,
 				68D8F1131CD25CCC008111D9 /* SPersonalLeaveNoteCell.swift in Sources */,
-				EF055DA31CD1AC5E004DD466 /* CLTeaveMainViewController.swift in Sources */,
+				EF055DA31CD1AC5E004DD466 /* CLTLeaveMainViewController.swift in Sources */,
 				EF055D831CD1AB9F004DD466 /* BLAttendanceView.swift in Sources */,
 				6808AA511CCFA28900C2C324 /* SPersonalAccontViewController.swift in Sources */,
 				68083F961CCE5909004BE4D4 /* CLeaveMainViewController.swift in Sources */,
@@ -1393,12 +1405,12 @@
 				EF055D871CD1ABB8004DD466 /* BLLeaveTableViewCell.swift in Sources */,
 				68186C191CB3525D005AF62D /* NVActivityIndicatorView.swift in Sources */,
 				EF055D891CD1ABBD004DD466 /* BLLeaveViewController.swift in Sources */,
-				EF055DA11CD1AC59004DD466 /* CLTeaveView.swift in Sources */,
 				68186C031CB3525D005AF62D /* NVActivityIndicatorAnimationBallRotate.swift in Sources */,
 				68186C0A1CB3525D005AF62D /* NVActivityIndicatorAnimationBallZigZag.swift in Sources */,
 				68186C171CB3525D005AF62D /* NVActivityIndicatorAnimationDelegate.swift in Sources */,
 				68083F931CCE5909004BE4D4 /* CAttendanceMainViewController.swift in Sources */,
 				EF055D9B1CD1AC14004DD466 /* CTPersonalMainViewController.swift in Sources */,
+				688E3ABA1CD5C360004011AE /* CLTLeaveDetailViewController.swift in Sources */,
 				68186C341CB3554F005AF62D /* LoginMatchViewController.swift in Sources */,
 				68083F881CCE5909004BE4D4 /* qqqView.swift in Sources */,
 				683CF5F61CC34E7F00F69765 /* UserSetting.swift in Sources */,
@@ -1409,6 +1421,7 @@
 				EF055D991CD1AC0F004DD466 /* CTPersonalView.swift in Sources */,
 				681DD1261CC7B685004CB295 /* Week.swift in Sources */,
 				68CE13C71CD1A16D009C8E6C /* LeaveReasonCell.swift in Sources */,
+				688E3ABC1CD5C3F6004011AE /* CLTLeaveDetailCell.swift in Sources */,
 				68186BFE1CB3525D005AF62D /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */,
 				EF055D951CD1AC04004DD466 /* CTLeaveViewMainController.swift in Sources */,
 				68186C1E1CB354DB005AF62D /* UIColor_extension.swift in Sources */,
@@ -1438,6 +1451,7 @@
 				68186C021CB3525D005AF62D /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */,
 				68083FA21CCE5909004BE4D4 /* ADPersonalMainViewController.swift in Sources */,
 				68083FBA1CCE5AAB004BE4D4 /* LeaveCell.swift in Sources */,
+				68C8B55A1CD50BD200B407AB /* CLTLeaveMainCell.swift in Sources */,
 				68083F921CCE5909004BE4D4 /* CAttendanceView.swift in Sources */,
 				EFA8691D1CAA655C00CC1B71 /* Methods.swift in Sources */,
 				68186C091CB3525D005AF62D /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
@@ -1459,9 +1473,9 @@
 				68CE13C51CD1A14E009C8E6C /* ViewControllerTransmitDelegate.swift in Sources */,
 				68083F851CCE5909004BE4D4 /* BPersonalView.swift in Sources */,
 				68035A081CC756BA002F7C60 /* LeaveMainViewController.swift in Sources */,
+				68C8B5561CD4E57800B407AB /* LeaveState.swift in Sources */,
 				68186C181CB3525D005AF62D /* NVActivityIndicatorShape.swift in Sources */,
 				68186C071CB3525D005AF62D /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
-				EF055D9D1CD1AC4A004DD466 /* CLTPersonalView.swift in Sources */,
 				68C8B5541CD499DB00B407AB /* Leave.swift in Sources */,
 				68035A011CC756BA002F7C60 /* Sign.swift in Sources */,
 				68083F951CCE5909004BE4D4 /* CLeaveView.swift in Sources */,
@@ -1475,12 +1489,14 @@
 				68186C051CB3525D005AF62D /* NVActivityIndicatorAnimationBallScaleMultiple.swift in Sources */,
 				68323F641CBCE14A00B7DEBE /* KeychainItemWrapper.m in Sources */,
 				68186C0F1CB3525D005AF62D /* NVActivityIndicatorAnimationLineScaleParty.swift in Sources */,
+				68C8B55C1CD5119900B407AB /* CLTPersonalAccountViewController.swift in Sources */,
 				68186BF91CB3525D005AF62D /* AnimationRefresh.swift in Sources */,
 				68186C151CB3525D005AF62D /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */,
 				EF9D7BA61CCF0A2000FA79F7 /* ThemeConfig.swift in Sources */,
 				EF6A8C061CCFB1970054282C /* UIImage+ImageEffects.m in Sources */,
 				68083F8A1CCE5909004BE4D4 /* CLTSignCourseViewController.swift in Sources */,
 				68B7B52F1CBE91C80046FC7F /* MainTabBarController.swift in Sources */,
+				68C8B5581CD4F97700B407AB /* CLTPersonalMainCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

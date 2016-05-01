@@ -9,15 +9,17 @@
 import UIKit
 
 class CLTLeaveDetailViewController: UIViewController {
-
     
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var verifyBtn: UIButton!
     
     var dataArr = [Dictionary<String, String>]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
+        setupBtn()
         perpareData()
     }
 }
@@ -30,8 +32,18 @@ extension CLTLeaveDetailViewController {
     }
     
     func perpareData() {
-        let data = ["title":"审核状态","detail":"请选择"]
+        let data = ["title":"审核状态:","detail":"请选择"]
         dataArr.append(data)
+    }
+    
+    func setupBtn() {
+        verifyBtn.layer.cornerRadius = 4
+        verifyBtn.clipsToBounds = true
+        verifyBtn.addTarget(self, action: #selector(CLTLeaveDetailViewController.verifyBtnClicked), forControlEvents: UIControlEvents.TouchUpInside)
+    }
+    
+    func verifyBtnClicked() {
+        
     }
 }
 
@@ -39,6 +51,37 @@ extension CLTLeaveDetailViewController {
 extension CLTLeaveDetailViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat.min
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.row == 3 {
+            let alertVC = UIAlertController(title: "审核结果", message: "", preferredStyle: UIAlertControllerStyle.ActionSheet)
+            let passAction = UIAlertAction(title: "通过", style: UIAlertActionStyle.Default, handler: { (action) in
+                self.dataArr[0].updateValue("通过", forKey: "detail")
+                if self.dataArr.count == 1 {
+                    self.tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: 3, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
+                } else if self.dataArr.count == 2 {
+                    self.dataArr.removeAtIndex(1)
+                    self.tableView.reloadData()
+                }
+                
+            })
+            let unPassAction = UIAlertAction(title: "不通过", style: UIAlertActionStyle.Destructive, handler: { (action) in
+                self.dataArr[0].updateValue("不通过", forKey: "detail")
+                if self.dataArr.count == 1 {
+                    let reason = ["title":"拒绝原因:","detail":"请填写拒绝原因"]
+                    self.dataArr.append(reason)
+                }
+                self.tableView.reloadData()
+            })
+            alertVC.addAction(passAction)
+            alertVC.addAction(unPassAction)
+            self.presentViewController(alertVC, animated: true, completion: nil)
+        }
     }
 }
 
@@ -64,6 +107,9 @@ extension CLTLeaveDetailViewController: UITableViewDataSource {
         case 3:
             cell.titleLbl.text = dataArr[0]["title"]
             cell.detailLbl.text = dataArr[0]["detail"]
+        case 4:
+            cell.titleLbl.text = dataArr[1]["title"]
+            cell.detailLbl.text = dataArr[1]["detail"]
         default:
             return UITableViewCell()
         }

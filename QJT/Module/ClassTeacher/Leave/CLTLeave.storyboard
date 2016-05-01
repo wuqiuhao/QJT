@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="r7Z-OF-WOH">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -216,7 +217,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDx-UN-Cye">
-                                                    <rect key="frame" x="85" y="10" width="500" height="23.5"/>
+                                                    <rect key="frame" x="85" y="12" width="500" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -226,7 +227,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="XDx-UN-Cye" secondAttribute="trailing" constant="15" id="E55-Cl-vyc"/>
                                                 <constraint firstItem="Uar-xe-sOG" firstAttribute="leading" secondItem="dlX-cV-wUn" secondAttribute="leading" constant="15" id="Ky2-hE-ErY"/>
                                                 <constraint firstItem="Uar-xe-sOG" firstAttribute="top" secondItem="dlX-cV-wUn" secondAttribute="top" constant="11" id="P2e-fb-zAA"/>
-                                                <constraint firstItem="XDx-UN-Cye" firstAttribute="top" secondItem="dlX-cV-wUn" secondAttribute="top" constant="10" id="ZjG-F4-xPT"/>
+                                                <constraint firstItem="XDx-UN-Cye" firstAttribute="top" secondItem="dlX-cV-wUn" secondAttribute="top" constant="12" id="ZjG-F4-xPT"/>
                                                 <constraint firstAttribute="bottom" secondItem="XDx-UN-Cye" secondAttribute="bottom" constant="10" id="gS1-IS-fxR"/>
                                                 <constraint firstItem="XDx-UN-Cye" firstAttribute="leading" secondItem="Uar-xe-sOG" secondAttribute="trailing" constant="5" id="oNb-XR-xu9"/>
                                             </constraints>
@@ -242,17 +243,39 @@
                                     <outlet property="delegate" destination="9mh-CQ-8Gz" id="UT6-e4-h30"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oah-wQ-7OS">
+                                <rect key="frame" x="10" y="545" width="580" height="40"/>
+                                <color key="backgroundColor" red="0.19607843137254902" green="0.65490196078431373" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="PpQ-ZA-BvX"/>
+                                </constraints>
+                                <state key="normal" title="提交审核">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="17l-S5-fmV" firstAttribute="leading" secondItem="HQf-5p-f9c" secondAttribute="leading" id="9aU-f8-gBz"/>
+                            <constraint firstAttribute="bottom" secondItem="Oah-wQ-7OS" secondAttribute="bottom" constant="15" id="BZe-Mv-sHW"/>
                             <constraint firstAttribute="trailing" secondItem="17l-S5-fmV" secondAttribute="trailing" id="HrX-jr-EWJ"/>
+                            <constraint firstAttribute="trailing" secondItem="Oah-wQ-7OS" secondAttribute="trailing" constant="10" id="Wc4-Xd-4v5"/>
+                            <constraint firstItem="Oah-wQ-7OS" firstAttribute="top" secondItem="17l-S5-fmV" secondAttribute="bottom" constant="2" id="bgC-PH-HOA"/>
+                            <constraint firstItem="Oah-wQ-7OS" firstAttribute="leading" secondItem="HQf-5p-f9c" secondAttribute="leading" constant="10" id="kfW-OG-cpJ"/>
                             <constraint firstItem="17l-S5-fmV" firstAttribute="top" secondItem="YfD-D8-kPu" secondAttribute="bottom" id="lzB-sk-pAT"/>
+                            <constraint firstItem="lfp-nE-sKx" firstAttribute="top" secondItem="Oah-wQ-7OS" secondAttribute="bottom" constant="2" id="mpg-F9-igM"/>
                             <constraint firstAttribute="bottom" secondItem="17l-S5-fmV" secondAttribute="bottom" id="qAD-Em-XWW"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="bgC-PH-HOA"/>
+                                <exclude reference="mpg-F9-igM"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="17l-S5-fmV" id="UqA-Ev-Zjq"/>
+                        <outlet property="verifyBtn" destination="Oah-wQ-7OS" id="quj-37-Dcj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UUr-dQ-PoL" userLabel="First Responder" sceneMemberID="firstResponder"/>

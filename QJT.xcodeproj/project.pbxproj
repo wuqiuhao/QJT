@@ -99,6 +99,7 @@
 		683CF5F61CC34E7F00F69765 /* UserSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CF5F41CC34E7F00F69765 /* UserSetting.swift */; };
 		683CF5FA1CC34E8C00F69765 /* BaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CF5F81CC34E8C00F69765 /* BaseType.swift */; };
 		683CF5FB1CC34E8C00F69765 /* UserType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CF5F91CC34E8C00F69765 /* UserType.swift */; };
+		6849D97C1CD5EBBF009DE599 /* LeaveDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6849D97B1CD5EBBF009DE599 /* LeaveDetail.swift */; };
 		687E38341CBE4008009EDE17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687E38331CBE4008009EDE17 /* Main.storyboard */; };
 		688E3ABA1CD5C360004011AE /* CLTLeaveDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688E3AB91CD5C360004011AE /* CLTLeaveDetailViewController.swift */; };
 		688E3ABC1CD5C3F6004011AE /* CLTLeaveDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688E3ABB1CD5C3F6004011AE /* CLTLeaveDetailCell.swift */; };
@@ -261,6 +262,7 @@
 		683CF5F41CC34E7F00F69765 /* UserSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSetting.swift; path = Entity/Model/UserSetting.swift; sourceTree = "<group>"; };
 		683CF5F81CC34E8C00F69765 /* BaseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseType.swift; sourceTree = "<group>"; };
 		683CF5F91CC34E8C00F69765 /* UserType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserType.swift; sourceTree = "<group>"; };
+		6849D97B1CD5EBBF009DE599 /* LeaveDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeaveDetail.swift; path = Entity/Model/LeaveDetail.swift; sourceTree = "<group>"; };
 		687E38331CBE4008009EDE17 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		688E3AB91CD5C360004011AE /* CLTLeaveDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTLeaveDetailViewController.swift; sourceTree = "<group>"; };
 		688E3ABB1CD5C3F6004011AE /* CLTLeaveDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTLeaveDetailCell.swift; sourceTree = "<group>"; };
@@ -1163,6 +1165,7 @@
 				68035A981CC78066002F7C60 /* StudentSetting.swift */,
 				68035A9A1CC782F0002F7C60 /* TeacherSetting.swift */,
 				68C8B5531CD499DB00B407AB /* Leave.swift */,
+				6849D97B1CD5EBBF009DE599 /* LeaveDetail.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1450,6 +1453,7 @@
 				580C958B1CD5060700F332A3 /* CLTPersonalANDetailViewController.swift in Sources */,
 				683CF5F51CC34E7F00F69765 /* PersonSetting.swift in Sources */,
 				68186BFA1CB3525D005AF62D /* NVActivityIndicatorAnimationBallBeat.swift in Sources */,
+				6849D97C1CD5EBBF009DE599 /* LeaveDetail.swift in Sources */,
 				68083F991CCE5909004BE4D4 /* CPersonalMainViewController.swift in Sources */,
 				68186C361CB3554F005AF62D /* LoginShowViewController.swift in Sources */,
 				68D8EFD01CC8AB7200906E3D /* NSString_extension.swift in Sources */,

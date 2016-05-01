@@ -101,7 +101,7 @@ extension CLTLeaveDetailViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.row == 4 {
             let alertVC = UIAlertController(title: "审核结果", message: "", preferredStyle: UIAlertControllerStyle.ActionSheet)
-            let passAction = UIAlertAction(title: "通过", style: UIAlertActionStyle.Default, handler: { (action) in
+            let passAction = UIAlertAction(title: "通过", style: UIAlertActionStyle.Cancel, handler: { (action) in
                 self.dataArr[0].updateValue("通过", forKey: "detail")
                 if self.dataArr.count == 1 {
                     self.tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: 4, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
@@ -119,8 +119,8 @@ extension CLTLeaveDetailViewController: UITableViewDelegate {
                 }
                 self.tableView.reloadData()
             })
-            alertVC.addAction(passAction)
             alertVC.addAction(unPassAction)
+            alertVC.addAction(passAction)
             self.presentViewController(alertVC, animated: true, completion: nil)
         } else if indexPath.row == 5 {
             let vc = UIStoryboard(name: "SLeave", bundle: nil).instantiateViewControllerWithIdentifier("LeaveReasonViewController") as! LeaveReasonViewController

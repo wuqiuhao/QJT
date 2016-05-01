@@ -45,23 +45,6 @@ extension SPersonalAccontViewController {
     func logoutBtnClicked() {
         let alertVC = UIAlertController(title: "注意", message: "确认要注销吗?", preferredStyle: UIAlertControllerStyle.Alert)
         let confirmAction = UIAlertAction(title: "确定", style: UIAlertActionStyle.Default) { (action) in
-<<<<<<< HEAD
-            let mainWindow = UIApplication.sharedApplication().keyWindow
-            if UserConfig.removeAllFileInSandbox() {
-                mainWindow?.rootViewController = UIStoryboard(name: "RegLogin", bundle: nil).instantiateInitialViewController()
-            } else {
-                self.errorNotice("注销失败")
-            }
-//            NetWorkManager.httpRequest(Methods.login_studentLogout, params: ["studentID":UserConfig.studentSetting()!.userID], modelType: EmptyModel(), listType: nil, completed: { (responseData) in
-//                let mainWindow = UIApplication.sharedApplication().keyWindow
-//                if UserConfig.removeAllFileInSandbox() {
-//                    mainWindow?.rootViewController = UIStoryboard(name: "RegLogin", bundle: nil).instantiateInitialViewController()
-//                } else {
-//                    self.errorNotice("注销失败")
-//                }
-//                }, errorClosure: {(errorMsg) in
-//            })
-=======
             NetWorkManager.httpRequest(Methods.login_studentLogout, params: ["studentID":UserConfig.studentSetting()!.userID], modelType: EmptyModel(), listType: nil, completed: { (responseData) in
                 let mainWindow = UIApplication.sharedApplication().keyWindow
                 if UserConfig.removeAllFileInSandbox() {
@@ -73,7 +56,6 @@ extension SPersonalAccontViewController {
                         mainWindow?.rootViewController = UIStoryboard(name: "RegLogin", bundle: nil).instantiateInitialViewController()
                     }
             })
->>>>>>> 2db87b57e5580ffc133e3267e5d9ff1d74b76ee1
         }
         let cancelAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel) { (action) in
             

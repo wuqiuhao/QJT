@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1A0F54FFF44B77ECE6EF942A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451ED4D82C76F378DBB33D09 /* Pods.framework */; };
-<<<<<<< HEAD
 		580C957D1CD4A66000F332A3 /* SPersonalSignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C957C1CD4A66000F332A3 /* SPersonalSignViewController.swift */; };
 		580C957F1CD4A70900F332A3 /* Attendance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C957E1CD4A70900F332A3 /* Attendance.swift */; };
 		580C95811CD4B09100F332A3 /* CLTPersonalAttendanceNoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C95801CD4B09100F332A3 /* CLTPersonalAttendanceNoteCell.swift */; };
@@ -170,7 +169,6 @@
 /* Begin PBXFileReference section */
 		421540CB059379FB231DBF0D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		451ED4D82C76F378DBB33D09 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-<<<<<<< HEAD
 		580C957C1CD4A66000F332A3 /* SPersonalSignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPersonalSignViewController.swift; sourceTree = "<group>"; };
 		580C957E1CD4A70900F332A3 /* Attendance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Attendance.swift; path = Entity/Model/Attendance.swift; sourceTree = "<group>"; };
 		580C95801CD4B09100F332A3 /* CLTPersonalAttendanceNoteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTPersonalAttendanceNoteCell.swift; sourceTree = "<group>"; };

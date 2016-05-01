@@ -32,7 +32,7 @@ class Leave: Mappable {
     // 教师姓名
     var teacherName: String
     // 请假课程编号数组
-    var leaveCourses: [String]
+    var leaveCourses: [Int]
     // 学年
     var year: Int
     // 学期
@@ -49,7 +49,7 @@ class Leave: Mappable {
         reason = ""
         teacherID = ""
         teacherName = ""
-        leaveCourses = [String]()
+        leaveCourses = [Int]()
         year = 0
         semester = 0
     }
@@ -65,7 +65,7 @@ class Leave: Mappable {
         reason = ""
         teacherID = ""
         teacherName = ""
-        leaveCourses = [String]()
+        leaveCourses = [Int]()
         year = 0
         semester = 0
     }

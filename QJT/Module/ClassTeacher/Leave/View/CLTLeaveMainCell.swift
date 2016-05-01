@@ -43,7 +43,7 @@ class CLTLeaveMainCell: UITableViewCell {
         CGContextSetLineCap(context, CGLineCap.Round)
         CGContextSetLineWidth(context,1.0)
         CGContextSetAllowsAntialiasing(context, false)
-        CGContextSetRGBStrokeColor(context,0/255, 0/255, 0/255, 1.0)
+        CGContextSetRGBStrokeColor(context,105/255, 105/255, 105/255, 1.0)
         CGContextBeginPath(context)
         
         CGContextMoveToPoint(context,100, rect.height / 2 )

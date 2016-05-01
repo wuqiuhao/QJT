@@ -48,7 +48,7 @@ extension CLTLeaveMainViewController {
     }
     
     func refreshLeave() {
-        
+        tableView.headerRefresh = true
     }
 }
 

@@ -126,6 +126,7 @@ extension CLTLeaveDetailViewController: UITableViewDelegate {
             let vc = UIStoryboard(name: "SLeave", bundle: nil).instantiateViewControllerWithIdentifier("LeaveReasonViewController") as! LeaveReasonViewController
             vc.delegate = self
             vc.textViewContent = reason
+            vc.isLeave = false
             navigationController?.pushViewController(vc, animated: true)
         }
     }

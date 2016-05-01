@@ -67,7 +67,7 @@ extension CLTPersonalMainViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch indexPath.row {
         case 0:
-            self.performSegueWithIdentifier("SPersonalLeaveNoteViewController", sender: nil)
+            self.performSegueWithIdentifier("CLTPersonalLeaveNoteViewController", sender: nil)
         case 1:
             self.performSegueWithIdentifier("CLTPersonalAttendanceNoteViewController", sender: nil)
         case 2:

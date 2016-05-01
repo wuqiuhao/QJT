@@ -20,18 +20,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = UIColor.whiteColor()
         ThemeConfig.configUI()
         
-        
-//        if UserConfig.isLogined() {
-//            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! MainTabBarController
-//            if let userID = UserConfig.studentSetting()?.userID where userID.characters.count != 0 {
-//                vc.userType = UserConfig.studentSetting()!.userType
-//            } else if let userID = UserConfig.teacherSetting()?.userID where userID.characters.count != 0 {
-//                vc.userType = UserConfig.teacherSetting()!.userType
-//            }
-//            window?.rootViewController = vc
-//        } else {
-//            window?.rootViewController = UIStoryboard(name: "RegLogin", bundle: nil).instantiateInitialViewController()
-//        }
+        if UserConfig.isLogined() {
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! MainTabBarController
+            if let userID = UserConfig.studentSetting()?.userID where userID.characters.count != 0 {
+                vc.userType = UserConfig.studentSetting()!.userType
+            } else if let userID = UserConfig.teacherSetting()?.userID where userID.characters.count != 0 {
+                vc.userType = UserConfig.teacherSetting()!.userType
+            }
+            window?.rootViewController = vc
+        } else {
+            window?.rootViewController = UIStoryboard(name: "RegLogin", bundle: nil).instantiateInitialViewController()
+        }
         
         registerJPush(launchOptions)
         

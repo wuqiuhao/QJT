@@ -13,6 +13,8 @@ class SPersonalLeaveNoteViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var leaveNoteDataArr = [Leave]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
@@ -34,8 +36,8 @@ extension SPersonalLeaveNoteViewController {
     
     func getNetWork() {
         NetWorkManager.httpRequest(Methods.leave_getLeaveInfosByStudentID, params: ["studentID":UserConfig.studentSetting()!.userID], modelType: nil, listType: Leave(), completed: { (responseData) in
-            let result = responseData["List"] as! [Leave]
-            print(result)
+            self.leaveNoteDataArr = responseData["List"] as! [Leave]
+            self.tableView.reloadData()
             }) { [weak self] (errorMsg) in
                 self?.errorNotice(errorMsg!)
         }
@@ -57,9 +59,7 @@ extension SPersonalLeaveNoteViewController: UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        //self.performSegueWithIdentifier("SPersonalLNDetailViewController", sender: nil)
-        let vc = UIStoryboard(name: "SPersonal", bundle: nil).instantiateViewControllerWithIdentifier("SPersonalLNDetailViewController")
-        navigationController?.pushViewController(vc, animated: true)
+        self.performSegueWithIdentifier("SPersonalLNDetailViewController", sender: nil)
     }
 }
 
@@ -67,11 +67,12 @@ extension SPersonalLeaveNoteViewController: UITableViewDelegate {
 private let cellIdeitiferForLeaveNote = "SPersonalLeaveNoteCell"
 extension SPersonalLeaveNoteViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return leaveNoteDataArr.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdeitiferForLeaveNote, forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdeitiferForLeaveNote, forIndexPath: indexPath) as! SPersonalLeaveNoteCell
+        cell.model = leaveNoteDataArr[indexPath.row]
         return cell
     }
 }

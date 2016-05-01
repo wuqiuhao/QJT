@@ -83,7 +83,7 @@ extension LeaveMainViewController {
             datePicker!.minimumDate = NSDate.dateFromString(NSDate().getEarlyOrLaterMonthFromDate(NSDate(), month: -1).stringForDateFormat("yyyy-MM-dd"), dateformatter: "yyyy-MM-dd")
             datePicker!.maximumDate = NSDate.dateFromString(NSDate().getEarlyOrLaterMonthFromDate(NSDate(), month: 1).stringForDateFormat("yyyy-MM-dd"), dateformatter: "yyyy-MM-dd")
         } else if index == 1 {
-            datePicker!.minimumDate = NSDate.dateFromString(NSDate().getEarlyOrLaterMonthFromDate(NSDate(), month: -2).stringForDateFormat("yyyy-MM-dd"), dateformatter: "yyyy-MM-dd")
+            datePicker!.minimumDate = fromTime
             datePicker!.maximumDate = NSDate.dateFromString(NSDate().getEarlyOrLaterMonthFromDate(NSDate(), month: 2).stringForDateFormat("yyyy-MM-dd"), dateformatter: "yyyy-MM-dd")
         }
         datePicker!.frame = CGRect(x: 15, y: 0, width: UIScreen.mainScreen().bounds.width, height: 162)
@@ -101,7 +101,9 @@ extension LeaveMainViewController {
                 let dateStr = datePicker?.date.stringForDateFormat("yyyy-MM-dd")
                 let weekStr = datePicker?.date.dateToWeek()
                 dateArr[i - 1].updateValue("\(dateStr!)  \(weekStr!)", forKey: "detail")
+                dateArr[i + 1].updateValue("\(dateStr!)  \(weekStr!)", forKey: "detail")
                 tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: i - 1, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
+                tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: i + 1, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
             } else if data["title"] == "datePicker" && i == 2 {
                 datePickerValue = datePicker?.date
                 pickerSelectDate = datePickerValue

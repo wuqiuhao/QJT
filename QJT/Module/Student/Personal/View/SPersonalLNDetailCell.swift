@@ -15,6 +15,7 @@ class SPersonalLNDetailCell: UITableViewCell {
     @IBOutlet weak var phoneImg: UIImageView!
     
     weak var fatherVC: UIViewController?
+    var phoneNum: String!
     
     override func awakeFromNib() {
         super.awakeFromNib()

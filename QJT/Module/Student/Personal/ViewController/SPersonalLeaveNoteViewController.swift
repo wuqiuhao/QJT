@@ -36,10 +36,18 @@ extension SPersonalLeaveNoteViewController {
     
     func getNetWork() {
         NetWorkManager.httpRequest(Methods.leave_getLeaveInfosByStudentID, params: ["studentID":UserConfig.studentSetting()!.userID], modelType: nil, listType: Leave(), completed: { (responseData) in
-            self.leaveNoteDataArr = responseData["List"] as! [Leave]
+            self.leaveNoteDataArr = responseData["list"] as! [Leave]
             self.tableView.reloadData()
             }) { [weak self] (errorMsg) in
                 self?.errorNotice(errorMsg!)
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.destinationViewController is SPersonalLNDetailViewController {
+            let vc = segue.destinationViewController as! SPersonalLNDetailViewController
+            let index = sender as! NSIndexPath
+            vc.leave = leaveNoteDataArr[index.row]
         }
     }
 }
@@ -59,7 +67,7 @@ extension SPersonalLeaveNoteViewController: UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier("SPersonalLNDetailViewController", sender: nil)
+        self.performSegueWithIdentifier("SPersonalLNDetailViewController", sender: indexPath)
     }
 }
 

@@ -9,6 +9,16 @@
 import Foundation
 import ObjectMapper
 
+class QJTDateTransform:DateFormatterTransform {
+    internal init() {
+        let formatter = NSDateFormatter()
+        formatter.locale = NSLocale.currentLocale()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        super.init(dateFormatter: formatter)
+    }
+    
+}
+
 class Leave: Mappable {
     
     // 请假编号
@@ -39,6 +49,8 @@ class Leave: Mappable {
     var semester: Int
     // 拒绝理由
     var refuseReason: String
+    // 电话号码
+    var phoneNum: String
     
     init() {
         leaveID = 0
@@ -55,6 +67,7 @@ class Leave: Mappable {
         year = 0
         semester = 0
         refuseReason = ""
+        phoneNum = ""
     }
     
     required init?(_ map: Map) {
@@ -72,6 +85,7 @@ class Leave: Mappable {
         year = 0
         semester = 0
         refuseReason = ""
+        phoneNum = ""
     }
     
     func mapping(map: Map) {
@@ -79,8 +93,8 @@ class Leave: Mappable {
         studentID       <- map["studentID"]
         studentName     <- map["studentName"]
         className       <- map["className"]
-        fromTime        <- map["fromTime"]
-        toTime          <- map["toTime"]
+        fromTime        <- (map["fromTime"])
+        toTime          <- (map["toTime"])
         leaveState      <- map["leaveState"]
         reason          <- map["reason"]
         teacherID       <- map["teacherID"]
@@ -89,6 +103,7 @@ class Leave: Mappable {
         year            <- map["year"]
         semester        <- map["semester"]
         refuseReason    <- map["refuseReason"]
+        phoneNum        <- map["phoneNum"]
     }
     
 }

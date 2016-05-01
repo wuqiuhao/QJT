@@ -10,7 +10,6 @@
 		1A0F54FFF44B77ECE6EF942A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451ED4D82C76F378DBB33D09 /* Pods.framework */; };
 		580C95891CD5055800F332A3 /* CLTPersonalANDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C95881CD5055800F332A3 /* CLTPersonalANDetailCell.swift */; };
 		580C958B1CD5060700F332A3 /* CLTPersonalANDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C958A1CD5060700F332A3 /* CLTPersonalANDetailViewController.swift */; };
-		5844B5CC1CD5EB2A009DD326 /* CLTPersonalAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5844B5CB1CD5EB2A009DD326 /* CLTPersonalAccountViewController.swift */; };
 		5844B5CD1CD5FDBD009DD326 /* CLTPersonalAttendanceNoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C95801CD4B09100F332A3 /* CLTPersonalAttendanceNoteCell.swift */; };
 		5844B5CE1CD5FDBD009DD326 /* CLTPersonalAttendanceNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C95841CD4BC8200F332A3 /* CLTPersonalAttendanceNoteViewController.swift */; };
 		585122D41CCD0F790041A82F /* SignCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585122D31CCD0F790041A82F /* SignCourseViewController.swift */; };
@@ -103,6 +102,9 @@
 		683CF5FA1CC34E8C00F69765 /* BaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CF5F81CC34E8C00F69765 /* BaseType.swift */; };
 		683CF5FB1CC34E8C00F69765 /* UserType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CF5F91CC34E8C00F69765 /* UserType.swift */; };
 		6849D97C1CD5EBBF009DE599 /* LeaveDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6849D97B1CD5EBBF009DE599 /* LeaveDetail.swift */; };
+		6849D9801CD5F8B6009DE599 /* SPersonalResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6849D97F1CD5F8B6009DE599 /* SPersonalResetViewController.swift */; };
+		6849D9821CD5FA0F009DE599 /* SPersonalResetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6849D9811CD5FA0F009DE599 /* SPersonalResetCell.swift */; };
+		6849D9841CD601F4009DE599 /* CLTPersonalAccountViewController .swift in Sources */ = {isa = PBXBuildFile; fileRef = 6849D9831CD601F4009DE599 /* CLTPersonalAccountViewController .swift */; };
 		687E38341CBE4008009EDE17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687E38331CBE4008009EDE17 /* Main.storyboard */; };
 		688E3ABA1CD5C360004011AE /* CLTLeaveDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688E3AB91CD5C360004011AE /* CLTLeaveDetailViewController.swift */; };
 		688E3ABC1CD5C3F6004011AE /* CLTLeaveDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688E3ABB1CD5C3F6004011AE /* CLTLeaveDetailCell.swift */; };
@@ -173,7 +175,6 @@
 		580C95841CD4BC8200F332A3 /* CLTPersonalAttendanceNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTPersonalAttendanceNoteViewController.swift; sourceTree = "<group>"; };
 		580C95881CD5055800F332A3 /* CLTPersonalANDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTPersonalANDetailCell.swift; sourceTree = "<group>"; };
 		580C958A1CD5060700F332A3 /* CLTPersonalANDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTPersonalANDetailViewController.swift; sourceTree = "<group>"; };
-		5844B5CB1CD5EB2A009DD326 /* CLTPersonalAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTPersonalAccountViewController.swift; sourceTree = "<group>"; };
 		585122D31CCD0F790041A82F /* SignCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignCourseViewController.swift; sourceTree = "<group>"; };
 		680359EC1CC756BA002F7C60 /* SSign.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SSign.storyboard; sourceTree = "<group>"; };
 		680359EE1CC756BA002F7C60 /* Sign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sign.swift; sourceTree = "<group>"; };
@@ -267,6 +268,9 @@
 		683CF5F81CC34E8C00F69765 /* BaseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseType.swift; sourceTree = "<group>"; };
 		683CF5F91CC34E8C00F69765 /* UserType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserType.swift; sourceTree = "<group>"; };
 		6849D97B1CD5EBBF009DE599 /* LeaveDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeaveDetail.swift; path = Entity/Model/LeaveDetail.swift; sourceTree = "<group>"; };
+		6849D97F1CD5F8B6009DE599 /* SPersonalResetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPersonalResetViewController.swift; sourceTree = "<group>"; };
+		6849D9811CD5FA0F009DE599 /* SPersonalResetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPersonalResetCell.swift; sourceTree = "<group>"; };
+		6849D9831CD601F4009DE599 /* CLTPersonalAccountViewController .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLTPersonalAccountViewController .swift"; sourceTree = "<group>"; };
 		687E38331CBE4008009EDE17 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		688E3AB91CD5C360004011AE /* CLTLeaveDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTLeaveDetailViewController.swift; sourceTree = "<group>"; };
 		688E3ABB1CD5C3F6004011AE /* CLTLeaveDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTLeaveDetailCell.swift; sourceTree = "<group>"; };
@@ -442,6 +446,7 @@
 				6808AA521CCFBF0B00C2C324 /* SPersonalHeadContentView.swift */,
 				68D8F1121CD25CCC008111D9 /* SPersonalLeaveNoteCell.swift */,
 				68C8B5511CD47D0800B407AB /* SPersonalLNDetailCell.swift */,
+				6849D9811CD5FA0F009DE599 /* SPersonalResetCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -453,6 +458,7 @@
 				6808AA501CCFA28900C2C324 /* SPersonalAccontViewController.swift */,
 				68D8F1101CD25CAF008111D9 /* SPersonalLeaveNoteViewController.swift */,
 				68C8B54F1CD47CDA00B407AB /* SPersonalLNDetailViewController.swift */,
+				6849D97F1CD5F8B6009DE599 /* SPersonalResetViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -645,8 +651,8 @@
 		68083F301CCE5909004BE4D4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6849D9831CD601F4009DE599 /* CLTPersonalAccountViewController .swift */,
 				EF055D9E1CD1AC4F004DD466 /* CLTPersonalMainViewController.swift */,
-				5844B5CB1CD5EB2A009DD326 /* CLTPersonalAccountViewController.swift */,
 				580C95841CD4BC8200F332A3 /* CLTPersonalAttendanceNoteViewController.swift */,
 				580C958A1CD5060700F332A3 /* CLTPersonalANDetailViewController.swift */,
 			);
@@ -1406,7 +1412,6 @@
 				68186BFF1CB3525D005AF62D /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */,
 				68186C081CB3525D005AF62D /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				68186C331CB3554F005AF62D /* LoginGeniusViewController.swift in Sources */,
-				5844B5CC1CD5EB2A009DD326 /* CLTPersonalAccountViewController.swift in Sources */,
 				68FF200A1CCD0396005AC0B7 /* ReturnResult.swift in Sources */,
 				68186C0B1CB3525D005AF62D /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,
 				EFA869191CAA651900CC1B71 /* NetWorkManager.swift in Sources */,
@@ -1417,6 +1422,7 @@
 				6808AA511CCFA28900C2C324 /* SPersonalAccontViewController.swift in Sources */,
 				68083F961CCE5909004BE4D4 /* CLeaveMainViewController.swift in Sources */,
 				68D8F1111CD25CAF008111D9 /* SPersonalLeaveNoteViewController.swift in Sources */,
+				6849D9841CD601F4009DE599 /* CLTPersonalAccountViewController .swift in Sources */,
 				68FF20011CCD02F6005AC0B7 /* HLable.swift in Sources */,
 				68186C111CB3525D005AF62D /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
 				68D8EFD41CC8ABFE00906E3D /* UIViewController_extension.swift in Sources */,
@@ -1512,8 +1518,10 @@
 				683CF5FA1CC34E8C00F69765 /* BaseType.swift in Sources */,
 				EF055D9F1CD1AC4F004DD466 /* CLTPersonalMainViewController.swift in Sources */,
 				688E3ADA1CD5E695004011AE /* AttendanceDetail.swift in Sources */,
+				6849D9801CD5F8B6009DE599 /* SPersonalResetViewController.swift in Sources */,
 				68186C381CB3554F005AF62D /* LoginViewController.swift in Sources */,
 				68083ECA1CCE56CC004BE4D4 /* DLRadioButton.m in Sources */,
+				6849D9821CD5FA0F009DE599 /* SPersonalResetCell.swift in Sources */,
 				EF055D7F1CD1AB5C004DD466 /* ADStatisticsTableViewCell.swift in Sources */,
 				EFA8691F1CAA659200CC1B71 /* SysConfig.swift in Sources */,
 				68186C051CB3525D005AF62D /* NVActivityIndicatorAnimationBallScaleMultiple.swift in Sources */,

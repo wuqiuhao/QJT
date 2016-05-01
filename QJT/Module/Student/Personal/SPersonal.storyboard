@@ -103,11 +103,77 @@
                     <connections>
                         <outlet property="logoutBtn" destination="qeU-S6-OZb" id="ntn-57-LtW"/>
                         <outlet property="tableView" destination="e03-1E-zzU" id="xrp-JO-0ir"/>
+                        <segue destination="qVT-5w-b7X" kind="show" identifier="SPersonalResetViewController" id="jaK-wN-k6b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FOn-SG-T03" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1411" y="-321"/>
+        </scene>
+        <!--Personal Reset View Controller-->
+        <scene sceneID="C78-4n-oqH">
+            <objects>
+                <viewController id="qVT-5w-b7X" customClass="SPersonalResetViewController" customModule="QJT" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZNE-Sh-ufI"/>
+                        <viewControllerLayoutGuide type="bottom" id="UlE-xh-LVC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7xx-Xk-Cak">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="wJr-xu-HYg">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SPersonalResetCell" id="7eM-nL-lNh" customClass="SPersonalResetCell" customModule="QJT" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="113.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7eM-nL-lNh" id="vxP-qT-DUX">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="07i-u1-U7c" userLabel="resetTfd">
+                                                    <rect key="frame" x="20" y="4.5" width="560" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="LXl-ZD-1WC"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" secureTextEntry="YES"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="07i-u1-U7c" secondAttribute="trailing" constant="20" id="23o-9q-C4K"/>
+                                                <constraint firstItem="07i-u1-U7c" firstAttribute="leading" secondItem="vxP-qT-DUX" secondAttribute="leading" constant="20" id="8kH-j5-2MM"/>
+                                                <constraint firstItem="07i-u1-U7c" firstAttribute="centerY" secondItem="vxP-qT-DUX" secondAttribute="centerY" id="SPw-zY-txY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="resetTfd" destination="07i-u1-U7c" id="OJe-DM-XKR"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="qVT-5w-b7X" id="HdI-Nd-4FQ"/>
+                                    <outlet property="delegate" destination="qVT-5w-b7X" id="7CF-bh-Bp0"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wJr-xu-HYg" firstAttribute="leading" secondItem="7xx-Xk-Cak" secondAttribute="leading" id="7PS-GA-aEJ"/>
+                            <constraint firstAttribute="trailing" secondItem="wJr-xu-HYg" secondAttribute="trailing" id="96i-2c-1Wf"/>
+                            <constraint firstItem="wJr-xu-HYg" firstAttribute="top" secondItem="ZNE-Sh-ufI" secondAttribute="bottom" id="KDU-GC-Yqn"/>
+                            <constraint firstAttribute="bottom" secondItem="wJr-xu-HYg" secondAttribute="bottom" id="amj-zb-gUe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="wJr-xu-HYg" id="qSI-wW-gO8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="psJ-kk-bWx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2095" y="-321"/>
         </scene>
         <!--Personal Leave Note View Controller-->
         <scene sceneID="aeV-sg-mEo">

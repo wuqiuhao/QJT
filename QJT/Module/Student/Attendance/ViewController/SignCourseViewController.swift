@@ -40,7 +40,7 @@ extension SignCourseViewController {
     
     func getNetwork() {
         self.pleaseWait()
-        NetWorkManager.httpRequest(Methods.leave_studentGetCourseClasses, params: ["studentID":"\(UserConfig.studentSetting()!.userID)"], modelType: CourseClass(), listType: CourseClass(), completed: { (responseData) in
+        NetWorkManager.httpRequest(Methods.leave_studentGetCourseClasses, params: ["studentID":UserConfig.studentSetting()!.userID], modelType: CourseClass(), listType: CourseClass(), completed: { (responseData) in
             
             self.clearAllNotice()
             self.courseArrData = responseData["list"] as! [CourseClass]

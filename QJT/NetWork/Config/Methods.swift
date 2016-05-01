@@ -10,7 +10,10 @@ import Foundation
 
 var LoginService = [
     "login_studentLogin",
-    "login_teacherLogin"
+    "login_teacherLogin",
+    "login_studentLogout",
+    "login_teacherLogout",
+    "login_studentChangePassword"
 ]
 
 var AttendanceService = [
@@ -39,6 +42,9 @@ class Methods {
     // 学生登录
     static let login_studentLogin = "login_studentLogin"
     static let login_teacherLogin = "login_teacherLogin"
+    static let login_studentLogout = "login_studentLogout"
+    static let login_teacherLogout = "login_teacherLogout"
+    static let login_studentChangePassword  = "login_studentChangePassword"
     
     
     //签到模块

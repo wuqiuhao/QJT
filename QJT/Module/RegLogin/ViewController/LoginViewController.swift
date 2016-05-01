@@ -144,6 +144,11 @@ extension LoginViewController {
             params.updateValue(accountTfd.text!, forKey: "teacherID")
             params.updateValue(passwordTfd.text!, forKey: "password")
             params.updateValue(2, forKey: "userType")
+            if let _ = JPUSHService.registrationID() {
+                params.updateValue(JPUSHService.registrationID(), forKey: "registerID")
+            } else {
+                params.updateValue("", forKey: "registerID")
+            }
             method = Methods.login_teacherLogin
             self.pleaseWait()
             NetWorkManager.httpRequest(method, params: params, modelType: TeacherSetting(), listType: nil, completed: { (responseData) in

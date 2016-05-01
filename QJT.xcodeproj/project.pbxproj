@@ -10,12 +10,6 @@
 		1A0F54FFF44B77ECE6EF942A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451ED4D82C76F378DBB33D09 /* Pods.framework */; };
 		580C95891CD5055800F332A3 /* CLTPersonalANDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C95881CD5055800F332A3 /* CLTPersonalANDetailCell.swift */; };
 		580C958B1CD5060700F332A3 /* CLTPersonalANDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C958A1CD5060700F332A3 /* CLTPersonalANDetailViewController.swift */; };
-		580FAAD91CD5DA8D0059CBFF /* CLTPersonal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 580FAAD81CD5DA8D0059CBFF /* CLTPersonal.storyboard */; };
-		580FAADE1CD5DC130059CBFF /* Attendance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580FAADC1CD5DC130059CBFF /* Attendance.swift */; };
-		580FAADF1CD5DC130059CBFF /* AttendanceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580FAADD1CD5DC130059CBFF /* AttendanceDetail.swift */; };
-		580FAAE11CD5DD7F0059CBFF /* SPersonalSignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580FAAE01CD5DD7F0059CBFF /* SPersonalSignViewController.swift */; };
-		580FAAE51CD5DFAF0059CBFF /* CLTPersonalMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580FAAE41CD5DFAF0059CBFF /* CLTPersonalMainCell.swift */; };
-		580FAAE71CD5E04C0059CBFF /* CLTPersonalAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580FAAE61CD5E04C0059CBFF /* CLTPersonalAccountViewController.swift */; };
 		585122D41CCD0F790041A82F /* SignCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585122D31CCD0F790041A82F /* SignCourseViewController.swift */; };
 		68035A001CC756BA002F7C60 /* SSign.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680359EC1CC756BA002F7C60 /* SSign.storyboard */; };
 		68035A011CC756BA002F7C60 /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359EE1CC756BA002F7C60 /* Sign.swift */; };
@@ -108,6 +102,10 @@
 		687E38341CBE4008009EDE17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687E38331CBE4008009EDE17 /* Main.storyboard */; };
 		688E3ABA1CD5C360004011AE /* CLTLeaveDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688E3AB91CD5C360004011AE /* CLTLeaveDetailViewController.swift */; };
 		688E3ABC1CD5C3F6004011AE /* CLTLeaveDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688E3ABB1CD5C3F6004011AE /* CLTLeaveDetailCell.swift */; };
+		688E3AD31CD5E42B004011AE /* Attendance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688E3AD11CD5E42B004011AE /* Attendance.swift */; };
+		688E3AD61CD5E5F8004011AE /* CLTPersonalMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688E3AD51CD5E5F8004011AE /* CLTPersonalMainCell.swift */; };
+		688E3AD81CD5E641004011AE /* CLTPersonal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 688E3AD71CD5E641004011AE /* CLTPersonal.storyboard */; };
+		688E3ADA1CD5E695004011AE /* AttendanceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688E3AD91CD5E695004011AE /* AttendanceDetail.swift */; };
 		68B7B52F1CBE91C80046FC7F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7B52E1CBE91C80046FC7F /* MainTabBarController.swift */; };
 		68B98EF41CBE49A9009D64D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B98EF21CBE49A9009D64D1 /* LaunchScreen.storyboard */; };
 		68B98EF71CBE4A00009D64D1 /* QJT.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 68B98EF61CBE4A00009D64D1 /* QJT.entitlements */; };
@@ -117,9 +115,7 @@
 		68C8B5521CD47D0800B407AB /* SPersonalLNDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C8B5511CD47D0800B407AB /* SPersonalLNDetailCell.swift */; };
 		68C8B5541CD499DB00B407AB /* Leave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C8B5531CD499DB00B407AB /* Leave.swift */; };
 		68C8B5561CD4E57800B407AB /* LeaveState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C8B5551CD4E57800B407AB /* LeaveState.swift */; };
-		68C8B5581CD4F97700B407AB /* CLTPersonalMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C8B5571CD4F97700B407AB /* CLTPersonalMainCell.swift */; };
 		68C8B55A1CD50BD200B407AB /* CLTLeaveMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C8B5591CD50BD200B407AB /* CLTLeaveMainCell.swift */; };
-		68C8B55C1CD5119900B407AB /* CLTPersonalAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C8B55B1CD5119900B407AB /* CLTPersonalAccountViewController.swift */; };
 		68CE13C31CD1A12A009C8E6C /* LeaveReasonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CE13C21CD1A12A009C8E6C /* LeaveReasonViewController.swift */; };
 		68CE13C51CD1A14E009C8E6C /* ViewControllerTransmitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CE13C41CD1A14E009C8E6C /* ViewControllerTransmitDelegate.swift */; };
 		68CE13C71CD1A16D009C8E6C /* LeaveReasonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CE13C61CD1A16D009C8E6C /* LeaveReasonCell.swift */; };
@@ -173,12 +169,6 @@
 		580C95841CD4BC8200F332A3 /* CLTPersonalAttendanceNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTPersonalAttendanceNoteViewController.swift; sourceTree = "<group>"; };
 		580C95881CD5055800F332A3 /* CLTPersonalANDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTPersonalANDetailCell.swift; sourceTree = "<group>"; };
 		580C958A1CD5060700F332A3 /* CLTPersonalANDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTPersonalANDetailViewController.swift; sourceTree = "<group>"; };
-		580FAAD81CD5DA8D0059CBFF /* CLTPersonal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CLTPersonal.storyboard; sourceTree = "<group>"; };
-		580FAADC1CD5DC130059CBFF /* Attendance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Attendance.swift; path = Entity/Model/Attendance.swift; sourceTree = "<group>"; };
-		580FAADD1CD5DC130059CBFF /* AttendanceDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AttendanceDetail.swift; path = Entity/Model/AttendanceDetail.swift; sourceTree = "<group>"; };
-		580FAAE01CD5DD7F0059CBFF /* SPersonalSignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPersonalSignViewController.swift; sourceTree = "<group>"; };
-		580FAAE41CD5DFAF0059CBFF /* CLTPersonalMainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTPersonalMainCell.swift; sourceTree = "<group>"; };
-		580FAAE61CD5E04C0059CBFF /* CLTPersonalAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTPersonalAccountViewController.swift; sourceTree = "<group>"; };
 		585122D31CCD0F790041A82F /* SignCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignCourseViewController.swift; sourceTree = "<group>"; };
 		680359EC1CC756BA002F7C60 /* SSign.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SSign.storyboard; sourceTree = "<group>"; };
 		680359EE1CC756BA002F7C60 /* Sign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sign.swift; sourceTree = "<group>"; };
@@ -274,6 +264,10 @@
 		687E38331CBE4008009EDE17 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		688E3AB91CD5C360004011AE /* CLTLeaveDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTLeaveDetailViewController.swift; sourceTree = "<group>"; };
 		688E3ABB1CD5C3F6004011AE /* CLTLeaveDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTLeaveDetailCell.swift; sourceTree = "<group>"; };
+		688E3AD11CD5E42B004011AE /* Attendance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Attendance.swift; path = Entity/Model/Attendance.swift; sourceTree = "<group>"; };
+		688E3AD51CD5E5F8004011AE /* CLTPersonalMainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTPersonalMainCell.swift; sourceTree = "<group>"; };
+		688E3AD71CD5E641004011AE /* CLTPersonal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CLTPersonal.storyboard; sourceTree = "<group>"; };
+		688E3AD91CD5E695004011AE /* AttendanceDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AttendanceDetail.swift; path = Entity/Model/AttendanceDetail.swift; sourceTree = "<group>"; };
 		68B7B52E1CBE91C80046FC7F /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		68B98EF21CBE49A9009D64D1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "Supporting Files/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		68B98EF61CBE4A00009D64D1 /* QJT.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = QJT.entitlements; sourceTree = "<group>"; };
@@ -283,9 +277,7 @@
 		68C8B5511CD47D0800B407AB /* SPersonalLNDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPersonalLNDetailCell.swift; sourceTree = "<group>"; };
 		68C8B5531CD499DB00B407AB /* Leave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Leave.swift; path = Entity/Model/Leave.swift; sourceTree = "<group>"; };
 		68C8B5551CD4E57800B407AB /* LeaveState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveState.swift; sourceTree = "<group>"; };
-		68C8B5571CD4F97700B407AB /* CLTPersonalMainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTPersonalMainCell.swift; sourceTree = "<group>"; };
 		68C8B5591CD50BD200B407AB /* CLTLeaveMainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTLeaveMainCell.swift; sourceTree = "<group>"; };
-		68C8B55B1CD5119900B407AB /* CLTPersonalAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTPersonalAccountViewController.swift; sourceTree = "<group>"; };
 		68CE13C21CD1A12A009C8E6C /* LeaveReasonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveReasonViewController.swift; sourceTree = "<group>"; };
 		68CE13C41CD1A14E009C8E6C /* ViewControllerTransmitDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerTransmitDelegate.swift; path = General/Protocol/ViewControllerTransmitDelegate.swift; sourceTree = "<group>"; };
 		68CE13C61CD1A16D009C8E6C /* LeaveReasonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveReasonCell.swift; sourceTree = "<group>"; };
@@ -455,7 +447,6 @@
 				6808AA501CCFA28900C2C324 /* SPersonalAccontViewController.swift */,
 				68D8F1101CD25CAF008111D9 /* SPersonalLeaveNoteViewController.swift */,
 				68C8B54F1CD47CDA00B407AB /* SPersonalLNDetailViewController.swift */,
-				580FAAE01CD5DD7F0059CBFF /* SPersonalSignViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -628,7 +619,7 @@
 		68083F2C1CCE5909004BE4D4 /* Personal */ = {
 			isa = PBXGroup;
 			children = (
-				580FAAD81CD5DA8D0059CBFF /* CLTPersonal.storyboard */,
+				688E3AD71CD5E641004011AE /* CLTPersonal.storyboard */,
 				68083F2E1CCE5909004BE4D4 /* View */,
 				68083F301CCE5909004BE4D4 /* ViewController */,
 			);
@@ -638,7 +629,7 @@
 		68083F2E1CCE5909004BE4D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				580FAAE41CD5DFAF0059CBFF /* CLTPersonalMainCell.swift */,
+				688E3AD51CD5E5F8004011AE /* CLTPersonalMainCell.swift */,
 				580C95801CD4B09100F332A3 /* CLTPersonalAttendanceNoteCell.swift */,
 				580C95881CD5055800F332A3 /* CLTPersonalANDetailCell.swift */,
 			);
@@ -648,7 +639,6 @@
 		68083F301CCE5909004BE4D4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				580FAAE61CD5E04C0059CBFF /* CLTPersonalAccountViewController.swift */,
 				EF055D9E1CD1AC4F004DD466 /* CLTPersonalMainViewController.swift */,
 				580C95841CD4BC8200F332A3 /* CLTPersonalAttendanceNoteViewController.swift */,
 				580C958A1CD5060700F332A3 /* CLTPersonalANDetailViewController.swift */,
@@ -1160,6 +1150,8 @@
 		EF9A30E01CA911BD00D5EFA6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				688E3AD91CD5E695004011AE /* AttendanceDetail.swift */,
+				688E3AD11CD5E42B004011AE /* Attendance.swift */,
 				68FF20081CCD0396005AC0B7 /* ResultModel */,
 				EF6A8C071CCFB1B10054282C /* EmptyModel.swift */,
 				683CF5F31CC34E7F00F69765 /* PersonSetting.swift */,
@@ -1171,8 +1163,6 @@
 				68035A981CC78066002F7C60 /* StudentSetting.swift */,
 				68035A9A1CC782F0002F7C60 /* TeacherSetting.swift */,
 				68C8B5531CD499DB00B407AB /* Leave.swift */,
-				580FAADC1CD5DC130059CBFF /* Attendance.swift */,
-				580FAADD1CD5DC130059CBFF /* AttendanceDetail.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1328,7 +1318,7 @@
 				68083F971CCE5909004BE4D4 /* CPersonal.storyboard in Resources */,
 				68083ECE1CCE571F004BE4D4 /* RegLogin.storyboard in Resources */,
 				68083F941CCE5909004BE4D4 /* CLeave.storyboard in Resources */,
-				580FAAD91CD5DA8D0059CBFF /* CLTPersonal.storyboard in Resources */,
+				688E3AD81CD5E641004011AE /* CLTPersonal.storyboard in Resources */,
 				687E38341CBE4008009EDE17 /* Main.storyboard in Resources */,
 				68083FB61CCE59D7004BE4D4 /* CLTAttendance.storyboard in Resources */,
 				68083FA01CCE5909004BE4D4 /* ADPersonal.storyboard in Resources */,
@@ -1419,7 +1409,6 @@
 				68FF20011CCD02F6005AC0B7 /* HLable.swift in Sources */,
 				68186C111CB3525D005AF62D /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
 				68D8EFD41CC8ABFE00906E3D /* UIViewController_extension.swift in Sources */,
-				580FAADF1CD5DC130059CBFF /* AttendanceDetail.swift in Sources */,
 				68035A931CC77791002F7C60 /* Teacher.swift in Sources */,
 				EF6A8C081CCFB1B10054282C /* EmptyModel.swift in Sources */,
 				68FF20001CCD02F6005AC0B7 /* CourseView.swift in Sources */,
@@ -1446,7 +1435,6 @@
 				EF055D991CD1AC0F004DD466 /* CTPersonalView.swift in Sources */,
 				681DD1261CC7B685004CB295 /* Week.swift in Sources */,
 				68CE13C71CD1A16D009C8E6C /* LeaveReasonCell.swift in Sources */,
-				580FAADE1CD5DC130059CBFF /* Attendance.swift in Sources */,
 				688E3ABC1CD5C3F6004011AE /* CLTLeaveDetailCell.swift in Sources */,
 				68186BFE1CB3525D005AF62D /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */,
 				EF055D951CD1AC04004DD466 /* CTLeaveViewMainController.swift in Sources */,
@@ -1468,7 +1456,6 @@
 				68186C001CB3525D005AF62D /* NVActivityIndicatorAnimationBallPulse.swift in Sources */,
 				68186C351CB3554F005AF62D /* LoginMeetViewController.swift in Sources */,
 				68BA68181CCF3FA20022C843 /* SPersonMainCell.swift in Sources */,
-				580FAAE11CD5DD7F0059CBFF /* SPersonalSignViewController.swift in Sources */,
 				68186BFB1CB3525D005AF62D /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */,
 				68035A0B1CC756BA002F7C60 /* SPersonalMainViewController.swift in Sources */,
 				68186C141CB3525D005AF62D /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
@@ -1477,10 +1464,10 @@
 				68083EC21CCE5691004BE4D4 /* NSDate_extension.swift in Sources */,
 				68186C0C1CB3525D005AF62D /* NVActivityIndicatorAnimationBlank.swift in Sources */,
 				68186C021CB3525D005AF62D /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */,
-				580FAAE71CD5E04C0059CBFF /* CLTPersonalAccountViewController.swift in Sources */,
 				68083FA21CCE5909004BE4D4 /* ADPersonalMainViewController.swift in Sources */,
 				68083FBA1CCE5AAB004BE4D4 /* LeaveCell.swift in Sources */,
 				68C8B55A1CD50BD200B407AB /* CLTLeaveMainCell.swift in Sources */,
+				688E3AD31CD5E42B004011AE /* Attendance.swift in Sources */,
 				68083F921CCE5909004BE4D4 /* CAttendanceView.swift in Sources */,
 				EFA8691D1CAA655C00CC1B71 /* Methods.swift in Sources */,
 				68186C091CB3525D005AF62D /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
@@ -1488,6 +1475,7 @@
 				68186C0E1CB3525D005AF62D /* NVActivityIndicatorAnimationLineScale.swift in Sources */,
 				68CE13C31CD1A12A009C8E6C /* LeaveReasonViewController.swift in Sources */,
 				EF055D8F1CD1ABED004DD466 /* CTAttendanceMainViewController.swift in Sources */,
+				688E3AD61CD5E5F8004011AE /* CLTPersonalMainCell.swift in Sources */,
 				EF796D8F1CD2F2970066A9F9 /* UIButton_extension.swift in Sources */,
 				68186C131CB3525D005AF62D /* NVActivityIndicatorAnimationPacman.swift in Sources */,
 				EF055D811CD1AB65004DD466 /* ADStatisticsViewController.swift in Sources */,
@@ -1500,7 +1488,6 @@
 				68FF20031CCD0315005AC0B7 /* LeaveCourseViewController.swift in Sources */,
 				EF1370271CD0F9EC008C6D39 /* Digest.swift in Sources */,
 				68CE13C51CD1A14E009C8E6C /* ViewControllerTransmitDelegate.swift in Sources */,
-				580FAAE51CD5DFAF0059CBFF /* CLTPersonalMainCell.swift in Sources */,
 				68083F851CCE5909004BE4D4 /* BPersonalView.swift in Sources */,
 				68035A081CC756BA002F7C60 /* LeaveMainViewController.swift in Sources */,
 				68C8B5561CD4E57800B407AB /* LeaveState.swift in Sources */,
@@ -1512,6 +1499,7 @@
 				68083F891CCE5909004BE4D4 /* CLTAttendanceMainViewController.swift in Sources */,
 				683CF5FA1CC34E8C00F69765 /* BaseType.swift in Sources */,
 				EF055D9F1CD1AC4F004DD466 /* CLTPersonalMainViewController.swift in Sources */,
+				688E3ADA1CD5E695004011AE /* AttendanceDetail.swift in Sources */,
 				68186C381CB3554F005AF62D /* LoginViewController.swift in Sources */,
 				68083ECA1CCE56CC004BE4D4 /* DLRadioButton.m in Sources */,
 				EF055D7F1CD1AB5C004DD466 /* ADStatisticsTableViewCell.swift in Sources */,
@@ -1519,14 +1507,12 @@
 				68186C051CB3525D005AF62D /* NVActivityIndicatorAnimationBallScaleMultiple.swift in Sources */,
 				68323F641CBCE14A00B7DEBE /* KeychainItemWrapper.m in Sources */,
 				68186C0F1CB3525D005AF62D /* NVActivityIndicatorAnimationLineScaleParty.swift in Sources */,
-				68C8B55C1CD5119900B407AB /* CLTPersonalAccountViewController.swift in Sources */,
 				68186BF91CB3525D005AF62D /* AnimationRefresh.swift in Sources */,
 				68186C151CB3525D005AF62D /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */,
 				EF9D7BA61CCF0A2000FA79F7 /* ThemeConfig.swift in Sources */,
 				EF6A8C061CCFB1970054282C /* UIImage+ImageEffects.m in Sources */,
 				68083F8A1CCE5909004BE4D4 /* CLTSignCourseViewController.swift in Sources */,
 				68B7B52F1CBE91C80046FC7F /* MainTabBarController.swift in Sources */,
-				68C8B5581CD4F97700B407AB /* CLTPersonalMainCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

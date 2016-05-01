@@ -45,12 +45,24 @@ extension SPersonalAccontViewController {
     func logoutBtnClicked() {
         let alertVC = UIAlertController(title: "注意", message: "确认要注销吗?", preferredStyle: UIAlertControllerStyle.Alert)
         let confirmAction = UIAlertAction(title: "确定", style: UIAlertActionStyle.Default) { (action) in
+            
             let mainWindow = UIApplication.sharedApplication().keyWindow
             if UserConfig.removeAllFileInSandbox() {
                 mainWindow?.rootViewController = UIStoryboard(name: "RegLogin", bundle: nil).instantiateInitialViewController()
             } else {
                 self.errorNotice("注销失败")
             }
+            
+//            NetWorkManager.httpRequest(Methods.login_studentLogout, params: ["studentID":UserConfig.studentSetting()!.userID], modelType: EmptyModel(), listType: nil, completed: { (responseData) in
+//                    let mainWindow = UIApplication.sharedApplication().keyWindow
+//                    if UserConfig.removeAllFileInSandbox() {
+//                        mainWindow?.rootViewController = UIStoryboard(name: "RegLogin", bundle: nil).instantiateInitialViewController()
+//                    } else {
+//                        self.errorNotice("注销失败")
+//                    }
+//                }, errorClosure: { [weak self] (errorMsg) in
+//                    self?.errorNotice(errorMsg!)
+//            })
         }
         let cancelAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel) { (action) in
             
@@ -69,6 +81,10 @@ extension SPersonalAccontViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 12
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("SPersonalResetViewController", sender: nil)
     }
 }
 

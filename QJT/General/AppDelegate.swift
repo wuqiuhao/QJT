@@ -20,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = UIColor.whiteColor()
         ThemeConfig.configUI()
         
-        
         if UserConfig.isLogined() {
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! MainTabBarController
             if let userID = UserConfig.studentSetting()?.userID where userID.characters.count != 0 {

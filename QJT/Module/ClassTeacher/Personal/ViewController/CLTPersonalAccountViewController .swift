@@ -53,6 +53,16 @@ extension CLTPersonalAccountViewController {
             } else {
                 self.errorNotice("注销失败")
             }
+//        NetWorkManager.httpRequest(Methods.login_teacherLogout, params: ["teacherID":UserConfig.teacherSetting()!.userID], modelType: EmptyModel(), listType: nil, completed: { (responseData) in
+//                let mainWindow = UIApplication.sharedApplication().keyWindow
+//                if UserConfig.removeAllFileInSandbox() {
+//                    mainWindow?.rootViewController = UIStoryboard(name: "RegLogin", bundle: nil).instantiateInitialViewController()
+//                } else {
+//                    self.errorNotice("注销失败")
+//                }
+//            }, errorClosure: { [weak self] (errorMsg) in
+//                self?.errorNotice(errorMsg!)
+//        })
         }
         let cancelAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel) { (action) in
             

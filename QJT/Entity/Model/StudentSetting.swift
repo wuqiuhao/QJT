@@ -62,7 +62,6 @@ class StudentSetting: PersonSetting, NSCoding {
         className = aDecoder.decodeObjectForKey("className") as! String
         specialityName = aDecoder.decodeObjectForKey("specialityName") as! String
         deviceID = aDecoder.decodeObjectForKey("deviceID") as! String
-        print(aDecoder.decodeObjectForKey("userType") as! String)
         super.init()
         switch  aDecoder.decodeObjectForKey("userType") as! String {
         case "Uknown":

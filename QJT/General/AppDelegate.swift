@@ -12,7 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let appKey = "8d0ad725b58842d39a90aa77"
+    let appKey = "229b49963eead656e766072d"
     let channel = "App Store"
     let isProduction = false
 

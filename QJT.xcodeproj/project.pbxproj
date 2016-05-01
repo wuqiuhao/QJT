@@ -101,6 +101,8 @@
 		687E38341CBE4008009EDE17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 687E38331CBE4008009EDE17 /* Main.storyboard */; };
 		688E3ABA1CD5C360004011AE /* CLTLeaveDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688E3AB91CD5C360004011AE /* CLTLeaveDetailViewController.swift */; };
 		688E3ABC1CD5C3F6004011AE /* CLTLeaveDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688E3ABB1CD5C3F6004011AE /* CLTLeaveDetailCell.swift */; };
+		688E3AD31CD5E42B004011AE /* Attendance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688E3AD11CD5E42B004011AE /* Attendance.swift */; };
+		688E3AD41CD5E42B004011AE /* AttendanceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688E3AD21CD5E42B004011AE /* AttendanceDetail.swift */; };
 		68B7B52F1CBE91C80046FC7F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7B52E1CBE91C80046FC7F /* MainTabBarController.swift */; };
 		68B98EF41CBE49A9009D64D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B98EF21CBE49A9009D64D1 /* LaunchScreen.storyboard */; };
 		68B98EF71CBE4A00009D64D1 /* QJT.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 68B98EF61CBE4A00009D64D1 /* QJT.entitlements */; };
@@ -258,6 +260,8 @@
 		687E38331CBE4008009EDE17 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		688E3AB91CD5C360004011AE /* CLTLeaveDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTLeaveDetailViewController.swift; sourceTree = "<group>"; };
 		688E3ABB1CD5C3F6004011AE /* CLTLeaveDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTLeaveDetailCell.swift; sourceTree = "<group>"; };
+		688E3AD11CD5E42B004011AE /* Attendance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Attendance.swift; path = Entity/Model/Attendance.swift; sourceTree = "<group>"; };
+		688E3AD21CD5E42B004011AE /* AttendanceDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AttendanceDetail.swift; path = Entity/Model/AttendanceDetail.swift; sourceTree = "<group>"; };
 		68B7B52E1CBE91C80046FC7F /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		68B98EF21CBE49A9009D64D1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "Supporting Files/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		68B98EF61CBE4A00009D64D1 /* QJT.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = QJT.entitlements; sourceTree = "<group>"; };
@@ -1139,6 +1143,8 @@
 		EF9A30E01CA911BD00D5EFA6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				688E3AD11CD5E42B004011AE /* Attendance.swift */,
+				688E3AD21CD5E42B004011AE /* AttendanceDetail.swift */,
 				68FF20081CCD0396005AC0B7 /* ResultModel */,
 				EF6A8C071CCFB1B10054282C /* EmptyModel.swift */,
 				683CF5F31CC34E7F00F69765 /* PersonSetting.swift */,
@@ -1430,6 +1436,7 @@
 				68186BFC1CB3525D005AF62D /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
 				68186C011CB3525D005AF62D /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */,
 				68C8B5521CD47D0800B407AB /* SPersonalLNDetailCell.swift in Sources */,
+				688E3AD41CD5E42B004011AE /* AttendanceDetail.swift in Sources */,
 				68083F981CCE5909004BE4D4 /* CPersonalView.swift in Sources */,
 				68BA681A1CCF43C00022C843 /* SPersonalHeaderView.swift in Sources */,
 				68186C101CB3525D005AF62D /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
@@ -1452,6 +1459,7 @@
 				68083FA21CCE5909004BE4D4 /* ADPersonalMainViewController.swift in Sources */,
 				68083FBA1CCE5AAB004BE4D4 /* LeaveCell.swift in Sources */,
 				68C8B55A1CD50BD200B407AB /* CLTLeaveMainCell.swift in Sources */,
+				688E3AD31CD5E42B004011AE /* Attendance.swift in Sources */,
 				68083F921CCE5909004BE4D4 /* CAttendanceView.swift in Sources */,
 				EFA8691D1CAA655C00CC1B71 /* Methods.swift in Sources */,
 				68186C091CB3525D005AF62D /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */,

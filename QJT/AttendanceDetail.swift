@@ -18,7 +18,7 @@ class AttendanceDetail: Mappable {
     //学生编号
     var studentID: String
     //学生姓名
-    var studentNAme: String
+    var studentName: String
     //缺课次数
     var queke: Int
     //迟到次数
@@ -32,7 +32,7 @@ class AttendanceDetail: Mappable {
         attendanceDetailID = 0
         attendanceID = 0
         studentID = ""
-        studentNAme = ""
+        studentName = ""
         queke = 0
         chidao = 0
         zaotui = 0
@@ -43,7 +43,7 @@ class AttendanceDetail: Mappable {
         attendanceDetailID = 0
         attendanceID = 0
         studentID = ""
-        studentNAme = ""
+        studentName = ""
         queke = 0
         chidao = 0
         zaotui = 0
@@ -54,7 +54,7 @@ class AttendanceDetail: Mappable {
         attendanceDetailID <- map["attendanceDetailID"]
         attendanceID       <- map["attendanceID"]
         studentID          <- map["studentID"]
-        studentNAme        <- map["studentNAme"]
+        studentName        <- map["studentName"]
         queke              <- map["queke"]
         chidao             <- map["chidao"]
         zaotui             <- map["zaotui"]

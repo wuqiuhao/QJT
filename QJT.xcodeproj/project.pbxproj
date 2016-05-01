@@ -13,6 +13,8 @@
 		580C95811CD4B09100F332A3 /* CLTPersonalAttendanceNoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C95801CD4B09100F332A3 /* CLTPersonalAttendanceNoteCell.swift */; };
 		580C95851CD4BC8200F332A3 /* CLTPersonalAttendanceNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C95841CD4BC8200F332A3 /* CLTPersonalAttendanceNoteViewController.swift */; };
 		580C95871CD4DA8900F332A3 /* AttendanceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C95861CD4DA8900F332A3 /* AttendanceDetail.swift */; };
+		580C95891CD5055800F332A3 /* CLTPersonalANDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C95881CD5055800F332A3 /* CLTPersonalANDetailCell.swift */; };
+		580C958B1CD5060700F332A3 /* CLTPersonalANDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C958A1CD5060700F332A3 /* CLTPersonalANDetailViewController.swift */; };
 		585122D41CCD0F790041A82F /* SignCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585122D31CCD0F790041A82F /* SignCourseViewController.swift */; };
 		68035A001CC756BA002F7C60 /* SSign.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680359EC1CC756BA002F7C60 /* SSign.storyboard */; };
 		68035A011CC756BA002F7C60 /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359EE1CC756BA002F7C60 /* Sign.swift */; };
@@ -168,6 +170,8 @@
 		580C95801CD4B09100F332A3 /* CLTPersonalAttendanceNoteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTPersonalAttendanceNoteCell.swift; sourceTree = "<group>"; };
 		580C95841CD4BC8200F332A3 /* CLTPersonalAttendanceNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTPersonalAttendanceNoteViewController.swift; sourceTree = "<group>"; };
 		580C95861CD4DA8900F332A3 /* AttendanceDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendanceDetail.swift; sourceTree = "<group>"; };
+		580C95881CD5055800F332A3 /* CLTPersonalANDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTPersonalANDetailCell.swift; sourceTree = "<group>"; };
+		580C958A1CD5060700F332A3 /* CLTPersonalANDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTPersonalANDetailViewController.swift; sourceTree = "<group>"; };
 		585122D31CCD0F790041A82F /* SignCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignCourseViewController.swift; sourceTree = "<group>"; };
 		680359EC1CC756BA002F7C60 /* SSign.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SSign.storyboard; sourceTree = "<group>"; };
 		680359EE1CC756BA002F7C60 /* Sign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sign.swift; sourceTree = "<group>"; };
@@ -624,6 +628,7 @@
 			children = (
 				EF055D9C1CD1AC4A004DD466 /* CLTPersonalView.swift */,
 				580C95801CD4B09100F332A3 /* CLTPersonalAttendanceNoteCell.swift */,
+				580C95881CD5055800F332A3 /* CLTPersonalANDetailCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -633,6 +638,7 @@
 			children = (
 				EF055D9E1CD1AC4F004DD466 /* CLTPersonalMainViewController.swift */,
 				580C95841CD4BC8200F332A3 /* CLTPersonalAttendanceNoteViewController.swift */,
+				580C958A1CD5060700F332A3 /* CLTPersonalANDetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1375,6 +1381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68035A9B1CC782F0002F7C60 /* TeacherSetting.swift in Sources */,
+				580C95891CD5055800F332A3 /* CLTPersonalANDetailCell.swift in Sources */,
 				68035A021CC756BA002F7C60 /* SignMainViewController.swift in Sources */,
 				68FF20071CCD0376005AC0B7 /* CourseClass.swift in Sources */,
 				68C8B5501CD47CDA00B407AB /* SPersonalLNDetailViewController.swift in Sources */,
@@ -1438,6 +1445,7 @@
 				68083F981CCE5909004BE4D4 /* CPersonalView.swift in Sources */,
 				68BA681A1CCF43C00022C843 /* SPersonalHeaderView.swift in Sources */,
 				68186C101CB3525D005AF62D /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
+				580C958B1CD5060700F332A3 /* CLTPersonalANDetailViewController.swift in Sources */,
 				683CF5F51CC34E7F00F69765 /* PersonSetting.swift in Sources */,
 				68186BFA1CB3525D005AF62D /* NVActivityIndicatorAnimationBallBeat.swift in Sources */,
 				68083F991CCE5909004BE4D4 /* CPersonalMainViewController.swift in Sources */,

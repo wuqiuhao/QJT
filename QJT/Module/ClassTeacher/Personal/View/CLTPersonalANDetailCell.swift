@@ -9,6 +9,9 @@
 import UIKit
 
 class CLTPersonalANDetailCell: UITableViewCell {
+    @IBOutlet weak var studentNameLabel: UILabel!
+    @IBOutlet weak var studentIDLabel: UILabel!
+    @IBOutlet weak var statusLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

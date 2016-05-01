@@ -9,14 +9,30 @@
 import Foundation
 import ObjectMapper
 
-class QJTDateTransform:DateFormatterTransform {
-    internal init() {
-        let formatter = NSDateFormatter()
-        formatter.locale = NSLocale.currentLocale()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        super.init(dateFormatter: formatter)
+class QJTDateTransform: TransformType {
+    typealias Object = NSDate
+    typealias JSON = Double
+    
+    init() {}
+    
+    func transformFromJSON(value: AnyObject?) -> NSDate? {
+        if let timeInt = value as? Double {
+            return NSDate(timeIntervalSince1970: NSTimeInterval(timeInt/1000))
+        }
+        
+        if let timeStr = value as? String {
+            return NSDate(timeIntervalSince1970: NSTimeInterval(atof(timeStr)/1000))
+        }
+        
+        return nil
     }
     
+    func transformToJSON(value: NSDate?) -> Double? {
+        if let date = value {
+            return Double(date.timeIntervalSince1970)
+        }
+        return nil
+    }
 }
 
 class Leave: Mappable {
@@ -93,8 +109,8 @@ class Leave: Mappable {
         studentID       <- map["studentID"]
         studentName     <- map["studentName"]
         className       <- map["className"]
-        fromTime        <- (map["fromTime"])
-        toTime          <- (map["toTime"])
+        fromTime        <- (map["fromTime"],QJTDateTransform())
+        toTime          <- (map["toTime"],QJTDateTransform())
         leaveState      <- map["leaveState"]
         reason          <- map["reason"]
         teacherID       <- map["teacherID"]

@@ -69,7 +69,7 @@ extension CLTPersonalMainViewController: UITableViewDelegate {
         case 0:
             self.performSegueWithIdentifier("SPersonalLeaveNoteViewController", sender: nil)
         case 1:
-            self.performSegueWithIdentifier("SPersonalSignViewController", sender: nil)
+            self.performSegueWithIdentifier("CLTPersonalAttendanceNoteViewController", sender: nil)
         case 2:
             self.performSegueWithIdentifier("CLTPersonalAccountViewController", sender: nil)
         default:

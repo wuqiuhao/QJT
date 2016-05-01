@@ -11,6 +11,7 @@ import UIKit
 class CLTPersonalAttendanceNoteViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     lazy var attendanceArrData = [Attendance]()
+    var attendanceID: Int?
     override func viewDidLoad() {
         super.viewDidLoad()
         getNetwork()
@@ -22,6 +23,15 @@ class CLTPersonalAttendanceNoteViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "cLTPersonalANDetailViewController" {
+            let detailView = segue.destinationViewController as! CLTPersonalANDetailViewController
+            detailView.attendanceID = attendanceID
+        }
+        
+        
     }
 
 }
@@ -67,10 +77,8 @@ extension CLTPersonalAttendanceNoteViewController: UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        //self.performSegueWithIdentifier("SPersonalLNDetailViewController", sender: nil)
-        
-        let vc = UIStoryboard(name: "SPersonal", bundle: nil).instantiateViewControllerWithIdentifier("SPersonalLNDetailViewController")
-        navigationController?.pushViewController(vc, animated: true)
+        attendanceID = attendanceArrData[indexPath.row].attendanceID
+        self.performSegueWithIdentifier("cLTPersonalANDetailViewController", sender: nil)
         
     }
 }

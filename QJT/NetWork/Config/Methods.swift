@@ -17,7 +17,8 @@ var AttendanceService = [
     "attendance_studentAttendance",
     "attendance_teacherGetCourseClasses",
     "attendance_teacherBeginClass",
-    "attendance_getAttendanceInfosByTeacherID"
+    "attendance_getAttendanceInfosByTeacherID",
+    "attendance_getAttendanceDetailInfo"
 ]
 
 var LeaveService = [
@@ -31,12 +32,14 @@ var TestService = [
 ]
 
 class Methods {
+    
     // 数据测试接口
     static let test = "test"
     // 登陆模块
     // 学生登录
     static let login_studentLogin = "login_studentLogin"
     static let login_teacherLogin = "login_teacherLogin"
+    
     
     //签到模块
     //学生签到
@@ -47,6 +50,9 @@ class Methods {
     static let attendance_teacherBeginClass = "attendance_teacherBeginClass"
     //教师获取所有考勤列表
     static let attendance_getAttendanceInfosByTeacherID = "attendance_getAttendanceInfosByTeacherID"
+    //教师获取考勤明细
+    static let attendance_getAttendanceDetailInfo = "attendance_getAttendanceDetailInfo"
+    
     
     // 请假模块
     // 学生获取课程表
@@ -55,7 +61,6 @@ class Methods {
     static let leave_leaveApplication = "leave_leaveApplication"
     // 学生获取历史请假列表
     static let leave_getLeaveInfosByStudentID = "leave_getLeaveInfosByStudentID"
-    
     
     
     class func getServiceMethod() -> [String:AnyObject] {

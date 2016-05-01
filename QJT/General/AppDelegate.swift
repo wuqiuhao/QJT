@@ -12,7 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let appKey = "8d0ad725b58842d39a90aa77"
+    let appKey = "229b49963eead656e766072d"
     let channel = "App Store"
     let isProduction = false
 
@@ -33,8 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         registerJPush(launchOptions)
-        
-        receiveJPushRigsterNotice()
         
         return true
     }
@@ -68,21 +66,12 @@ extension AppDelegate {
     }
     
     func application(application: UIApplication , didReceiveRemoteNotification userInfo: [ NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void ) {
-        
-        
-    }
-    
-    func applicationDidEnterBackground(application : UIApplication) {
-        JPUSHService.resetBadge()
+        // TODO:收到推送消息
+        print(userInfo)
     }
     
     func applicationWillEnterForeground(application : UIApplication) {
         JPUSHService.resetBadge()
+        application.applicationIconBadgeNumber = 0
     }
-    
-    func receiveJPushRigsterNotice() {
-
-    }
-
-    
 }

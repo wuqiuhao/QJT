@@ -9,7 +9,7 @@
 import UIKit
 
 class CLTPersonalAccountViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var logoutBtn: UIButton!
@@ -24,7 +24,7 @@ class CLTPersonalAccountViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
-
+    
 }
 
 // MARK: - private Method
@@ -47,22 +47,17 @@ extension CLTPersonalAccountViewController {
     func logoutBtnClicked() {
         let alertVC = UIAlertController(title: "注意", message: "确认要注销吗?", preferredStyle: UIAlertControllerStyle.Alert)
         let confirmAction = UIAlertAction(title: "确定", style: UIAlertActionStyle.Default) { (action) in
-            let mainWindow = UIApplication.sharedApplication().keyWindow
-            if UserConfig.removeAllFileInSandbox() {
-                mainWindow?.rootViewController = UIStoryboard(name: "RegLogin", bundle: nil).instantiateInitialViewController()
-            } else {
-                self.errorNotice("注销失败")
-            }
-//        NetWorkManager.httpRequest(Methods.login_teacherLogout, params: ["teacherID":UserConfig.teacherSetting()!.userID], modelType: EmptyModel(), listType: nil, completed: { (responseData) in
-//                let mainWindow = UIApplication.sharedApplication().keyWindow
-//                if UserConfig.removeAllFileInSandbox() {
-//                    mainWindow?.rootViewController = UIStoryboard(name: "RegLogin", bundle: nil).instantiateInitialViewController()
-//                } else {
-//                    self.errorNotice("注销失败")
-//                }
-//            }, errorClosure: { [weak self] (errorMsg) in
-//                self?.errorNotice(errorMsg!)
-//        })
+            NetWorkManager.httpRequest(Methods.login_teacherLogout, params: ["teacherID":UserConfig.teacherSetting()!.userID], modelType: EmptyModel(), listType: nil, completed: { (responseData) in
+                let mainWindow = UIApplication.sharedApplication().keyWindow
+                if UserConfig.removeAllFileInSandbox() {
+                    mainWindow?.rootViewController = UIStoryboard(name: "RegLogin", bundle: nil).instantiateInitialViewController()
+                }
+                }, errorClosure: { (errorMsg) in
+                    let mainWindow = UIApplication.sharedApplication().keyWindow
+                    if UserConfig.removeAllFileInSandbox() {
+                        mainWindow?.rootViewController = UIStoryboard(name: "RegLogin", bundle: nil).instantiateInitialViewController()
+                    }
+            })
         }
         let cancelAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel) { (action) in
             

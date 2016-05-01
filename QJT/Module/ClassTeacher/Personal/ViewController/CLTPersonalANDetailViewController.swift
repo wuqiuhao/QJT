@@ -15,8 +15,7 @@ class CLTPersonalANDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("\(attendanceID)")
+        navigationController?.setNavigationBarHidden(false, animated: true)
         getNetwork()
         tableView.delegate = self
         tableView.dataSource = self
@@ -44,7 +43,6 @@ extension CLTPersonalANDetailViewController {
             
             self.clearAllNotice()
             self.attDetailArrData = responseData["list"] as! [AttendanceDetail]
-            print(self.attDetailArrData.count)
             self.tableView.reloadData()
             
         }) { (errorMsg) in

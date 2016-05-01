@@ -11,7 +11,8 @@ import SnapKit
 
 class SPersonalHeadContentView: TableHeaderContentView {
 
-    var avatarImg: UIImageView!
+    var avatarView: UIView!
+    var imageView: UIImageView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -33,18 +34,31 @@ class SPersonalHeadContentView: TableHeaderContentView {
 extension SPersonalHeadContentView {
     
     func configUI() {
-        avatarImg = UIImageView()
-        avatarImg.image = UIImage(named: "SPersonal_avatar")
-        self.addSubview(avatarImg)
+        avatarView = UIView()
+        avatarView.backgroundColor = UIColor.whiteColor()
+        imageView = UIImageView()
+        avatarView.layer.cornerRadius = 40
+        imageView.layer.cornerRadius = 37
+        imageView.clipsToBounds = true
+        avatarView.clipsToBounds = true
+        imageView.contentMode = UIViewContentMode.ScaleAspectFill
+        imageView.image = UIImage(named: "SPersonal_avatar")
+        avatarView.addSubview(imageView)
+        self.addSubview(avatarView)
     }
     
     func configConstraintes() {
-        
-        avatarImg.snp_makeConstraints { (make) -> Void in
+        imageView.snp_makeConstraints { (make) in
+            make.centerX.equalTo(avatarView)
+            make.centerY.equalTo(avatarView)
+            make.width.equalTo(74)
+            make.height.equalTo(74)
+        }
+        avatarView.snp_makeConstraints { (make) -> Void in
             make.centerX.equalTo(self)
             make.centerY.equalTo(self)
-            make.width.equalTo(70)
-            make.height.equalTo(70)
+            make.width.equalTo(80)
+            make.height.equalTo(80)
         }
         
     }

@@ -12,6 +12,7 @@
 		580C958B1CD5060700F332A3 /* CLTPersonalANDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C958A1CD5060700F332A3 /* CLTPersonalANDetailViewController.swift */; };
 		5844B5CD1CD5FDBD009DD326 /* CLTPersonalAttendanceNoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C95801CD4B09100F332A3 /* CLTPersonalAttendanceNoteCell.swift */; };
 		5844B5CE1CD5FDBD009DD326 /* CLTPersonalAttendanceNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C95841CD4BC8200F332A3 /* CLTPersonalAttendanceNoteViewController.swift */; };
+		5844B5D01CD60661009DD326 /* SPersonalSignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5844B5CF1CD60661009DD326 /* SPersonalSignViewController.swift */; };
 		585122D41CCD0F790041A82F /* SignCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585122D31CCD0F790041A82F /* SignCourseViewController.swift */; };
 		68035A001CC756BA002F7C60 /* SSign.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680359EC1CC756BA002F7C60 /* SSign.storyboard */; };
 		68035A011CC756BA002F7C60 /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359EE1CC756BA002F7C60 /* Sign.swift */; };
@@ -175,6 +176,7 @@
 		580C95841CD4BC8200F332A3 /* CLTPersonalAttendanceNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTPersonalAttendanceNoteViewController.swift; sourceTree = "<group>"; };
 		580C95881CD5055800F332A3 /* CLTPersonalANDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTPersonalANDetailCell.swift; sourceTree = "<group>"; };
 		580C958A1CD5060700F332A3 /* CLTPersonalANDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTPersonalANDetailViewController.swift; sourceTree = "<group>"; };
+		5844B5CF1CD60661009DD326 /* SPersonalSignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPersonalSignViewController.swift; sourceTree = "<group>"; };
 		585122D31CCD0F790041A82F /* SignCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignCourseViewController.swift; sourceTree = "<group>"; };
 		680359EC1CC756BA002F7C60 /* SSign.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SSign.storyboard; sourceTree = "<group>"; };
 		680359EE1CC756BA002F7C60 /* Sign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sign.swift; sourceTree = "<group>"; };
@@ -454,6 +456,7 @@
 		680359FE1CC756BA002F7C60 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				5844B5CF1CD60661009DD326 /* SPersonalSignViewController.swift */,
 				680359FF1CC756BA002F7C60 /* SPersonalMainViewController.swift */,
 				6808AA501CCFA28900C2C324 /* SPersonalAccontViewController.swift */,
 				68D8F1101CD25CAF008111D9 /* SPersonalLeaveNoteViewController.swift */,
@@ -1289,6 +1292,9 @@
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = YKSTK56XPJ;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Keychain = {
 								enabled = 1;
 							};
@@ -1463,6 +1469,7 @@
 				68C8B5521CD47D0800B407AB /* SPersonalLNDetailCell.swift in Sources */,
 				68083F981CCE5909004BE4D4 /* CPersonalView.swift in Sources */,
 				68BA681A1CCF43C00022C843 /* SPersonalHeaderView.swift in Sources */,
+				5844B5D01CD60661009DD326 /* SPersonalSignViewController.swift in Sources */,
 				68186C101CB3525D005AF62D /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
 				580C958B1CD5060700F332A3 /* CLTPersonalANDetailViewController.swift in Sources */,
 				683CF5F51CC34E7F00F69765 /* PersonSetting.swift in Sources */,

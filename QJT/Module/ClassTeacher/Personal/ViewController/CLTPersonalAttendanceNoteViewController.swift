@@ -14,6 +14,7 @@ class CLTPersonalAttendanceNoteViewController: UIViewController {
     var attendanceID: Int?
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(false, animated: true)
         getNetwork()
         tableView.delegate = self
         tableView.dataSource = self
@@ -46,7 +47,7 @@ extension CLTPersonalAttendanceNoteViewController {
     
     func getNetwork() {
         self.pleaseWait()
-        NetWorkManager.httpRequest(Methods.attendance_getAttendanceInfosByTeacherID, params: ["teacherID":"20069027"], modelType: Attendance(), listType: Attendance(), completed: { (responseData) in
+        NetWorkManager.httpRequest(Methods.attendance_getAttendanceInfosByTeacherID, params: ["teacherID":UserConfig.teacherSetting()!.userID], modelType: Attendance(), listType: Attendance(), completed: { (responseData) in
             
             self.clearAllNotice()
             self.attendanceArrData = responseData["list"] as! [Attendance]

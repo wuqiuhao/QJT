@@ -518,7 +518,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CLTPersonalANDetailCell" rowHeight="44" id="jyj-wn-Uhp" customClass="CLTPersonalANDetailCell" customModule="QJT" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CLTPersonalANDetailCell" rowHeight="44" id="jyj-wn-Uhp" customClass="CLTPersonalANDetailCell" customModule="QJT" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="113.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jyj-wn-Uhp" id="aGl-Ac-mzo">

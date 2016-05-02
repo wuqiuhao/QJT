@@ -1,5 +1,5 @@
 //
-//  SPersonalSignCell.swift
+//  SPersonalSignNoteCell.swift
 //  QJT
 //
 //  Created by YC on 16/5/2.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SPersonalSignCell: UITableViewCell {
+class SPersonalSignNoteCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var courseNameLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!

@@ -16,12 +16,16 @@ class CLTPersonalAttendanceNoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.setNavigationBarHidden(false, animated: true)
+        
         getNetwork()
         tableView.delegate = self
         tableView.dataSource = self
         configUI()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(CLTPersonalAttendanceNoteViewController.refreshNote), name: "refreshNote", object: nil)
+        
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -42,6 +46,7 @@ class CLTPersonalAttendanceNoteViewController: UIViewController {
 // MARK: - private Method
 extension CLTPersonalAttendanceNoteViewController {
     func configUI() {
+        navigationController?.setNavigationBarHidden(false, animated: true)
         navigationItem.title = "考勤记录"
         tableView.headerRefresh = true
         tableView.configRefreshDelegate = self
@@ -60,6 +65,10 @@ extension CLTPersonalAttendanceNoteViewController {
             print(errorMsg!)
             
         }
+    }
+    
+    func refreshNote() {
+        tableView.headerRefresh = true
     }
     
 }

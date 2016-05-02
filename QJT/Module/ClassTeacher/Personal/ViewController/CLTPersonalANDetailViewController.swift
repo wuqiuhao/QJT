@@ -43,6 +43,9 @@ class CLTPersonalANDetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    deinit{
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "refreshNote", object: nil)
+    }
 
 }
 
@@ -89,6 +92,8 @@ extension CLTPersonalANDetailViewController {
             NetWorkManager.httpRequest(Methods.attendance_updateStudentAttendanceInfos, params: params, modelType: EmptyModel(), listType: nil, completed: { (responseData) in
                 self.clearAllNotice()
                 self.successNotice("提交成功")
+                NSNotificationCenter.defaultCenter().postNotificationName("refreshNote", object: nil)
+                
             }) { [weak self] (errorMsg) in
                 self?.clearAllNotice()
                 self?.errorNotice(errorMsg!)
@@ -152,14 +157,24 @@ extension CLTPersonalANDetailViewController {
                 
                 if self!.tempRow == 0 {
                     self!.attDetailArrData[self!.rowInTable].queke = 1
+                    self!.attDetailArrData[self!.rowInTable].chidao = 0
+                    self!.attDetailArrData[self!.rowInTable].zaotui = 0
+                    self!.attDetailArrData[self!.rowInTable].qingjia = 0
                 }
                 if self!.tempRow == 1 {
+                    self!.attDetailArrData[self!.rowInTable].queke = 0
                     self!.attDetailArrData[self!.rowInTable].chidao = 1
+                    self!.attDetailArrData[self!.rowInTable].qingjia = 0
                 }
                 if self!.tempRow == 2 {
+                    self!.attDetailArrData[self!.rowInTable].queke = 0
                     self!.attDetailArrData[self!.rowInTable].zaotui = 1
+                    self!.attDetailArrData[self!.rowInTable].qingjia = 0
                 }
                 if self!.tempRow == 3 {
+                    self!.attDetailArrData[self!.rowInTable].queke = 0
+                    self!.attDetailArrData[self!.rowInTable].chidao = 0
+                    self!.attDetailArrData[self!.rowInTable].zaotui = 0
                     self!.attDetailArrData[self!.rowInTable].qingjia = 1
                 }
                 if self!.tempRow == 4 {
@@ -220,6 +235,13 @@ extension CLTPersonalANDetailViewController {
                     self!.tempAttDetail.zaotui = 0
                     self!.tempAttDetail.qingjia = 1
                 }
+                if self!.tempRow == 4 {
+                    self!.tempAttDetail = self!.attDetailArrData[self!.rowInTable]
+                    self!.tempAttDetail.queke = 0
+                    self!.tempAttDetail.chidao = 0
+                    self!.tempAttDetail.zaotui = 0
+                    self!.tempAttDetail.qingjia = 0
+                }
                 
                 if self!.tempAttDetailArrData.count == 0 {
                     self!.tempAttDetailArrData.append(self!.attDetailArrData[self!.rowInTable])
@@ -239,7 +261,7 @@ extension CLTPersonalANDetailViewController {
                 
                 
                 self!.tableView.reloadData()
-                
+
             })
 
             msgAlertVC.addAction(cancelAction)

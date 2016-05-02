@@ -10,10 +10,12 @@ import UIKit
 
 class CLTPersonalAttendanceNoteViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    
     lazy var attendanceArrData = [Attendance]()
     var attendanceID: Int?
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationController?.setNavigationBarHidden(false, animated: true)
         getNetwork()
         tableView.delegate = self
@@ -40,9 +42,9 @@ class CLTPersonalAttendanceNoteViewController: UIViewController {
 // MARK: - private Method
 extension CLTPersonalAttendanceNoteViewController {
     func configUI() {
-//        self.automaticallyAdjustsScrollViewInsets = false
         navigationItem.title = "考勤记录"
-        
+        tableView.headerRefresh = true
+        tableView.configRefreshDelegate = self
     }
     
     func getNetwork() {
@@ -62,6 +64,25 @@ extension CLTPersonalAttendanceNoteViewController {
     
 }
 
+extension CLTPersonalAttendanceNoteViewController: ConfigRefreshDelegate {
+    func headerRefresh(view: UIView) {
+        NetWorkManager.httpRequest(Methods.attendance_getAttendanceInfosByTeacherID, params: ["teacherID":UserConfig.teacherSetting()!.userID], modelType: Attendance(), listType: Attendance(), completed: { (responseData) in
+            
+            
+            self.attendanceArrData = responseData["list"] as! [Attendance]
+            self.tableView.reloadData()
+            
+        }) { (errorMsg) in
+            
+            print(errorMsg!)
+            
+        }
+        
+        // 结束刷新
+        self.tableView.mj_header.endRefreshing()
+    }
+}
+
 // MARK: - UITableViewDelegate
 extension CLTPersonalAttendanceNoteViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -69,7 +90,7 @@ extension CLTPersonalAttendanceNoteViewController: UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 12
+        return CGFloat.min
     }
     
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

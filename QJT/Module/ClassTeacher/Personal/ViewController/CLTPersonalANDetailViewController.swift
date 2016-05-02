@@ -11,6 +11,7 @@ import ObjectMapper
 
 class CLTPersonalANDetailViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    
     lazy var attDetailArrData = [AttendanceDetail]()
     lazy var tempAttDetailArrData = [AttendanceDetail]()
     var attendanceID: Int!
@@ -29,6 +30,7 @@ class CLTPersonalANDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationController?.setNavigationBarHidden(false, animated: true)
         getNetwork()
         tableView.delegate = self
@@ -44,12 +46,31 @@ class CLTPersonalANDetailViewController: UIViewController {
 
 }
 
+extension CLTPersonalANDetailViewController: ConfigRefreshDelegate {
+    func headerRefresh(view: UIView) {
+        NetWorkManager.httpRequest(Methods.attendance_getAttendanceDetailInfo, params: ["attendanceID":attendanceID], modelType: AttendanceDetail(), listType: AttendanceDetail(), completed: { (responseData) in
+            
+            
+            self.attDetailArrData = responseData["list"] as! [AttendanceDetail]
+            self.tableView.reloadData()
+            
+        }) { (errorMsg) in
+            
+            print(errorMsg!)
+            
+        }
+        
+        // 结束刷新
+        self.tableView.mj_header.endRefreshing()
+    }
+}
+
 // MARK: - private Method
 extension CLTPersonalANDetailViewController {
     func configUI() {
-        //        self.automaticallyAdjustsScrollViewInsets = false
         navigationItem.title = "考勤明细"
-        
+        tableView.headerRefresh = true
+        tableView.configRefreshDelegate = self
     }
     
     func setupItem() {
@@ -58,18 +79,25 @@ extension CLTPersonalANDetailViewController {
     }
     
     func rightItemClicked() {
-        var params = [String:AnyObject]()
-        
-        params.updateValue(Mapper().toJSONString(tempAttDetailArrData)!, forKey: "attendanceDetailString")
-        
-        self.pleaseWait()
-        NetWorkManager.httpRequest(Methods.attendance_updateStudentAttendanceInfos, params: params, modelType: EmptyModel(), listType: nil, completed: { (responseData) in
-            self.clearAllNotice()
+        if tempAttDetailArrData.count != 0 {
             
+            var params = [String:AnyObject]()
+            
+            params.updateValue(Mapper().toJSONString(tempAttDetailArrData)!, forKey: "attendanceDetailString")
+            
+            self.pleaseWait()
+            NetWorkManager.httpRequest(Methods.attendance_updateStudentAttendanceInfos, params: params, modelType: EmptyModel(), listType: nil, completed: { (responseData) in
+                self.clearAllNotice()
+                self.successNotice("提交成功")
             }) { [weak self] (errorMsg) in
                 self?.clearAllNotice()
                 self?.errorNotice(errorMsg!)
+            }
+            
+        }else {
+            self.errorNotice("请修改后再提交")
         }
+        
         
     }
     
@@ -120,6 +148,28 @@ extension CLTPersonalANDetailViewController {
             let msgAlertVC = UIAlertController(title: "请选择操作类型", message: "", preferredStyle: .Alert)
             let cancelAction = UIAlertAction(title: "取消", style: .Cancel, handler: nil)
             let addAction = UIAlertAction(title: "添加", style: .Default,handler: {action in
+                
+                
+                if self!.tempRow == 0 {
+                    self!.attDetailArrData[self!.rowInTable].queke = 1
+                }
+                if self!.tempRow == 1 {
+                    self!.attDetailArrData[self!.rowInTable].chidao = 1
+                }
+                if self!.tempRow == 2 {
+                    self!.attDetailArrData[self!.rowInTable].zaotui = 1
+                }
+                if self!.tempRow == 3 {
+                    self!.attDetailArrData[self!.rowInTable].qingjia = 1
+                }
+                if self!.tempRow == 4 {
+                    self!.attDetailArrData[self!.rowInTable].queke = 0
+                    self!.attDetailArrData[self!.rowInTable].chidao = 0
+                    self!.attDetailArrData[self!.rowInTable].zaotui = 0
+                    self!.attDetailArrData[self!.rowInTable].qingjia = 0
+                }
+                
+                
                 if self!.tempAttDetailArrData.count == 0 {
                     self!.tempAttDetailArrData.append(self!.attDetailArrData[self!.rowInTable])
                 }
@@ -174,6 +224,7 @@ extension CLTPersonalANDetailViewController {
                 if self!.tempAttDetailArrData.count == 0 {
                     self!.tempAttDetailArrData.append(self!.attDetailArrData[self!.rowInTable])
                 }
+                
                 for temp in 0..<self!.tempAttDetailArrData.count {
                     if self!.tempAttDetailArrData[temp].studentID == self!.attDetailArrData[self!.rowInTable].studentID {
                         self!.tempAttDetailArrData[temp] = self!.attDetailArrData[self!.rowInTable]
@@ -223,35 +274,28 @@ extension CLTPersonalANDetailViewController: UIPickerViewDelegate {
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        tempRow = 4
+        tempRow = 0
         if component == 0 {
             if row == 0 {
                 
                 tempRow = row
-                attDetailArrData[rowInTable].queke = 1
+                
             }
             if row == 1 {
                 
-                
                 tempRow = row
-                attDetailArrData[rowInTable].chidao = 1
             }
             if row == 2 {
                 
                 tempRow = row
-                attDetailArrData[rowInTable].zaotui = 1
             }
             if row == 3 {
                 
                 tempRow = row
-                attDetailArrData[rowInTable].qingjia = 1
             }
             if row == 4 {
-                attDetailArrData[rowInTable].queke = 0
-                attDetailArrData[rowInTable].chidao = 0
-                attDetailArrData[rowInTable].zaotui = 0
-                attDetailArrData[rowInTable].qingjia = 0
                 
+                tempRow = row
             }
             
         }
@@ -274,7 +318,7 @@ extension CLTPersonalANDetailViewController: UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 12
+        return CGFloat.min
     }
     
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

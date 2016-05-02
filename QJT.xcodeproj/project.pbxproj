@@ -14,6 +14,7 @@
 		5844B5CE1CD5FDBD009DD326 /* CLTPersonalAttendanceNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C95841CD4BC8200F332A3 /* CLTPersonalAttendanceNoteViewController.swift */; };
 		5844B5D01CD60661009DD326 /* SPersonalSignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5844B5CF1CD60661009DD326 /* SPersonalSignViewController.swift */; };
 		585122D41CCD0F790041A82F /* SignCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585122D31CCD0F790041A82F /* SignCourseViewController.swift */; };
+		58DDBE101CD7361000F8BC66 /* SPersonalSignCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DDBE0F1CD7361000F8BC66 /* SPersonalSignCell.swift */; };
 		68035A001CC756BA002F7C60 /* SSign.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680359EC1CC756BA002F7C60 /* SSign.storyboard */; };
 		68035A011CC756BA002F7C60 /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359EE1CC756BA002F7C60 /* Sign.swift */; };
 		68035A021CC756BA002F7C60 /* SignMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359F01CC756BA002F7C60 /* SignMainViewController.swift */; };
@@ -180,6 +181,7 @@
 		580C958A1CD5060700F332A3 /* CLTPersonalANDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTPersonalANDetailViewController.swift; sourceTree = "<group>"; };
 		5844B5CF1CD60661009DD326 /* SPersonalSignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPersonalSignViewController.swift; sourceTree = "<group>"; };
 		585122D31CCD0F790041A82F /* SignCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignCourseViewController.swift; sourceTree = "<group>"; };
+		58DDBE0F1CD7361000F8BC66 /* SPersonalSignCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPersonalSignCell.swift; sourceTree = "<group>"; };
 		680359EC1CC756BA002F7C60 /* SSign.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SSign.storyboard; sourceTree = "<group>"; };
 		680359EE1CC756BA002F7C60 /* Sign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sign.swift; sourceTree = "<group>"; };
 		680359F01CC756BA002F7C60 /* SignMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignMainViewController.swift; sourceTree = "<group>"; };
@@ -453,6 +455,7 @@
 				68D8F1121CD25CCC008111D9 /* SPersonalLeaveNoteCell.swift */,
 				68C8B5511CD47D0800B407AB /* SPersonalLNDetailCell.swift */,
 				6849D9811CD5FA0F009DE599 /* SPersonalResetCell.swift */,
+				58DDBE0F1CD7361000F8BC66 /* SPersonalSignCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -460,12 +463,12 @@
 		680359FE1CC756BA002F7C60 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				5844B5CF1CD60661009DD326 /* SPersonalSignViewController.swift */,
 				680359FF1CC756BA002F7C60 /* SPersonalMainViewController.swift */,
 				6808AA501CCFA28900C2C324 /* SPersonalAccontViewController.swift */,
 				68D8F1101CD25CAF008111D9 /* SPersonalLeaveNoteViewController.swift */,
 				68C8B54F1CD47CDA00B407AB /* SPersonalLNDetailViewController.swift */,
 				6849D97F1CD5F8B6009DE599 /* SPersonalResetViewController.swift */,
+				5844B5CF1CD60661009DD326 /* SPersonalSignViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1443,6 +1446,7 @@
 				EF6A8C081CCFB1B10054282C /* EmptyModel.swift in Sources */,
 				68FF20001CCD02F6005AC0B7 /* CourseView.swift in Sources */,
 				EF45F52F1CABF1800052AA1F /* Student.swift in Sources */,
+				58DDBE101CD7361000F8BC66 /* SPersonalSignCell.swift in Sources */,
 				68186C061CB3525D005AF62D /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
 				EF055D851CD1ABA5004DD466 /* BLAttendanceMainViewController.swift in Sources */,
 				683CF5E81CC3390200F69765 /* UserConfig.swift in Sources */,

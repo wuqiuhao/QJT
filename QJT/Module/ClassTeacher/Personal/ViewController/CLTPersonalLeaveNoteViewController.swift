@@ -18,7 +18,6 @@ class CLTPersonalLeaveNoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
-        getNetWork()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -32,22 +31,31 @@ extension CLTPersonalLeaveNoteViewController {
     func configUI() {
         self.automaticallyAdjustsScrollViewInsets = false
         navigationItem.title = "审核记录"
+        tableView.headerRefresh = true
+        tableView.configRefreshDelegate = self
     }
     
-    func getNetWork() {
-        NetWorkManager.httpRequest(Methods.leave_getLeaveInfosByTeacherID, params: ["teacherID":UserConfig.teacherSetting()!.userID,"isHistory":1], modelType: nil, listType: Leave(), completed: { (responseData) in
-            self.leaveNoteDataArr = responseData["list"] as! [Leave]
-            self.tableView.reloadData()
-        }) { [weak self] (errorMsg) in
-            self?.errorNotice(errorMsg!)
-        }
-    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.destinationViewController is SPersonalLNDetailViewController {
             let vc = segue.destinationViewController as! SPersonalLNDetailViewController
             let index = sender as! NSIndexPath
             vc.leave = leaveNoteDataArr[index.row]
+        }
+    }
+}
+
+extension CLTPersonalLeaveNoteViewController: ConfigRefreshDelegate {
+    func headerRefresh(view: UIView) {
+        NetWorkManager.httpRequest(Methods.leave_getLeaveInfosByTeacherID, params: ["teacherID":UserConfig.teacherSetting()!.userID,"isHistory":1], modelType: nil, listType: Leave(), completed: { (responseData) in
+            self.leaveNoteDataArr = responseData["list"] as! [Leave]
+            self.tableView.mj_header.endRefreshing()
+            self.tableView.emptyDataSetSource = self
+            self.tableView.emptyDataSetDelegate = self
+            self.tableView.reloadData()
+        }) { [weak self] (errorMsg) in
+            self?.tableView.mj_header.endRefreshing()
+            self?.errorNotice(errorMsg!)
         }
     }
 }
@@ -67,7 +75,10 @@ extension CLTPersonalLeaveNoteViewController: UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier("SPersonalLNDetailViewController", sender: indexPath)
+        let vc = UIStoryboard(name: "CLTLeave", bundle: nil).instantiateViewControllerWithIdentifier("CLTLeaveDetailViewController") as! CLTLeaveDetailViewController
+        vc.isHistory = true
+        vc.leave = leaveNoteDataArr[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -82,5 +93,26 @@ extension CLTPersonalLeaveNoteViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdeitiferForLeaveNote, forIndexPath: indexPath) as! CLTPersonalLeaveNoteCell
         cell.model = leaveNoteDataArr[indexPath.row]
         return cell
+    }
+}
+
+// MARK: - DZNEmptyDataSetSource
+extension CLTPersonalLeaveNoteViewController: DZNEmptyDataSetSource {
+    func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+        var text : String!
+        text = "还没有请假审核记录"
+        
+        let font = UIFont.systemFontOfSize(16.0)
+        let textColor = UIColor.lightGrayColor()
+        let paragraph = NSMutableParagraphStyle()
+        paragraph.lineSpacing = 5
+        paragraph.alignment = NSTextAlignment.Center
+        return NSAttributedString(string: text, attributes: [NSFontAttributeName : font, NSForegroundColorAttributeName : textColor,NSParagraphStyleAttributeName : paragraph])    }
+}
+
+// MARK: - DZNEmptyDataSetDelegate
+extension CLTPersonalLeaveNoteViewController: DZNEmptyDataSetDelegate {
+    func emptyDataSetShouldAllowScroll(scrollView: UIScrollView!) -> Bool {
+        return true
     }
 }

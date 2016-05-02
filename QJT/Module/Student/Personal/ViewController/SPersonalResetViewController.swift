@@ -16,6 +16,7 @@ class SPersonalResetViewController: UIViewController {
     var firstTfd = UITextField()
     var secondTfd = UITextField()
     var thirdTfd = UITextField()
+    var userType: UserType!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,16 +58,25 @@ extension SPersonalResetViewController {
         }
         
         var params = [String:AnyObject]()
-        params.updateValue(UserConfig.studentSetting()!.userID, forKey: "studentID")
+        var method = ""
+        if userType == .Student {
+            method = Methods.login_studentChangePassword
+            params.updateValue(UserConfig.studentSetting()!.userID, forKey: "studentID")
+        } else if userType == .ClassTeacher {
+            method = Methods.login_teacherChangePassword
+            params.updateValue(UserConfig.teacherSetting()!.userID, forKey: "teacherID")
+        }
+       
         params.updateValue(firstTfd.text!, forKey: "oldPassword")
         params.updateValue(thirdTfd.text!, forKey: "newPassword")
         
         self.pleaseWait()
-        NetWorkManager.httpRequest(Methods.login_studentChangePassword, params: params, modelType: EmptyModel(), listType: nil, completed: { (responseData) in
+        NetWorkManager.httpRequest(method, params: params, modelType: EmptyModel(), listType: nil, completed: { (responseData) in
                 self.clearAllNotice()
                 self.successNotice("修改成功")
                 self.navigationController?.popViewControllerAnimated(true)
             }) { [weak self] (errorMsg) in
+                self?.clearAllNotice()
                 self?.errorNotice(errorMsg!)
         }
     }

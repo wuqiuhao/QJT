@@ -113,7 +113,7 @@
         <!--Personal Reset View Controller-->
         <scene sceneID="C78-4n-oqH">
             <objects>
-                <viewController id="qVT-5w-b7X" customClass="SPersonalResetViewController" customModule="QJT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SPersonalResetViewController" id="qVT-5w-b7X" customClass="SPersonalResetViewController" customModule="QJT" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZNE-Sh-ufI"/>
                         <viewControllerLayoutGuide type="bottom" id="UlE-xh-LVC"/>

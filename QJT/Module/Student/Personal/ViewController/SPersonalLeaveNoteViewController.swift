@@ -18,7 +18,6 @@ class SPersonalLeaveNoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
-        getNetWork()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -32,15 +31,9 @@ extension SPersonalLeaveNoteViewController {
     func configUI() {
         self.automaticallyAdjustsScrollViewInsets = false
         navigationItem.title = "请假记录"
-    }
-    
-    func getNetWork() {
-        NetWorkManager.httpRequest(Methods.leave_getLeaveInfosByStudentID, params: ["studentID":UserConfig.studentSetting()!.userID], modelType: nil, listType: Leave(), completed: { (responseData) in
-            self.leaveNoteDataArr = responseData["list"] as! [Leave]
-            self.tableView.reloadData()
-            }) { [weak self] (errorMsg) in
-                self?.errorNotice(errorMsg!)
-        }
+        tableView.headerRefresh = true
+        tableView.configRefreshDelegate = self
+
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -49,6 +42,22 @@ extension SPersonalLeaveNoteViewController {
             let index = sender as! NSIndexPath
             vc.leave = leaveNoteDataArr[index.row]
         }
+    }
+}
+
+extension SPersonalLeaveNoteViewController: ConfigRefreshDelegate {
+    func headerRefresh(view: UIView) {
+        NetWorkManager.httpRequest(Methods.leave_getLeaveInfosByStudentID, params: ["studentID":UserConfig.studentSetting()!.userID], modelType: nil, listType: Leave(), completed: { (responseData) in
+            self.leaveNoteDataArr = responseData["list"] as! [Leave]
+            self.tableView.mj_header.endRefreshing()
+            self.tableView.emptyDataSetSource = self
+            self.tableView.emptyDataSetDelegate = self
+            self.tableView.reloadData()
+        }) { [weak self] (errorMsg) in
+            self?.errorNotice(errorMsg!)
+            self?.tableView.mj_header.endRefreshing()
+        }
+
     }
 }
 
@@ -82,5 +91,26 @@ extension SPersonalLeaveNoteViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdeitiferForLeaveNote, forIndexPath: indexPath) as! SPersonalLeaveNoteCell
         cell.model = leaveNoteDataArr[indexPath.row]
         return cell
+    }
+}
+
+// MARK: - DZNEmptyDataSetSource
+extension SPersonalLeaveNoteViewController: DZNEmptyDataSetSource {
+    func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+        var text : String!
+        text = "还没有请假申请记录"
+        
+        let font = UIFont.systemFontOfSize(16.0)
+        let textColor = UIColor.lightGrayColor()
+        let paragraph = NSMutableParagraphStyle()
+        paragraph.lineSpacing = 5
+        paragraph.alignment = NSTextAlignment.Center
+        return NSAttributedString(string: text, attributes: [NSFontAttributeName : font, NSForegroundColorAttributeName : textColor,NSParagraphStyleAttributeName : paragraph])    }
+}
+
+// MARK: - DZNEmptyDataSetDelegate
+extension SPersonalLeaveNoteViewController: DZNEmptyDataSetDelegate {
+    func emptyDataSetShouldAllowScroll(scrollView: UIScrollView!) -> Bool {
+        return true
     }
 }

@@ -19,6 +19,7 @@ class CLTLeaveDetailViewController: UIViewController {
     var leaveCourseArr = [LeaveDetail]()
     var courseStr = ""
     var reason = ""
+    var isHistory = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,8 @@ extension CLTLeaveDetailViewController {
     func configUI() {
         tableView.estimatedRowHeight = 100
         self.automaticallyAdjustsScrollViewInsets = false
+        verifyBtn.hidden = isHistory
+        navigationItem.title = "请假单"
     }
     
     func perpareData() {
@@ -99,7 +102,7 @@ extension CLTLeaveDetailViewController: UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.row == 4 {
+        if indexPath.row == 4 && !isHistory {
             let alertVC = UIAlertController(title: "审核结果", message: "", preferredStyle: UIAlertControllerStyle.ActionSheet)
             let passAction = UIAlertAction(title: "通过", style: UIAlertActionStyle.Cancel, handler: { (action) in
                 self.dataArr[0].updateValue("通过", forKey: "detail")
@@ -122,7 +125,7 @@ extension CLTLeaveDetailViewController: UITableViewDelegate {
             alertVC.addAction(unPassAction)
             alertVC.addAction(passAction)
             self.presentViewController(alertVC, animated: true, completion: nil)
-        } else if indexPath.row == 5 {
+        } else if indexPath.row == 5 && !isHistory {
             let vc = UIStoryboard(name: "SLeave", bundle: nil).instantiateViewControllerWithIdentifier("LeaveReasonViewController") as! LeaveReasonViewController
             vc.delegate = self
             vc.textViewContent = reason
@@ -149,7 +152,11 @@ extension CLTLeaveDetailViewController: ViewControllerTransmitDelegate {
 private let cellIdeitiferForDetail = "CLTLeaveDetailCell"
 extension CLTLeaveDetailViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4 + dataArr.count
+        if leave.leaveState == .Failed {
+            return 5 + dataArr.count
+        } else {
+            return 4 + dataArr.count
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -168,11 +175,22 @@ extension CLTLeaveDetailViewController: UITableViewDataSource {
             cell.titleLbl.text = "请假原因:"
             cell.detailLbl.text = leave.reason
         case 4:
-            cell.titleLbl.text = dataArr[0]["title"]
-            cell.detailLbl.text = dataArr[0]["detail"]
+            if !isHistory {
+                cell.titleLbl.text = dataArr[0]["title"]
+                cell.detailLbl.text = dataArr[0]["detail"]
+            } else {
+                cell.titleLbl.text = "审核状态:"
+                cell.detailLbl.text = leave.leaveState.toDescription()
+            }
         case 5:
-            cell.titleLbl.text = dataArr[1]["title"]
-            cell.detailLbl.text = dataArr[1]["detail"]
+            if !isHistory {
+                cell.titleLbl.text = dataArr[1]["title"]
+                cell.detailLbl.text = dataArr[1]["detail"]
+            } else {
+                cell.titleLbl.text = "拒绝原因:"
+                cell.detailLbl.text = leave.refuseReason
+            }
+
         default:
             return UITableViewCell()
         }

@@ -23,8 +23,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        accountTfd.text = "2012812044"
-        passwordTfd.text = "2012812044"
         configUI()
         setupLoginBtn()
     }
@@ -40,13 +38,18 @@ extension LoginViewController {
     
     func configUI() {
         navigationItem.title = "登录"
-        accountTfd.becomeFirstResponder()
+        passwordTfd.becomeFirstResponder()
         accountTfd.delegate = self
         passwordTfd.delegate = self
         createRadioButton(studentBtn, title: "学生", color: UIColor.qjtNavgationBarTitleColor())
         createRadioButton(teacherBtn, title: "教师", color: UIColor.qjtNavgationBarTitleColor())
         studentBtn.selected = true
         studentBtn.otherButtons = [teacherBtn];
+        
+        if let _ = UserConfig.lastUsername() {
+            accountTfd.text = UserConfig.lastUsername()
+        }
+        
     }
     
     func setupLoginBtn() {
@@ -132,6 +135,7 @@ extension LoginViewController {
                 self.clearAllNotice()
                 let studentSetting = responseData["model"] as! StudentSetting
                 UserConfig.saveStudentSetting(studentSetting)
+                UserConfig.saveLastUsername(studentSetting.userID)
                 let mainWindow = UIApplication.sharedApplication().keyWindow
                 let mainTabBarVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()! as! MainTabBarController
                 mainTabBarVC.userType = studentSetting.userType
@@ -155,6 +159,7 @@ extension LoginViewController {
                 self.clearAllNotice()
                 let teacherSetting = responseData["model"] as! TeacherSetting
                 UserConfig.saveTeacherSetting(teacherSetting)
+                UserConfig.saveLastUsername(teacherSetting.userID)
                 let mainWindow = UIApplication.sharedApplication().keyWindow
                 let mainTabBarVC = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()! as! MainTabBarController
                 mainTabBarVC.userType = teacherSetting.userType

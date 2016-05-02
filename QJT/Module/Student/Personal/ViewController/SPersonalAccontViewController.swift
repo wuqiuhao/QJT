@@ -38,6 +38,13 @@ extension SPersonalAccontViewController {
         logoutBtn.layer.masksToBounds = true
         logoutBtn.addTarget(self, action: #selector(SPersonalAccontViewController.logoutBtnClicked), forControlEvents: UIControlEvents.TouchUpInside)
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.destinationViewController is SPersonalResetViewController {
+            let vc = segue.destinationViewController as! SPersonalResetViewController
+            vc.userType = UserType.Student
+        }
+    }
 }
 
 // MARK: - IB Action

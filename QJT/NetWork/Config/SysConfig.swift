@@ -9,7 +9,7 @@
 import Foundation
 
 class  SysConfig {
-    static let serverIp = "172.23.245.73"
+    static let serverIp = "172.23.33.121"
     static let serverPort = "8080"
     
     static func getServerURL()-> String {

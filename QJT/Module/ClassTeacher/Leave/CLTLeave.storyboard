@@ -186,7 +186,7 @@
         <!--Leave Detail View Controller-->
         <scene sceneID="nW7-ZA-5Vr">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="9mh-CQ-8Gz" customClass="CLTLeaveDetailViewController" customModule="QJT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CLTLeaveDetailViewController" hidesBottomBarWhenPushed="YES" id="9mh-CQ-8Gz" customClass="CLTLeaveDetailViewController" customModule="QJT" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YfD-D8-kPu"/>
                         <viewControllerLayoutGuide type="bottom" id="lfp-nE-sKx"/>

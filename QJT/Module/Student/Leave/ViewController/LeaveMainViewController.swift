@@ -71,6 +71,10 @@ extension LeaveMainViewController {
             self.clearAllNotice()
             let vc = UIStoryboard(name: "SPersonal", bundle: nil).instantiateViewControllerWithIdentifier("SPersonalLeaveNoteViewController")
             self.navigationController?.pushViewController(vc, animated: true)
+            self.selectCourseDataArr.removeAll()
+            self.dateArr.removeAll()
+            self.createTableViewData()
+            self.tableView.reloadData()
             }) {[weak self](errorMsg) in
                 self?.clearAllNotice()
                 self?.errorNotice(errorMsg!)

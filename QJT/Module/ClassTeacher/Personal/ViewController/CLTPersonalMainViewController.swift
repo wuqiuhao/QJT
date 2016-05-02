@@ -89,10 +89,10 @@ extension CLTPersonalMainViewController: UITableViewDataSource {
         switch indexPath.row {
         case 0:
             cell.typeImg.image = UIImage(named: "SPersonal_leave")
-            cell.titleLbl.text = "请假记录"
+            cell.titleLbl.text = "审核记录"
         case 1:
             cell.typeImg.image = UIImage(named: "SPersonal_attendance")
-            cell.titleLbl.text = "签到记录"
+            cell.titleLbl.text = "考勤记录"
         case 2:
             cell.typeImg.image = UIImage(named: "SPersonal_account")
             cell.titleLbl.text = "账号安全"

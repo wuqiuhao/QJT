@@ -13,7 +13,8 @@ var LoginService = [
     "login_teacherLogin",
     "login_studentLogout",
     "login_teacherLogout",
-    "login_studentChangePassword"
+    "login_studentChangePassword",
+    "login_teacherChangePassword"
 ]
 
 var AttendanceService = [
@@ -48,6 +49,7 @@ class Methods {
     static let login_studentLogout = "login_studentLogout"
     static let login_teacherLogout = "login_teacherLogout"
     static let login_studentChangePassword  = "login_studentChangePassword"
+    static let login_teacherChangePassword = "login_teacherChangePassword"
     
     
     //签到模块

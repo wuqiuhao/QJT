@@ -40,7 +40,7 @@ class LeaveMainViewController: UIViewController {
 extension LeaveMainViewController {
     
     func configUI() {
-        
+
         navigationItem.title = "请假"
         self.automaticallyAdjustsScrollViewInsets = false
         tableView.tableFooterView = UIView()

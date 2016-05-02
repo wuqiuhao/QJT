@@ -51,7 +51,6 @@ extension CLTPersonalAttendanceNoteViewController {
             
             self.clearAllNotice()
             self.attendanceArrData = responseData["list"] as! [Attendance]
-            print(self.attendanceArrData.count)
             self.tableView.reloadData()
             
         }) { (errorMsg) in

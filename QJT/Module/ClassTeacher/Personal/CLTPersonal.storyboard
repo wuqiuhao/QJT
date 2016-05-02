@@ -325,8 +325,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="z57-qf-wp7" firstAttribute="top" secondItem="caD-uR-I8m" secondAttribute="bottom" id="68q-ES-czB"/>
                             <constraint firstAttribute="trailing" secondItem="caD-uR-I8m" secondAttribute="trailing" id="I5A-ZA-Ipf"/>
+                            <constraint firstAttribute="bottom" secondItem="caD-uR-I8m" secondAttribute="bottom" id="Qbb-Cr-ZMh"/>
                             <constraint firstItem="caD-uR-I8m" firstAttribute="top" secondItem="eVA-Py-Fdc" secondAttribute="top" id="Rej-w8-Pp5"/>
                             <constraint firstItem="caD-uR-I8m" firstAttribute="leading" secondItem="eVA-Py-Fdc" secondAttribute="leading" id="hUK-RD-TBb"/>
                         </constraints>
@@ -518,7 +518,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CLTPersonalANDetailCell" rowHeight="44" id="jyj-wn-Uhp" customClass="CLTPersonalANDetailCell" customModule="QJT" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CLTPersonalANDetailCell" rowHeight="44" id="jyj-wn-Uhp" customClass="CLTPersonalANDetailCell" customModule="QJT" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="113.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jyj-wn-Uhp" id="aGl-Ac-mzo">

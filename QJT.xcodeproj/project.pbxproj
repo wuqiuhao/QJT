@@ -14,7 +14,6 @@
 		5844B5CE1CD5FDBD009DD326 /* CLTPersonalAttendanceNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C95841CD4BC8200F332A3 /* CLTPersonalAttendanceNoteViewController.swift */; };
 		5844B5D01CD60661009DD326 /* SPersonalSignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5844B5CF1CD60661009DD326 /* SPersonalSignViewController.swift */; };
 		585122D41CCD0F790041A82F /* SignCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585122D31CCD0F790041A82F /* SignCourseViewController.swift */; };
-		58DDBE101CD7361000F8BC66 /* SPersonalSignCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DDBE0F1CD7361000F8BC66 /* SPersonalSignCell.swift */; };
 		68035A001CC756BA002F7C60 /* SSign.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680359EC1CC756BA002F7C60 /* SSign.storyboard */; };
 		68035A011CC756BA002F7C60 /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359EE1CC756BA002F7C60 /* Sign.swift */; };
 		68035A021CC756BA002F7C60 /* SignMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359F01CC756BA002F7C60 /* SignMainViewController.swift */; };
@@ -46,9 +45,6 @@
 		68083F971CCE5909004BE4D4 /* CPersonal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F401CCE5909004BE4D4 /* CPersonal.storyboard */; };
 		68083F981CCE5909004BE4D4 /* CPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F421CCE5909004BE4D4 /* CPersonalView.swift */; };
 		68083F991CCE5909004BE4D4 /* CPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F441CCE5909004BE4D4 /* CPersonalMainViewController.swift */; };
-		68083FA01CCE5909004BE4D4 /* ADPersonal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083F531CCE5909004BE4D4 /* ADPersonal.storyboard */; };
-		68083FA11CCE5909004BE4D4 /* ADPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F551CCE5909004BE4D4 /* ADPersonalView.swift */; };
-		68083FA21CCE5909004BE4D4 /* ADPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083F571CCE5909004BE4D4 /* ADPersonalMainViewController.swift */; };
 		68083FB61CCE59D7004BE4D4 /* CLTAttendance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083FB51CCE59D7004BE4D4 /* CLTAttendance.storyboard */; };
 		68083FB81CCE5A96004BE4D4 /* SLeave.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68083FB71CCE5A96004BE4D4 /* SLeave.storyboard */; };
 		68083FBA1CCE5AAB004BE4D4 /* LeaveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68083FB91CCE5AAB004BE4D4 /* LeaveCell.swift */; };
@@ -116,6 +112,12 @@
 		688E3AD61CD5E5F8004011AE /* CLTPersonalMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688E3AD51CD5E5F8004011AE /* CLTPersonalMainCell.swift */; };
 		688E3AD81CD5E641004011AE /* CLTPersonal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 688E3AD71CD5E641004011AE /* CLTPersonal.storyboard */; };
 		688E3ADA1CD5E695004011AE /* AttendanceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688E3AD91CD5E695004011AE /* AttendanceDetail.swift */; };
+		68A8D7081CD73896008771F9 /* ADPersonal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68A8D6FD1CD73896008771F9 /* ADPersonal.storyboard */; };
+		68A8D7091CD73896008771F9 /* ADPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8D6FF1CD73896008771F9 /* ADPersonalView.swift */; };
+		68A8D70A1CD73896008771F9 /* ADPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8D7011CD73896008771F9 /* ADPersonalMainViewController.swift */; };
+		68A8D70B1CD73896008771F9 /* ADStatistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68A8D7031CD73896008771F9 /* ADStatistics.storyboard */; };
+		68A8D70C1CD73896008771F9 /* ADStatisticsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8D7051CD73896008771F9 /* ADStatisticsTableViewCell.swift */; };
+		68A8D70D1CD73896008771F9 /* ADStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A8D7071CD73896008771F9 /* ADStatisticsViewController.swift */; };
 		68B7B52F1CBE91C80046FC7F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B7B52E1CBE91C80046FC7F /* MainTabBarController.swift */; };
 		68B98EF41CBE49A9009D64D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B98EF21CBE49A9009D64D1 /* LaunchScreen.storyboard */; };
 		68B98EF71CBE4A00009D64D1 /* QJT.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 68B98EF61CBE4A00009D64D1 /* QJT.entitlements */; };
@@ -140,9 +142,6 @@
 		68FF20031CCD0315005AC0B7 /* LeaveCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF20021CCD0315005AC0B7 /* LeaveCourseViewController.swift */; };
 		68FF20071CCD0376005AC0B7 /* CourseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF20061CCD0376005AC0B7 /* CourseClass.swift */; };
 		68FF200A1CCD0396005AC0B7 /* ReturnResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF20091CCD0396005AC0B7 /* ReturnResult.swift */; };
-		EF055D7D1CD1AB57004DD466 /* ADStatistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF055D7C1CD1AB57004DD466 /* ADStatistics.storyboard */; };
-		EF055D7F1CD1AB5C004DD466 /* ADStatisticsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF055D7E1CD1AB5C004DD466 /* ADStatisticsTableViewCell.swift */; };
-		EF055D811CD1AB65004DD466 /* ADStatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF055D801CD1AB65004DD466 /* ADStatisticsViewController.swift */; };
 		EF055D831CD1AB9F004DD466 /* BLAttendanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF055D821CD1AB9F004DD466 /* BLAttendanceView.swift */; };
 		EF055D851CD1ABA5004DD466 /* BLAttendanceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF055D841CD1ABA5004DD466 /* BLAttendanceMainViewController.swift */; };
 		EF055D871CD1ABB8004DD466 /* BLLeaveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF055D861CD1ABB8004DD466 /* BLLeaveTableViewCell.swift */; };
@@ -181,7 +180,6 @@
 		580C958A1CD5060700F332A3 /* CLTPersonalANDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTPersonalANDetailViewController.swift; sourceTree = "<group>"; };
 		5844B5CF1CD60661009DD326 /* SPersonalSignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPersonalSignViewController.swift; sourceTree = "<group>"; };
 		585122D31CCD0F790041A82F /* SignCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignCourseViewController.swift; sourceTree = "<group>"; };
-		58DDBE0F1CD7361000F8BC66 /* SPersonalSignCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPersonalSignCell.swift; sourceTree = "<group>"; };
 		680359EC1CC756BA002F7C60 /* SSign.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SSign.storyboard; sourceTree = "<group>"; };
 		680359EE1CC756BA002F7C60 /* Sign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sign.swift; sourceTree = "<group>"; };
 		680359F01CC756BA002F7C60 /* SignMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignMainViewController.swift; sourceTree = "<group>"; };
@@ -214,9 +212,6 @@
 		68083F401CCE5909004BE4D4 /* CPersonal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CPersonal.storyboard; sourceTree = "<group>"; };
 		68083F421CCE5909004BE4D4 /* CPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPersonalView.swift; sourceTree = "<group>"; };
 		68083F441CCE5909004BE4D4 /* CPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CPersonalMainViewController.swift; sourceTree = "<group>"; };
-		68083F531CCE5909004BE4D4 /* ADPersonal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ADPersonal.storyboard; sourceTree = "<group>"; };
-		68083F551CCE5909004BE4D4 /* ADPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADPersonalView.swift; sourceTree = "<group>"; };
-		68083F571CCE5909004BE4D4 /* ADPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADPersonalMainViewController.swift; sourceTree = "<group>"; };
 		68083FB51CCE59D7004BE4D4 /* CLTAttendance.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CLTAttendance.storyboard; sourceTree = "<group>"; };
 		68083FB71CCE5A96004BE4D4 /* SLeave.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SLeave.storyboard; sourceTree = "<group>"; };
 		68083FB91CCE5AAB004BE4D4 /* LeaveCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaveCell.swift; sourceTree = "<group>"; };
@@ -286,6 +281,12 @@
 		688E3AD51CD5E5F8004011AE /* CLTPersonalMainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTPersonalMainCell.swift; sourceTree = "<group>"; };
 		688E3AD71CD5E641004011AE /* CLTPersonal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CLTPersonal.storyboard; sourceTree = "<group>"; };
 		688E3AD91CD5E695004011AE /* AttendanceDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AttendanceDetail.swift; path = Entity/Model/AttendanceDetail.swift; sourceTree = "<group>"; };
+		68A8D6FD1CD73896008771F9 /* ADPersonal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ADPersonal.storyboard; sourceTree = "<group>"; };
+		68A8D6FF1CD73896008771F9 /* ADPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADPersonalView.swift; sourceTree = "<group>"; };
+		68A8D7011CD73896008771F9 /* ADPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADPersonalMainViewController.swift; sourceTree = "<group>"; };
+		68A8D7031CD73896008771F9 /* ADStatistics.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ADStatistics.storyboard; sourceTree = "<group>"; };
+		68A8D7051CD73896008771F9 /* ADStatisticsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADStatisticsTableViewCell.swift; sourceTree = "<group>"; };
+		68A8D7071CD73896008771F9 /* ADStatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADStatisticsViewController.swift; sourceTree = "<group>"; };
 		68B7B52E1CBE91C80046FC7F /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		68B98EF21CBE49A9009D64D1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "Supporting Files/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		68B98EF61CBE4A00009D64D1 /* QJT.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = QJT.entitlements; sourceTree = "<group>"; };
@@ -311,9 +312,6 @@
 		68FF20061CCD0376005AC0B7 /* CourseClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CourseClass.swift; path = Entity/Model/CourseClass.swift; sourceTree = "<group>"; };
 		68FF20091CCD0396005AC0B7 /* ReturnResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReturnResult.swift; sourceTree = "<group>"; };
 		AE37ED3E40352A6C9D2E6664 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		EF055D7C1CD1AB57004DD466 /* ADStatistics.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ADStatistics.storyboard; path = QJT/Module/Leader/Statistics/ADStatistics.storyboard; sourceTree = SOURCE_ROOT; };
-		EF055D7E1CD1AB5C004DD466 /* ADStatisticsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ADStatisticsTableViewCell.swift; path = QJT/Module/Leader/Statistics/View/ADStatisticsTableViewCell.swift; sourceTree = SOURCE_ROOT; };
-		EF055D801CD1AB65004DD466 /* ADStatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ADStatisticsViewController.swift; path = QJT/Module/Leader/Statistics/ViewController/ADStatisticsViewController.swift; sourceTree = SOURCE_ROOT; };
 		EF055D821CD1AB9F004DD466 /* BLAttendanceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLAttendanceView.swift; sourceTree = "<group>"; };
 		EF055D841CD1ABA5004DD466 /* BLAttendanceMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLAttendanceMainViewController.swift; sourceTree = "<group>"; };
 		EF055D861CD1ABB8004DD466 /* BLLeaveTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLLeaveTableViewCell.swift; sourceTree = "<group>"; };
@@ -455,7 +453,6 @@
 				68D8F1121CD25CCC008111D9 /* SPersonalLeaveNoteCell.swift */,
 				68C8B5511CD47D0800B407AB /* SPersonalLNDetailCell.swift */,
 				6849D9811CD5FA0F009DE599 /* SPersonalResetCell.swift */,
-				58DDBE0F1CD7361000F8BC66 /* SPersonalSignCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -463,12 +460,12 @@
 		680359FE1CC756BA002F7C60 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				5844B5CF1CD60661009DD326 /* SPersonalSignViewController.swift */,
 				680359FF1CC756BA002F7C60 /* SPersonalMainViewController.swift */,
 				6808AA501CCFA28900C2C324 /* SPersonalAccontViewController.swift */,
 				68D8F1101CD25CAF008111D9 /* SPersonalLeaveNoteViewController.swift */,
 				68C8B54F1CD47CDA00B407AB /* SPersonalLNDetailViewController.swift */,
 				6849D97F1CD5F8B6009DE599 /* SPersonalResetViewController.swift */,
-				5844B5CF1CD60661009DD326 /* SPersonalSignViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -760,69 +757,6 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		68083F451CCE5909004BE4D4 /* Admin */ = {
-			isa = PBXGroup;
-			children = (
-				68083F461CCE5909004BE4D4 /* Statistics */,
-				68083F521CCE5909004BE4D4 /* Personal */,
-			);
-			name = Admin;
-			path = Module/Leader;
-			sourceTree = "<group>";
-		};
-		68083F461CCE5909004BE4D4 /* Statistics */ = {
-			isa = PBXGroup;
-			children = (
-				EF055D7C1CD1AB57004DD466 /* ADStatistics.storyboard */,
-				68083F481CCE5909004BE4D4 /* View */,
-				68083F4A1CCE5909004BE4D4 /* ViewController */,
-			);
-			name = Statistics;
-			path = Attendance;
-			sourceTree = "<group>";
-		};
-		68083F481CCE5909004BE4D4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				EF055D7E1CD1AB5C004DD466 /* ADStatisticsTableViewCell.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		68083F4A1CCE5909004BE4D4 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				EF055D801CD1AB65004DD466 /* ADStatisticsViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		68083F521CCE5909004BE4D4 /* Personal */ = {
-			isa = PBXGroup;
-			children = (
-				68083F531CCE5909004BE4D4 /* ADPersonal.storyboard */,
-				68083F541CCE5909004BE4D4 /* View */,
-				68083F561CCE5909004BE4D4 /* ViewController */,
-			);
-			path = Personal;
-			sourceTree = "<group>";
-		};
-		68083F541CCE5909004BE4D4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				68083F551CCE5909004BE4D4 /* ADPersonalView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		68083F561CCE5909004BE4D4 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				68083F571CCE5909004BE4D4 /* ADPersonalMainViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
 		68083F6B1CCE5909004BE4D4 /* CourseTeacher */ = {
 			isa = PBXGroup;
 			children = (
@@ -1007,6 +941,68 @@
 			);
 			name = Main;
 			path = Module/Main;
+			sourceTree = "<group>";
+		};
+		68A8D6FB1CD73896008771F9 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				68A8D6FC1CD73896008771F9 /* Personal */,
+				68A8D7021CD73896008771F9 /* Statistics */,
+			);
+			name = Admin;
+			path = Module/Admin;
+			sourceTree = "<group>";
+		};
+		68A8D6FC1CD73896008771F9 /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+				68A8D6FD1CD73896008771F9 /* ADPersonal.storyboard */,
+				68A8D6FE1CD73896008771F9 /* View */,
+				68A8D7001CD73896008771F9 /* ViewController */,
+			);
+			path = Personal;
+			sourceTree = "<group>";
+		};
+		68A8D6FE1CD73896008771F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68A8D6FF1CD73896008771F9 /* ADPersonalView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68A8D7001CD73896008771F9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68A8D7011CD73896008771F9 /* ADPersonalMainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		68A8D7021CD73896008771F9 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				68A8D7031CD73896008771F9 /* ADStatistics.storyboard */,
+				68A8D7041CD73896008771F9 /* View */,
+				68A8D7061CD73896008771F9 /* ViewController */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
+		68A8D7041CD73896008771F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68A8D7051CD73896008771F9 /* ADStatisticsTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68A8D7061CD73896008771F9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68A8D7071CD73896008771F9 /* ADStatisticsViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		68B98EED1CBE4942009D64D1 /* ViewController */ = {
@@ -1196,6 +1192,7 @@
 		EF9A30E11CA911CB00D5EFA6 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				68A8D6FB1CD73896008771F9 /* Admin */,
 				EFA869201CAA703800CC1B71 /* RegLogin */,
 				687E38321CBE3FE3009EDE17 /* Main */,
 				680359EA1CC75686002F7C60 /* Student */,
@@ -1203,7 +1200,6 @@
 				68083F6B1CCE5909004BE4D4 /* CourseTeacher */,
 				68083F0B1CCE5909004BE4D4 /* BranchLeader */,
 				68083F321CCE5909004BE4D4 /* Counsellor */,
-				68083F451CCE5909004BE4D4 /* Admin */,
 			);
 			name = Module;
 			sourceTree = "<group>";
@@ -1336,6 +1332,7 @@
 				68B98EF71CBE4A00009D64D1 /* QJT.entitlements in Resources */,
 				68083F8B1CCE5909004BE4D4 /* CLTLeave.storyboard in Resources */,
 				68083FB81CCE5A96004BE4D4 /* SLeave.storyboard in Resources */,
+				68A8D7081CD73896008771F9 /* ADPersonal.storyboard in Resources */,
 				68083F841CCE5909004BE4D4 /* BLPersonal.storyboard in Resources */,
 				68083F7E1CCE5909004BE4D4 /* BLAttendance.storyboard in Resources */,
 				68B98EF41CBE49A9009D64D1 /* LaunchScreen.storyboard in Resources */,
@@ -1343,17 +1340,16 @@
 				EF055D971CD1AC0A004DD466 /* CTPersonal.storyboard in Resources */,
 				EF9A30D21CA90FD400D5EFA6 /* Assets.xcassets in Resources */,
 				68083F811CCE5909004BE4D4 /* BLLeave.storyboard in Resources */,
-				EF055D7D1CD1AB57004DD466 /* ADStatistics.storyboard in Resources */,
 				68083F971CCE5909004BE4D4 /* CPersonal.storyboard in Resources */,
 				68083ECE1CCE571F004BE4D4 /* RegLogin.storyboard in Resources */,
 				68083F941CCE5909004BE4D4 /* CLeave.storyboard in Resources */,
 				688E3AD81CD5E641004011AE /* CLTPersonal.storyboard in Resources */,
 				687E38341CBE4008009EDE17 /* Main.storyboard in Resources */,
 				68083FB61CCE59D7004BE4D4 /* CLTAttendance.storyboard in Resources */,
-				68083FA01CCE5909004BE4D4 /* ADPersonal.storyboard in Resources */,
 				68083F911CCE5909004BE4D4 /* CAttendance.storyboard in Resources */,
 				EF055D911CD1ABF7004DD466 /* CTLeave.storyboard in Resources */,
 				68035A091CC756BA002F7C60 /* SPersonal.storyboard in Resources */,
+				68A8D70B1CD73896008771F9 /* ADStatistics.storyboard in Resources */,
 				68035A001CC756BA002F7C60 /* SSign.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1414,6 +1410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5844B5CD1CD5FDBD009DD326 /* CLTPersonalAttendanceNoteCell.swift in Sources */,
+				68A8D70C1CD73896008771F9 /* ADStatisticsTableViewCell.swift in Sources */,
 				5844B5CE1CD5FDBD009DD326 /* CLTPersonalAttendanceNoteViewController.swift in Sources */,
 				68035A9B1CC782F0002F7C60 /* TeacherSetting.swift in Sources */,
 				580C95891CD5055800F332A3 /* CLTPersonalANDetailCell.swift in Sources */,
@@ -1423,7 +1420,6 @@
 				68186C121CB3525D005AF62D /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
 				6808AA531CCFBF0B00C2C324 /* SPersonalHeadContentView.swift in Sources */,
 				EF055D931CD1AC00004DD466 /* CTLeaveView.swift in Sources */,
-				68083FA11CCE5909004BE4D4 /* ADPersonalView.swift in Sources */,
 				68186BFF1CB3525D005AF62D /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */,
 				68186C081CB3525D005AF62D /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				68186C331CB3554F005AF62D /* LoginGeniusViewController.swift in Sources */,
@@ -1446,7 +1442,7 @@
 				EF6A8C081CCFB1B10054282C /* EmptyModel.swift in Sources */,
 				68FF20001CCD02F6005AC0B7 /* CourseView.swift in Sources */,
 				EF45F52F1CABF1800052AA1F /* Student.swift in Sources */,
-				58DDBE101CD7361000F8BC66 /* SPersonalSignCell.swift in Sources */,
+				68A8D7091CD73896008771F9 /* ADPersonalView.swift in Sources */,
 				68186C061CB3525D005AF62D /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
 				EF055D851CD1ABA5004DD466 /* BLAttendanceMainViewController.swift in Sources */,
 				683CF5E81CC3390200F69765 /* UserConfig.swift in Sources */,
@@ -1500,7 +1496,6 @@
 				68083EC21CCE5691004BE4D4 /* NSDate_extension.swift in Sources */,
 				68186C0C1CB3525D005AF62D /* NVActivityIndicatorAnimationBlank.swift in Sources */,
 				68186C021CB3525D005AF62D /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */,
-				68083FA21CCE5909004BE4D4 /* ADPersonalMainViewController.swift in Sources */,
 				68083FBA1CCE5AAB004BE4D4 /* LeaveCell.swift in Sources */,
 				68C8B55A1CD50BD200B407AB /* CLTLeaveMainCell.swift in Sources */,
 				688E3AD31CD5E42B004011AE /* Attendance.swift in Sources */,
@@ -1514,7 +1509,7 @@
 				688E3AD61CD5E5F8004011AE /* CLTPersonalMainCell.swift in Sources */,
 				EF796D8F1CD2F2970066A9F9 /* UIButton_extension.swift in Sources */,
 				68186C131CB3525D005AF62D /* NVActivityIndicatorAnimationPacman.swift in Sources */,
-				EF055D811CD1AB65004DD466 /* ADStatisticsViewController.swift in Sources */,
+				68A8D70D1CD73896008771F9 /* ADStatisticsViewController.swift in Sources */,
 				683CF5FB1CC34E8C00F69765 /* UserType.swift in Sources */,
 				68083F861CCE5909004BE4D4 /* BPersonalMainViewController.swift in Sources */,
 				68186C041CB3525D005AF62D /* NVActivityIndicatorAnimationBallScale.swift in Sources */,
@@ -1522,6 +1517,7 @@
 				68186C161CB3525D005AF62D /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */,
 				585122D41CCD0F790041A82F /* SignCourseViewController.swift in Sources */,
 				68186BFD1CB3525D005AF62D /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
+				68A8D70A1CD73896008771F9 /* ADPersonalMainViewController.swift in Sources */,
 				68FF20031CCD0315005AC0B7 /* LeaveCourseViewController.swift in Sources */,
 				EF1370271CD0F9EC008C6D39 /* Digest.swift in Sources */,
 				68CE13C51CD1A14E009C8E6C /* ViewControllerTransmitDelegate.swift in Sources */,
@@ -1541,7 +1537,6 @@
 				68186C381CB3554F005AF62D /* LoginViewController.swift in Sources */,
 				68083ECA1CCE56CC004BE4D4 /* DLRadioButton.m in Sources */,
 				6849D9821CD5FA0F009DE599 /* SPersonalResetCell.swift in Sources */,
-				EF055D7F1CD1AB5C004DD466 /* ADStatisticsTableViewCell.swift in Sources */,
 				EFA8691F1CAA659200CC1B71 /* SysConfig.swift in Sources */,
 				68186C051CB3525D005AF62D /* NVActivityIndicatorAnimationBallScaleMultiple.swift in Sources */,
 				68323F641CBCE14A00B7DEBE /* KeychainItemWrapper.m in Sources */,

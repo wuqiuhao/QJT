@@ -38,7 +38,7 @@ extension LoginViewController {
     
     func configUI() {
         navigationItem.title = "登录"
-        passwordTfd.becomeFirstResponder()
+        
         accountTfd.delegate = self
         passwordTfd.delegate = self
         createRadioButton(studentBtn, title: "学生", color: UIColor.qjtNavgationBarTitleColor())
@@ -48,6 +48,9 @@ extension LoginViewController {
         
         if let _ = UserConfig.lastUsername() {
             accountTfd.text = UserConfig.lastUsername()
+            passwordTfd.becomeFirstResponder()
+        } else {
+            accountTfd.becomeFirstResponder()
         }
         
     }

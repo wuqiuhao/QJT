@@ -14,7 +14,8 @@ var LoginService = [
     "login_studentLogout",
     "login_teacherLogout",
     "login_studentChangePassword",
-    "login_teacherChangePassword"
+    "login_teacherChangePassword",
+    "login_removeStudentDeviceID"
 ]
 
 var AttendanceService = [
@@ -23,7 +24,8 @@ var AttendanceService = [
     "attendance_teacherBeginClass",
     "attendance_getAttendanceInfosByTeacherID",
     "attendance_getAttendanceDetailInfo",
-    "attendance_updateStudentAttendanceInfos"
+    "attendance_updateStudentAttendanceInfos",
+    "attendance_getClassesByDepartmentID"
 ]
 
 var LeaveService = [
@@ -51,6 +53,7 @@ class Methods {
     static let login_teacherLogout = "login_teacherLogout"
     static let login_studentChangePassword  = "login_studentChangePassword"
     static let login_teacherChangePassword = "login_teacherChangePassword"
+    static let login_removeStudentDeviceID = "login_removeStudentDeviceID"
     
     
     //签到模块
@@ -66,7 +69,7 @@ class Methods {
     static let attendance_getAttendanceDetailInfo = "attendance_getAttendanceDetailInfo"
     //教师批量修改学生考勤信息
     static let attendance_updateStudentAttendanceInfos = "attendance_updateStudentAttendanceInfos"
-    
+    static let attendance_getClassesByDepartmentID = "attendance_getClassesByDepartmentID"
     // 请假模块
     // 学生获取课程表
     static let leave_studentGetCourseClasses = "leave_studentGetCourseClasses"
@@ -80,6 +83,7 @@ class Methods {
     static let leave_getLeaveInfosByTeacherID = "leave_getLeaveInfosByTeacherID"
     // 教师审核请假单
     static let leave_checkApplication = "leave_checkApplication"
+    
     
     
     class func getServiceMethod() -> [String:AnyObject] {

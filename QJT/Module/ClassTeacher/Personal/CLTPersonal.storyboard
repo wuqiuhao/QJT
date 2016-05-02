@@ -196,7 +196,7 @@
         <!--Personal Attendance Note View Controller-->
         <scene sceneID="zZX-r2-xJe">
             <objects>
-                <viewController id="bwW-Ry-5vG" customClass="CLTPersonalAttendanceNoteViewController" customModule="QJT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="bwW-Ry-5vG" customClass="CLTPersonalAttendanceNoteViewController" customModule="QJT" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ff5-7E-Cxq"/>
                         <viewControllerLayoutGuide type="bottom" id="z57-qf-wp7"/>
@@ -342,7 +342,7 @@
         <!--PersonalAN Detail View Controller-->
         <scene sceneID="524-ET-aFZ">
             <objects>
-                <viewController id="U8i-2L-DrY" customClass="CLTPersonalANDetailViewController" customModule="QJT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="U8i-2L-DrY" customClass="CLTPersonalANDetailViewController" customModule="QJT" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="a9K-VJ-Xz4"/>
                         <viewControllerLayoutGuide type="bottom" id="7r6-Iv-xac"/>
@@ -375,18 +375,21 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="学号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQe-Hx-NA3">
-                                                    <rect key="frame" x="55" y="12" width="30" height="18"/>
+                                                    <rect key="frame" x="80" y="12" width="30" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="Z4d-ql-iw0"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="tQe-Hx-NA3" firstAttribute="top" secondItem="aGl-Ac-mzo" secondAttribute="top" constant="12" id="49H-6j-ZKe"/>
+                                                <constraint firstItem="tQe-Hx-NA3" firstAttribute="leading" secondItem="aGl-Ac-mzo" secondAttribute="leading" constant="80" id="XfO-Lh-31f"/>
                                                 <constraint firstAttribute="trailing" secondItem="4XY-AI-2Kl" secondAttribute="trailing" constant="20" id="aKM-7b-msl"/>
-                                                <constraint firstItem="tQe-Hx-NA3" firstAttribute="leading" secondItem="2CU-2e-Ek9" secondAttribute="trailing" constant="5" id="ey8-uU-yg9"/>
                                                 <constraint firstItem="2CU-2e-Ek9" firstAttribute="leading" secondItem="aGl-Ac-mzo" secondAttribute="leading" constant="20" id="fdh-JN-p4p"/>
                                                 <constraint firstItem="4XY-AI-2Kl" firstAttribute="top" secondItem="aGl-Ac-mzo" secondAttribute="top" constant="12" id="h2O-Qq-fYY"/>
-                                                <constraint firstItem="tQe-Hx-NA3" firstAttribute="top" secondItem="aGl-Ac-mzo" secondAttribute="top" constant="12" id="ngc-Jg-4sF"/>
                                                 <constraint firstItem="2CU-2e-Ek9" firstAttribute="top" secondItem="aGl-Ac-mzo" secondAttribute="top" constant="12" id="sqq-9L-Hub"/>
                                             </constraints>
                                         </tableViewCellContentView>

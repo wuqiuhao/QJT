@@ -7,11 +7,25 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class CLTPersonalANDetailViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     lazy var attDetailArrData = [AttendanceDetail]()
+    lazy var tempAttDetailArrData = [AttendanceDetail]()
     var attendanceID: Int!
+    var tempAttDetail: AttendanceDetail!
+    var rowInTable: Int!
+    var tempRow: Int!
+    let statusArr = ["缺课","迟到","早退","请假","出勤"]
+    
+    lazy var pickView:UIPickerView = {
+        let pickerView = UIPickerView(frame: CGRect(x: 0, y:0, width:  UIScreen.mainScreen().bounds.width - 20, height: 180))
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        pickerView.showsSelectionIndicator = true
+        return pickerView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +34,7 @@ class CLTPersonalANDetailViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         configUI()
+        setupItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,6 +49,27 @@ extension CLTPersonalANDetailViewController {
     func configUI() {
         //        self.automaticallyAdjustsScrollViewInsets = false
         navigationItem.title = "考勤明细"
+        
+    }
+    
+    func setupItem() {
+        let rightItem = UIBarButtonItem(title: "提交", style: UIBarButtonItemStyle.Done, target: self, action: #selector(LeaveMainViewController.rightItemClicked))
+        navigationItem.rightBarButtonItem = rightItem
+    }
+    
+    func rightItemClicked() {
+        var params = [String:AnyObject]()
+        
+        params.updateValue(Mapper().toJSONString(tempAttDetailArrData)!, forKey: "attendanceDetailString")
+        
+        self.pleaseWait()
+        NetWorkManager.httpRequest(Methods.attendance_updateStudentAttendanceInfos, params: params, modelType: EmptyModel(), listType: nil, completed: { (responseData) in
+            self.clearAllNotice()
+            
+            }) { [weak self] (errorMsg) in
+                self?.clearAllNotice()
+                self?.errorNotice(errorMsg!)
+        }
         
     }
     
@@ -57,18 +93,178 @@ extension CLTPersonalANDetailViewController {
         
         let statusStr = NSMutableString()
         if queke == 1 {
-            statusStr.appendString("缺课;")
-        }else if chidao == 1 {
-            statusStr.appendString("迟到;")
-        }else if zaotui == 1 {
-            statusStr.appendString("早退;")
-        }else if qingjia == 1 {
-            statusStr.appendString("请假;")
+            statusStr.appendString("缺课,")
+        }
+        if chidao == 1 {
+            statusStr.appendString("迟到,")
+        }
+        if zaotui == 1 {
+            statusStr.appendString("早退,")
+        }
+        if qingjia == 1 {
+            statusStr.appendString("请假,")
+        }
+        if queke == 0 && chidao == 0 && zaotui == 0 && qingjia == 0 {
+            statusStr.appendString("出勤.")
         }
         
-        return (statusStr as String)
+        return statusStr.substringToIndex(statusStr.length - 1) as String
     }
     
+    //提示选择状态
+    func alertPcikerView() {
+        let alertVC = UIAlertController(title: "", message: "\n\n\n\n\n\n\n\n", preferredStyle: .ActionSheet)
+        let cancelAction = UIAlertAction(title: "确定", style: UIAlertActionStyle.Cancel) { [weak self] (alertAction) -> Void in
+            
+            //提示添加或修改
+            let msgAlertVC = UIAlertController(title: "请选择操作类型", message: "", preferredStyle: .Alert)
+            let cancelAction = UIAlertAction(title: "取消", style: .Cancel, handler: nil)
+            let addAction = UIAlertAction(title: "添加", style: .Default,handler: {action in
+                if self!.tempAttDetailArrData.count == 0 {
+                    self!.tempAttDetailArrData.append(self!.attDetailArrData[self!.rowInTable])
+                }
+                for temp in 0..<self!.tempAttDetailArrData.count {
+                    if self!.tempAttDetailArrData[temp].studentID == self!.attDetailArrData[self!.rowInTable].studentID {
+                        self!.tempAttDetailArrData[temp] = self!.attDetailArrData[self!.rowInTable]
+                        break
+                    }
+                    if temp == self!.tempAttDetailArrData.count-1{
+                        self!.tempAttDetailArrData.append(self!.attDetailArrData[self!.rowInTable])
+                    }
+                    
+                    
+                }
+                
+                self!.tableView.reloadData()
+                
+            })
+            let changeAction = UIAlertAction(title: "修改", style: .Default,handler: {action in
+                
+                
+                if self!.tempRow == 0 {
+                    self!.tempAttDetail = self!.attDetailArrData[self!.rowInTable]
+                    self!.tempAttDetail.queke = 1
+                    self!.tempAttDetail.chidao = 0
+                    self!.tempAttDetail.zaotui = 0
+                    self!.tempAttDetail.qingjia = 0
+                }
+                if self!.tempRow == 1 {
+                    
+                    self!.tempAttDetail = self!.attDetailArrData[self!.rowInTable]
+                    self!.tempAttDetail.queke = 0
+                    self!.tempAttDetail.chidao = 1
+                    self!.tempAttDetail.zaotui = 0
+                    self!.tempAttDetail.qingjia = 0
+                }
+                if self!.tempRow == 2 {
+                    self!.tempAttDetail = self!.attDetailArrData[self!.rowInTable]
+                    self!.tempAttDetail.queke = 0
+                    self!.tempAttDetail.chidao = 0
+                    self!.tempAttDetail.zaotui = 1
+                    self!.tempAttDetail.qingjia = 0
+                }
+                if self!.tempRow == 3 {
+                    self!.tempAttDetail = self!.attDetailArrData[self!.rowInTable]
+                    self!.tempAttDetail.queke = 0
+                    self!.tempAttDetail.chidao = 0
+                    self!.tempAttDetail.zaotui = 0
+                    self!.tempAttDetail.qingjia = 1
+                }
+                
+                if self!.tempAttDetailArrData.count == 0 {
+                    self!.tempAttDetailArrData.append(self!.attDetailArrData[self!.rowInTable])
+                }
+                for temp in 0..<self!.tempAttDetailArrData.count {
+                    if self!.tempAttDetailArrData[temp].studentID == self!.attDetailArrData[self!.rowInTable].studentID {
+                        self!.tempAttDetailArrData[temp] = self!.attDetailArrData[self!.rowInTable]
+                        break
+                    }
+                    if temp == self!.tempAttDetailArrData.count-1{
+                        self!.tempAttDetailArrData.append(self!.attDetailArrData[self!.rowInTable])
+                    }
+                    
+                    
+                }
+                
+                
+                self!.tableView.reloadData()
+                
+            })
+
+            msgAlertVC.addAction(cancelAction)
+            msgAlertVC.addAction(addAction)
+            msgAlertVC.addAction(changeAction)
+            self!.presentViewController(msgAlertVC, animated: true, completion: nil)
+            
+        }
+        alertVC.view.addSubview(pickView)
+        alertVC.addAction(cancelAction)
+        self.presentViewController(alertVC, animated: true, completion: nil)
+    }
+    
+}
+
+// MARK: - UIPickerViewDataSource
+extension CLTPersonalANDetailViewController: UIPickerViewDataSource {
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 5
+    }
+}
+
+// MARK: - UIPickerViewDelegate
+extension CLTPersonalANDetailViewController: UIPickerViewDelegate {
+    
+    func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 35
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        tempRow = 4
+        if component == 0 {
+            if row == 0 {
+                
+                tempRow = row
+                attDetailArrData[rowInTable].queke = 1
+            }
+            if row == 1 {
+                
+                
+                tempRow = row
+                attDetailArrData[rowInTable].chidao = 1
+            }
+            if row == 2 {
+                
+                tempRow = row
+                attDetailArrData[rowInTable].zaotui = 1
+            }
+            if row == 3 {
+                
+                tempRow = row
+                attDetailArrData[rowInTable].qingjia = 1
+            }
+            if row == 4 {
+                attDetailArrData[rowInTable].queke = 0
+                attDetailArrData[rowInTable].chidao = 0
+                attDetailArrData[rowInTable].zaotui = 0
+                attDetailArrData[rowInTable].qingjia = 0
+                
+            }
+            
+        }
+        
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if(component == 0){
+            
+            return statusArr[row]
+        }
+        return nil
+    }
 }
 
 // MARK: - UITableViewDelegate
@@ -85,6 +281,12 @@ extension CLTPersonalANDetailViewController: UITableViewDelegate {
         return CGFloat.min
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        rowInTable = indexPath.row
+        self.alertPcikerView()
+        
+    }
     
 }
 
@@ -97,6 +299,7 @@ extension CLTPersonalANDetailViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdeitiferForANDetail, forIndexPath: indexPath) as! CLTPersonalANDetailCell
         let attDetail = self.attDetailArrData[indexPath.row]
         cell.studentNameLabel.text = attDetail.studentName
@@ -105,8 +308,6 @@ extension CLTPersonalANDetailViewController: UITableViewDataSource {
         
         return cell
     }
-    
-    
     
 }
 

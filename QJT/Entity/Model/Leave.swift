@@ -9,6 +9,32 @@
 import Foundation
 import ObjectMapper
 
+class QJTDateTransform: TransformType {
+    typealias Object = NSDate
+    typealias JSON = Double
+    
+    init() {}
+    
+    func transformFromJSON(value: AnyObject?) -> NSDate? {
+        if let timeInt = value as? Double {
+            return NSDate(timeIntervalSince1970: NSTimeInterval(timeInt/1000))
+        }
+        
+        if let timeStr = value as? String {
+            return NSDate(timeIntervalSince1970: NSTimeInterval(atof(timeStr)/1000))
+        }
+        
+        return nil
+    }
+    
+    func transformToJSON(value: NSDate?) -> Double? {
+        if let date = value {
+            return Double(date.timeIntervalSince1970)
+        }
+        return nil
+    }
+}
+
 class Leave: Mappable {
     
     // 请假编号
@@ -39,6 +65,8 @@ class Leave: Mappable {
     var semester: Int
     // 拒绝理由
     var refuseReason: String
+    // 电话号码
+    var phoneNum: String
     
     init() {
         leaveID = 0
@@ -55,6 +83,7 @@ class Leave: Mappable {
         year = 0
         semester = 0
         refuseReason = ""
+        phoneNum = ""
     }
     
     required init?(_ map: Map) {
@@ -72,6 +101,7 @@ class Leave: Mappable {
         year = 0
         semester = 0
         refuseReason = ""
+        phoneNum = ""
     }
     
     func mapping(map: Map) {
@@ -79,8 +109,8 @@ class Leave: Mappable {
         studentID       <- map["studentID"]
         studentName     <- map["studentName"]
         className       <- map["className"]
-        fromTime        <- map["fromTime"]
-        toTime          <- map["toTime"]
+        fromTime        <- (map["fromTime"],QJTDateTransform())
+        toTime          <- (map["toTime"],QJTDateTransform())
         leaveState      <- map["leaveState"]
         reason          <- map["reason"]
         teacherID       <- map["teacherID"]
@@ -89,6 +119,7 @@ class Leave: Mappable {
         year            <- map["year"]
         semester        <- map["semester"]
         refuseReason    <- map["refuseReason"]
+        phoneNum        <- map["phoneNum"]
     }
     
 }

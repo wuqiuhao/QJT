@@ -54,9 +54,9 @@ enum LeaveState:Int, BaseType {
         case .Verify:
             return "审核中"
         case .Success:
-            return "成功"
+            return "申请通过"
         case .Failed:
-            return "失败"
+            return "申请拒绝"
         }
     }
     

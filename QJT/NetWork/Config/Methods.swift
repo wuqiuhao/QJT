@@ -28,7 +28,10 @@ var AttendanceService = [
 var LeaveService = [
     "leave_studentGetCourseClasses",
     "leave_leaveApplication",
-    "leave_getLeaveInfosByStudentID"
+    "leave_getLeaveInfosByStudentID",
+    "leave_getLeaveDetailByLeaveID",
+    "leave_getLeaveInfosByTeacherID",
+    "leave_checkApplication"
 ]
 
 var TestService = [
@@ -69,6 +72,12 @@ class Methods {
     static let leave_leaveApplication = "leave_leaveApplication"
     // 学生获取历史请假列表
     static let leave_getLeaveInfosByStudentID = "leave_getLeaveInfosByStudentID"
+    // 学生、教师获取请假明细
+    static let leave_getLeaveDetailByLeaveID = "leave_getLeaveDetailByLeaveID"
+    // 教师获取请假列表
+    static let leave_getLeaveInfosByTeacherID = "leave_getLeaveInfosByTeacherID"
+    // 教师审核请假单
+    static let leave_checkApplication = "leave_checkApplication"
     
     
     class func getServiceMethod() -> [String:AnyObject] {

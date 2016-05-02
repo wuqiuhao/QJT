@@ -15,12 +15,17 @@ class CLTLeaveDetailViewController: UIViewController {
     @IBOutlet weak var verifyBtn: UIButton!
     
     var dataArr = [Dictionary<String, String>]()
+    var leave: Leave!
+    var leaveCourseArr = [LeaveDetail]()
+    var courseStr = ""
+    var reason = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
         setupBtn()
         perpareData()
+        getNetWorkData()
     }
 }
 
@@ -36,6 +41,25 @@ extension CLTLeaveDetailViewController {
         dataArr.append(data)
     }
     
+    func getNetWorkData() {
+        NetWorkManager.httpRequest(Methods.leave_getLeaveDetailByLeaveID, params: ["leaveID":leave.leaveID], modelType: nil, listType: LeaveDetail(), completed: { (responseData) in
+            self.leaveCourseArr = responseData["list"] as! [LeaveDetail]
+            var i = 0
+            for data in self.leaveCourseArr {
+                if i != self.leaveCourseArr.count - 1 {
+                    self.courseStr = self.courseStr + data.courseName + " " + data.address + "\n"
+                } else {
+                    self.courseStr = self.courseStr + data.courseName + " " + data.address
+                }
+                i += 1
+            }
+            self.tableView.reloadData()
+        }) { [weak self](errorMsg) in
+            self?.errorNotice(errorMsg!)
+        }
+
+    }
+    
     func setupBtn() {
         verifyBtn.layer.cornerRadius = 4
         verifyBtn.clipsToBounds = true
@@ -43,7 +67,24 @@ extension CLTLeaveDetailViewController {
     }
     
     func verifyBtnClicked() {
-        
+        var params = [String:AnyObject]()
+        params.updateValue(leave.leaveID, forKey: "leaveID")
+        params.updateValue(reason, forKey: "refuseReason")
+        params.updateValue(leave.studentID, forKey: "studentID")
+        if dataArr[0]["detail"] == "通过" {
+            params.updateValue(2, forKey: "leaveState")
+        } else if dataArr[0]["detail"] == "不通过" {
+            params.updateValue(3, forKey: "leaveState")
+        }
+        self.pleaseWait()
+        NetWorkManager.httpRequest(Methods.leave_checkApplication, params: params, modelType: EmptyModel(), listType: nil, completed: { (responseData) in
+            self.clearAllNotice()
+            NSNotificationCenter.defaultCenter().postNotificationName("refreshLeave", object: nil)
+            self.navigationController?.popViewControllerAnimated(true)
+            }) { [weak self] (errorMsg) in
+                self?.clearAllNotice()
+                self?.errorNotice(errorMsg!)
+        }
     }
 }
 
@@ -58,12 +99,12 @@ extension CLTLeaveDetailViewController: UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.row == 3 {
+        if indexPath.row == 4 {
             let alertVC = UIAlertController(title: "审核结果", message: "", preferredStyle: UIAlertControllerStyle.ActionSheet)
-            let passAction = UIAlertAction(title: "通过", style: UIAlertActionStyle.Default, handler: { (action) in
+            let passAction = UIAlertAction(title: "通过", style: UIAlertActionStyle.Cancel, handler: { (action) in
                 self.dataArr[0].updateValue("通过", forKey: "detail")
                 if self.dataArr.count == 1 {
-                    self.tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: 3, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
+                    self.tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: 4, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
                 } else if self.dataArr.count == 2 {
                     self.dataArr.removeAtIndex(1)
                     self.tableView.reloadData()
@@ -78,9 +119,28 @@ extension CLTLeaveDetailViewController: UITableViewDelegate {
                 }
                 self.tableView.reloadData()
             })
-            alertVC.addAction(passAction)
             alertVC.addAction(unPassAction)
+            alertVC.addAction(passAction)
             self.presentViewController(alertVC, animated: true, completion: nil)
+        } else if indexPath.row == 5 {
+            let vc = UIStoryboard(name: "SLeave", bundle: nil).instantiateViewControllerWithIdentifier("LeaveReasonViewController") as! LeaveReasonViewController
+            vc.delegate = self
+            vc.textViewContent = reason
+            vc.isLeave = false
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+}
+
+extension CLTLeaveDetailViewController: ViewControllerTransmitDelegate {
+    func transmitMessage(data: [AnyObject]) {
+        if data.count != 0 && data[0] is String {
+            if data[0] as? String != "" {
+                dataArr[1]["detail"] = data[0] as? String
+            }
+            reason = dataArr[1]["detail"]!
+            tableView.reloadData()
+            
         }
     }
 }
@@ -89,7 +149,7 @@ extension CLTLeaveDetailViewController: UITableViewDelegate {
 private let cellIdeitiferForDetail = "CLTLeaveDetailCell"
 extension CLTLeaveDetailViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3 + dataArr.count
+        return 4 + dataArr.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -97,17 +157,20 @@ extension CLTLeaveDetailViewController: UITableViewDataSource {
         switch indexPath.row {
         case 0:
             cell.titleLbl.text = "请假时间:"
-            cell.detailLbl.text = "2016.4.20 - 2016.4.23"
+            cell.detailLbl.text = leave.fromTime.stringForDateFormat("yyyy.MM.dd") + " - " + leave.toTime.stringForDateFormat("yyyy.MM.dd")
         case 1:
             cell.titleLbl.text = "请假学生:"
-            cell.detailLbl.text = "李泽强"
+            cell.detailLbl.text = leave.studentName
         case 2:
             cell.titleLbl.text = "请假课程:"
-            cell.detailLbl.text = "返回房间爱开始疯狂聚划算的空间和电视剧看更好的飞机开始过圣诞节会感觉到施工快捷的师傅搞空间大帅哥会计师的花费高科技的"
+            cell.detailLbl.text = courseStr
         case 3:
+            cell.titleLbl.text = "请假原因:"
+            cell.detailLbl.text = leave.reason
+        case 4:
             cell.titleLbl.text = dataArr[0]["title"]
             cell.detailLbl.text = dataArr[0]["detail"]
-        case 4:
+        case 5:
             cell.titleLbl.text = dataArr[1]["title"]
             cell.detailLbl.text = dataArr[1]["detail"]
         default:

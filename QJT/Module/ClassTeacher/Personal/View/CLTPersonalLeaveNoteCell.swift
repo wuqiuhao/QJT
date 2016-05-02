@@ -1,30 +1,27 @@
 //
-//  SPersonalLeaveNoteCell.swift
+//  CLTPersonalLeaveNoteCell.swift
 //  QJT
 //
-//  Created by LZQ on 16/4/28.
+//  Created by LZQ on 16/5/2.
 //  Copyright © 2016年 Hale. All rights reserved.
 //
 
 import UIKit
 
-class SPersonalLeaveNoteCell: UITableViewCell {
+class CLTPersonalLeaveNoteCell: UITableViewCell {
 
-    
     @IBOutlet weak var beginLbl: UILabel!
     @IBOutlet weak var endLbl: UILabel!
     @IBOutlet weak var teacherLbl: UILabel!
     @IBOutlet weak var stateLbl: UILabel!
-    
     @IBOutlet weak var beginWeekLbl: UILabel!
     @IBOutlet weak var endWeekLbl: UILabel!
-    
     
     var model: Leave! {
         didSet {
             beginLbl.text = model.fromTime.stringForDateFormat("yyyy-MM-dd")
             endLbl.text = model.toTime.stringForDateFormat("yyyy-MM-dd")
-            teacherLbl.text = model.teacherName
+            teacherLbl.text = model.className + " " + model.studentName
             stateLbl.text = model.leaveState.toDescription()
             beginWeekLbl.text = model.fromTime.dateToWeek()
             endWeekLbl.text = model.toTime.dateToWeek()
@@ -35,7 +32,7 @@ class SPersonalLeaveNoteCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func drawRect(rect: CGRect) {
         
         let context = UIGraphicsGetCurrentContext()
@@ -48,10 +45,10 @@ class SPersonalLeaveNoteCell: UITableViewCell {
         
         CGContextMoveToPoint(context,100, rect.height / 2 )
         CGContextAddLineToPoint(context,UIScreen.mainScreen().bounds.width - 110, rect.height / 2)
-   
+        
         CGContextMoveToPoint(context, UIScreen.mainScreen().bounds.width - 120, rect.height / 2 - 5)
         CGContextAddLineToPoint(context,UIScreen.mainScreen().bounds.width - 110, rect.height / 2)
- 
+        
         CGContextMoveToPoint(context, UIScreen.mainScreen().bounds.width - 120, rect.height / 2 + 5)
         CGContextAddLineToPoint(context, UIScreen.mainScreen().bounds.width - 110, rect.height / 2)
         

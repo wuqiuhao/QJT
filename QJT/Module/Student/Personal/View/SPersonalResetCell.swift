@@ -11,9 +11,10 @@ import UIKit
 class SPersonalResetCell: UITableViewCell {
 
     @IBOutlet weak var resetTfd: UITextField!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

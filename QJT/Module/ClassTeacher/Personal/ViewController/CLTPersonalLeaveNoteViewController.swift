@@ -1,14 +1,14 @@
 //
-//  SPersonalLeaveNoteViewController.swift
+//  CLTPersonalLeaveNoteViewController.swift
 //  QJT
 //
-//  Created by LZQ on 16/4/28.
+//  Created by LZQ on 16/5/2.
 //  Copyright © 2016年 Hale. All rights reserved.
 //
 
 import UIKit
 
-class SPersonalLeaveNoteViewController: UIViewController {
+class CLTPersonalLeaveNoteViewController: UIViewController {
 
     
     @IBOutlet weak var tableView: UITableView!
@@ -28,18 +28,18 @@ class SPersonalLeaveNoteViewController: UIViewController {
 }
 
 // MARK: - private Method
-extension SPersonalLeaveNoteViewController {
+extension CLTPersonalLeaveNoteViewController {
     func configUI() {
         self.automaticallyAdjustsScrollViewInsets = false
-        navigationItem.title = "请假记录"
+        navigationItem.title = "审核记录"
     }
     
     func getNetWork() {
-        NetWorkManager.httpRequest(Methods.leave_getLeaveInfosByStudentID, params: ["studentID":UserConfig.studentSetting()!.userID], modelType: nil, listType: Leave(), completed: { (responseData) in
+        NetWorkManager.httpRequest(Methods.leave_getLeaveInfosByTeacherID, params: ["teacherID":UserConfig.teacherSetting()!.userID,"isHistory":1], modelType: nil, listType: Leave(), completed: { (responseData) in
             self.leaveNoteDataArr = responseData["list"] as! [Leave]
             self.tableView.reloadData()
-            }) { [weak self] (errorMsg) in
-                self?.errorNotice(errorMsg!)
+        }) { [weak self] (errorMsg) in
+            self?.errorNotice(errorMsg!)
         }
     }
     
@@ -53,7 +53,7 @@ extension SPersonalLeaveNoteViewController {
 }
 
 // MARK: - UITableViewDelegate
-extension SPersonalLeaveNoteViewController: UITableViewDelegate {
+extension CLTPersonalLeaveNoteViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 80
     }
@@ -72,14 +72,14 @@ extension SPersonalLeaveNoteViewController: UITableViewDelegate {
 }
 
 // MARK: - UITableViewDataSource
-private let cellIdeitiferForLeaveNote = "SPersonalLeaveNoteCell"
-extension SPersonalLeaveNoteViewController: UITableViewDataSource {
+private let cellIdeitiferForLeaveNote = "CLTPersonalLeaveNoteCell"
+extension CLTPersonalLeaveNoteViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return leaveNoteDataArr.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdeitiferForLeaveNote, forIndexPath: indexPath) as! SPersonalLeaveNoteCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdeitiferForLeaveNote, forIndexPath: indexPath) as! CLTPersonalLeaveNoteCell
         cell.model = leaveNoteDataArr[indexPath.row]
         return cell
     }

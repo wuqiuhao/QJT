@@ -17,6 +17,7 @@ class LeaveReasonViewController: UIViewController {
     var textViewMinHeight:CGFloat = 150
     var textViewContent = ""
     var delegate: ViewControllerTransmitDelegate?
+    var isLeave = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +52,11 @@ extension LeaveReasonViewController {
     
     func rightItemClicked() {
         if textViewContent == "" {
-            self.errorNotice("请填写请假原因")
+            if isLeave {
+                self.errorNotice("请填写请假原因")
+            } else {
+                self.errorNotice("请填写拒绝原因")
+            }
             return
         }
         delegate?.transmitMessage([textViewContent])
@@ -71,7 +76,11 @@ extension LeaveReasonViewController: UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "请假原因"
+        if isLeave {
+             return "请假原因"
+        } else {
+             return "拒绝原因"
+        }
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

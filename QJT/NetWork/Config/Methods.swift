@@ -25,7 +25,8 @@ var AttendanceService = [
     "attendance_getAttendanceInfosByTeacherID",
     "attendance_getAttendanceDetailInfo",
     "attendance_updateStudentAttendanceInfos",
-    "attendance_getClassesByDepartmentID"
+    "attendance_getClassesByDepartmentID",
+    "attendance_getAttendanceInfosByClassID"
 ]
 
 var LeaveService = [
@@ -54,8 +55,7 @@ class Methods {
     static let login_studentChangePassword  = "login_studentChangePassword"
     static let login_teacherChangePassword = "login_teacherChangePassword"
     static let login_removeStudentDeviceID = "login_removeStudentDeviceID"
-    
-    
+
     //签到模块
     //学生签到
     static let attendance_studentAttendance = "attendance_studentAttendance"
@@ -70,6 +70,8 @@ class Methods {
     //教师批量修改学生考勤信息
     static let attendance_updateStudentAttendanceInfos = "attendance_updateStudentAttendanceInfos"
     static let attendance_getClassesByDepartmentID = "attendance_getClassesByDepartmentID"
+    static let attendance_getAttendanceInfosByClassID = "attendance_getAttendanceInfosByClassID"
+    
     // 请假模块
     // 学生获取课程表
     static let leave_studentGetCourseClasses = "leave_studentGetCourseClasses"

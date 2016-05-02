@@ -62,8 +62,6 @@ extension CLTPersonalAttendanceNoteViewController {
             
         }) { (errorMsg) in
             self.clearAllNotice()
-            print(errorMsg!)
-            
         }
     }
     
@@ -77,18 +75,16 @@ extension CLTPersonalAttendanceNoteViewController: ConfigRefreshDelegate {
     func headerRefresh(view: UIView) {
         NetWorkManager.httpRequest(Methods.attendance_getAttendanceInfosByTeacherID, params: ["teacherID":UserConfig.teacherSetting()!.userID], modelType: Attendance(), listType: Attendance(), completed: { (responseData) in
             
-            
+            self.tableView.mj_header.endRefreshing()
             self.attendanceArrData = responseData["list"] as! [Attendance]
             self.tableView.reloadData()
             
-        }) { (errorMsg) in
             
-            print(errorMsg!)
+        }) { [weak self] (errorMsg) in
+            self?.errorNotice(errorMsg!)
+            self?.tableView.mj_header.endRefreshing()
             
         }
-        
-        // 结束刷新
-        self.tableView.mj_header.endRefreshing()
     }
 }
 

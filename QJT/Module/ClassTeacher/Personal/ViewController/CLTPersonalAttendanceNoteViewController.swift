@@ -16,8 +16,6 @@ class CLTPersonalAttendanceNoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        getNetwork()
         tableView.delegate = self
         tableView.dataSource = self
         configUI()
@@ -52,20 +50,19 @@ extension CLTPersonalAttendanceNoteViewController {
         tableView.configRefreshDelegate = self
     }
     
-    func getNetwork() {
-        self.pleaseWait()
-        NetWorkManager.httpRequest(Methods.attendance_getAttendanceInfosByTeacherID, params: ["teacherID":UserConfig.teacherSetting()!.userID], modelType: Attendance(), listType: Attendance(), completed: { (responseData) in
-            
-            self.clearAllNotice()
-            self.attendanceArrData = responseData["list"] as! [Attendance]
-            self.tableView.reloadData()
-            
-        }) { (errorMsg) in
-            self.clearAllNotice()
-            print(errorMsg!)
-            
-        }
-    }
+//    func getNetwork() {
+//        self.pleaseWait()
+//        NetWorkManager.httpRequest(Methods.attendance_getAttendanceInfosByTeacherID, params: ["teacherID":UserConfig.teacherSetting()!.userID], modelType: Attendance(), listType: Attendance(), completed: { (responseData) in
+//            
+//            self.clearAllNotice()
+//            self.attendanceArrData = responseData["list"] as! [Attendance]
+//            self.tableView.reloadData()
+//            
+//        }) { (errorMsg) in
+//            self.clearAllNotice()
+//            
+//        }
+//    }
     
     func refreshNote() {
         tableView.headerRefresh = true
@@ -77,18 +74,14 @@ extension CLTPersonalAttendanceNoteViewController: ConfigRefreshDelegate {
     func headerRefresh(view: UIView) {
         NetWorkManager.httpRequest(Methods.attendance_getAttendanceInfosByTeacherID, params: ["teacherID":UserConfig.teacherSetting()!.userID], modelType: Attendance(), listType: Attendance(), completed: { (responseData) in
             
-            
+            self.tableView.mj_header.endRefreshing()
             self.attendanceArrData = responseData["list"] as! [Attendance]
             self.tableView.reloadData()
             
-        }) { (errorMsg) in
-            
-            print(errorMsg!)
+        }) { [weak self] (errorMsg) in
+            self?.tableView.mj_header.endRefreshing()
             
         }
-        
-        // 结束刷新
-        self.tableView.mj_header.endRefreshing()
     }
 }
 
@@ -125,7 +118,7 @@ extension CLTPersonalAttendanceNoteViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdeitiferForAttendanceNote, forIndexPath: indexPath) as! CLTPersonalAttendanceNoteCell
         let attendance = self.attendanceArrData[indexPath.row]
         
-        cell.timeLabel.text = ("\(attendance.updateTime)" as NSString).substringToIndex(10)
+        cell.timeLabel.text = attendance.updateTime.stringForDateFormat("yyyy.MM.dd")
         cell.courseNameLabel.text = attendance.courseName
         cell.classNameLabel.text = attendance.className
         cell.quekeLabel.text = "\(attendance.quekeCount)"

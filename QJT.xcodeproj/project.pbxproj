@@ -15,6 +15,7 @@
 		5844B5D01CD60661009DD326 /* SPersonalSignNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5844B5CF1CD60661009DD326 /* SPersonalSignNoteViewController.swift */; };
 		585122D41CCD0F790041A82F /* SignCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585122D31CCD0F790041A82F /* SignCourseViewController.swift */; };
 		589060401CD7438100BB4CAE /* SPersonalSignNoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5890603F1CD7438100BB4CAE /* SPersonalSignNoteCell.swift */; };
+		589060441CD777E000BB4CAE /* StudentAttendanceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589060431CD777E000BB4CAE /* StudentAttendanceInfo.swift */; };
 		68035A001CC756BA002F7C60 /* SSign.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 680359EC1CC756BA002F7C60 /* SSign.storyboard */; };
 		68035A011CC756BA002F7C60 /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359EE1CC756BA002F7C60 /* Sign.swift */; };
 		68035A021CC756BA002F7C60 /* SignMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680359F01CC756BA002F7C60 /* SignMainViewController.swift */; };
@@ -184,6 +185,7 @@
 		5844B5CF1CD60661009DD326 /* SPersonalSignNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPersonalSignNoteViewController.swift; sourceTree = "<group>"; };
 		585122D31CCD0F790041A82F /* SignCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignCourseViewController.swift; sourceTree = "<group>"; };
 		5890603F1CD7438100BB4CAE /* SPersonalSignNoteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPersonalSignNoteCell.swift; sourceTree = "<group>"; };
+		589060431CD777E000BB4CAE /* StudentAttendanceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StudentAttendanceInfo.swift; path = Entity/Model/StudentAttendanceInfo.swift; sourceTree = "<group>"; };
 		680359EC1CC756BA002F7C60 /* SSign.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SSign.storyboard; sourceTree = "<group>"; };
 		680359EE1CC756BA002F7C60 /* Sign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sign.swift; sourceTree = "<group>"; };
 		680359F01CC756BA002F7C60 /* SignMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignMainViewController.swift; sourceTree = "<group>"; };
@@ -1194,6 +1196,7 @@
 				68035A9A1CC782F0002F7C60 /* TeacherSetting.swift */,
 				68C8B5531CD499DB00B407AB /* Leave.swift */,
 				6849D97B1CD5EBBF009DE599 /* LeaveDetail.swift */,
+				589060431CD777E000BB4CAE /* StudentAttendanceInfo.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1460,6 +1463,7 @@
 				68186C191CB3525D005AF62D /* NVActivityIndicatorView.swift in Sources */,
 				EF055D891CD1ABBD004DD466 /* BLLeaveViewController.swift in Sources */,
 				68186C031CB3525D005AF62D /* NVActivityIndicatorAnimationBallRotate.swift in Sources */,
+				589060441CD777E000BB4CAE /* StudentAttendanceInfo.swift in Sources */,
 				68186C0A1CB3525D005AF62D /* NVActivityIndicatorAnimationBallZigZag.swift in Sources */,
 				68186C171CB3525D005AF62D /* NVActivityIndicatorAnimationDelegate.swift in Sources */,
 				68083F931CCE5909004BE4D4 /* CAttendanceMainViewController.swift in Sources */,

@@ -32,7 +32,6 @@ class CLTPersonalANDetailViewController: UIViewController {
         super.viewDidLoad()
         
         navigationController?.setNavigationBarHidden(false, animated: true)
-        getNetwork()
         tableView.delegate = self
         tableView.dataSource = self
         configUI()
@@ -53,18 +52,16 @@ extension CLTPersonalANDetailViewController: ConfigRefreshDelegate {
     func headerRefresh(view: UIView) {
         NetWorkManager.httpRequest(Methods.attendance_getAttendanceDetailInfo, params: ["attendanceID":attendanceID], modelType: AttendanceDetail(), listType: AttendanceDetail(), completed: { (responseData) in
             
-            
+            self.tableView.mj_header.endRefreshing()
             self.attDetailArrData = responseData["list"] as! [AttendanceDetail]
             self.tableView.reloadData()
             
-        }) { (errorMsg) in
+        }) { [weak self] (errorMsg) in
             
-            print(errorMsg!)
+            self?.tableView.mj_header.endRefreshing()
             
         }
         
-        // 结束刷新
-        self.tableView.mj_header.endRefreshing()
     }
 }
 
@@ -106,20 +103,20 @@ extension CLTPersonalANDetailViewController {
         
     }
     
-    func getNetwork() {
-        self.pleaseWait()
-        NetWorkManager.httpRequest(Methods.attendance_getAttendanceDetailInfo, params: ["attendanceID":attendanceID], modelType: AttendanceDetail(), listType: AttendanceDetail(), completed: { (responseData) in
-            
-            self.clearAllNotice()
-            self.attDetailArrData = responseData["list"] as! [AttendanceDetail]
-            self.tableView.reloadData()
-            
-        }) { (errorMsg) in
-            self.clearAllNotice()
-            print(errorMsg!)
-            
-        }
-    }
+//    func getNetwork() {
+//        self.pleaseWait()
+//        NetWorkManager.httpRequest(Methods.attendance_getAttendanceDetailInfo, params: ["attendanceID":attendanceID], modelType: AttendanceDetail(), listType: AttendanceDetail(), completed: { (responseData) in
+//            
+//            self.clearAllNotice()
+//            self.attDetailArrData = responseData["list"] as! [AttendanceDetail]
+//            self.tableView.reloadData()
+//            
+//        }) { (errorMsg) in
+//            self.clearAllNotice()
+//            print(errorMsg!)
+//            
+//        }
+//    }
     
     //状态字符串拼接
     func getStatusStr(queke: Int, chidao: Int, zaotui: Int, qingjia: Int) -> String {

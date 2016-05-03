@@ -12,11 +12,10 @@ class SPersonalSignNoteViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    lazy var signNoteArrData = [Attendance]()
+    lazy var signNoteArrData = [StudentAttendanceInfo]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getNetwork()
         tableView.delegate = self
         tableView.dataSource = self
         configUI()
@@ -41,18 +40,21 @@ extension SPersonalSignNoteViewController {
         tableView.configRefreshDelegate = self
     }
     
-    func getNetwork() {
-        print("getNetwork")
-    }
-    
 }
 
 extension SPersonalSignNoteViewController: ConfigRefreshDelegate {
     func headerRefresh(view: UIView) {
         
-        getNetwork()
-        // 结束刷新
-        self.tableView.mj_header.endRefreshing()
+        NetWorkManager.httpRequest(Methods.studentGetLostAttendanceInfos, params: ["studentID":UserConfig.studentSetting()!.userID], modelType: StudentAttendanceInfo(), listType: StudentAttendanceInfo(), completed: { (responseData) in
+            
+            self.tableView.mj_header.endRefreshing()
+            self.signNoteArrData = responseData["list"] as! [StudentAttendanceInfo]
+            self.tableView.reloadData()
+            
+        }) { [weak self] (errorMsg) in
+            self?.tableView.mj_header.endRefreshing()
+            
+        }
     }
 }
 
@@ -70,10 +72,6 @@ extension SPersonalSignNoteViewController: UITableViewDelegate {
         return CGFloat.min
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        
-    }
 }
 
 // MARK: - UITableViewDataSource
@@ -85,8 +83,15 @@ extension SPersonalSignNoteViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdeitiferForSignNote, forIndexPath: indexPath) as! CLTPersonalAttendanceNoteCell
-//        let attendance = self.signNoteArrData[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdeitiferForSignNote, forIndexPath: indexPath) as! SPersonalSignNoteCell
+        let attendance = self.signNoteArrData[indexPath.row]
+        cell.timeLabel.text = attendance.attendanceTime.stringForDateFormat("yyyy.MM.dd")
+        cell.courseNameLabel.text = attendance.courseName
+        cell.teacherNameLabel.text = attendance.teacherName
+        cell.quekeLabel.text = "\(attendance.queke)"
+        cell.chidaoLabel.text = "\(attendance.chidao)"
+        cell.zaotuiLabel.text = "\(attendance.zaotui)"
+        cell.qingjiaLabel.text = "\(attendance.qingjia)"
         
         
         return cell

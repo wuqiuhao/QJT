@@ -33,6 +33,11 @@ extension CLTPersonalLeaveNoteViewController {
         navigationItem.title = "审核记录"
         tableView.headerRefresh = true
         tableView.configRefreshDelegate = self
+        
+        
+        let rightItem = UIBarButtonItem(image: UIImage(named: "CLTPersonal_myClass"), style: UIBarButtonItemStyle.Done, target: self, action: #selector(CLTPersonalLeaveNoteViewController.rightItemClicked))
+        navigationItem.rightBarButtonItem = rightItem
+        
     }
     
     
@@ -42,6 +47,10 @@ extension CLTPersonalLeaveNoteViewController {
             let index = sender as! NSIndexPath
             vc.leave = leaveNoteDataArr[index.row]
         }
+    }
+    
+     @objc private func rightItemClicked() {
+        
     }
 }
 

@@ -39,6 +39,8 @@ class Attendance: Mappable {
     var longitude: Double
     // 维度
     var latitude: Double
+    // 教师姓名
+    var teacherName: String
     
     
     init() {
@@ -56,6 +58,7 @@ class Attendance: Mappable {
         updateTime = NSDate()
         longitude = 0.0
         latitude = 0.0
+        teacherName = ""
         
     }
     
@@ -77,6 +80,7 @@ class Attendance: Mappable {
         
         longitude = 0.0
         latitude = 0.0
+        teacherName = ""
         
     }
     func mapping(map: Map) {
@@ -93,10 +97,12 @@ class Attendance: Mappable {
         zaotuiCount    <- map["zaotuiCount"]
         qingjiaCount   <- map["qingjiaCount"]
         modified       <- map["modified"]
-        updateTime     <- map["updateTime"]
+        updateTime     <- (map["updateTime"],QJTDateTransform())
         
         longitude      <- map["longitude"]
         latitude       <- map["latitude"]
+        
+        teacherName    <- map["teacherName"]
         
     }
     

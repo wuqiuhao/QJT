@@ -18,6 +18,9 @@ class ADStatisticsViewController: UIViewController {
     var datePickerValue: NSDate!
     var professionTitleArr = [String]()
     var classDataArr = [Class]()
+    var classID: Int?
+    var fromTime: NSDate?
+    var toTime: NSDate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,17 +43,20 @@ extension ADStatisticsViewController {
     }
     
     func createTableViewData() {
-        let dateStr = NSDate().stringForDateFormat("yyyy-MM-dd")
-        let weekStr = NSDate().dateToWeek()
+//        let dateStr = NSDate().stringForDateFormat("yyyy-MM-dd")
+//        let weekStr = NSDate().dateToWeek()
         let cellData1 = ["title":"分院专业", "detail":"请选择专业"]
-        let cellData2 = ["title":"开始时间","detail":"\(dateStr) \(weekStr)"]
-        let cellData3 = ["title":"结束时间","detail":"\(dateStr) \(weekStr)"]
+        let cellData2 = ["title":"开始时间","detail":"请选择开始时间"]
+        let cellData3 = ["title":"结束时间","detail":"请选择结束时间"]
         dateArr = [cellData1, cellData2, cellData3]
-        professionTitleArr = ["计算机科学与技术","机械","电子","工业设计","自动化","大环境","大会及单号","fhsdjhf"]
     }
     
     func rightItemClicked() {
-        
+        let vc = UIStoryboard(name: "ADStatistics", bundle: nil).instantiateViewControllerWithIdentifier("ADAttendanceNoteViewController") as! ADAttendanceNoteViewController
+        vc.classID = classID
+        vc.fromTime = fromTime
+        vc.toTime = toTime
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func getNetworkData() {
@@ -88,7 +94,7 @@ extension ADStatisticsViewController {
         professionPicker = UIPickerView()
         professionPicker?.delegate = self
         professionPicker?.dataSource = self
-        professionPicker?.frame = CGRect(x: 15, y: 0, width: UIScreen.mainScreen().bounds.width, height: 162)
+        professionPicker?.frame = CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.width, height: 162)
     }
     
     
@@ -98,7 +104,7 @@ extension ADStatisticsViewController {
         for data in dateArr {
             if data["title"] == "datePicker" && i == 2 {
                 datePickerValue = datePicker?.date
-                //fromTime = datePickerValue
+                fromTime = datePickerValue
                 let dateStr = datePicker?.date.stringForDateFormat("yyyy-MM-dd")
                 let weekStr = datePicker?.date.dateToWeek()
                 dateArr[i - 1].updateValue("\(dateStr!)  \(weekStr!)", forKey: "detail")
@@ -107,7 +113,7 @@ extension ADStatisticsViewController {
                 //tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: i + 1, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
             } else if data["title"] == "datePicker" && i == 3 {
                 datePickerValue = datePicker?.date
-                //toTime = datePickerValue
+                toTime = datePickerValue
                 let dateStr = datePicker?.date.stringForDateFormat("yyyy-MM-dd")
                 let weekStr = datePicker?.date.dateToWeek()
                 dateArr[i - 1].updateValue("\(dateStr!)  \(weekStr!)", forKey: "detail")
@@ -137,6 +143,7 @@ extension ADStatisticsViewController: UIPickerViewDelegate {
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         dateArr[0]["detail"] = classDataArr[row].className
+        classID = classDataArr[row].classID
         tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
     }
     

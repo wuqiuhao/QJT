@@ -12,10 +12,8 @@ class SPersonalSignNoteCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var courseNameLabel: UILabel!
     @IBOutlet weak var teacherNameLabel: UILabel!
-    @IBOutlet weak var quekeLabel: UILabel!
-    @IBOutlet weak var chidaoLabel: UILabel!
-    @IBOutlet weak var zaotuiLabel: UILabel!
-    @IBOutlet weak var qingjiaLabel: UILabel!
+    @IBOutlet weak var statusLabel: UILabel!
+    
     
 
     override func awakeFromNib() {

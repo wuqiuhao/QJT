@@ -9,7 +9,6 @@
 import Foundation
 
 class  SysConfig {
-    //static let serverIp = "172.23.86.169"
     static let serverIp = "172.23.196.232"
     static let serverPort = "8080"
     

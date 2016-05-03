@@ -17,7 +17,7 @@ class CLTPersonalANDetailViewController: UIViewController {
     var attendanceID: Int!
     var tempAttDetail: AttendanceDetail!
     var rowInTable: Int!
-    var tempRow: Int!
+    var tempRow = 0
     let statusArr = ["缺课","迟到","早退","请假","出勤"]
     
     lazy var pickView:UIPickerView = {

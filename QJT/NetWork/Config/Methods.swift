@@ -26,7 +26,8 @@ var AttendanceService = [
     "attendance_getAttendanceDetailInfo",
     "attendance_updateStudentAttendanceInfos",
     "attendance_getClassesByDepartmentID",
-    "attendance_getAttendanceInfosByClassID"
+    "attendance_getAttendanceInfosByClassID",
+    "attendance_studentGetLostAttendanceInfos"
 ]
 
 var LeaveService = [
@@ -59,6 +60,8 @@ class Methods {
     //签到模块
     //学生签到
     static let attendance_studentAttendance = "attendance_studentAttendance"
+    //学生获取签到列表
+    static let attendance_studentGetLostAttendanceInfos = "attendance_studentGetLostAttendanceInfos"
     //教师获取课程表
     static let attendance_teacherGetCourseClasses = "attendance_teacherGetCourseClasses"
     //教师发起考勤

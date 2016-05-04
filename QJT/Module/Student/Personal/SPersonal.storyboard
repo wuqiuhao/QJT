@@ -503,7 +503,7 @@
                         <outlet property="tableView" destination="Ngd-pP-vMC" id="98m-hx-3Ew"/>
                         <segue destination="1Xx-oJ-M0h" kind="show" identifier="SPersonalMainViewController" action="showDetailViewController:sender:" id="L5b-0O-gUb"/>
                         <segue destination="JX4-zp-hyc" kind="show" identifier="SPersonalLeaveNoteViewController" id="pE7-Kk-SKR"/>
-                        <segue destination="fBa-ub-88R" kind="show" identifier="SPersonalSignNoteViewController" id="wlG-UH-ngn"/>
+                        <segue destination="fBa-ub-88R" kind="show" identifier="SPersonalSignViewController" id="wlG-UH-ngn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lFo-E6-fhZ" userLabel="First Responder" sceneMemberID="firstResponder"/>

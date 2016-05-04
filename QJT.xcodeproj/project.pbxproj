@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1A0F54FFF44B77ECE6EF942A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451ED4D82C76F378DBB33D09 /* Pods.framework */; };
+		580825121CD9A1CC006DE16B /* CTSignCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580825111CD9A1CC006DE16B /* CTSignCourseViewController.swift */; };
+		580825141CD9A51B006DE16B /* CTPersonalAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580825131CD9A51B006DE16B /* CTPersonalAccountViewController.swift */; };
+		580825161CD9A76C006DE16B /* CTPersonalAttendanceNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580825151CD9A76C006DE16B /* CTPersonalAttendanceNoteViewController.swift */; };
+		580825181CD9A879006DE16B /* CTPersonalAttendanceNoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580825171CD9A879006DE16B /* CTPersonalAttendanceNoteCell.swift */; };
+		5808251C1CD9A984006DE16B /* CTPersonalANDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808251B1CD9A984006DE16B /* CTPersonalANDetailViewController.swift */; };
+		5808251E1CD9AA06006DE16B /* CTPersonalANDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808251D1CD9AA06006DE16B /* CTPersonalANDetailCell.swift */; };
+		580825201CD9AB51006DE16B /* CTPersonalMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5808251F1CD9AB51006DE16B /* CTPersonalMainCell.swift */; };
 		580C95891CD5055800F332A3 /* CLTPersonalANDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C95881CD5055800F332A3 /* CLTPersonalANDetailCell.swift */; };
 		580C958B1CD5060700F332A3 /* CLTPersonalANDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C958A1CD5060700F332A3 /* CLTPersonalANDetailViewController.swift */; };
 		5844B5CD1CD5FDBD009DD326 /* CLTPersonalAttendanceNoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C95801CD4B09100F332A3 /* CLTPersonalAttendanceNoteCell.swift */; };
@@ -184,6 +191,13 @@
 /* Begin PBXFileReference section */
 		421540CB059379FB231DBF0D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		451ED4D82C76F378DBB33D09 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		580825111CD9A1CC006DE16B /* CTSignCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTSignCourseViewController.swift; sourceTree = "<group>"; };
+		580825131CD9A51B006DE16B /* CTPersonalAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPersonalAccountViewController.swift; sourceTree = "<group>"; };
+		580825151CD9A76C006DE16B /* CTPersonalAttendanceNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPersonalAttendanceNoteViewController.swift; sourceTree = "<group>"; };
+		580825171CD9A879006DE16B /* CTPersonalAttendanceNoteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPersonalAttendanceNoteCell.swift; sourceTree = "<group>"; };
+		5808251B1CD9A984006DE16B /* CTPersonalANDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPersonalANDetailViewController.swift; sourceTree = "<group>"; };
+		5808251D1CD9AA06006DE16B /* CTPersonalANDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPersonalANDetailCell.swift; sourceTree = "<group>"; };
+		5808251F1CD9AB51006DE16B /* CTPersonalMainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPersonalMainCell.swift; sourceTree = "<group>"; };
 		580C95801CD4B09100F332A3 /* CLTPersonalAttendanceNoteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTPersonalAttendanceNoteCell.swift; sourceTree = "<group>"; };
 		580C95841CD4BC8200F332A3 /* CLTPersonalAttendanceNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTPersonalAttendanceNoteViewController.swift; sourceTree = "<group>"; };
 		580C95881CD5055800F332A3 /* CLTPersonalANDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLTPersonalANDetailCell.swift; sourceTree = "<group>"; };
@@ -811,6 +825,7 @@
 			isa = PBXGroup;
 			children = (
 				EF055D8E1CD1ABED004DD466 /* CTAttendanceMainViewController.swift */,
+				580825111CD9A1CC006DE16B /* CTSignCourseViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -855,6 +870,9 @@
 			isa = PBXGroup;
 			children = (
 				EF055D981CD1AC0F004DD466 /* CTPersonalView.swift */,
+				580825171CD9A879006DE16B /* CTPersonalAttendanceNoteCell.swift */,
+				5808251D1CD9AA06006DE16B /* CTPersonalANDetailCell.swift */,
+				5808251F1CD9AB51006DE16B /* CTPersonalMainCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -863,6 +881,9 @@
 			isa = PBXGroup;
 			children = (
 				EF055D9A1CD1AC14004DD466 /* CTPersonalMainViewController.swift */,
+				580825131CD9A51B006DE16B /* CTPersonalAccountViewController.swift */,
+				580825151CD9A76C006DE16B /* CTPersonalAttendanceNoteViewController.swift */,
+				5808251B1CD9A984006DE16B /* CTPersonalANDetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1440,6 +1461,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5844B5CD1CD5FDBD009DD326 /* CLTPersonalAttendanceNoteCell.swift in Sources */,
+				580825201CD9AB51006DE16B /* CTPersonalMainCell.swift in Sources */,
 				68A8D70C1CD73896008771F9 /* ADStatisticsTableViewCell.swift in Sources */,
 				5844B5CE1CD5FDBD009DD326 /* CLTPersonalAttendanceNoteViewController.swift in Sources */,
 				68035A9B1CC782F0002F7C60 /* TeacherSetting.swift in Sources */,
@@ -1501,14 +1523,17 @@
 				681DD1261CC7B685004CB295 /* Week.swift in Sources */,
 				68CE13C71CD1A16D009C8E6C /* LeaveReasonCell.swift in Sources */,
 				688E3ABC1CD5C3F6004011AE /* CLTLeaveDetailCell.swift in Sources */,
+				5808251C1CD9A984006DE16B /* CTPersonalANDetailViewController.swift in Sources */,
 				68186BFE1CB3525D005AF62D /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */,
 				EF055D951CD1AC04004DD466 /* CTLeaveViewMainController.swift in Sources */,
 				68186C1E1CB354DB005AF62D /* UIColor_extension.swift in Sources */,
+				580825121CD9A1CC006DE16B /* CTSignCourseViewController.swift in Sources */,
 				68035A991CC78066002F7C60 /* StudentSetting.swift in Sources */,
 				EF9A30E81CA9133C00D5EFA6 /* AppDelegate.swift in Sources */,
 				68186BFC1CB3525D005AF62D /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
 				68186C011CB3525D005AF62D /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */,
 				68C8B5521CD47D0800B407AB /* SPersonalLNDetailCell.swift in Sources */,
+				5808251E1CD9AA06006DE16B /* CTPersonalANDetailCell.swift in Sources */,
 				68083F981CCE5909004BE4D4 /* CPersonalView.swift in Sources */,
 				68BA681A1CCF43C00022C843 /* SPersonalHeaderView.swift in Sources */,
 				5844B5D01CD60661009DD326 /* SPersonalSignNoteViewController.swift in Sources */,
@@ -1549,6 +1574,7 @@
 				683CF5FB1CC34E8C00F69765 /* UserType.swift in Sources */,
 				68083F861CCE5909004BE4D4 /* BPersonalMainViewController.swift in Sources */,
 				68186C041CB3525D005AF62D /* NVActivityIndicatorAnimationBallScale.swift in Sources */,
+				580825141CD9A51B006DE16B /* CTPersonalAccountViewController.swift in Sources */,
 				6817DC661CD65F8E0058194A /* CLTPersonalLeaveNoteViewController.swift in Sources */,
 				68186C161CB3525D005AF62D /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */,
 				6837C4F21CD773DF00C69CD5 /* ADPersonalResetIDViewController.swift in Sources */,
@@ -1566,6 +1592,7 @@
 				6837C4FE1CD77BD400C69CD5 /* ADANDetailCell.swift in Sources */,
 				68C8B5541CD499DB00B407AB /* Leave.swift in Sources */,
 				68035A011CC756BA002F7C60 /* Sign.swift in Sources */,
+				580825181CD9A879006DE16B /* CTPersonalAttendanceNoteCell.swift in Sources */,
 				68083F951CCE5909004BE4D4 /* CLeaveView.swift in Sources */,
 				68083F891CCE5909004BE4D4 /* CLTAttendanceMainViewController.swift in Sources */,
 				683CF5FA1CC34E8C00F69765 /* BaseType.swift in Sources */,
@@ -1578,6 +1605,7 @@
 				6849D9821CD5FA0F009DE599 /* SPersonalResetCell.swift in Sources */,
 				EFA8691F1CAA659200CC1B71 /* SysConfig.swift in Sources */,
 				68186C051CB3525D005AF62D /* NVActivityIndicatorAnimationBallScaleMultiple.swift in Sources */,
+				580825161CD9A76C006DE16B /* CTPersonalAttendanceNoteViewController.swift in Sources */,
 				68323F641CBCE14A00B7DEBE /* KeychainItemWrapper.m in Sources */,
 				68186C0F1CB3525D005AF62D /* NVActivityIndicatorAnimationLineScaleParty.swift in Sources */,
 				68186BF91CB3525D005AF62D /* AnimationRefresh.swift in Sources */,

@@ -83,4 +83,9 @@ extension AppDelegate {
         JPUSHService.resetBadge()
         application.applicationIconBadgeNumber = 0
     }
+    
+    func applicationDidEnterBackground(application: UIApplication) {
+        JPUSHService.resetBadge()
+        application.applicationIconBadgeNumber = 0
+    }
 }

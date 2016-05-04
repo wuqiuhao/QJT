@@ -46,7 +46,7 @@ extension CLTLeaveDetailViewController {
     }
     
     func getNetWorkData() {
-        NetWorkManager.httpRequest(Methods.leave_getLeaveDetailByLeaveID, params: ["leaveID":leaveID], modelType: EmptyModel(), listType: LeaveDetail(), completed: { (responseData) in
+        NetWorkManager.httpRequest(Methods.leave_getLeaveDetailByLeaveID, params: ["leaveID":leaveID,"userType":UserType.Teacher.rawValue], modelType: Leave(), listType: LeaveDetail(), completed: { (responseData) in
             self.leaveCourseArr = responseData["list"] as! [LeaveDetail]
             self.leave = responseData["model"] as! Leave
             var i = 0

@@ -33,7 +33,7 @@ extension SPersonalLNDetailViewController {
     }
     
     func getNetwork() {
-        NetWorkManager.httpRequest(Methods.leave_getLeaveDetailByLeaveID, params: ["leaveID":leaveID], modelType: Leave(), listType: LeaveDetail(), completed: { (responseData) in
+        NetWorkManager.httpRequest(Methods.leave_getLeaveDetailByLeaveID, params: ["leaveID":leaveID,"userType":UserType.Student.rawValue], modelType: Leave(), listType: LeaveDetail(), completed: { (responseData) in
             self.leaveCourseArr = responseData["list"] as! [LeaveDetail]
             self.leave = responseData["model"] as! Leave
             var i = 0
@@ -119,7 +119,7 @@ extension SPersonalLNDetailViewController: UITableViewDataSource {
                 cell.detailLbl.text = leave.teacherName
                 cell.fatherVC = self
                 cell.phoneImg.hidden = false
-                
+                cell.phoneNum = leave.phoneNum
             } else if indexPath.row == 1 {
                 cell.titleLbl.text = "审核状态:"
                 cell.detailLbl.text = leave.leaveState.toDescription()

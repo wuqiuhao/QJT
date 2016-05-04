@@ -133,9 +133,9 @@ extension NSDate {
     static func judegeDateState(begin: NSDate, end: NSDate) -> DateState {
         let value = end.timeIntervalSince1970 - begin.timeIntervalSince1970
         let dayNum = value / (3600 * 24)
-        if dayNum < -1 {
+        if dayNum < 0 {
             return DateState.error
-        } else if dayNum >= -1 && dayNum <= 5 {
+        } else if dayNum >= 0 && dayNum <= 5 {
             return DateState.withinFive
         } else {
             return DateState.beyondFive

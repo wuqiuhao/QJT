@@ -24,7 +24,7 @@ class LeaveMainViewController: UIViewController {
     var fromTime = NSDate()
     var toTime = NSDate()
     var reason = ""
-    var isFirstSelected = false
+    var isFirstSelected = true
     var isSecondSelected = false
     
     override func viewDidLoad() {
@@ -91,11 +91,17 @@ extension LeaveMainViewController {
             datePicker!.minimumDate = NSDate.distantPast()
             datePicker!.maximumDate = NSDate.distantFuture()
             datePicker!.setDate(fromTime, animated: false)
+            isFirstSelected = true
         } else if index == 1 {
             //datePicker!.minimumDate = NSDate.dateFromString(NSDate().getEarlyOrLaterMonthFromDate(NSDate(), month: -1).stringForDateFormat("yyyy-MM-dd"), dateformatter: "yyyy-MM-dd")
             datePicker!.minimumDate = NSDate.distantPast()
             datePicker!.maximumDate = NSDate.distantFuture()
-            datePicker!.setDate(toTime, animated: false)
+            if isFirstSelected {
+                datePicker!.setDate(fromTime, animated: false)
+            } else {
+                datePicker!.setDate(endDate, animated: false)
+            }
+            isFirstSelected = false
         }
         datePicker!.frame = CGRect(x: 15, y: 0, width: UIScreen.mainScreen().bounds.width, height: 162)
         datePicker!.addTarget(self, action: #selector(LeaveMainViewController.datePickerValueChange), forControlEvents: UIControlEvents.ValueChanged)
@@ -106,15 +112,22 @@ extension LeaveMainViewController {
         var i = 0
         for data in dateArr {
             if data["title"] == "datePicker" && i == 1 {
+                isFirstSelected = true
                 datePickerValue = datePicker?.date
                 fromTime = datePickerValue
+                toTime = fromTime
+                print(fromTime)
                 let dateStr = datePicker?.date.stringForDateFormat("yyyy-MM-dd")
                 let weekStr = datePicker?.date.dateToWeek()
                 dateArr[i - 1].updateValue("\(dateStr!)  \(weekStr!)", forKey: "detail")
+                dateArr[i + 1].updateValue("\(dateStr!)  \(weekStr!)", forKey: "detail")
                 tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: i - 1, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
+                tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: i + 1, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
             } else if data["title"] == "datePicker" && i == 2 {
                 datePickerValue = datePicker?.date
                 toTime = datePickerValue
+                endDate = datePicker!.date
+                print(toTime)
                 let dateStr = datePicker?.date.stringForDateFormat("yyyy-MM-dd")
                 let weekStr = datePicker?.date.dateToWeek()
                 dateArr[i - 1].updateValue("\(dateStr!)  \(weekStr!)", forKey: "detail")
@@ -128,6 +141,10 @@ extension LeaveMainViewController {
      创建初始数据
      */
     func createTableViewData() {
+        fromTime = NSDate()
+        toTime = NSDate()
+        isFirstSelected = true
+        endDate = NSDate()
         let dateStr = pickerSelectDate.stringForDateFormat("yyyy-MM-dd")
         let weekStr = pickerSelectDate.dateToWeek()
         let cellData1 = ["title":"开始时间", "detail":"\(dateStr)  \(weekStr)"]
@@ -218,7 +235,7 @@ extension LeaveMainViewController: UITableViewDelegate {
         } else if indexPath.row == 1 {
             addPicker("datePicker", indexPath: indexPath)
         } else if indexPath.row == 2 {
-            switch NSDate.judegeDateState(fromTime, end: toTime) {
+            switch NSDate.judegeDateState(NSDate.dateFromString(fromTime.stringForDateFormat("yyyy-MM-dd"), dateformatter: "yyyy-MM-dd"), end: NSDate.dateFromString(toTime.stringForDateFormat("yyyy-MM-dd"), dateformatter: "yyyy-MM-dd")) {
             case DateState.error:
                 self.errorNotice("请假时间错误！")
                 return

@@ -18,7 +18,7 @@ class NotificationHandler {
 
         if let userID = UserConfig.studentSetting()?.userID where userID.characters.count != 0 {
             let vc = UIStoryboard(name: "SPersonal", bundle: nil).instantiateViewControllerWithIdentifier("SPersonalLNDetailViewController") as! SPersonalLNDetailViewController
-            vc.leaveID = userInfo["leaveID"] as! Int
+            vc.leaveID = Int(userInfo["leaveID"] as! String)
             pushVC?.navigationController?.pushViewController(vc, animated: true)
             
         } else if let userID = UserConfig.teacherSetting()?.userID where userID.characters.count != 0 {
@@ -27,7 +27,7 @@ class NotificationHandler {
                 print("任课老师点击进入APP")
             default:
                 let vc = UIStoryboard(name: "CLTLeave", bundle: nil).instantiateViewControllerWithIdentifier("CLTLeaveDetailViewController") as! CLTLeaveDetailViewController
-                vc.leaveID = userInfo["leaveID"] as! Int
+                vc.leaveID = Int(userInfo["leaveID"] as! String)
                 pushVC?.navigationController?.pushViewController(vc, animated: true)
             }
         }
@@ -36,7 +36,7 @@ class NotificationHandler {
     static func fetchAPNsNotificationForActive(userInfo: [NSObject: AnyObject]) {
         
         let vc = UIApplication.sharedApplication().keyWindow!.rootViewController!
-        let alertController = UIAlertController(title: nil, message: userInfo["message"] as? String, preferredStyle: UIAlertControllerStyle.Alert)
+        let alertController = UIAlertController(title: nil, message: userInfo["context"] as? String, preferredStyle: UIAlertControllerStyle.Alert)
         let cancelAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.Cancel, handler: nil)
         alertController.addAction(cancelAction)
         vc.presentViewController(alertController, animated: true, completion: nil)

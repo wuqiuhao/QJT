@@ -35,9 +35,9 @@ extension SPersonalLNDetailCell {
     
     func phoneImgClicked() {
         
-        let alertVC = UIAlertController(title: "15381144627", message: "确认要拨打该电话吗？", preferredStyle: UIAlertControllerStyle.Alert)
+        let alertVC = UIAlertController(title: phoneNum, message: "确认要拨打该电话吗？", preferredStyle: UIAlertControllerStyle.Alert)
         let confirmAction = UIAlertAction(title: "确定", style: UIAlertActionStyle.Default) { (action) in
-            let phoneUrl = NSURL(string: "tel://15381144627")
+            let phoneUrl = NSURL(string: "tel://\(self.phoneNum)")
             let app = UIApplication.sharedApplication()
             app.openURL(phoneUrl!)
         }

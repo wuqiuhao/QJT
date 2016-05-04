@@ -16,6 +16,8 @@ class LoginShowViewController: UIViewController {
 
     private var isFirstAppear = true
     
+    
+    
     private var steps = [UIViewController]()
     
     override func viewWillAppear(animated: Bool) {
@@ -147,10 +149,6 @@ extension LoginShowViewController: UIScrollViewDelegate {
 
 // MARK: - IB Action
 extension LoginShowViewController {
-    
-    func registerBtnClicked() {
-       
-    }
     
     func loginBtnClicked() {
         

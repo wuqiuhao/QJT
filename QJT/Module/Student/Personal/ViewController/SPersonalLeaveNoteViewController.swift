@@ -40,14 +40,14 @@ extension SPersonalLeaveNoteViewController {
         if segue.destinationViewController is SPersonalLNDetailViewController {
             let vc = segue.destinationViewController as! SPersonalLNDetailViewController
             let index = sender as! NSIndexPath
-            vc.leave = leaveNoteDataArr[index.row]
+            vc.leaveID = leaveNoteDataArr[index.row].leaveID
         }
     }
 }
 
 extension SPersonalLeaveNoteViewController: ConfigRefreshDelegate {
     func headerRefresh(view: UIView) {
-        NetWorkManager.httpRequest(Methods.leave_getLeaveInfosByStudentID, params: ["studentID":UserConfig.studentSetting()!.userID], modelType: nil, listType: Leave(), completed: { (responseData) in
+        NetWorkManager.httpRequest(Methods.leave_getLeaveInfosByStudentID, params: ["studentID":UserConfig.studentSetting()!.userID], modelType: EmptyModel(), listType: Leave(), completed: { (responseData) in
             self.leaveNoteDataArr = responseData["list"] as! [Leave]
             self.tableView.mj_header.endRefreshing()
             self.tableView.emptyDataSetSource = self
@@ -99,7 +99,6 @@ extension SPersonalLeaveNoteViewController: DZNEmptyDataSetSource {
     func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
         var text : String!
         text = "还没有请假申请记录"
-        
         let font = UIFont.systemFontOfSize(16.0)
         let textColor = UIColor.lightGrayColor()
         let paragraph = NSMutableParagraphStyle()

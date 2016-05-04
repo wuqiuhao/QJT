@@ -42,7 +42,7 @@ extension CLTLeaveMainViewController {
         if segue.destinationViewController is CLTLeaveDetailViewController {
             let vc = segue.destinationViewController as! CLTLeaveDetailViewController
             let index = sender as! NSIndexPath
-            vc.leave = leaveDataArr[index.row]
+            vc.leaveID = leaveDataArr[index.row].leaveID
 
         }
     }
@@ -54,7 +54,7 @@ extension CLTLeaveMainViewController {
 
 extension CLTLeaveMainViewController: ConfigRefreshDelegate {
     func headerRefresh(view: UIView) {
-            NetWorkManager.httpRequest(Methods.leave_getLeaveInfosByTeacherID, params: ["teacherID":UserConfig.teacherSetting()!.userID,"isHistory":0], modelType: nil, listType: Leave(), completed: { (responseData) in
+            NetWorkManager.httpRequest(Methods.leave_getLeaveInfosByTeacherID, params: ["teacherID":UserConfig.teacherSetting()!.userID,"isHistory":0], modelType: EmptyModel(), listType: Leave(), completed: { (responseData) in
                 self.leaveDataArr = responseData["list"] as! [Leave]
                 self.tableView.mj_header.endRefreshing()
                 self.tableView.emptyDataSetSource = self
@@ -102,54 +102,13 @@ extension CLTLeaveMainViewController: DZNEmptyDataSetSource {
     func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
         var text : String!
         text = "还没有请假审核记录"
-        
         let font = UIFont.systemFontOfSize(16.0)
         let textColor = UIColor.lightGrayColor()
         let paragraph = NSMutableParagraphStyle()
         paragraph.lineSpacing = 5
         paragraph.alignment = NSTextAlignment.Center
-        return NSAttributedString(string: text, attributes: [NSFontAttributeName : font, NSForegroundColorAttributeName : textColor,NSParagraphStyleAttributeName : paragraph])    }
-    
-//    func imageForEmptyDataSet(scrollView: UIScrollView!) -> UIImage! {
-//        if isNeedReload {
-//            if isServerError {
-//                return UIImage(named: "Public_server_busy")
-//            } else {
-//                return UIImage(named: "Public_net_error")
-//            }
-//        } else {
-//            return UIImage(named: "Public_noData")
-//        }
-//    }
-    
-//    func buttonTitleForEmptyDataSet(scrollView: UIScrollView!, forState state: UIControlState) -> NSAttributedString! {
-//        if isNeedReload {
-//            let text = "重新加载"
-//            let font = UIFont.systemFontOfSize(14.0)
-//            let textColor = UIColor.lightGrayColor()
-//            
-//            return NSAttributedString(string: text, attributes: [NSFontAttributeName:font,NSForegroundColorAttributeName:textColor])
-//        } else {
-//            return NSAttributedString()
-//        }
-//    }
-    
-//    func buttonBackgroundImageForEmptyDataSet(scrollView: UIScrollView!, forState state: UIControlState) -> UIImage! {
-//        let capInsets = UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0)
-//        let rectInsets = UIEdgeInsetsMake(0, -115.0, 0, -115.0)
-//        var imageName = ""
-//        if state == UIControlState.Normal {
-//            imageName = "button_background_normal"
-//        } else if state == UIControlState.Highlighted {
-//            imageName = "button_background_highlight"
-//        }
-//        return UIImage(named: imageName)?.resizableImageWithCapInsets(capInsets, resizingMode: UIImageResizingMode.Stretch).imageWithAlignmentRectInsets(rectInsets)
-//    }
-    
-//    func emptyDataSetDidTapButton(scrollView: UIScrollView!) {
-//        self.tableView.headerRefresh = true
-//    }
-    
+        return NSAttributedString(string: text, attributes: [NSFontAttributeName : font, NSForegroundColorAttributeName : textColor,NSParagraphStyleAttributeName : paragraph])
+    }
 }
 
 // MARK: - DZNEmptyDataSetDelegate

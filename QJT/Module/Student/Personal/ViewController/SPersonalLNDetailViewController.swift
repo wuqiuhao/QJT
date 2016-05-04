@@ -15,6 +15,7 @@ class SPersonalLNDetailViewController: UIViewController {
     var leaveCourseArr = [LeaveDetail]()
     var leave: Leave!
     var courseStr = ""
+    var leaveID: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +33,9 @@ extension SPersonalLNDetailViewController {
     }
     
     func getNetwork() {
-        NetWorkManager.httpRequest(Methods.leave_getLeaveDetailByLeaveID, params: ["leaveID":leave.leaveID], modelType: nil, listType: LeaveDetail(), completed: { (responseData) in
+        NetWorkManager.httpRequest(Methods.leave_getLeaveDetailByLeaveID, params: ["leaveID":leaveID], modelType: Leave(), listType: LeaveDetail(), completed: { (responseData) in
             self.leaveCourseArr = responseData["list"] as! [LeaveDetail]
+            self.leave = responseData["model"] as! Leave
             var i = 0
             for data in self.leaveCourseArr {
                 if i != self.leaveCourseArr.count - 1 {
@@ -76,7 +78,10 @@ extension SPersonalLNDetailViewController: UITableViewDelegate {
 private let cellIdeitiferForDetailCell = "SPersonalLNDetailCell"
 extension SPersonalLNDetailViewController: UITableViewDataSource {
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
+        if let _ = leave {
+            return 2
+        }
+        return 0
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

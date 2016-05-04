@@ -20,6 +20,7 @@ class CLTLeaveDetailViewController: UIViewController {
     var courseStr = ""
     var reason = ""
     var isHistory = false
+    var leaveID: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,8 +46,9 @@ extension CLTLeaveDetailViewController {
     }
     
     func getNetWorkData() {
-        NetWorkManager.httpRequest(Methods.leave_getLeaveDetailByLeaveID, params: ["leaveID":leave.leaveID], modelType: nil, listType: LeaveDetail(), completed: { (responseData) in
+        NetWorkManager.httpRequest(Methods.leave_getLeaveDetailByLeaveID, params: ["leaveID":leaveID], modelType: EmptyModel(), listType: LeaveDetail(), completed: { (responseData) in
             self.leaveCourseArr = responseData["list"] as! [LeaveDetail]
+            self.leave = responseData["model"] as! Leave
             var i = 0
             for data in self.leaveCourseArr {
                 if i != self.leaveCourseArr.count - 1 {
@@ -78,9 +80,12 @@ extension CLTLeaveDetailViewController {
             params.updateValue(2, forKey: "leaveState")
         } else if dataArr[0]["detail"] == "不通过" {
             params.updateValue(3, forKey: "leaveState")
+            if reason == "" {
+                
+            }
         }
         self.pleaseWait()
-        NetWorkManager.httpRequest(Methods.leave_checkApplication, params: params, modelType: EmptyModel(), listType: nil, completed: { (responseData) in
+        NetWorkManager.httpRequest(Methods.leave_checkApplication, params: params, modelType: EmptyModel(), listType: EmptyModel(), completed: { (responseData) in
             self.clearAllNotice()
             NSNotificationCenter.defaultCenter().postNotificationName("refreshLeave", object: nil)
             self.navigationController?.popViewControllerAnimated(true)
@@ -152,11 +157,15 @@ extension CLTLeaveDetailViewController: ViewControllerTransmitDelegate {
 private let cellIdeitiferForDetail = "CLTLeaveDetailCell"
 extension CLTLeaveDetailViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if leave.leaveState == .Failed {
-            return 5 + dataArr.count
-        } else {
-            return 4 + dataArr.count
+        
+        if let _ = leave {
+            if leave.leaveState == .Failed {
+                return 5 + dataArr.count
+            } else {
+                return 4 + dataArr.count
+            }
         }
+        return 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

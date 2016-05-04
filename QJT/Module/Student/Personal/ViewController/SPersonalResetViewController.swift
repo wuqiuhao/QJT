@@ -71,7 +71,7 @@ extension SPersonalResetViewController {
         params.updateValue(thirdTfd.text!, forKey: "newPassword")
         
         self.pleaseWait()
-        NetWorkManager.httpRequest(method, params: params, modelType: EmptyModel(), listType: nil, completed: { (responseData) in
+        NetWorkManager.httpRequest(method, params: params, modelType: EmptyModel(), listType: EmptyModel(), completed: { (responseData) in
                 self.clearAllNotice()
                 self.successNotice("修改成功")
                 self.navigationController?.popViewControllerAnimated(true)

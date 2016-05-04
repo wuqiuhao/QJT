@@ -46,7 +46,7 @@ class StudentAttendanceInfo: Mappable {
     func mapping(map: Map) {
         
         courseName     <- map["courseName"]
-        attendanceTime <- map["attendanceTime"]
+        attendanceTime <- (map["attendanceTime"],QJTDateTransform())
         teacherName    <- map["teacherName"]
         chidao         <- map["chidao"]
         zaotui         <- map["zaotui"]

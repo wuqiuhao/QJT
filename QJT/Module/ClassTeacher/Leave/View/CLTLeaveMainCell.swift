@@ -24,16 +24,8 @@ class CLTLeaveMainCell: UITableViewCell {
         }
     }
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-    
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
     
     override func drawRect(rect: CGRect) {
@@ -56,7 +48,6 @@ class CLTLeaveMainCell: UITableViewCell {
         CGContextAddLineToPoint(context, UIScreen.mainScreen().bounds.width - 110, rect.height / 2)
         
         CGContextStrokePath(context)
-        
     }
 
 }

@@ -27,7 +27,7 @@ class NetWorkManager {
      - parameter errorClosure: 失败返回错误信息闭包
      */
     
-    class func httpRequest<T: Mappable>(method: String, params:[String:AnyObject], modelType: T? = nil,listType: T? = nil,completed: SuccessedClosure?, errorClosure: FailedClosure) {
+    class func httpRequest<T: Mappable,E:Mappable>(method: String, params:[String:AnyObject], modelType: T? = nil,listType: E? = nil,completed: SuccessedClosure?, errorClosure: FailedClosure) {
         var serviceName: String?
         let serviceDic = Methods.getServiceMethod()
         for (key, value) in serviceDic {
@@ -53,7 +53,7 @@ class NetWorkManager {
 //                }
 //        }
         
-        Alamofire.request(Method.POST, serviceURL, parameters: params, encoding: ParameterEncoding.URL).responseObject { (response: Response<ReturnResult<T,T>, NSError>) in
+        Alamofire.request(Method.POST, serviceURL, parameters: params, encoding: ParameterEncoding.URL).responseObject { (response: Response<ReturnResult<T,E>, NSError>) in
             if let resp = response.response {
                 switch resp.statusCode {
                 case 200:

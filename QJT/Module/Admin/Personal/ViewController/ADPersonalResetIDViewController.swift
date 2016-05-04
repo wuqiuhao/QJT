@@ -41,7 +41,7 @@ extension ADPersonalResetIDViewController {
     
     func resetBtnClicked() {
         self.pleaseWait()
-        NetWorkManager.httpRequest(Methods.login_removeStudentDeviceID, params: ["studentID":numTfd.text!], modelType: EmptyModel(), listType: nil, completed: { (responseData) in
+        NetWorkManager.httpRequest(Methods.login_removeStudentDeviceID, params: ["studentID":numTfd.text!], modelType: EmptyModel(), listType: EmptyModel(), completed: { (responseData) in
             self.clearAllNotice()
             self.successNotice("重置成功")
             self.navigationController?.popViewControllerAnimated(true)

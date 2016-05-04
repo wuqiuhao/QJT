@@ -66,7 +66,7 @@ extension SignCourseViewController {
         method = Methods.attendance_studentAttendance
         
         self.pleaseWait()
-        NetWorkManager.httpRequest(method, params: params, modelType: EmptyModel(), listType: nil, completed: { (responseData) in
+        NetWorkManager.httpRequest(method, params: params, modelType: EmptyModel(), listType: EmptyModel(), completed: { (responseData) in
             self.clearAllNotice()
             
             self.successNotice("签到成功")

@@ -86,7 +86,7 @@ extension CLTPersonalANDetailViewController {
             params.updateValue(Mapper().toJSONString(tempAttDetailArrData)!, forKey: "attendanceDetailString")
             
             self.pleaseWait()
-            NetWorkManager.httpRequest(Methods.attendance_updateStudentAttendanceInfos, params: params, modelType: EmptyModel(), listType: nil, completed: { (responseData) in
+            NetWorkManager.httpRequest(Methods.attendance_updateStudentAttendanceInfos, params: params, modelType: EmptyModel(), listType: EmptyModel(), completed: { (responseData) in
                 self.clearAllNotice()
                 self.successNotice("提交成功")
                 NSNotificationCenter.defaultCenter().postNotificationName("refreshNote", object: nil)

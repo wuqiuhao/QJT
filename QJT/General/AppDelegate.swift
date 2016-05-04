@@ -68,6 +68,15 @@ extension AppDelegate {
     func application(application: UIApplication , didReceiveRemoteNotification userInfo: [ NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void ) {
         // TODO:收到推送消息
         print(userInfo)
+        if UserConfig.isLogined() {
+            if UIApplication.sharedApplication().applicationState != UIApplicationState.Active {
+                // 点击通知进入应用
+                NotificationHandler.fetchAPNsNotificationForInActive(userInfo)
+            } else if UIApplication.sharedApplication().applicationState == UIApplicationState.Active {
+                // 应用使用期间
+                NotificationHandler.fetchAPNsNotificationForActive(userInfo)
+            }
+        }
     }
     
     func applicationWillEnterForeground(application : UIApplication) {

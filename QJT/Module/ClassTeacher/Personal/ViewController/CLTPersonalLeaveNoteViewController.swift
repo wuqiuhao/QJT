@@ -49,14 +49,14 @@ extension CLTPersonalLeaveNoteViewController {
         }
     }
     
-     @objc private func rightItemClicked() {
+    func rightItemClicked() {
         
     }
 }
 
 extension CLTPersonalLeaveNoteViewController: ConfigRefreshDelegate {
     func headerRefresh(view: UIView) {
-        NetWorkManager.httpRequest(Methods.leave_getLeaveInfosByTeacherID, params: ["teacherID":UserConfig.teacherSetting()!.userID,"isHistory":1], modelType: nil, listType: Leave(), completed: { (responseData) in
+        NetWorkManager.httpRequest(Methods.leave_getLeaveInfosByTeacherID, params: ["teacherID":UserConfig.teacherSetting()!.userID,"isHistory":1], modelType: EmptyModel(), listType: Leave(), completed: { (responseData) in
             self.leaveNoteDataArr = responseData["list"] as! [Leave]
             self.tableView.mj_header.endRefreshing()
             self.tableView.emptyDataSetSource = self
@@ -80,7 +80,7 @@ extension CLTPersonalLeaveNoteViewController: UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return CGFloat.min
+        return 12
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

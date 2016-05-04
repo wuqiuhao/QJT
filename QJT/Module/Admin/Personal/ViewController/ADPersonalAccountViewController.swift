@@ -45,7 +45,7 @@ extension ADPersonalAccountViewController {
     func logoutBtnClicked() {
         let alertVC = UIAlertController(title: "注意", message: "确认要注销吗?", preferredStyle: UIAlertControllerStyle.Alert)
         let confirmAction = UIAlertAction(title: "确定", style: UIAlertActionStyle.Default) { (action) in
-            NetWorkManager.httpRequest(Methods.login_teacherLogout, params: ["teacherID":UserConfig.teacherSetting()!.userID], modelType: EmptyModel(), listType: nil, completed: { (responseData) in
+            NetWorkManager.httpRequest(Methods.login_teacherLogout, params: ["teacherID":UserConfig.teacherSetting()!.userID], modelType: EmptyModel(), listType: EmptyModel(), completed: { (responseData) in
                 let mainWindow = UIApplication.sharedApplication().keyWindow
                 if UserConfig.removeAllFileInSandbox() {
                     mainWindow?.rootViewController = UIStoryboard(name: "RegLogin", bundle: nil).instantiateInitialViewController()

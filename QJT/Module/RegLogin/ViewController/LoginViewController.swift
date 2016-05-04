@@ -134,7 +134,7 @@ extension LoginViewController {
             }
             params.updateValue(getUUID(), forKey: "deviceID")
             self.pleaseWait()
-            NetWorkManager.httpRequest(method, params: params, modelType: StudentSetting(), listType: nil, completed: { (responseData) in
+            NetWorkManager.httpRequest(method, params: params, modelType: StudentSetting(), listType: EmptyModel(), completed: { (responseData) in
                 self.clearAllNotice()
                 let studentSetting = responseData["model"] as! StudentSetting
                 UserConfig.saveStudentSetting(studentSetting)
@@ -158,7 +158,7 @@ extension LoginViewController {
             }
             method = Methods.login_teacherLogin
             self.pleaseWait()
-            NetWorkManager.httpRequest(method, params: params, modelType: TeacherSetting(), listType: nil, completed: { (responseData) in
+            NetWorkManager.httpRequest(method, params: params, modelType: TeacherSetting(), listType: EmptyModel(), completed: { (responseData) in
                 self.clearAllNotice()
                 let teacherSetting = responseData["model"] as! TeacherSetting
                 UserConfig.saveTeacherSetting(teacherSetting)

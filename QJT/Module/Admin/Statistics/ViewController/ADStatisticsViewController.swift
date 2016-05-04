@@ -60,7 +60,7 @@ extension ADStatisticsViewController {
     }
     
     func getNetworkData() {
-        NetWorkManager.httpRequest(Methods.attendance_getClassesByDepartmentID, params: ["departmentID":UserConfig.teacherSetting()!.departmentID], modelType: nil, listType: Class(), completed: { (responseData) in
+        NetWorkManager.httpRequest(Methods.attendance_getClassesByDepartmentID, params: ["departmentID":UserConfig.teacherSetting()!.departmentID], modelType: EmptyModel(), listType: Class(), completed: { (responseData) in
             self.classDataArr = responseData["list"] as! [Class]
             self.dateArr[0]["detail"] = self.classDataArr[0].className
             self.tableView.reloadData()

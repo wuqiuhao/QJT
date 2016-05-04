@@ -67,7 +67,7 @@ extension LeaveMainViewController {
         params.updateValue(Mapper<EmptyModel>.toJSONString(uniqueID, prettyPrint: false)!, forKey: "applyCourseJsonString")
         params.updateValue(NSDate().localDate(), forKey: "leaveTime")
         self.pleaseWait()
-        NetWorkManager.httpRequest(Methods.leave_leaveApplication, params: params, modelType: EmptyModel(), listType: nil, completed: { (responseData) in
+        NetWorkManager.httpRequest(Methods.leave_leaveApplication, params: params, modelType: EmptyModel(), listType: EmptyModel(), completed: { (responseData) in
             self.clearAllNotice()
             let vc = UIStoryboard(name: "SPersonal", bundle: nil).instantiateViewControllerWithIdentifier("SPersonalLeaveNoteViewController")
             self.navigationController?.pushViewController(vc, animated: true)
@@ -88,14 +88,14 @@ extension LeaveMainViewController {
         datePicker = UIDatePicker()
         datePicker!.datePickerMode = .Date
         if index == 0 {
-            datePicker!.minimumDate = NSDate.dateFromString(NSDate().getEarlyOrLaterMonthFromDate(NSDate(), month: -1).stringForDateFormat("yyyy-MM-dd"), dateformatter: "yyyy-MM-dd")
-            datePicker!.maximumDate = NSDate.dateFromString(NSDate().getEarlyOrLaterMonthFromDate(NSDate(), month: 1).stringForDateFormat("yyyy-MM-dd"), dateformatter: "yyyy-MM-dd")
+            datePicker!.minimumDate = NSDate.distantPast()
+            datePicker!.maximumDate = NSDate.distantFuture()
             datePicker!.setDate(fromTime, animated: false)
         } else if index == 1 {
             //datePicker!.minimumDate = NSDate.dateFromString(NSDate().getEarlyOrLaterMonthFromDate(NSDate(), month: -1).stringForDateFormat("yyyy-MM-dd"), dateformatter: "yyyy-MM-dd")
-            datePicker!.minimumDate = fromTime
-            datePicker!.maximumDate = NSDate.dateFromString(NSDate().getEarlyOrLaterMonthFromDate(NSDate(), month: 2).stringForDateFormat("yyyy-MM-dd"), dateformatter: "yyyy-MM-dd")
-            datePicker!.setDate(fromTime, animated: false)
+            datePicker!.minimumDate = NSDate.distantPast()
+            datePicker!.maximumDate = NSDate.distantFuture()
+            datePicker!.setDate(toTime, animated: false)
         }
         datePicker!.frame = CGRect(x: 15, y: 0, width: UIScreen.mainScreen().bounds.width, height: 162)
         datePicker!.addTarget(self, action: #selector(LeaveMainViewController.datePickerValueChange), forControlEvents: UIControlEvents.ValueChanged)
@@ -111,9 +111,7 @@ extension LeaveMainViewController {
                 let dateStr = datePicker?.date.stringForDateFormat("yyyy-MM-dd")
                 let weekStr = datePicker?.date.dateToWeek()
                 dateArr[i - 1].updateValue("\(dateStr!)  \(weekStr!)", forKey: "detail")
-                dateArr[i + 1].updateValue("\(dateStr!)  \(weekStr!)", forKey: "detail")
                 tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: i - 1, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
-                tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: i + 1, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
             } else if data["title"] == "datePicker" && i == 2 {
                 datePickerValue = datePicker?.date
                 toTime = datePickerValue
@@ -154,6 +152,7 @@ extension LeaveMainViewController {
     }
 }
 
+// MARK: - ViewControllerTransmitDelegate
 extension LeaveMainViewController: ViewControllerTransmitDelegate {
     func transmitMessage(data: [AnyObject]) {
         if data.count != 0 && data[0] is String {

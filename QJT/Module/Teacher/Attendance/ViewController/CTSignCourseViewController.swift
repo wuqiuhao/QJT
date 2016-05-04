@@ -73,7 +73,7 @@ extension CTSignCourseViewController {
         method = Methods.attendance_teacherBeginClass
         
         self.pleaseWait()
-        NetWorkManager.httpRequest(method, params: params, modelType: EmptyModel(), listType: nil, completed: { (responseData) in
+        NetWorkManager.httpRequest(method, params: params, modelType: EmptyModel(), listType: EmptyModel(), completed: { (responseData) in
             self.clearAllNotice()
             
             self.successNotice("发起考勤成功")

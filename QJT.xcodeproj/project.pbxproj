@@ -168,9 +168,6 @@
 		EF055D8B1CD1ABE4004DD466 /* CTAttendance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF055D8A1CD1ABE4004DD466 /* CTAttendance.storyboard */; };
 		EF055D8D1CD1ABE9004DD466 /* CTAttendanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF055D8C1CD1ABE9004DD466 /* CTAttendanceView.swift */; };
 		EF055D8F1CD1ABED004DD466 /* CTAttendanceMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF055D8E1CD1ABED004DD466 /* CTAttendanceMainViewController.swift */; };
-		EF055D911CD1ABF7004DD466 /* CTLeave.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF055D901CD1ABF7004DD466 /* CTLeave.storyboard */; };
-		EF055D931CD1AC00004DD466 /* CTLeaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF055D921CD1AC00004DD466 /* CTLeaveView.swift */; };
-		EF055D951CD1AC04004DD466 /* CTLeaveViewMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF055D941CD1AC04004DD466 /* CTLeaveViewMainController.swift */; };
 		EF055D971CD1AC0A004DD466 /* CTPersonal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF055D961CD1AC0A004DD466 /* CTPersonal.storyboard */; };
 		EF055D991CD1AC0F004DD466 /* CTPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF055D981CD1AC0F004DD466 /* CTPersonalView.swift */; };
 		EF055D9B1CD1AC14004DD466 /* CTPersonalMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF055D9A1CD1AC14004DD466 /* CTPersonalMainViewController.swift */; };
@@ -357,9 +354,6 @@
 		EF055D8A1CD1ABE4004DD466 /* CTAttendance.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CTAttendance.storyboard; sourceTree = "<group>"; };
 		EF055D8C1CD1ABE9004DD466 /* CTAttendanceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTAttendanceView.swift; sourceTree = "<group>"; };
 		EF055D8E1CD1ABED004DD466 /* CTAttendanceMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTAttendanceMainViewController.swift; sourceTree = "<group>"; };
-		EF055D901CD1ABF7004DD466 /* CTLeave.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CTLeave.storyboard; sourceTree = "<group>"; };
-		EF055D921CD1AC00004DD466 /* CTLeaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTLeaveView.swift; sourceTree = "<group>"; };
-		EF055D941CD1AC04004DD466 /* CTLeaveViewMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTLeaveViewMainController.swift; sourceTree = "<group>"; };
 		EF055D961CD1AC0A004DD466 /* CTPersonal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CTPersonal.storyboard; sourceTree = "<group>"; };
 		EF055D981CD1AC0F004DD466 /* CTPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPersonalView.swift; sourceTree = "<group>"; };
 		EF055D9A1CD1AC14004DD466 /* CTPersonalMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTPersonalMainViewController.swift; sourceTree = "<group>"; };
@@ -801,7 +795,6 @@
 			isa = PBXGroup;
 			children = (
 				68083F6C1CCE5909004BE4D4 /* Attendance */,
-				68083F721CCE5909004BE4D4 /* Leave */,
 				68083F781CCE5909004BE4D4 /* Personal */,
 			);
 			name = CourseTeacher;
@@ -831,32 +824,6 @@
 			children = (
 				EF055D8E1CD1ABED004DD466 /* CTAttendanceMainViewController.swift */,
 				580825111CD9A1CC006DE16B /* CTSignCourseViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		68083F721CCE5909004BE4D4 /* Leave */ = {
-			isa = PBXGroup;
-			children = (
-				EF055D901CD1ABF7004DD466 /* CTLeave.storyboard */,
-				68083F741CCE5909004BE4D4 /* View */,
-				68083F761CCE5909004BE4D4 /* ViewController */,
-			);
-			path = Leave;
-			sourceTree = "<group>";
-		};
-		68083F741CCE5909004BE4D4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				EF055D921CD1AC00004DD466 /* CTLeaveView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		68083F761CCE5909004BE4D4 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				EF055D941CD1AC04004DD466 /* CTLeaveViewMainController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1404,7 +1371,6 @@
 				687E38341CBE4008009EDE17 /* Main.storyboard in Resources */,
 				68083FB61CCE59D7004BE4D4 /* CLTAttendance.storyboard in Resources */,
 				68083F911CCE5909004BE4D4 /* CAttendance.storyboard in Resources */,
-				EF055D911CD1ABF7004DD466 /* CTLeave.storyboard in Resources */,
 				68035A091CC756BA002F7C60 /* SPersonal.storyboard in Resources */,
 				68A8D70B1CD73896008771F9 /* ADStatistics.storyboard in Resources */,
 				68035A001CC756BA002F7C60 /* SSign.storyboard in Resources */,
@@ -1478,7 +1444,6 @@
 				68C8B5501CD47CDA00B407AB /* SPersonalLNDetailViewController.swift in Sources */,
 				68186C121CB3525D005AF62D /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
 				6808AA531CCFBF0B00C2C324 /* SPersonalHeadContentView.swift in Sources */,
-				EF055D931CD1AC00004DD466 /* CTLeaveView.swift in Sources */,
 				68186BFF1CB3525D005AF62D /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */,
 				68186C081CB3525D005AF62D /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				68186C331CB3554F005AF62D /* LoginGeniusViewController.swift in Sources */,
@@ -1532,7 +1497,6 @@
 				688E3ABC1CD5C3F6004011AE /* CLTLeaveDetailCell.swift in Sources */,
 				5808251C1CD9A984006DE16B /* CTPersonalANDetailViewController.swift in Sources */,
 				68186BFE1CB3525D005AF62D /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */,
-				EF055D951CD1AC04004DD466 /* CTLeaveViewMainController.swift in Sources */,
 				68186C1E1CB354DB005AF62D /* UIColor_extension.swift in Sources */,
 				580825121CD9A1CC006DE16B /* CTSignCourseViewController.swift in Sources */,
 				68035A991CC78066002F7C60 /* StudentSetting.swift in Sources */,

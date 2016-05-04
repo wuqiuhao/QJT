@@ -32,7 +32,7 @@ class CTPersonalAttendanceNoteViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "CTPersonalANDetailViewController" {
-            let detailView = segue.destinationViewController as! CLTPersonalANDetailViewController
+            let detailView = segue.destinationViewController as! CTPersonalANDetailViewController
             detailView.attendanceID = attendanceID
         }
         

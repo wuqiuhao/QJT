@@ -86,7 +86,7 @@ extension CTPersonalANDetailViewController {
             params.updateValue(Mapper().toJSONString(tempAttDetailArrData)!, forKey: "attendanceDetailString")
             
             self.pleaseWait()
-            NetWorkManager.httpRequest(Methods.attendance_updateStudentAttendanceInfos, params: params, modelType: EmptyModel(), listType: nil, completed: { (responseData) in
+            NetWorkManager.httpRequest(Methods.attendance_updateStudentAttendanceInfos, params: params, modelType: EmptyModel(), listType: EmptyModel(), completed: { (responseData) in
                 self.clearAllNotice()
                 self.successNotice("提交成功")
                 NSNotificationCenter.defaultCenter().postNotificationName("refreshNote", object: nil)
@@ -340,7 +340,7 @@ extension CTPersonalANDetailViewController: UITableViewDelegate {
 }
 
 // MARK: - UITableViewDataSource
-private let cellIdeitiferForANDetail = "CLTPersonalANDetailCell"
+private let cellIdeitiferForANDetail = "CTPersonalANDetailCell"
 extension CTPersonalANDetailViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -349,7 +349,7 @@ extension CTPersonalANDetailViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdeitiferForANDetail, forIndexPath: indexPath) as! CLTPersonalANDetailCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdeitiferForANDetail, forIndexPath: indexPath) as! CTPersonalANDetailCell
         let attDetail = self.attDetailArrData[indexPath.row]
         cell.studentNameLabel.text = attDetail.studentName
         cell.studentIDLabel.text = attDetail.studentID

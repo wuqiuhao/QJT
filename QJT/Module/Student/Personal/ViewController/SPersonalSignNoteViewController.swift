@@ -86,7 +86,7 @@ extension SPersonalSignNoteViewController: ConfigRefreshDelegate {
 // MARK: - UITableViewDelegate
 extension SPersonalSignNoteViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 50
+        return 60
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

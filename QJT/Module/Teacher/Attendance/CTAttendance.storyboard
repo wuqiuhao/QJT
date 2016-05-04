@@ -3,37 +3,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
-        <scene sceneID="2Iz-pm-3wc">
-            <objects>
-                <tableViewController id="Zq1-Ts-h6n" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="MKZ-bY-ory">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Hui-ml-e2d">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hui-ml-e2d" id="kW9-ir-VRm">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Zq1-Ts-h6n" id="ndj-4N-ebY"/>
-                            <outlet property="delegate" destination="Zq1-Ts-h6n" id="H2N-Rw-25u"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Sc8-ix-Si4"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bL6-UD-vCR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="649" y="455"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="MqL-yp-e3K">
             <objects>
@@ -43,12 +15,96 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Zq1-Ts-h6n" kind="relationship" relationship="rootViewController" id="7PN-hL-rRm"/>
+                        <segue destination="Ia5-ob-ZaV" kind="relationship" relationship="rootViewController" id="OKN-pl-fCt"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nip-uL-2h1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-171" y="455"/>
         </scene>
+        <!--Sign Course View Controller-->
+        <scene sceneID="aX6-7V-qff">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="CdI-NY-AOV" customClass="CLTSignCourseViewController" customModule="QJT" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zKj-79-RZU"/>
+                        <viewControllerLayoutGuide type="bottom" id="bKQ-vQ-Qy4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L3U-Sy-lQa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T9z-fs-CDx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1334" y="455"/>
+        </scene>
+        <!--Attendance Main View Controller-->
+        <scene sceneID="FZu-3o-3xd">
+            <objects>
+                <viewController id="Ia5-ob-ZaV" customClass="CTAttendanceMainViewController" customModule="QJT" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nlm-y3-1D3"/>
+                        <viewControllerLayoutGuide type="bottom" id="Yc0-LN-YZz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8uY-dX-Hf9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="o1R-0Z-Oe4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OS5-ks-pRk">
+                                <rect key="frame" x="6" y="551" width="40" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Rd-aQ-ZoP">
+                                        <rect key="frame" x="5" y="5" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="btV-iD-Ckg"/>
+                                            <constraint firstAttribute="width" constant="30" id="eI6-JQ-LyJ"/>
+                                        </constraints>
+                                        <state key="normal" image="Map_repoint"/>
+                                        <connections>
+                                            <action selector="repositionBtn:" destination="Ia5-ob-ZaV" eventType="touchUpInside" id="PoH-PE-OWx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="7Rd-aQ-ZoP" firstAttribute="centerX" secondItem="OS5-ks-pRk" secondAttribute="centerX" id="BeZ-CL-r5x"/>
+                                    <constraint firstItem="7Rd-aQ-ZoP" firstAttribute="centerY" secondItem="OS5-ks-pRk" secondAttribute="centerY" id="DBa-AL-3br"/>
+                                    <constraint firstAttribute="width" constant="40" id="UCb-P5-RmY"/>
+                                    <constraint firstAttribute="height" constant="40" id="onj-38-OzN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OS5-ks-pRk" firstAttribute="leading" secondItem="8uY-dX-Hf9" secondAttribute="leading" constant="6" id="CQw-Ot-Hck"/>
+                            <constraint firstItem="o1R-0Z-Oe4" firstAttribute="leading" secondItem="8uY-dX-Hf9" secondAttribute="leadingMargin" constant="-20" id="Id4-Au-7DD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="o1R-0Z-Oe4" secondAttribute="trailing" constant="-20" id="dhO-2w-QkG"/>
+                            <constraint firstAttribute="bottom" secondItem="o1R-0Z-Oe4" secondAttribute="bottom" id="dvu-G5-2QN"/>
+                            <constraint firstItem="Yc0-LN-YZz" firstAttribute="top" secondItem="OS5-ks-pRk" secondAttribute="bottom" constant="9" id="fEj-EB-AWW"/>
+                            <constraint firstItem="o1R-0Z-Oe4" firstAttribute="top" secondItem="8uY-dX-Hf9" secondAttribute="top" id="iRV-RQ-sxD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ScK-Y6-8bL"/>
+                    <connections>
+                        <outlet property="mapView" destination="o1R-0Z-Oe4" id="ktn-LW-Cqi"/>
+                        <outlet property="repointView" destination="OS5-ks-pRk" id="Rr6-OO-Udw"/>
+                        <outlet property="repositionBtn" destination="7Rd-aQ-ZoP" id="goy-4D-b4Z"/>
+                        <segue destination="CdI-NY-AOV" kind="show" identifier="cltSignCourseViewController" id="Pj4-su-GMP">
+                            <nil key="action"/>
+                        </segue>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W3O-az-sIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="631" y="455"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Map_repoint" width="30" height="30"/>
+    </resources>
 </document>

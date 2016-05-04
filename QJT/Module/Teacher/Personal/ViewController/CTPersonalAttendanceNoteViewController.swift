@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CLTPersonalAttendanceNoteViewController: UIViewController {
+class CTPersonalAttendanceNoteViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     lazy var attendanceArrData = [Attendance]()
@@ -20,29 +20,29 @@ class CLTPersonalAttendanceNoteViewController: UIViewController {
         tableView.dataSource = self
         configUI()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(CLTPersonalAttendanceNoteViewController.refreshNote), name: "refreshNote", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(CTPersonalAttendanceNoteViewController.refreshNote), name: "refreshNote", object: nil)
         
     }
     
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "cLTPersonalANDetailViewController" {
-            let detailView = segue.destinationViewController as! CLTPersonalANDetailViewController
+        if segue.identifier == "CTPersonalANDetailViewController" {
+            let detailView = segue.destinationViewController as! CTPersonalANDetailViewController
             detailView.attendanceID = attendanceID
         }
         
         
     }
-
+    
 }
 
 // MARK: - private Method
-extension CLTPersonalAttendanceNoteViewController {
+extension CTPersonalAttendanceNoteViewController {
     func configUI() {
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationItem.title = "考勤记录"
@@ -50,7 +50,6 @@ extension CLTPersonalAttendanceNoteViewController {
         tableView.configRefreshDelegate = self
     }
     
-
     
     func refreshNote() {
         tableView.headerRefresh = true
@@ -58,7 +57,7 @@ extension CLTPersonalAttendanceNoteViewController {
     
 }
 
-extension CLTPersonalAttendanceNoteViewController: ConfigRefreshDelegate {
+extension CTPersonalAttendanceNoteViewController: ConfigRefreshDelegate {
     func headerRefresh(view: UIView) {
         NetWorkManager.httpRequest(Methods.attendance_getAttendanceInfosByTeacherID, params: ["teacherID":UserConfig.teacherSetting()!.userID], modelType: Attendance(), listType: Attendance(), completed: { (responseData) in
             
@@ -74,7 +73,7 @@ extension CLTPersonalAttendanceNoteViewController: ConfigRefreshDelegate {
 }
 
 // MARK: - UITableViewDelegate
-extension CLTPersonalAttendanceNoteViewController: UITableViewDelegate {
+extension CTPersonalAttendanceNoteViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 60
     }
@@ -89,21 +88,21 @@ extension CLTPersonalAttendanceNoteViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         attendanceID = attendanceArrData[indexPath.row].attendanceID
-        self.performSegueWithIdentifier("cLTPersonalANDetailViewController", sender: nil)
+        self.performSegueWithIdentifier("CTPersonalANDetailViewController", sender: nil)
         
     }
 }
 
 // MARK: - UITableViewDataSource
-private let cellIdeitiferForAttendanceNote = "CLTPersonalAttendanceNoteCell"
-extension CLTPersonalAttendanceNoteViewController: UITableViewDataSource {
+private let cellIdeitiferForAttendanceNote = "CTPersonalAttendanceNoteCell"
+extension CTPersonalAttendanceNoteViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.attendanceArrData.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdeitiferForAttendanceNote, forIndexPath: indexPath) as! CLTPersonalAttendanceNoteCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdeitiferForAttendanceNote, forIndexPath: indexPath) as! CTPersonalAttendanceNoteCell
         let attendance = self.attendanceArrData[indexPath.row]
         
         cell.timeLabel.text = attendance.updateTime.stringForDateFormat("yyyy.MM.dd")

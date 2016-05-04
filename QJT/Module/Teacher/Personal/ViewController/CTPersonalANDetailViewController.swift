@@ -9,7 +9,7 @@
 import UIKit
 import ObjectMapper
 
-class CLTPersonalANDetailViewController: UIViewController {
+class CTPersonalANDetailViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     lazy var attDetailArrData = [AttendanceDetail]()
@@ -37,7 +37,7 @@ class CLTPersonalANDetailViewController: UIViewController {
         configUI()
         setupItem()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -45,10 +45,10 @@ class CLTPersonalANDetailViewController: UIViewController {
     deinit{
         NSNotificationCenter.defaultCenter().removeObserver(self, name: "refreshNote", object: nil)
     }
-
+    
 }
 
-extension CLTPersonalANDetailViewController: ConfigRefreshDelegate {
+extension CTPersonalANDetailViewController: ConfigRefreshDelegate {
     func headerRefresh(view: UIView) {
         NetWorkManager.httpRequest(Methods.attendance_getAttendanceDetailInfo, params: ["attendanceID":attendanceID], modelType: AttendanceDetail(), listType: AttendanceDetail(), completed: { (responseData) in
             
@@ -66,7 +66,7 @@ extension CLTPersonalANDetailViewController: ConfigRefreshDelegate {
 }
 
 // MARK: - private Method
-extension CLTPersonalANDetailViewController {
+extension CTPersonalANDetailViewController {
     func configUI() {
         navigationItem.title = "考勤明细"
         tableView.headerRefresh = true
@@ -103,7 +103,6 @@ extension CLTPersonalANDetailViewController {
         
     }
     
-
     
     //状态字符串拼接
     func getStatusStr(queke: Int, chidao: Int, zaotui: Int, qingjia: Int) -> String {
@@ -245,9 +244,9 @@ extension CLTPersonalANDetailViewController {
                 
                 
                 self!.tableView.reloadData()
-
+                
             })
-
+            
             msgAlertVC.addAction(cancelAction)
             msgAlertVC.addAction(addAction)
             msgAlertVC.addAction(changeAction)
@@ -262,7 +261,7 @@ extension CLTPersonalANDetailViewController {
 }
 
 // MARK: - UIPickerViewDataSource
-extension CLTPersonalANDetailViewController: UIPickerViewDataSource {
+extension CTPersonalANDetailViewController: UIPickerViewDataSource {
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -273,7 +272,7 @@ extension CLTPersonalANDetailViewController: UIPickerViewDataSource {
 }
 
 // MARK: - UIPickerViewDelegate
-extension CLTPersonalANDetailViewController: UIPickerViewDelegate {
+extension CTPersonalANDetailViewController: UIPickerViewDelegate {
     
     func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
         return 35
@@ -318,7 +317,7 @@ extension CLTPersonalANDetailViewController: UIPickerViewDelegate {
 }
 
 // MARK: - UITableViewDelegate
-extension CLTPersonalANDetailViewController: UITableViewDelegate {
+extension CTPersonalANDetailViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 44
     }
@@ -341,8 +340,8 @@ extension CLTPersonalANDetailViewController: UITableViewDelegate {
 }
 
 // MARK: - UITableViewDataSource
-private let cellIdeitiferForANDetail = "CLTPersonalANDetailCell"
-extension CLTPersonalANDetailViewController: UITableViewDataSource {
+private let cellIdeitiferForANDetail = "CTPersonalANDetailCell"
+extension CTPersonalANDetailViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.attDetailArrData.count
@@ -350,7 +349,7 @@ extension CLTPersonalANDetailViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdeitiferForANDetail, forIndexPath: indexPath) as! CLTPersonalANDetailCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdeitiferForANDetail, forIndexPath: indexPath) as! CTPersonalANDetailCell
         let attDetail = self.attDetailArrData[indexPath.row]
         cell.studentNameLabel.text = attDetail.studentName
         cell.studentIDLabel.text = attDetail.studentID

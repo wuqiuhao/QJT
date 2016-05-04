@@ -40,19 +40,6 @@ class NetWorkManager {
         }
         let serviceURL = "\(SysConfig.getServerURL())\(serviceName!)/\(method)"
         
-//        Alamofire.request(.POST, serviceURL, parameters: params)
-//            .responseJSON { response in
-//                print(response.request)  // original URL request
-//                print(response.response) // URL response
-//                print(response.data)     // server data
-//                print(response.result)   // result of response serialization
-//                
-//                if let JSON = response.result.value {
-//                    print("JSON: \(JSON)")
-//                    
-//                }
-//        }
-        
         Alamofire.request(Method.POST, serviceURL, parameters: params, encoding: ParameterEncoding.URL).responseObject { (response: Response<ReturnResult<T,E>, NSError>) in
             if let resp = response.response {
                 switch resp.statusCode {

@@ -27,7 +27,8 @@ var AttendanceService = [
     "attendance_updateStudentAttendanceInfos",
     "attendance_getClassesByDepartmentID",
     "attendance_getAttendanceInfosByClassID",
-    "attendance_studentGetLostAttendanceInfos"
+    "attendance_studentGetLostAttendanceInfos",
+    "attendance_getAttendanceInfosByClassTeacher"
 ]
 
 var LeaveService = [
@@ -74,6 +75,7 @@ class Methods {
     static let attendance_updateStudentAttendanceInfos = "attendance_updateStudentAttendanceInfos"
     static let attendance_getClassesByDepartmentID = "attendance_getClassesByDepartmentID"
     static let attendance_getAttendanceInfosByClassID = "attendance_getAttendanceInfosByClassID"
+    static let attendance_getAttendanceInfosByClassTeacher = "attendance_getAttendanceInfosByClassTeacher"
     
     // 请假模块
     // 学生获取课程表

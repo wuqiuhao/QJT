@@ -62,10 +62,6 @@ extension LeaveCourseViewController {
     }
     
     func rightItemClicked() {
-        if refreshDataArr.count == 0 {
-            self.errorNotice("请填写请假课程")
-            return
-        }
         delegate?.transmitMessage(refreshDataArr)
         navigationController?.popViewControllerAnimated(true)
     }

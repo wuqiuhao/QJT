@@ -41,7 +41,7 @@ extension CLTLeaveDetailViewController {
     }
     
     func perpareData() {
-        let data = ["title":"审核状态:","detail":"请选择"]
+        let data = ["title":"审核状态:","detail":"请选择","flag":"0"]
         dataArr.append(data)
     }
     
@@ -72,6 +72,22 @@ extension CLTLeaveDetailViewController {
     }
     
     func verifyBtnClicked() {
+        
+        if dataArr.count == 1 {
+            if dataArr[0]["flag"] == "0" {
+                self.errorNotice("请选择审核状态")
+                return
+            }
+        } else if dataArr.count == 2 {
+            if dataArr[0]["flag"] == "0" {
+                self.errorNotice("请选择审核状态")
+                return
+            }
+            if dataArr[1]["flag"] == "0" {
+                self.errorNotice("请填写拒绝原因")
+                return
+            }
+        }
         var params = [String:AnyObject]()
         params.updateValue(leave.leaveID, forKey: "leaveID")
         params.updateValue(reason, forKey: "refuseReason")
@@ -111,6 +127,7 @@ extension CLTLeaveDetailViewController: UITableViewDelegate {
             let alertVC = UIAlertController(title: "审核结果", message: "", preferredStyle: UIAlertControllerStyle.ActionSheet)
             let passAction = UIAlertAction(title: "通过", style: UIAlertActionStyle.Cancel, handler: { (action) in
                 self.dataArr[0].updateValue("通过", forKey: "detail")
+                self.dataArr[0].updateValue("1", forKey: "flag")
                 if self.dataArr.count == 1 {
                     self.tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: 4, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
                 } else if self.dataArr.count == 2 {
@@ -121,8 +138,9 @@ extension CLTLeaveDetailViewController: UITableViewDelegate {
             })
             let unPassAction = UIAlertAction(title: "不通过", style: UIAlertActionStyle.Destructive, handler: { (action) in
                 self.dataArr[0].updateValue("不通过", forKey: "detail")
+                self.dataArr[0].updateValue("1", forKey: "flag")
                 if self.dataArr.count == 1 {
-                    let reason = ["title":"拒绝原因:","detail":"请填写拒绝原因"]
+                    let reason = ["title":"拒绝原因:","detail":"请填写拒绝原因","flag":"0"]
                     self.dataArr.append(reason)
                 }
                 self.tableView.reloadData()
@@ -145,6 +163,10 @@ extension CLTLeaveDetailViewController: ViewControllerTransmitDelegate {
         if data.count != 0 && data[0] is String {
             if data[0] as? String != "" {
                 dataArr[1]["detail"] = data[0] as? String
+                dataArr[1]["flag"] = "1"
+            } else {
+                dataArr[1]["detail"] = "请填写拒绝原因"
+                dataArr[1]["flag"] = "0"
             }
             reason = dataArr[1]["detail"]!
             tableView.reloadData()

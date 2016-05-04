@@ -51,14 +51,6 @@ extension LeaveReasonViewController {
     }
     
     func rightItemClicked() {
-        if textViewContent == "" {
-            if isLeave {
-                self.errorNotice("请填写请假原因")
-            } else {
-                self.errorNotice("请填写拒绝原因")
-            }
-            return
-        }
         delegate?.transmitMessage([textViewContent])
         navigationController?.popViewControllerAnimated(true)
     }

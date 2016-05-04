@@ -19,6 +19,7 @@ class CLTPersonalANDetailViewController: UIViewController {
     var rowInTable: Int!
     var tempRow = 0
     let statusArr = ["缺课","迟到","早退","请假","出勤"]
+    var isNeedModify: Bool = true
     
     lazy var pickView:UIPickerView = {
         let pickerView = UIPickerView(frame: CGRect(x: 0, y:0, width:  UIScreen.mainScreen().bounds.width - 20, height: 180))
@@ -74,8 +75,12 @@ extension CLTPersonalANDetailViewController {
     }
     
     func setupItem() {
-        let rightItem = UIBarButtonItem(title: "提交", style: UIBarButtonItemStyle.Done, target: self, action: #selector(LeaveMainViewController.rightItemClicked))
-        navigationItem.rightBarButtonItem = rightItem
+        
+        if isNeedModify {
+            let rightItem = UIBarButtonItem(title: "提交", style: UIBarButtonItemStyle.Done, target: self, action: #selector(LeaveMainViewController.rightItemClicked))
+            
+            navigationItem.rightBarButtonItem = rightItem
+        }
     }
     
     func rightItemClicked() {
@@ -332,10 +337,10 @@ extension CLTPersonalANDetailViewController: UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        rowInTable = indexPath.row
-        self.alertPcikerView()
-        
+        if isNeedModify {
+            rowInTable = indexPath.row
+            self.alertPcikerView()
+        }
     }
     
 }

@@ -34,10 +34,6 @@ extension CLTPersonalLeaveNoteViewController {
         tableView.headerRefresh = true
         tableView.configRefreshDelegate = self
         
-        
-        let rightItem = UIBarButtonItem(image: UIImage(named: "CLTPersonal_myClass"), style: UIBarButtonItemStyle.Done, target: self, action: #selector(CLTPersonalLeaveNoteViewController.rightItemClicked))
-        navigationItem.rightBarButtonItem = rightItem
-        
     }
     
     
@@ -49,9 +45,7 @@ extension CLTPersonalLeaveNoteViewController {
         }
     }
     
-    func rightItemClicked() {
-        
-    }
+
 }
 
 extension CLTPersonalLeaveNoteViewController: ConfigRefreshDelegate {
@@ -86,7 +80,7 @@ extension CLTPersonalLeaveNoteViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let vc = UIStoryboard(name: "CLTLeave", bundle: nil).instantiateViewControllerWithIdentifier("CLTLeaveDetailViewController") as! CLTLeaveDetailViewController
         vc.isHistory = true
-        vc.leave = leaveNoteDataArr[indexPath.row]
+        vc.leaveID = leaveNoteDataArr[indexPath.row].leaveID
         navigationController?.pushViewController(vc, animated: true)
     }
 }

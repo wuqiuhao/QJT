@@ -53,6 +53,23 @@ extension LeaveMainViewController {
     }
     
     func rightItemClicked() {
+        
+        if dateArr[1]["title"] == "datePicker" || dateArr[2]["title"] == "datePicker" {
+            self.errorNotice("请填写正确请假信息")
+            return
+        }
+        
+        if dateArr[2]["falg"] == "0" {
+            self.errorNotice("请选择请假课程")
+            return
+        }
+        
+        if dateArr[3]["falg"] == "0" {
+            self.errorNotice("请填写请假原因")
+            return
+        }
+        
+        
         var params = [String:AnyObject]()
         var uniqueID = [Int]()
         params.updateValue(UserConfig.studentSetting()!.userID, forKey: "studentID")
@@ -147,10 +164,10 @@ extension LeaveMainViewController {
         endDate = NSDate()
         let dateStr = pickerSelectDate.stringForDateFormat("yyyy-MM-dd")
         let weekStr = pickerSelectDate.dateToWeek()
-        let cellData1 = ["title":"开始时间", "detail":"\(dateStr)  \(weekStr)"]
-        let cellData2 = ["title":"结束时间","detail":"\(dateStr)  \(weekStr)"]
-        let cellData3 = ["title":"课程选择","detail":"请选择请假课程"]
-        let cellData4 = ["title":"请假原因","detail":"请填写请假原因"]
+        let cellData1 = ["title":"开始时间", "detail":"\(dateStr)  \(weekStr)","falg":"0"]
+        let cellData2 = ["title":"结束时间","detail":"\(dateStr)  \(weekStr)","falg":"0"]
+        let cellData3 = ["title":"课程选择","detail":"请选择请假课程","falg":"0"]
+        let cellData4 = ["title":"请假原因","detail":"请填写请假原因","falg":"0"]
         dateArr = [cellData1, cellData2, cellData3,cellData4]
     }
     
@@ -175,7 +192,13 @@ extension LeaveMainViewController: ViewControllerTransmitDelegate {
         if data.count != 0 && data[0] is String {
             if data[0] as? String != "" {
                 dateArr[3]["detail"] = data[0] as? String
+                dateArr[3]["falg"] = "1"
+            } else {
+                dateArr[3]["detail"] = "请填写请假原因"
+                dateArr[3]["falg"] = "0"
             }
+            
+            
             reason = dateArr[3]["detail"]!
             UIView.performWithoutAnimation({ 
                 self.tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: 3, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
@@ -194,7 +217,14 @@ extension LeaveMainViewController: ViewControllerTransmitDelegate {
                 i += 1
             }
             selectCourseDataArr = data as! [CourseClass]
-            dateArr[2]["detail"] = detailStr
+            if detailStr == "" {
+                dateArr[2]["detail"] = "请选择请假课程"
+                dateArr[2]["falg"] = "0"
+            } else {
+                dateArr[2]["detail"] = detailStr
+                dateArr[2]["falg"] = "1"
+            }
+            
             UIView.performWithoutAnimation({ 
                 self.tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: 2, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
             })

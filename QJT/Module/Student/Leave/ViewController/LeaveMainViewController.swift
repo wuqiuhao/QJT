@@ -53,23 +53,18 @@ extension LeaveMainViewController {
     }
     
     func rightItemClicked() {
-        
         if dateArr[1]["title"] == "datePicker" || dateArr[2]["title"] == "datePicker" {
             self.errorNotice("请填写正确请假信息")
             return
         }
-        
         if dateArr[2]["falg"] == "0" {
             self.errorNotice("请选择请假课程")
             return
         }
-        
         if dateArr[3]["falg"] == "0" {
             self.errorNotice("请填写请假原因")
             return
         }
-        
-        
         var params = [String:AnyObject]()
         var uniqueID = [Int]()
         params.updateValue(UserConfig.studentSetting()!.userID, forKey: "studentID")
@@ -197,13 +192,10 @@ extension LeaveMainViewController: ViewControllerTransmitDelegate {
                 dateArr[3]["detail"] = "请填写请假原因"
                 dateArr[3]["falg"] = "0"
             }
-            
-            
             reason = dateArr[3]["detail"]!
             UIView.performWithoutAnimation({ 
                 self.tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: 3, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
             })
-            
         } else {
             var detailStr = ""
             var i = 0
@@ -228,7 +220,6 @@ extension LeaveMainViewController: ViewControllerTransmitDelegate {
             UIView.performWithoutAnimation({ 
                 self.tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: 2, inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
             })
-            
         }
     }
 }

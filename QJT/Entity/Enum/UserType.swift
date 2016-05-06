@@ -86,7 +86,7 @@ enum UserType: Int,BaseType {
         case .Teacher:
             return "T"
         case .Counsellor:
-            return "C"
+            return "CLT"
         case .BranchLeader:
             return "BL"
         case .Leader:

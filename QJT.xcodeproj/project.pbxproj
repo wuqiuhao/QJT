@@ -1222,8 +1222,8 @@
 				680359EA1CC75686002F7C60 /* Student */,
 				68083F1E1CCE5909004BE4D4 /* ClassTeacher */,
 				68083F6B1CCE5909004BE4D4 /* CourseTeacher */,
-				68083F0B1CCE5909004BE4D4 /* BranchLeader */,
 				68083F321CCE5909004BE4D4 /* Counsellor */,
+				68083F0B1CCE5909004BE4D4 /* BranchLeader */,
 			);
 			name = Module;
 			sourceTree = "<group>";

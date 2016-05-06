@@ -49,8 +49,10 @@ extension CLTPersonalAttendanceNoteViewController {
         tableView.headerRefresh = true
         tableView.configRefreshDelegate = self
         
-        let rightItem = UIBarButtonItem(image: UIImage(named: "CLTPersonal_myClass"), style: UIBarButtonItemStyle.Done, target: self, action: #selector(CLTPersonalAttendanceNoteViewController.rightItemClicked))
-        navigationItem.rightBarButtonItem = rightItem
+        if UserConfig.teacherSetting()!.userType == .ClassTeacher {
+            let rightItem = UIBarButtonItem(image: UIImage(named: "CLTPersonal_myClass"), style: UIBarButtonItemStyle.Done, target: self, action: #selector(CLTPersonalAttendanceNoteViewController.rightItemClicked))
+            navigationItem.rightBarButtonItem = rightItem
+        }
     }
     
     func rightItemClicked() {

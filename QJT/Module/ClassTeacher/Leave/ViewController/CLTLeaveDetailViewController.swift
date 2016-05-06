@@ -72,7 +72,6 @@ extension CLTLeaveDetailViewController {
     }
     
     func verifyBtnClicked() {
-        
         if dataArr.count == 1 {
             if dataArr[0]["flag"] == "0" {
                 self.errorNotice("请选择审核状态")

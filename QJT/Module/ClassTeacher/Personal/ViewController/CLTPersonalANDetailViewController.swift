@@ -143,7 +143,6 @@ extension CLTPersonalANDetailViewController {
             let cancelAction = UIAlertAction(title: "取消", style: .Cancel, handler: nil)
             let addAction = UIAlertAction(title: "添加", style: .Default,handler: {action in
                 
-                
                 if self!.tempRow == 0 {
                     self!.attDetailArrData[self!.rowInTable].queke = 1
                     self!.attDetailArrData[self!.rowInTable].chidao = 0
@@ -185,8 +184,6 @@ extension CLTPersonalANDetailViewController {
                     if temp == self!.tempAttDetailArrData.count-1{
                         self!.tempAttDetailArrData.append(self!.attDetailArrData[self!.rowInTable])
                     }
-                    
-                    
                 }
                 
                 self!.tableView.reloadData()
